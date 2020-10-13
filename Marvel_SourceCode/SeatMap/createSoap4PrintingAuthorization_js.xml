@@ -1,0 +1,56 @@
+<LocalDescRef version="1.1">
+  <name>createSoap4PrintingAuthorization_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// createSoap4PrintingAuthorization_js
+// WBSのBasic認証の暗号化
+//
+// @param password パスワード
+// @param hashedPassword 暗号化パスワード
+//
+// @author sakai
+//
+// Copyright(C) 2014/06/17
+//-------------------------------------------------------------------------------
+importPackage(java.lang);
+
+var password = args[0];
+var hashedPassword = application.dataItems[args[1]];
+var errorFlag = application.dataItems[args[2]];
+var base64list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+errorFlag.value = '';
+hashedPassword.value = base64encode(password);
+if (hashedPassword.length == 0) {
+    errorFlag.value = 'Y';
+}
+
+function base64encode(s)
+{
+  var t = '', p = -6, a = 0, i = 0, v = 0, c;
+
+  while ( (i &lt; s.length) || (p &gt; -6) ) {
+    if ( p &lt; 0 ) {
+      if ( i &lt; s.length ) {
+        c = s.charCodeAt(i++);
+        v += 8;
+      } else {
+        c = 0;
+      }
+      a = ((a&amp;255)&lt;&lt;8)|(c&amp;255);
+      p += 8;
+    }
+    t += base64list.charAt( ( v &gt; 0 )? (a&gt;&gt;p)&amp;63 : 64 )
+    p -= 6;
+    v -= 6;
+  }
+  return t;
+}
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-17 06:41:48.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-06-17 06:43:20.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

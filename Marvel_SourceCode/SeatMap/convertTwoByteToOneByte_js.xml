@@ -1,0 +1,31 @@
+<LocalDescRef version="1.1">
+  <name>convertTwoByteToOneByte_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// 全角文字を半角文字に変換する
+//
+// @param inputDate 入力文字列
+// @param resultDataitemName 変換結果を返却するDataitem名
+// @return 変換後の半角文字列
+// @author Jun Tanami
+//
+// Copyright(C) 2013 XXXX
+//-------------------------------------------------------------------------------
+importPackage(Packages.jp.co.ana.smart.tool);
+
+var inputData = args[0];
+var resultDataitemName = args[1];
+
+//有効性チェック
+var rtn = StringUtil.convertTwoByteToOneByte(inputData);
+
+var resultDataitem = application.dataItems[resultDataitemName];
+resultDataitem.value = rtn;
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-05-27 04:08:51.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-06-14 04:29:34.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,62 @@
+<LocalDescRef version="1.1">
+  <name>dmsGetReplyXmlNameSpace</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsGetReplyXmlNameSpace
+;
+; @param replyXml
+; @param nsNumber
+; @param nameSpaceValue
+; @param nameSpaceAttribute
+; @author Mitsuru Watanabe
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'replyXml'
+name_arguments #2 'nsNumber'
+name_arguments #3 'nameSpaceValue'
+name_arguments #4 'nameSpaceAttribute'
+
+; ローカル変数 位置
+build_local_data_item '_nsVal'
+build_local_data_item '_nmKey'
+build_local_data_item '_bgn'
+build_local_data_item '_end'
+build_local_data_item '_pos'
+build_local_data_item '_len'
+build_local_data_item '_dummy'
+
+set nameSpaceValue ''
+set nameSpaceAttribute ''
+
+; 開始位置[nm:XX="]を検索
+set _nmKey ''
+concat _nmKey 'xmlns:ns' nsNumber '="'
+search_data_item _nmKey _bgn replyXml '1'
+data_item_length _nmKey _dummy '' '' _len
+if _bgn = ''
+    return ; 見つからない =&gt; 空を返却
+end_if
+calculate _bgn = _bgn + _len
+
+; 終了位置["]を検索
+search_data_item '"' _end replyXml _bgn
+if _end = ''
+    return ; 見つからない =&gt; 空を返却
+end_if
+
+; namespace取得
+calculate _len = _end - _bgn
+copy_data_item _nsVal replyXml _bgn _len
+
+; 返却
+set nameSpaceValue _nsVal
+concat nameSpaceAttribute _nmKey _nsVal '"'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-03-31 11:10:20.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-04-17 11:09:52.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

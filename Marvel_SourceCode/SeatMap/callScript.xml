@@ -1,0 +1,49 @@
+<LocalDescRef version="1.1">
+  <name>callScript</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 上位階層のappのscriptを呼ぶためのscript
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param script script名(app必須)
+; @param param1 パラメータ1
+; @param param2 パラメータ2
+; @param param3 パラメータ3
+; @param param4 パラメータ4
+; @param param5 パラメータ5
+; @param param6 パラメータ6
+; @param param7 パラメータ7
+; @param param8 パラメータ8
+; @param param9 パラメータ9
+; @param param10 パラメータ10
+; @param param11 パラメータ11
+; @param param12 パラメータ12
+; @author Watanabe Shinji
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'script'
+name_arguments #2 'param1'
+name_arguments #3 'param2'
+name_arguments #4 'param3'
+name_arguments #5 'param4'
+name_arguments #6 'param5'
+name_arguments #7 'param6'
+name_arguments #8 'param7'
+name_arguments #9 'param8'
+name_arguments #10 'param9'
+name_arguments #11 'param10'
+name_arguments #12 'param11'
+name_arguments #13 'param12'
+
+; scriptを呼ぶ
+call script #1=param1 #2=param2 #3=param3 #4=param4 #5=param5 #6=param6 #7=param7 #8=param8 #9=param9 #10=param10 #11=param11 #12=param12
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-08-06 05:06:50.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-12-01 06:42:40.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

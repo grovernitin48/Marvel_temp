@@ -1,0 +1,70 @@
+<LocalDescRef version="1.1">
+  <name>dmsGetAirportReplayXmlNameSpace</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+;TLM電文対応(NameSpaceの取得)
+;
+; @param _AnacoreProcessTypeIdDataitem       ANACore機能ID
+; @param _outReply                           受信結果
+; @param _nsReplaceElement                   取得したNameSpace
+; @param _nsFlg                              NameSpace変更処理を実施するかを判定するFlg
+;
+; @author Yutaka.Takeda
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 '_AnacoreProcessTypeIdDataitem'
+name_arguments #2 '_outReply'
+name_arguments #3 '_nsElement'
+name_arguments #4 '_nsFlg'
+
+build_local_data_item     '_appnsNo'
+build_local_data_item     '_appnsTag'
+build_local_data_item     '_appPosition'
+build_local_data_item     '_appnsTaglength'
+build_local_data_item     '_nsNo'
+build_local_data_item     '_nsNoLength'
+build_local_data_item     '_startPosition'
+build_local_data_item     '_name'
+build_local_data_item     '_colonPosition'
+build_local_data_item     '_nsNoFixLength'
+
+if _nsFlg = ''
+    return
+end_if
+
+;発券精算の場合は、属性の位置を付け直す
+if _AnacoreProcessTypeIdDataitem = 'FTKTC00329001' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337010' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC00337011' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337013' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC00337014' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337015' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC00337016' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337021' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC01533002'
+   
+   ;applicationMessageのNsNoを取得
+    call 'AnacoreUtil:dmsGetReplyXmlNsNumber'  #1=_outReply #2=_appnsNo #3='applicationMessage'
+    ;applicationMessageのTAG文字列を生成
+    concat _appnsTag '&lt;ns' _appnsNo ':applicationMessage&gt;'
+    search_data_item '&gt;' _appnsTaglength _appnsTag _startPosition
+    
+    ;applicationMessag直下にあるTAGを10文字分切り出す(&lt;nsxx:xxxx)
+    search_data_item _appnsTag _appPosition _outReply _startPosition
+    calculate _appPosition = _appPosition + _appnsTaglength
+    copy_data_item  _name _outReply _appPosition '10'
+    ;「:」の位置を取得
+    search_data_item ':' _colonPosition _name _startPosition
+    ;nsナンバー長さ計算'(固定文字4文字分を除く)
+    set _nsNoFixLength '4'
+	calculate _nsNoLength = _colonPosition - _nsNoFixLength
+   ;nsナンバー切り出し
+    copy_data_item _nsNo _name _nsNoFixLength _nsNoLength
+    ;ネームスペース取得
+    call 'AnacoreUtil:dmsGetReplyXmlNameSpace' #1=_outReply #2=_nsNo #3='' #4=_nsElement
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-10-28 06:39:14.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-01-24 05:40:57.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,139 @@
+<LocalDescRef version="1.1">
+  <name>dmsValidateCharacter</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsValidateCharacter
+; 文字列のバリデーションチェック
+;
+; @param character チェック対象文字列(in/out)
+; @param checkType チェック種別(in)。処理順にチェック対象を設定。1:入力チェック、2:Byte数チェック、3:文字種別チェック。
+; @param checkResult チェック結果(out)。0:正常、0以外:最初にエラーとなったチェック種別。
+; @param convTwoByteFlg 全角→半角変換実施フラグ(in)。Y:変換する、Y以外:変換しない。
+;                       ただし,#2で3指定、かつ、#8でCしていない場合、変換処理が行われる。
+; @param minLength Byte数チェック時の最小Byte数(in)。
+; @param maxLength Byte数チェック時の最大Byte数(in)。
+; @param regExp 許容する文字種別(in)。A:英字、N:数字、K:半角カナ文字、C:漢字(全角文字)、
+;               X:特殊文字(#8で指定した文字を許容)、S:特殊文字(#8で指定した文字以外を許容)。X、Sは同時指定不可。
+; @param specialCharacter #7でS、X指定時の対象となる特殊文字(in)。
+;
+; @author Kei Shimono
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'character'
+name_arguments #2 'checkType'
+name_arguments #3 'checkResult'
+name_arguments #4 'convTwoByteFlg'
+name_arguments #5 'minLength'
+name_arguments #6 'maxLength'
+name_arguments #7 'regExp'
+name_arguments #8 'specialCharacter'
+
+build_local_data_item '_checkTypeLength'
+build_local_data_item '_processCnt'
+build_local_data_item '_targetCheckType'
+build_local_data_item '_result'
+build_local_data_item '_noInputFlg'
+build_local_data_item '_characterLength'
+build_local_data_item '_regExpLength'
+build_local_data_item '_regExpPosition'
+build_local_data_item '_regExpChar'
+build_local_data_item '_banCharType'
+build_local_data_item '_regExpCharXPosition'
+build_local_data_item '_regExpCharSPosition'
+build_local_data_item '_acceptSymbol'
+
+if convTwoByteFlg = 'Y'
+    ; 全角→半角変換
+    set SmartUtil:convertTwoByteToOneByteDataitem ''
+    call 'SmartUtil:convertTwoByteToOneByte_js' #1=character #2='SmartUtil:convertTwoByteToOneByteDataitem'
+    set character SmartUtil:convertTwoByteToOneByteDataitem
+end_if
+
+; 入力値チェック
+call 'SmartUtil:isEmpty' #1=character #2=_noInputFlg
+if _noInputFlg &lt;&gt; 'Y'
+    set _noInputFlg ''
+end_if
+
+; Byte数
+call 'SmartUtil:getByte' #1=character #2=_characterLength
+
+; 許容文字種から禁止文字種への反転
+set _banCharType 'AKCN'
+set _acceptSymbol ''
+data_item_length regExp _regExpLength
+set _regExpPosition '1'
+while _regExpPosition &lt;= _regExpLength
+    copy_data_item _regExpChar regExp _regExpPosition '1'
+    call 'SmartUtil:replaceStringAll' #1=_banCharType #2=_regExpChar #3='' #4=_banCharType
+    calculate _regExpPosition = _regExpPosition + '1'
+end_while
+; X指定時
+search_data_item 'X' _regExpCharXPosition regExp '1'
+if _regExpCharXPosition &lt;&gt; ''
+    concat _banCharType 'XO'
+    set _acceptSymbol specialCharacter
+end_if
+; S指定時
+search_data_item 'S' _regExpCharSPosition regExp '1'
+if _regExpCharSPosition &lt;&gt; ''
+    concat _banCharType 'S'
+    set _acceptSymbol specialCharacter
+end_if
+; X、Sどちらも指定なし
+; 特殊文字を禁止文字として追加する
+if _regExpCharXPosition = '' &amp; _regExpCharSPosition = ''
+    concat _banCharType 'XO'
+    set _acceptSymbol ''
+end_if
+
+data_item_length checkType _checkTypeLength
+set _processCnt '1'
+
+while _processCnt &lt;= _checkTypeLength
+
+    set _result ''
+    copy_data_item _targetCheckType checkType _processCnt '1'
+
+    switch _targetCheckType
+    case '1'
+        ; 必須チェック
+        set _result _noInputFlg
+
+    case '2'
+        ; 桁数(Byte)チェック
+        if _noInputFlg = ''
+            if _characterLength &lt; minLength | _characterLength &gt; maxLength
+                set _result 'Y'
+            end_if
+        end_if
+
+    case '3'
+        ; 文字種別チェック
+        if _noInputFlg = ''
+            call 'dmsValidateCharacterType' #1=character #2=_banCharType #3=_result #4=_acceptSymbol
+        end_if
+    end_switch
+
+    if _result &lt;&gt; ''
+        break_while
+    end_if
+
+    calculate _processCnt = _processCnt + '1'
+
+end_while
+
+if _result &lt;&gt; ''
+    set checkResult _targetcheckType
+else
+    set checkResult '0'
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-17 05:58:10.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-04-28 13:13:13.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,57 @@
+<LocalDescRef version="1.1">
+  <name>dmsReadPnrReplyHeaderTable</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsReadPnrReplyHeaderTable
+; 各種ログに必要な情報をテーブルから取得する
+;
+; @param pnrIdentifier       OUT:PNR識別(仕様がTBDのため、固定で有償'Revenue'を返します)
+; @param pnrControlNumber    OUT:レコードロケータ
+; @param performanceLogFlag  OP-IN:パフォーマンスログ用の情報である場合、
+;                                  レコードロケータをEOT結果から取得
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'pnrIdentifier'
+name_arguments #2 'pnrControlNumber'
+name_arguments #3 'performanceLogFlag'
+
+build_local_data_item '_pnrReplyHeaderTableName'
+build_local_data_item '_pnrReplyPAXTableName'
+build_local_data_item '_rowCount'
+build_local_data_item '_awdFlag'
+
+;初期処理
+set _pnrReplyHeaderTableName 'DmsXmlPNRPane:dmsPnrReplyHeaderTable'
+set _pnrReplyPAXTableName 'DmsXmlPNRPane:dmsPnrReplyPAXTable'
+set pnrIdentifier ''
+set pnrControlNumber ''
+
+; レコードロケータ
+set pnrControlNumber ''
+get_table_row_count _pnrReplyHeaderTableName _rowCount
+if _rowCount &gt; '0'
+    copy_table _pnrReplyHeaderTableName pnrControlNumber '1' '' 'pnrRecordLocator'
+
+    ; PNR識別
+    call 'DmsPNRPane:dmsAwdPnrType' #1=_awdFlag
+    if _awdFlag &lt;&gt; 'y'
+        set pnrIdentifier 'Revenue'
+    else
+        set pnrIdentifier 'Award'
+    end_if
+else
+    ; ロケータが無いならすべて空で返却
+    set pnrControlNumber ''
+    set pnrIdentifier    ''
+end_if
+
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-11-06 08:41:16.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-05-07 10:41:01.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

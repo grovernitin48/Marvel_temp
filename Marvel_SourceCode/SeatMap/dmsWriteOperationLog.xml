@@ -1,0 +1,119 @@
+<LocalDescRef version="1.1">
+  <name>dmsWriteOperationLog</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsWriteOperationLog
+; 国内用共通 オペレーションログ
+;
+; @param popupName      ポップアップ名
+;                         ※APP名を必ず付与してください(区切り文字は _ )
+;                          (例：DmsBusinessPopup_dms～popup)
+; @param tabName        タブ名(IN)
+; @param controlName    コントロール名(IN)
+; @param originalScript 独自操作ログ出力用スクリプト名(IN)
+; @param siteCatalystId サイトカタリストID(オプション)(IN)
+;
+; @author Kota Yoshino
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'popupName'
+name_arguments #2 'tabName'
+name_arguments #3 'controlName'
+name_arguments #4 'siteCatalystId'
+
+build_local_data_item '_channel'
+build_local_data_item '_defTable'
+build_local_data_item '_key'
+build_local_data_item '_dataitem'
+build_local_data_item '_script'
+build_local_data_item '_siteCatalystId'
+build_local_data_item '_message'
+build_local_data_item '_row'
+build_local_data_item '_delimiter'
+build_local_data_item '_srcDataitem'
+build_local_data_item '_retDataitem'
+build_local_data_item '_appRetDataitem'
+build_local_data_item '_orgMessage'
+build_local_data_item '_appName'
+build_local_data_item '_maskData'
+build_local_data_item '_maskingType'
+build_local_data_item '_count'
+
+; 初期化
+set _channel   '0' ;国内or国際
+set _defTable  'dmsOperationLogDefinitionTable'
+set _delimiter ','
+set _message   'START_'
+
+; ポップアップ名、タブ名からキー作成
+set _key popupName 
+if tabName &lt;&gt; ''
+    concat _key '_' tabName
+end_if
+
+; テーブル項目取得
+search_table _defTable _key 'key' _row '' '' \
+    _dataitem 'dataitem' _siteCatalystId 'siteCatalystId' _script 'script'
+
+; 検索対象がなければ終了
+if _row = ''
+    return
+end_if
+
+; サイトカタリストに指定があればそちらを使用
+if siteCatalystId &lt;&gt; ''
+    set _siteCatalystId siteCatalystId
+end_if
+
+; 出力用メッセージ作成
+; APP名取得
+call 'SmartUtil:divideString' #1=popupName #2='_' #3=_appName
+set _srcDataitem _dataitem
+while _srcDataitem &lt;&gt; ''
+    call 'SmartUtil:divideString' #1=_srcDataitem #2=_delimiter #3=_retDataitem #4=_srcDataitem
+    set _appRetDataitem ''
+    concat _appRetDataitem _appName ':' _retDataitem
+    if $_appRetDataitem = ''
+        ; 入力データがない場合
+        concat _message _retDataitem ':' $_appRetDataitem '_'
+        restart_while
+    end_if
+    ; マスキング対象の有無を確認する
+    search_table 'DmsSmartUtil:dmsWriteOperationLogMaskingTypeTable' _appRetDataitem 'DataItem' _count '' '' \
+        _maskingType 'maskingType'
+    if _count = ''
+        ; マスキング対象でない又は、マスキング対象ではあるが、データアイテムが空白の場合
+        concat _message _retDataitem ':' $_appRetDataitem '_'
+    else
+        set _maskData ''
+        ; マスキング対象の場合
+        if _maskingType = 'cvv'
+            ; CVVの場合
+            set _maskData 'XXX'
+        end_if
+        if _maskingType = 'creditCard'
+            ; クレジットカードの場合
+            call 'SmartUtil:setPaymentCC' #1=$_appRetDataitem #2=_maskData
+        end_if
+        concat _message _retDataitem ':' _maskData '_'
+    end_if
+end_while
+
+; 個別のオペレーションログ出力処理を呼び出す
+if _script &lt;&gt; ''
+    call _script #1=_orgMessage
+    concat _message _orgMessage
+end_if
+
+; オペレーションログ出力
+call 'SmartUtil:callScript' #1='PNRPane:writeOperationLog' \
+    #2=_channel #3=_siteCatalystId #4=controlName #5=_message
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-03-13 09:23:52.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2019-04-11 10:25:17.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

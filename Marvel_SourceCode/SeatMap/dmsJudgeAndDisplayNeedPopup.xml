@@ -1,0 +1,154 @@
+<LocalDescRef version="1.1">
+  <name>dmsJudgeAndDisplayNeedPopup</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsJudgeAndDisplayNeedPopup
+;
+; @param replyXml (in)返却xml
+; @param redoFlag (out)WBS再送フラグ 'y'なら再送
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'replyXml'
+name_arguments #2 'redoFlag'
+
+build_local_data_item '_returnedRow'
+; エラー種別判定用変数
+build_local_data_item '_replyPattern'
+build_local_data_item '_csvExistsFlag'
+build_local_data_item '_parseScript'
+; NEEDポップアップ種別判定用変数
+build_local_data_item '_needTypeMaster'
+build_local_data_item '_row'
+build_local_data_item '_rowMax'
+build_local_data_item '_keyMessage'
+build_local_data_item '_keyProcessId'
+build_local_data_item '_keyReasonCode'
+build_local_data_item '_popupName'
+build_local_data_item '_popupId'
+build_local_data_item '_exceptThisWbsFlag'
+; ログ用変数
+build_local_data_item '_thisScript'
+build_local_data_item '_logScript'
+build_local_data_item '_logMessage'
+build_local_data_item '_reasonCodeParseResult'
+
+;========================================
+; 初期化
+;========================================
+; 変数初期化
+set redoFlag                        'n'
+set _thisScript                     'AnacoreUtil_dmsJudgeAndDisplayNeedPopup'
+set _logScript                      'PNRPane:writeTraceLog'
+set AnacoreAdditionalErrorMessageDi ''
+; フラグ初期化
+if dmsNeedPopupDisplayFlagDi = 'EXCEPT_THIS_WBS'
+    set _exceptThisWbsFlag 'y'
+    reset_data_item dmsNeedPopupDisplayFlagDi
+end_if
+
+;========================================
+; WBSエラー判定 &amp; メッセージ取得
+;========================================
+; WBS種別判定
+call 'dmsJudgeWBSPattern' #1=replyXml #2=_replyPattern
+set dmsReplyWBSTypeDi _replyPattern
+
+; reasonMessage.csvからメッセージ取得
+;   parse_xml_schemaではなくて、文字列検索でreasonCode取得
+;   reasonMessageDisplayTableにコードとメッセージを格納
+call 'getReasonCodeByStringSearch' #1=replyXml #2=_csvExistsFlag
+
+; 特殊エラー型毎のparse処理を準備して、下記テーブルを整備する
+; Qik内部に定義された特殊なエラー型かどうか判定
+search_table 'dmsErrorWBSTypeMasterTable' _replyPattern 'type' _returnedRow '' '' _parseScript 'parseScript'
+
+; 特殊エラー型専用parse処理呼び出し
+if _returnedRow &lt;&gt; '' 
+    call _parseScript #1=replyXml
+else
+    if _csvExistsFlag = 'y'
+        ; 「reasonMessage.csvに定義されていた」 且つ、
+        ; 「特殊エラー型ではなかった」 場合
+        ; 通常のWBSエラーが発生したと判定
+        ; ※全てのWBS処理で「通常のWBSエラー=ResponseData」として実装されているので、
+        ; 仮にResponseData型以外が返却されたとしても、型がResponseDataだったことにする
+        set dmsReplyWBSTypeDi 'ResponseData'
+    end_if
+end_if
+
+;##########################################################################################
+;                         ★★ここまではどのWBSでも必須の処理★★
+;##########################################################################################
+
+; 「Qik内部に定義された特殊なエラー型ではない」 AND
+; 「csvに登録されていないエラー」 なら
+; 正常系(もしくはSYS ERRのResponseData)と判定しreturn
+if _returnedRow = '' &amp; _csvExistsFlag = 'n'
+    call _logScript #1='0' #2='INFO' #3=_thisScript #4='Display NOT_ERROR End'
+    return
+end_if
+
+copy_table 'reasonMessageDisplayTable' _reasonCodeParseResult '1' '~|'
+concat     _logMessage 'sendProcessId:'       AnacoreProcessTypeIdDataitem     '_'
+concat     _logMessage 'errorProcessId:'      AnacoreErroredFunctionIdDataitem '_'
+concat     _logMessage 'reasonCode&amp;Message:' _reasonCodeParseResult
+
+call   _logScript #1='0' #2='INFO' #3=_thisScript #4='WBS ERROR OCCUERD'
+call   _logScript #1='0' #2='INFO' #3=_thisScript #4=_logMessage
+
+;========================================
+; NEED系画面表示要否判定
+;========================================
+;今回だけ表示しない場合はreturn
+if _exceptThisWbsFlag = 'y'
+    call _logScript #1='0' #2='INFO' #3=_thisScript #4='Display EXCEPT_THIS_WBS End'
+    return
+end_if
+
+;表示しない場合は即return
+if dmsNeedPopupDisplayFlagDi = 'DO_NOT'
+    call _logScript #1='0' #2='INFO' #3=_thisScript #4='Display DO_NOT End'
+    return
+end_if
+
+;========================================
+; NEED系画面名取得
+;========================================
+set _needTypeMaster  'dmsNeedPopupTypeMaster'
+set _row             '1'
+get_table_row_count  _needTypeMaster _rowMax
+while _row &lt;= _rowMax
+    ; NEED系ポップアップ判定条件となるエラー文言を取得
+    copy_table _needTypeMaster _keyProcessId  _row '' 'keyProcessId'
+    copy_table _needTypeMaster _keyReasonCode _row '' 'keyReasonCode'
+    call 'getWBSErrorMessage' #1=_keyProcessId #2=_keyReasonCode #3=_keyMessage
+    search_table 'reasonMessageDisplayTable' _keyMessage 'message' _returnedRow
+    if _returnedRow &lt;&gt; ''
+        ;マスタに登録されているメッセージが返却されていたらループを抜ける
+        copy_table _needTypeMaster _popupName _row '' 'popupName'
+        copy_table _needTypeMaster _popupId   _row '' 'popupId'
+        break_while
+    end_if
+    calculate _row =_row + '1'
+end_while
+
+;ポップアップを表示しないメッセージが返却された場合処理終了
+if _popupName = ''
+    call _logScript #1='0' #2='INFO' #3=_thisScript #4='Display NOT_NEED_ERROR End'
+    return
+end_if
+
+;========================================
+; NEED系画面表示
+;========================================
+call 'dmsDisplayNeedPopup' #1=_popupName #2=_popupId #3=redoFlag
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-07-14 06:57:09.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-03-18 09:34:13.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

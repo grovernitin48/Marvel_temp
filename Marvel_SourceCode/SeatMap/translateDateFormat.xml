@@ -1,0 +1,124 @@
+<LocalDescRef version="1.1">
+  <name>translateDateFormat</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; translateDateFormatの説明
+;  入力日付のフォーマットを指定し、アウトプット指定のフォーマットに変換する。
+;  月のフォーマットを変換する。(MM⇔MMM相互変換)
+;  対応するフォーマットは以下の通り
+;   ・'DDMMMYY'
+;   ・'DDMMYY'
+;   ・'DDMMMYYYY'
+;   ・'yyyyMMdd'
+;   ・'YYYY-MM-DD'
+;   ・'MM/DD/YY'
+;   ・'MM/DD/YYYY'
+;   ・'DDMMYYYY'
+;   ・'YYMMDD'
+;  以下は制限事項(動作は保証なし)
+;   ・入力日付と入力フォーマットが一致しているかはチェックしない
+;   ・日、年の正当性はチェックしない
+;   ・年の２桁⇒４桁変換は実施しない
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param inDate       入力日付(in)
+; @param inputFormat  入力日付のフォーマット(in)
+; @param outputFormat 出力日付のフォーマット(in)
+; @param returnDate   出力日付(out)
+; @author kanda tatsuya
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'inDate'
+name_arguments #2 'inputFormat'
+name_arguments #3 'outputFormat'
+name_arguments #4 'returnDate'
+
+;ローカル変数
+build_local_data_item '_inDate'
+build_local_data_item '_day'
+build_local_data_item '_month'
+build_local_data_item '_year'
+build_local_data_item '_wkBuff'
+build_local_data_item '_pos'
+build_local_data_item '_length'
+
+set _inDate inDate
+;初期化処理
+set returnDate ''
+
+call 'SmartUtil:getDate'  #1=_inDate #2=inputFormat #3=_day
+call 'SmartUtil:getMonth' #1=_inDate #2=inputFormat #3=_month
+call 'SmartUtil:getYear'  #1=_inDate #2=inputFormat #3=_year
+
+;月フォーマットの変更(MM⇔MMM相互変換)
+data_item_length _month _length
+search_data_item 'MMM' _pos outputFormat '1'
+if '' &lt;&gt; _pos
+    if '2' = _length
+        call 'translateMonthName' #1=_month #2='MM' #3='MMM' #4=_month
+    end_if
+else
+    if '3' = _length
+        call 'translateMonthName' #1=_month #2='MMM' #3='MM' #4=_month
+    end_if
+end_if
+
+if '' = _month
+    ;ログ出力して処理を抜ける
+    return
+end_if
+
+;年の4ケタ⇒2ケタ変換
+data_item_length _year _length
+search_data_item 'YYYY' _pos outputFormat '1'
+if '' = _pos
+    ;年フォーマットがYYの場合
+    switch _length
+    case '3'
+        copy_data_item _wkBuff _year '2' '2'
+        set _year _wkBuff
+    case '4'
+        copy_data_item _wkBuff _year '3' '2'
+        set _year _wkBuff
+    default
+    
+    end_switch
+end_if
+
+;返却日付のフォーマット編集
+switch outputFormat
+case 'DDMMM'
+    concat returnDate _day _month
+case 'DDMMMYY'
+    concat returnDate _day _month _year
+case 'DDMMYY'
+    concat returnDate _day _month _year
+case 'DDMMYYYY'
+    concat returnDate _day _month _year
+case 'DDMMMYYYY'
+    concat returnDate _day _month _year
+case 'yyyyMMdd'
+    concat returnDate _year _month _day
+case 'YYYY-MM-DD'
+    concat returnDate _year '-' _month '-' _day
+case 'MM/DD/YY'
+    concat returnDate _month '/' _day '/' _year
+case 'MM/DD/YYYY'
+    concat returnDate _month '/' _day '/' _year
+case 'YYMMDD'
+    concat returnDate _year _month _day
+case 'YYYY/MM/DD'
+    concat returnDate _year '/' _month '/' _day
+end_switch
+
+
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-20 03:03:09.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-06-22 10:53:38.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

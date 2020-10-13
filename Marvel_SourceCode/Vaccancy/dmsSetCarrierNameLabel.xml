@@ -1,0 +1,57 @@
+<LocalDescRef version="1.1">
+  <name>dmsSetCarrierNameLabel</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; キャリアコードを元に指定したポップアップのラベルに名称を設定する
+;
+; @param popupName        ポップアップ名
+; @param carrierCode      キャリアコード
+; @param labelControlName ラベルコントロール名
+; 
+; @author HideakiMiyata
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'popupName'
+name_arguments #2 'carrierCode'
+name_arguments #3 'labelControlName'
+
+; ローカル変数
+build_local_data_item '_rowNo'
+build_local_data_item '_resultValue'
+build_local_data_item '_column'
+build_local_data_item '_isEmptyScript'
+build_local_data_item '_language'
+
+; キャリアコード有無を調べる
+set _isEmptyScript 'SmartUtil:isEmpty'
+call _isEmptyScript #1=carrierCode #2=_resultValue
+; キャリアコード未設定なら何もしないで終了
+if _resultValue = 'Y'
+    set_popup_control_property popupName labelControlName 'text' ' '
+    set DmsSmartUtil:dmsCarrierNameDataitem ''
+    return
+end_if
+
+get_language _language
+if _language = 'ja_JP'
+    set _column 'P_JP_CARRIER_NAME_VC'
+else
+    set _column 'P_EN_CARRIER_NAME_VC'
+end_if
+
+set _resultValue ''
+; 国内キャリアテーブルを検索し、ヒットしたキャリア名を設定する
+search_table 'DmsSmartUtil:dmsCarrierTable' carrierCode 'CARRIER2_CD' _rowNo '' ''\
+    _resultValue _column
+set_popup_control_property popupName labelControlName 'text' _resultValue
+set DmsSmartUtil:dmsCarrierNameDataitem _resultValue
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-09-20 01:31:21.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-04-29 06:18:22.0 GMT</lastSaved>
+    <comment>searchPNRPopup</comment>
+  </appObjectDesc>
+</LocalDescRef>

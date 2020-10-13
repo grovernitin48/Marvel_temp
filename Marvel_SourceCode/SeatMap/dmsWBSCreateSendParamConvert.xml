@@ -1,0 +1,56 @@
+<LocalDescRef version="1.1">
+  <name>dmsWBSCreateSendParamConvert</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; SOAP送信オブジェクト作成
+;   必須タグがあるParamのXML作成
+;
+; 対象のタグにはマッピングされている必要があり、
+; 値が設定されている場合その値で、設定されていない場合、空要素のタグを作成する。
+; 対象は1タグのみ。
+;
+; @param sendXml       送信XML
+; @param errorFlag     エラーフラグ [&lt;&gt;'': エラー]
+; @param errorMessage  エラーメッセージ
+; @param anacoreId     ANACore機能ID
+; @param schemaMap     スキーママップ名
+; @param dummyItem     [空タグ用オプション]  データアイテム又はテーブル名
+; @param dummyClmn     [空タグ用オプション]  カラム名(これを指定した場合テーブルと判断)
+; @author Misuru Watanabe
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1  'sendXml'
+name_arguments #2  'errorFlag'
+name_arguments #3  'errorMessage'
+name_arguments #4  'anacoreId'
+name_arguments #5  'schemaMap'
+name_arguments #6  'dummyItem'
+name_arguments #7  'dummyClmn'
+
+; ローカル変数
+build_local_data_item '_pr'
+build_local_data_item '_tmp'
+
+; 初期化
+set errorFlag    'Y'
+set errorMessage ''
+
+; スキーママップからXMLを作成
+call 'AnacoreUtil:createSoapXMLForSendEmptyTag' #1=schemaMap #2=anacoreId \
+    #3=sendXml #4=_pr #5=errorMessage #6=dummyItem  #7=dummyClmn
+if _pr = 'Y'
+    concat errorMessage 'schemaMap:' schemaMap ',anacoreId:' anacoreId
+    return ; Error
+end_if
+
+set errorFlag    ''
+set DmsXmlPNRPane:dmsWBSSendCommandUsedArgCountDi '7' ; 使用引数個数
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-05-07 04:22:17.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-05-04 03:14:13.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

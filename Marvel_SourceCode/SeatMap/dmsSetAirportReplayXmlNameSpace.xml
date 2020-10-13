@@ -1,0 +1,49 @@
+<LocalDescRef version="1.1">
+  <name>dmsSetAirportReplayXmlNameSpace</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+;TLM電文対応(NameSpaceの付与)
+
+; @param _AnacoreProcessTypeIdDataitem ANACore機能ID
+; @param _nsReplaceElement             受信結果
+;;@param _outReply                     付与するNameSpace信結果
+; @param _nsFlg                        NameSpace変更処理を実施するかを判定するFlg
+
+; @author Yutaka.Takeda
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 '_AnacoreProcessTypeIdDataitem'
+name_arguments #2 '_outReply'
+name_arguments #3 '_nsElement'
+name_arguments #4 '_nsFlg'
+
+build_local_data_item     '_nsReplaceElement'
+build_local_data_item     '_length'
+build_local_data_item     '_elementlength'
+
+if _nsFlg = ''
+    return
+end_if
+
+;発券精算の場合は、属性の位置を付け直す
+if _AnacoreProcessTypeIdDataitem = 'FTKTC00329001' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337010' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC00337011' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337013' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC00337014' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337015' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC00337016' | _AnacoreProcessTypeIdDataitem = 'FTKTC00337021' | \
+   _AnacoreProcessTypeIdDataitem = 'FTKTC01533002'
+   
+    ;先頭に半角スペースを挿入する(concatは半角を無視するので、文字列+半角で付与した後に、文字列を削除する
+    concat _nsReplaceElement '@ ' _nsElement '&gt;'
+    search_data_item '&gt;' _elementlength _nsReplaceElement _length
+    copy_data_item _nsElement _nsReplaceElement '2' _elementlength
+    call 'SmartUtil:replaceStringOnlyOnce' #1=_outReply #2='&gt;' #3=_nsElement  #4=_outReply
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-10-28 06:39:38.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-01-24 05:41:15.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

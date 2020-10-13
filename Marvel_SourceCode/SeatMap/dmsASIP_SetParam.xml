@@ -1,0 +1,79 @@
+<LocalDescRef version="1.1">
+  <name>dmsASIP_SetParam</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsASIP_SetParam
+; シートマップ照会条件入力画面(DM) 送信情報設定
+;
+; @param class         コンパートメントクラス(in) Y:普通 S:プレミアム
+; @param year          年(in)
+;
+; @author Mizushima satoru
+;
+; Copyright(C) 2014/06/25
+;-------------------------------------------------------------------------------
+name_arguments #1 'class'
+name_arguments #2 'year'
+
+build_local_data_item '_class'
+build_local_data_item '_date'
+build_local_data_item '_carrier'
+build_local_data_item '_day'
+
+; パーステーブルクリア
+clear_table 'dmsActiveSeatmapAttributeGridElementTable'
+
+; クラス指定
+if class &lt;&gt; ''
+    set _class class
+else
+    set _class dmsASIP_ClassRadioDi
+end_if
+
+; 日付編集
+set _day dmsASIP_DateDi
+format_data_item _day 'right' '2' '0'
+set _date ''
+concat _date year '-' dmsASIP_DateComboDi '-' _day
+
+; キャリア未設定時はデフォルトを使用
+if dmsASIP_CarrierDi = ''
+   call 'DmsSmartUtil:dmsGetDefaultCarrierCode' #1=_carrier
+else
+   set _carrier dmsASIP_CarrierDi
+end_if
+
+;パラメータ設定
+set DmsXmlPNRPane:dmsASRCarrierCodeXmlDi _carrier
+set DmsXmlPNRPane:dmsASRFlightNumberXmlDi dmsASIP_FlightNumberDi
+set DmsXmlPNRPane:dmsASRDeparturePlanDateXmlDi _date
+set DmsXmlPNRPane:dmsASRBookingClassXmlDi _class
+set DmsXmlPNRPane:dmsASRRopOutputIndicatorXmlDi 'false'
+set DmsXmlPNRPane:dmsASRDepartureAirportCodeXmlDi dmsASIP_DepartureDi
+set DmsXmlPNRPane:dmsASRArrivalAirportCodeXmlDi dmsASIP_ArrivalDi
+; エレメントIDはクリア
+set DmsXmlPNRPane:dmsASRElementIdXmlDi ''
+
+;エリア設定
+clear_table 'DmsXmlPNRPane:dmsASRAreaNameListXmlTable'
+insert_table_row 'DmsXmlPNRPane:dmsASRAreaNameListXmlTable' 'F'
+insert_table_row 'DmsXmlPNRPane:dmsASRAreaNameListXmlTable' 'C'
+insert_table_row 'DmsXmlPNRPane:dmsASRAreaNameListXmlTable' 'B'
+
+; 属性情報を表示する場合
+if dmsASIP_AttributeDi = 'Y'
+    set dmsActiveSeatmapCarrierCodeDataitem _carrier
+    set dmsActiveSeatmapFlightNumberDataitem dmsASIP_FlightNumberDi
+    set dmsActiveSeatmapBookingClassDataitem _class
+    set dmsActiveSeatmapDeparturePlanDateDataitem _date
+    set dmsActiveSeatmapRopOutputIndicatorDataitem 'false'
+    set dmsActiveSeatmapAttributeElementIdDataitem ''
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-25 05:42:17.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-06-02 06:35:21.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

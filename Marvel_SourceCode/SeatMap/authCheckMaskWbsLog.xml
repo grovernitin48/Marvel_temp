@@ -1,0 +1,150 @@
+<LocalDescRef version="1.1">
+  <name>authCheckMaskWbsLog</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; WBSの送信ログの機密データをマスキングする
+;
+; @param systemName	[IN]対象システム名　alteaとかdatahubとか
+; @param data		    [IN/OUT]マスキング対象XML
+;
+; @author ueda
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'systemName'
+name_arguments #2 'data'
+
+build_local_data_item '_data'
+build_local_data_item '_table'
+build_local_data_item '_prefix'
+build_local_data_item '_suffix'
+build_local_data_item '_targetSystem'
+build_local_data_item '_isTargetSystem'
+build_local_data_item '_wbsName'
+build_local_data_item '_operationName'
+build_local_data_item '_i'
+build_local_data_item '_buff'
+build_local_data_item '_rowCount'
+build_local_data_item '_returnRow'
+build_local_data_item '_maskType'
+build_local_data_item '_callScript'
+build_local_data_item '_nsNo'
+build_local_data_item '_targetTagName'
+
+;-------------------------------------------------------------------------------
+; 初期化
+;-------------------------------------------------------------------------------
+set _table ''
+set _prefix 'SmartUtil:authCheckMask'
+set _suffix 'WbsLogTable'
+set _data data
+set data ''
+
+;-------------------------------------------------------------------------------
+; マスキング対象システムか判断する
+;-------------------------------------------------------------------------------
+concat _targetSystem ''
+; 対象システムが増えた場合、テーブルを作った後にここに追記する
+concat _targetSystem 'altea/minds/Anacore'
+; 対象システムか判断
+call 'checkRegularExpression' #1=_targetSystem #2=systemName #3=_isTargetSystem \
+	#4='Y'
+if _isTargetSystem = 'N'
+    ; 違ったら処理終了
+    set data _data
+    return
+end_if
+
+;-------------------------------------------------------------------------------
+; WBS名取得
+;-------------------------------------------------------------------------------
+if systemName = 'Anacore'
+    if _data = ''
+        ; WBSの情報がない場合、処理終了
+        return
+    end_if
+    ; ns番号を取得する
+    set _callScript 'AnacoreUtil:dmsGetReplyXmlNsNumber'
+    call _callScript #1=_data #2=_nsNo #3='processTypeId'
+    ; ANACoreの場合、機能ID取得
+    set _targetTagName ''
+    if _nsNo &lt;&gt; ''
+        ; ns番号が存在した場合
+        concat _targetTagName 'ns' _nsNo ':processTypeId'
+    else
+        ; ns番号が存在しない場合
+        set _targetTagName 'processTypeId'
+    end_if
+    call 'SmartUtil:getTagValue' #1=_data #2=_targetTagName #3='' #4=_wbsName
+else
+    ; ANACore以外の場合、WBS名取得
+    call 'captureRegularExpression' #1=_data #2='.+?Body&gt;&lt;(\\S+)\\s' #3=_wbsName
+    ; 名前空間があればとる
+    call 'checkRegularExpression' #1=_wbsName #2=':' #3=_buff #4='Y'
+    if _buff = 'Y'
+        call 'captureRegularExpression' #1=_wbsName #2=':(.+)' #3=_wbsName
+    end_if
+    ; WBS以下に名前空間がなかった場合の考慮
+    call 'checkRegularExpression' #1=_wbsName #2='&gt;' #3=_buff #4='Y'
+    if _buff = 'Y'
+        call 'captureRegularExpression' #1=_wbsName #2='(.+?)&gt;' #3=_wbsName
+    end_if
+end_if
+;-------------------------------------------------------------------------------
+; テーブルを参照し、WBSの特定タグに対しマスキングを行う
+;-------------------------------------------------------------------------------
+; テーブル名生成(例, authCheckMaskAlteaWbsLogTable)
+concat _table _prefix systemName _suffix
+; マスキング対象WBSでなかったら処理終了
+search_table _table _wbsName 'operationName' _returnRow
+if _returnRow = ''
+    set data _data
+    return
+end_if
+; テーブルを参照し、特定タグに対してマスキングを行う
+set _i '1'
+get_table_row_count _table _rowCount
+while _i &lt;= _rowCount
+    ; WBS名取得
+    copy_table _table _operationName _i '' 'operationName'
+    ; WBS名が対象でなかったら次の行へ
+    if _wbsName &lt;&gt; _operationName
+        calculate _i = _i + '1'
+        restart_while
+    end_if
+    ; タグ名、絞り込み対象正規表現取得
+    search_table _table _operationName 'operationName' _returnRow _i '' _maskType 'maskType'
+    
+    ; マスキング種別毎のマスキング処理を実行
+    switch _maskType
+        case 'securityId'
+            call 'maskingDefault' #1=_table #2=_i #3=_data
+        case 'creditCardNumber'
+            if systemName = 'Anacore'
+                ; Anacoreの場合、数値チェックなしのマスキング処理
+                call 'maskingCreditCardWithoutCheckNumber' #1=_table #2=_i #3=_data
+            else
+                ; Anacore以外の場合、数値チェックありのマスキング処理
+                call 'maskingCreditCardNumber' #1=_table #2=_i #3=_data
+            end_if
+        case 'freeText'
+            call 'maskingFreeText' #1=_table #2=_i #3=_data
+        case 'rawTrack'
+            call 'maskingDefault' #1=_table #2=_i #3=_data
+        case 'jisRowTrack'
+            call 'maskingJisRowTrack' #1=_table #2=_i #3=_data
+    end_switch
+
+    calculate _i = _i + '1'
+end_while
+
+; 値返却
+set data _data
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-10-03 05:12:04.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2019-08-02 05:47:00.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

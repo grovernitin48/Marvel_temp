@@ -1,0 +1,38 @@
+<LocalDescRef version="1.1">
+  <name>getByte_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// 文字列のバイト数取得
+//
+// @param  inputDate 文字列(in)
+// @return バイト数
+// @author Watanabe Shinji
+//
+// Copyright(C) 2014/04/21
+//-------------------------------------------------------------------------------
+var inputData = args[0];
+var resultDataitemName = application.dataItems[args[1]];
+
+var str = inputData.replace("\r\n", "\n").replace("\r", "\n"); // CRLF, CRを、LFの改行コードに変換
+var r = 0; 
+for (var i = 0; i &lt; str.length; i++) { 
+    var c = str.charCodeAt(i); 
+    // Shift_JIS: 0x0 ～ 0x80, 0xa0 , 0xa1 ～ 0xdf , 0xfd ～ 0xff 
+    // Unicode : 0x0 ～ 0x80, 0xf8f0, 0xff61 ～ 0xff9f, 0xf8f1 ～ 0xf8f3 
+    if ( c == "\n".charCodeAt(0) ) { // 改行コードLF
+        r += 2; 
+    } else if ( (c &gt;= 0x0 &amp;&amp; c &lt; 0x81) || (c == 0xf8f0) || (c &gt;= 0xff61 &amp;&amp; c &lt; 0xffa0) || (c &gt;= 0xf8f1 &amp;&amp; c &lt; 0xf8f4)) { 
+        r += 1; 
+    } else { 
+        r += 2; 
+    } 
+} 
+resultDataitemName.value = r;
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-04-21 01:50:44.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-09-04 01:15:33.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

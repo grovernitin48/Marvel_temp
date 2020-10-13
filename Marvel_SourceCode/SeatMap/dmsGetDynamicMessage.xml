@@ -1,0 +1,43 @@
+<LocalDescRef version="1.1">
+  <name>dmsGetDynamicMessage</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsGetDynamicMessage
+; dmsDynamicMessageテーブルより指定のID、言語に該当する文言を取得
+;
+; @param id　文言のID
+; @param returnValue 該当する文言
+;
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'id'
+name_arguments #2 'returnValue'
+build_local_data_item '_rowNo'
+build_local_data_item '_language'
+
+; idがブランクの場合はreturnする
+if '' = id
+    set returnValue ''
+    return
+end_if
+
+; 日英切替対応
+get_language _language
+switch _language
+case 'ja_JP'
+    search_table 'dmsDynamicMessageTable' id 'ID' _rowNo '' '' returnValue 'japaneseMessage'
+case 'en_US'
+    search_table 'dmsDynamicMessageTable' id 'ID' _rowNo '' '' returnValue 'englishMessage'
+default
+    search_table 'dmsDynamicMessageTable' id 'ID' _rowNo '' '' returnValue 'japaneseMessage'
+end_switch
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-03-10 02:11:29.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-01-27 11:21:06.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

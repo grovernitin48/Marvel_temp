@@ -1,0 +1,30 @@
+<LocalDescRef version="1.1">
+  <name>getAnacoreCommonItemValue</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getAnacoreCommonItemValue
+; ANACoreの汎用項目を取得する
+;
+; @param itemKey   (in)汎用項目名称
+; @param itemValue (out)汎用項目の値
+; @author Naoya Yamaguchi
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'itemKey'
+name_arguments #2 'itemValue'
+
+build_local_data_item '_commonItemTable'
+build_local_data_item '_row'
+
+set _commonItemTable 'dmsParseCommonMessageCommonItemTable'
+
+search_table _commonItemTable itemKey 'itemkey' _row '' '' itemValue 'itemValue'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-02-18 08:16:18.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-02-18 08:18:53.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

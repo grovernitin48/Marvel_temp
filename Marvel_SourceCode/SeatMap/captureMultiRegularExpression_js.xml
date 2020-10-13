@@ -1,0 +1,44 @@
+<LocalDescRef version="1.1">
+  <name>captureMultiRegularExpression_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// キャプチャを用いた正規表現にマッチした場合、
+// マッチした部分文字列を返却する(複数)
+//
+// @param targetString      チェック対象文字列
+// @param regularExpression 正規表現
+// @param returnString      マッチした部分文字列
+// @param count             1つ以上マッチした場合のキャプチャした個数
+//
+// @author ueda
+//
+// Copyright(C) 2013 XXXX
+//-------------------------------------------------------------------------------
+var targetString = args[0];
+var regularExpression = args[1];
+var returnString = application.dataItems[args[2]];
+var count = application.dataItems[args[3]];
+
+var exp = new RegExp(regularExpression, "g");
+var ary = exp.exec(targetString);
+var tempValue = "";
+count.value = 0;
+if (ary){
+    for (i = 1; i &lt; ary.length; i++){
+        tempValue = ary[i];
+        if (tempValue == undefined){
+            tempValue = ""
+        }
+        returnString.value = returnString.value + tempValue + ";";
+    }
+    count.value = ary.length;
+    count.value--;
+}
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-01-07 05:38:38.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-04-18 06:58:00.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

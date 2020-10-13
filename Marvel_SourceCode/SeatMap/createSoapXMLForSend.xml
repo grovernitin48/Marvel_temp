@@ -1,0 +1,136 @@
+<LocalDescRef version="1.1">
+  <name>createSoapXMLForSend</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; (Anacore用)
+;  SOAP送信オブジェクトを作成する
+;  ns3 → CapHeader
+;  ns0 → DPSExternalMessage
+;  ns1 → CommonMessage
+;  ns2 → 業務xml
+;
+; @param schemaMapName   スキーママップ名
+; @param operationName   オペレーション名(ANACore機能ID)
+; @param outXmlDoc       xmlオブジェクト
+; @param outErrorFlag    エラーフラグ（Y:エラー、それ以外:正常）
+; @param outErrorMessage エラーメッセージ
+; @author Ai Fukuhiro
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'schemaMapName'
+name_arguments #2 'operationName'
+name_arguments #3 'outXmlDoc'
+name_arguments #4 'outErrorFlag'
+name_arguments #5 'outErrorMessage'
+
+; ローカル変数宣言
+build_local_data_item     '_nameSpace'
+build_local_data_item     '_soapFooter'
+build_local_data_item     '_soapHeader'
+build_local_data_item     '_soapBody'
+build_local_data_item     '_soapApMessage'
+build_local_data_item     '_status'
+build_local_data_item     '_soapAction'
+build_local_data_item     '_messageTraceId'
+build_local_data_item     '_beforeReplace'
+build_local_data_item     '_afterReplace'
+build_local_data_item     '_commonMessage'
+
+set outErrorFlag 'N'
+set _soapHeader  ''
+
+;トランザクションログキー生成
+call 'createMessageTraceId' #1=_messageTraceId
+set AnacoreTransactionLogKeyDataitem _messageTraceId
+
+call 'SmartUtil:outputTraceLog' #1='0' #2='INFO' #3='' #4='' #5='createXML' #6='create xml start'
+
+;---------------------------------------
+; ヘッダ部分を作成
+;---------------------------------------
+fill_xml_schema 'Anacore_CAPHeader' _soapHeader _status
+if _status &lt;&gt; '0'
+    ;エラーフラグとエラーメッセージを設定する。
+    set outErrorMessage\
+        'Call SystemAdministrator.SystemError occured at createSoapXMLForSend#fill_xml_schema.'
+    set outErrorFlag 'Y'
+    return 
+end_if
+;ApMessage内には不要な先頭の38文字を削除「&lt;?xml version="1.0" encoding="UTF-8"?&gt;」
+call  'SmartUtil:cutDownXmlHeader' #1=_soapHeader #2=_soapHeader
+
+;ns0をns3に変換
+call 'dmsReplaceXmlNsNumber' #1=_soapHeader #2='3'
+set _soapHeader ''
+concat  _soapHeader '&lt;?xml version="1.0" encoding="UTF-8"?&gt;'\
+    '&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;'\
+    '&lt;soapenv:Header&gt;' AnacoreNsReplaceDataitem \
+    '&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;'
+
+;---------------------------------------
+;Body部分を作成
+;---------------------------------------
+call 'setDPSExternalMessage' #1=_messageTraceId #2=operationName
+fill_xml_schema    'Anacore_DPSExternalMessage' _soapBody _status
+if _status &lt;&gt; '0'
+    ;エラーフラグとエラーメッセージを設定する。
+    set outErrorMessage\
+        'Call SystemAdministrator.SystemError occured at createSoapXMLForSend#fill_xml_schema.'
+    set outErrorFlag 'Y'
+    return 
+end_if
+
+;SOAPボディ内には不要な先頭の38文字を削除「&lt;?xml version="1.0" encoding="UTF-8"?&gt;」
+call 'SmartUtil:cutDownXmlHeader' #1=_soapBody #2=_soapBody
+;---------------------------------------
+;ApMessage部分を作成
+;---------------------------------------
+fill_xml_schema    schemaMapName _soapApMessage _status
+if _status &lt;&gt; '0'
+    ;エラーフラグとエラーメッセージを設定する。
+    set outErrorMessage\
+        'Call SystemAdministrator.SystemError occured at createSoapXMLForSend#fill_xml_schema.'
+    set outErrorFlag 'Y'
+    return 
+end_if
+;ApMessage内には不要な先頭の38文字を削除「&lt;?xml version="1.0" encoding="UTF-8"?&gt;」
+call  'SmartUtil:cutDownXmlHeader' #1=_soapApMessage #2=_soapApMessage
+;ns0をns2に変換
+call 'dmsReplaceXmlNsNumber' #1=_soapApMessage #2='2'
+
+;---------------------------------------
+;CommonMessage対応
+;---------------------------------------
+call 'dmsWrapApMessageByCommonMessage' #1=_soapApMessage #2=_commonMessage #3=_status
+if _status = 'y'
+    ;エラーフラグとエラーメッセージを設定する。
+    set outErrorMessage\
+        'Call SystemAdministrator.SystemError occured at createSoapXMLForSend#fill_xml_schema.'
+    set outErrorFlag 'Y'
+    return 
+end_if
+
+;anyTypeである、「xmlApMessage」タグにfill_xml_schemaできないので、置換してxmlを生成する
+;SOAPボディ内の&lt;binaryApMessage&gt;タグの「~|AnacoreBodyXml~|」文字列部分と本物のApMessageを置き換える
+concat _beforeReplace '&lt;ns0:binaryApMessage&gt;' AnacoreBodyXmlDataitem '&lt;/ns0:binaryApMessage&gt;'
+concat _afterReplace  '&lt;ns0:xmlApMessage&gt;'    _commonMessage         '&lt;/ns0:xmlApMessage&gt;'
+call 'SmartUtil:replaceStringOnlyOnce' #1=_soapBody #2=_beforeReplace #3=_afterReplace #4=_soapBody
+;---------------------------------------
+;Footer部分を作成
+;---------------------------------------
+set _soapFooter '&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;'
+
+;SOAPのXML文字列の成形
+set outXmlDoc ''
+concat   outXmlDoc _soapHeader _soapBody _soapFooter
+
+call 'SmartUtil:outputTraceLog' #1='0' #2='INFO' #3='' #4='' #5='createXML' #6='create xml end'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-24 01:41:56.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-04-28 07:05:59.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

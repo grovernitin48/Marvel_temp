@@ -1,0 +1,99 @@
+<LocalDescRef version="1.1">
+  <name>parseANACoreQikCommonMessage</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; parseANACoreQikCommonMessage
+;
+; @param outReply (in)ANACoreから返却された調整していないxml
+; @param _nsFlg   (out)NameSpace変更処理を実施するかを判定するFlg
+; @author Naoya Yamaguchi
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'outReply'
+name_arguments #2 '_nsFlg'
+
+build_local_data_item '_ANACoreQikCommonMessage'
+build_local_data_item '_outerTagName'
+build_local_data_item '_outerXml'
+build_local_data_item '_targetTagName'
+build_local_data_item '_targetTagValue'
+build_local_data_item '_nsNo'
+build_local_data_item '_status'
+build_local_data_item '_nameSpaceValue'
+build_local_data_item '_nameSpaceAttribute'
+build_local_data_item '_buff'
+
+build_local_data_item '_TermWorkingOrderResponse'
+build_local_data_item '_dmsAirPortTLMFlag'
+
+; 初期化
+set _ANACoreQikCommonMessage ''
+set _outerTagName            'xmlApMessage'
+set _targetTagName           'ANACoreQikCommonMessage'
+set _buff                    ''
+
+; xmlApMessageタグを切り出す
+call 'SmartUtil:getTagValue'  #1=outReply #2=_outerTagName  #3=''    #4=_outerXml
+
+; QikCommonMessageタグを切り出す
+call 'dmsGetReplyXmlNsNumber'  #1=_outerXml #2=_nsNo   #3=_targetTagName
+call 'dmsGetReplyXmlNameSpace' #1=_outerXml #2=_nsNo   #3=_nameSpaceValue #4=_nameSpaceAttribute
+concat _buff 'ns' _nsNo ':' _targetTagName
+set _targetTagName _buff
+call 'SmartUtil:getTagValue'  #1=outReply #2=_buff     #3=''    #4=_targetTagValue
+
+; Qikでparse出来る形に成形する
+concat _ANACoreQikCommonMessage '&lt;' _targetTagName ' ' _nameSpaceAttribute '&gt;'
+concat _ANACoreQikCommonMessage _targetTagValue
+concat _ANACoreQikCommonMessage '&lt;/' _targetTagName '&gt;'
+
+; parseする
+parse_xml_schema 'Anacore_ANACoreQikCommonMessageForParse' _ANACoreQikCommonMessage _status
+
+;===TODO:空港権限かつTLM付以外でもTLM電文が返却される仕様になる可能性があるため、コメントアウト  
+;空港権限かつTLM付以外だった場合、TLM電文をパースしない。
+;call 'SmartUtil:callScript'  #1='DmsPNRPane:dmsAuthAgentGetAirPortTLMFlagGetting' #2=_dmsAirPortTLMFlag
+
+;if _dmsAirPortTLMFlag = ''
+    ;return
+;end_if
+;====================================================================================================
+
+; TermWorkingOrderResponseタグを切り出す
+set _targetTagName           'TermWorkingOrderResponse'
+set _buff ''
+set _nsNo ''
+set _nameSpaceValue ''
+set _nameSpaceAttribute ''
+set _status ''
+
+call 'dmsGetReplyXmlNsNumber'  #1=_outerXml #2=_nsNo   #3=_targetTagName
+call 'dmsGetReplyXmlNameSpace' #1=_outerXml #2=_nsNo   #3=_nameSpaceValue #4=_nameSpaceAttribute
+concat _buff 'ns' _nsNo ':' _targetTagName
+set _targetTagName _buff
+call 'SmartUtil:getTagValue'  #1=outReply #2=_buff     #3=''    #4=_targetTagValue
+
+;TLM電文(TermWorkingOrderResponse)が取得できない場合
+if _targetTagValue = ''
+    return
+end_if
+
+; Qikでparse出来る形に成形する
+concat _TermWorkingOrderResponse '&lt;' _targetTagName ' ' _nameSpaceAttribute '&gt;'
+concat _TermWorkingOrderResponse _targetTagValue
+concat _TermWorkingOrderResponse '&lt;/' _targetTagName '&gt;'
+
+; TLM電文をparseする
+parse_xml_schema 'TermWorkingOrderResponse' _TermWorkingOrderResponse _status
+
+;NameSpace変更処理Flgを「y」にセット
+set _nsFlg 'y'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-02-17 08:05:26.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-10-28 09:47:02.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

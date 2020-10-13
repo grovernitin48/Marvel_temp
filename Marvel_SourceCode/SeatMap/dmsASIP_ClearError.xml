@@ -1,0 +1,27 @@
+<LocalDescRef version="1.1">
+  <name>dmsASIP_ClearError</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsASIP_ClearError
+; シートマップ照会条件入力画面(DM) エラー表示をリセット
+;
+; @author Mizushima satoru
+;
+; Copyright(C) 2014/06/24
+;-------------------------------------------------------------------------------
+; エラーメッセージテーブル初期化
+clear_table 'dmsActiveSeatmapInputPopupErrorMessageTable'
+
+; タイトルエリア初期化
+call 'dmsASIP_DisplayError'
+
+; バリデーション初期化
+reset_validation
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-24 08:08:53.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-06-24 08:10:23.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

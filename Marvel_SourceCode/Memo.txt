@@ -1,0 +1,7 @@
+・空席照会は、検索条件入力後に「検索」ボタンを押下すると、
+dmsSearchFlightsInputPopupOnSelectSearchButtonCommon.xml
+から処理がスタートします。
+
+・シートマップ照会は、検索条件入力後に「検索」ボタンを押下すると、
+dmsASIP_OnSelectSearchButton.xml
+から処理がスタートします。

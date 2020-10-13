@@ -1,0 +1,28 @@
+<LocalDescRef version="1.1">
+  <name>dmsWBSCmdDmN</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; DM:N [アクティブシートマップ照会] 送信処理
+;
+; @param sendInfo   送信XML生成処理情報(out)
+; @param replayInfo パース処理情報(out)
+; @author Mizushima satoru
+; @author Hideaki Miyata
+;
+; Copyright(C) 2014/06/25
+;-------------------------------------------------------------------------------
+name_arguments #1 'sendInfo'
+name_arguments #2 'replayInfo'
+
+; 送信情報設定(共通関数名/ファンクションID/スキーママップ名)
+set sendInfo   'DmsXmlPNRPane:dmsWBSCreateSendParamSimple,FRESC00230006,DmsXmlPNRPane:dmsActiveSeatmapParam'
+; 受信情報設定(正常時のリターンパラメータ/共通関数名/スキーママップ名)
+set replayInfo 'ActiveSeatmapResponse,DmsXmlPNRPane:dmsWBSParseActiveSeatmapResponse'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-25 05:12:30.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-12-23 01:36:35.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

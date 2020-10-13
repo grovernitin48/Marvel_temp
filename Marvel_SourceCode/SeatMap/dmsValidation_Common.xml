@@ -1,0 +1,342 @@
+<LocalDescRef version="1.1">
+  <name>dmsValidation_Common</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 国内 共通バリデーション処理
+;
+; @param id                (in) バリデーション項目名            (必須)(dmsValidationMasterTable id列)
+; @param dataitem          (in) データアイテム                  (必須)(dataitem)
+; @param appPopup          (in) app名付きポップアップ名         (必須)('app名:pupup名'形式)
+; @oaram mandatoryFlag     (in) 必須チェック実施フラグ          (必須)(必須チェックする場合'Y')
+; @oaram messageId         (in) メッセージID                    (省略可能)(エラーメッセージに表示する項目ID
+;                                                                省略時はdmsValidationMasterTableのmessageIdを使用)
+; @param mainPortalFlag    (in) メインポータル下部エラーフラグ  (省略可能)(メイポ下部エラー表示の場合'Y')
+; @param errorType         (out) エラータイプ                   (エラーなし:0、必須チェックエラー:1
+;                                                                桁数チェックエラー:2、文字種チェックエラー:3
+;                                                                数値範囲チェックエラー:4、フォーマットチェックエラー:5
+;                                                               その他チェックエラー（複数ある場合は左から連番）:6以降)
+; @param errorNotDisplayFlag (in) エラー非表示フラグ、Yの場合エラー表示しない
+; @param errorMessageTable　(in)  エラーを挿入するテーブル名(任意)
+;
+; @author Watanabe Shinji
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'id'
+name_arguments #2 'dataitem'
+name_arguments #3 'appPopup'
+name_arguments #4 'mandatoryFlag'
+name_arguments #5 'messageId'
+name_arguments #6 'mainPortalFlag'
+name_arguments #7 'errorType'
+name_arguments #8 'errorNotDisplayFlag'
+name_arguments #9 'errorMessageTable'
+
+; dmsValidationMasterTableの列
+build_local_data_item '_messageID'
+build_local_data_item '_lengthMin'
+build_local_data_item '_lengthMax'
+build_local_data_item '_numberMin'
+build_local_data_item '_numberMax'
+build_local_data_item '_alphabet'
+build_local_data_item '_number'
+build_local_data_item '_halfkana'
+build_local_data_item '_zenkaku'
+build_local_data_item '_symbol'
+build_local_data_item '_acceptSymbol'
+build_local_data_item '_regExp'
+build_local_data_item '_formatErrorId'
+build_local_data_item '_zeroPadding'
+build_local_data_item '_otherScripts'
+build_local_data_item '_strto'
+; その他
+build_local_data_item '_checkResult1'
+build_local_data_item '_checkResult2'
+build_local_data_item '_buff'
+build_local_data_item '_acceptType'
+build_local_data_item '_acceptMessage'
+build_local_data_item '_row'
+build_local_data_item '_errorPopup'
+build_local_data_item '_checkScript'
+build_local_data_item '_index'
+build_local_data_item '_start'
+build_local_data_item '_end'
+build_local_data_item '_delimiter'
+build_local_data_item '_length'
+
+;-------------------------------------------------------------------------------
+; 初期設定
+;-------------------------------------------------------------------------------
+; エラータイプ
+set errorType '0'
+
+; メインポータル下部エラー表示対象の判定
+if mainPortalFlag = 'Y'
+    set _errorPopup 'MainPortal'
+else
+    set _errorPopup appPopup
+end_if
+
+; バリデーション定義マスタから入力チェック情報を所得
+search_table 'dmsValidationMasterTable' id 'id' _row '' '' \
+    _messageID 'messageID' _lengthMin 'lengthMin' _lengthMax 'lengthMax' \
+    _numberMin 'numberMin' _numberMax 'numberMax' _alphabet 'alphabet' _number 'number' \
+    _halfkana 'halfkana' _zenkaku 'fullWidthCharacter' _symbol 'symbol' _acceptSymbol 'acceptSymbol' \
+    _regExp 'regExp' _formatErrorId 'formatErrorId' _zeroPadding 'zeroPadding' _otherScripts 'otherScript' \
+    _strto 'strto'
+if _row = ''
+    ; バリデーション定義マスタに対象がない場合、終了
+    return
+end_if
+
+; エラーメッセージ表示用IDは引数で渡された場合、それを使用する
+if messageId &lt;&gt; ''
+    set _messageId messageId
+end_if
+; フォーマットエラーIDはテーブルにある場合、それを使用
+if _formatErrorId = ''
+    set _formatErrorId 'DMS3200_001'
+end_if
+
+;-------------------------------------------------------------------------------
+; 必須チェック(引数で必須チェック実施を指定した場合のみ)
+;-------------------------------------------------------------------------------
+if mandatoryFlag = 'Y' &amp; dataitem = ''
+    if errorNotDisplayFlag &lt;&gt; 'Y'
+        highlight_popup appPopup dataitem
+        call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS1000_001' #3=_messageID #4='' #5='' #6='' #7=errorMessageTable
+    end_if
+    set errorType '1'
+    return
+end_if
+; 必須チェックはしないが空文字の場合、以後のチェックの意味はないので終了
+if dataitem = ''
+    return
+end_if
+
+;-------------------------------------------------------------------------------
+; 0埋め
+;-------------------------------------------------------------------------------
+if _zeroPadding = 'Y' &amp; _lengthMax &gt; '0'
+    format_data_item dataitem 'right' _lengthMax '0'
+end_if
+
+;-------------------------------------------------------------------------------
+; 桁数チェック(全角ありの場合はバイト数チェック)
+;-------------------------------------------------------------------------------
+set _checkResult1 _checkResult2 '0'
+if _zenkaku = 'Y'
+    call 'SmartUtil:getByte' #1=dataitem #2=_length
+    if _lengthMin &lt;&gt; '' &amp; _length &lt; _lengthMin
+        set _checkResult1 '-1'
+    end_if
+    if _lengthMax &lt;&gt; '' &amp; _length &gt; _lengthMax
+        set _checkResult2 '1'
+    end_if
+    ; 上限、下限が同じの場合の桁数エラー
+    if _lengthMin &lt;&gt; '' &amp; _lengthMin = _lengthMax &amp; ( _checkResult1 &lt;&gt; '0' | _checkResult2 &lt;&gt; '0' )
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS2000_010' #3=_messageID #4=_lengthMin
+        end_if
+        set errorType '2'
+        return
+    end_if
+    ; 下限未満エラー
+    if _checkResult1 &lt; '0'
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS2000_009' #3=_messageID #4=_lengthMin
+        end_if
+        set errorType '2'
+        return
+    end_if
+    ; 上限超えエラー
+    if _checkResult2 &gt; '0'
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS2000_006' #3=_messageID #4=_lengthMax
+        end_if
+        set errorType '2'
+        return
+    end_if
+else
+    if _lengthMin &lt;&gt; ''
+        call 'SmartUtil:checkDataLength' #1=dataitem #2=_lengthMin #3=_checkResult1
+    end_if
+    if _lengthMax &lt;&gt; ''
+        call 'SmartUtil:checkDataLength' #1=dataitem #2=_lengthMax #3=_checkResult2
+    end_if
+    ; 上限、下限が同じの場合の桁数エラー
+    if _lengthMin &lt;&gt; '' &amp; _lengthMin = _lengthMax &amp; _checkResult1 &lt;&gt; '0'
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS2000_001' #3=_messageID #4=_lengthMin
+        end_if
+        set errorType '2'
+        return
+    end_if
+    ; 下限未満エラー
+    if _checkResult1 &lt; '0'
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS2000_005' #3=_messageID #4=_lengthMin
+        end_if
+        set errorType '2'
+        return
+    end_if
+    ; 上限超えエラー
+    if _checkResult2 &gt; '0'
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS2000_002' #3=_messageID #4=_lengthMax
+        end_if
+        set errorType '2'
+        return
+    end_if
+end_if
+
+;-------------------------------------------------------------------------------
+; 文字種チェック(半角化も)
+;-------------------------------------------------------------------------------
+set _checkResult1 ''
+set _acceptType _acceptMessage ''
+call 'dmsGetDynamicMessage' #1='DMS90_1123' #2=_delimiter
+call 'dmsGetDynamicMessage' #1='DMS90_1124' #2=_start
+call 'dmsGetDynamicMessage' #1='DMS90_1125' #2=_end
+
+; 英字
+if _alphabet = 'Y'
+    concat _acceptType 'A'
+    call 'dmsGetDynamicMessage' #1='DMS90_1126' #2=_acceptMessage
+end_if
+; 数字
+if _number = 'Y'
+    concat _acceptType 'N'
+    call 'dmsGetDynamicMessage' #1='DMS90_1127' #2=_buff
+    if _acceptMessage
+        concat _acceptMessage _delimiter
+    end_if
+    concat _acceptMessage _buff
+end_if
+; 半角カナ
+if _halfkana = 'Y'
+    concat _acceptType 'K'
+    call 'dmsGetDynamicMessage' #1='DMS90_1128' #2=_buff
+    if _acceptMessage
+        concat _acceptMessage _delimiter
+    end_if
+    concat _acceptMessage _buff
+end_if
+; 全角文字
+if _zenkaku = 'Y'
+    concat _acceptType 'C'
+    call 'dmsGetDynamicMessage' #1='DMS90_1129' #2=_buff
+    if _acceptMessage
+        concat _acceptMessage _delimiter
+    end_if
+    concat _acceptMessage _buff
+end_if
+; 特殊文字
+if _symbol = 'Y'
+    if _acceptSymbol = ''
+        concat _acceptType 'S'
+        call 'dmsGetDynamicMessage' #1='DMS90_1130' #2=_buff
+        if _acceptMessage
+            concat _acceptMessage _delimiter
+        end_if
+        concat _acceptMessage _buff
+    else
+        concat _acceptType 'X'
+    end_if
+end_if
+; 許容する特殊文字
+data_item_length _acceptSymbol _length
+set _index '1'
+while _index &lt;= _length
+    copy_data_item _buff _acceptSymbol _index '1'
+    call 'SmartUtil:concatHead' #1=_buff #2=_start #3=_buff
+    concat _buff _end
+    if _acceptMessage
+        concat _acceptMessage _delimiter
+    end_if
+    concat _acceptMessage _buff
+    calculate _index = _index + '1'
+end_while
+
+; チェック実施
+if _acceptType &lt;&gt; ''
+    call 'dmsValidateCharacter' #1=dataitem #2='3' #3=_checkResult1 #4='N' #5='' #6='' #7=_acceptType #8=_acceptSymbol
+end_if
+if _strto = 'U'
+    CHANGE_UPPER_CASE dataitem dataitem
+end_if
+if _strto = 'L'
+    CHANGE_LOWER_CASE dataitem dataitem
+end_if
+if _checkResult1 = '3'
+    if errorNotDisplayFlag &lt;&gt; 'Y'
+        highlight_popup appPopup dataitem
+        call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS3000_015' #3=_messageID #4=_acceptMessage
+    end_if
+    set errorType '3'
+    return
+end_if
+
+;-------------------------------------------------------------------------------
+; 数値範囲チェック
+;-------------------------------------------------------------------------------
+if _numberMin &lt;&gt; '' &amp; _numberMax &lt;&gt; ''
+    if dataitem &lt; _numberMin | dataitem &gt; _numberMax
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            set _buff ''
+            concat _buff _numberMin '～' _numberMax
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2='DMS5000_001' #3=_messageID #4=_buff
+        end_if
+        set errorType '4'
+        return
+    end_if 
+end_if
+
+;-------------------------------------------------------------------------------
+; フォーマットチェック
+;-------------------------------------------------------------------------------
+if _regExp &lt;&gt; ''
+    ; 正規表現でチェック
+    call 'SmartUtil:checkRegularExpression' #1=dataitem #2=_regExp #3=_checkResult1
+    if _checkResult1 &lt;&gt; 'Y'
+        if errorNotDisplayFlag &lt;&gt; 'Y'
+            highlight_popup appPopup dataitem
+            call 'dmsDisplayErrorMessage' #1=_errorPopup #2=_formatErrorId #3=_messageID
+        end_if
+        set errorType '5'
+        return
+    end_if
+end_if
+
+;-------------------------------------------------------------------------------
+; その他チェック
+;-------------------------------------------------------------------------------
+if _otherScripts &lt;&gt; ''
+    set _index '1'
+    ; カンマ区切りで保持されたscriptを一つずつ呼び出す
+    call 'SmartUtil:splitString' #1=_otherScripts #2=',' #3=_index #4=_checkScript
+    while _checkScript &lt;&gt; ''
+        call _checkScript #1=dataitem #2=appPopup #3=_messageId #4=_errorPopup #5=_checkResult1 #6=errorNotDisplayFlag
+        if _checkResult1 = 'Y'
+            calculate errorType = '5' + _index
+            return
+        end_if
+        calculate _index = _index + '1'
+        call 'SmartUtil:splitString' #1=_otherScripts #2=',' #3=_index #4=_checkScript
+    end_while
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-08-22 04:53:40.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-11-04 05:18:42.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

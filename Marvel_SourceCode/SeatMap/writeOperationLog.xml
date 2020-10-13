@@ -1,0 +1,49 @@
+<LocalDescRef version="1.1">
+  <name>writeOperationLog</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 操作履歴ログを記録する
+;
+; @param channelKind       チャネル区分
+; @param pageId            画面ID
+; @param operation         操作内容
+; @param pageData          画面データ
+; @author Keita Okada
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments    #1 'channelKind'
+name_arguments    #2 'pageId'
+name_arguments    #3 'operation'
+name_arguments    #4 'pageData'
+
+build_local_data_item '_pnrIdentifier'
+build_local_data_item '_pnrControlNumber'
+build_local_data_item '_channel'
+build_local_data_item '_dmsScript'
+;引数をDataitemに保存
+set operationLogPopupIdParamDataitem  pageId
+set operationLogControlParamDataitem  operation
+set operationLogPageDataParamDataitem pageData
+
+call 'SmartUtil:getChannel' #1=_channel
+
+; ログに必要な情報をテーブルから取得する
+if _channel = 'INT' | _channel = 'REF_INT' 
+    call 'readPnrReplyHeaderTable'    #1=_pnrIdentifier #2=_pnrControlNumber
+else
+    set _dmsScript 'DmsPNRPane:dmsReadPnrReplyHeaderTable'
+    call _dmsScript #1=_pnrIdentifier #2=_pnrControlNumber
+end_if
+
+; 操作履歴ログを出力する
+call 'SmartUtil:outputOperationLog' #1=channelKind #2=_pnrControlNumber #3=pageId \
+    #4=operation #5=pageData
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-21 10:13:57.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-05-07 07:11:21.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

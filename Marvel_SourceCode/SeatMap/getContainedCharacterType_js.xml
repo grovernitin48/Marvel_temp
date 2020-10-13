@@ -1,0 +1,40 @@
+<LocalDescRef version="1.1">
+  <name>getContainedCharacterType_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// 入力文字列に含まれる文字種別を判定する
+//
+// @param inputDate 入力文字列(in)
+// @param allowedSymbol 許容する特殊文字(in)
+// @param resultDataitemName チェック結果を格納するDataitem名(out)
+// @return 含まれていた文字種類(以下の文字の配列  例：英字と全角文字が含まれていた場合：AC)
+//          アルファベット       ：A
+//          数字                 ：N
+//          半角カタカナ         ：K
+//          許容される特殊文字   ：S
+//          許容されない特殊文字 ：X
+//          全角文字             ：C
+//          その他               ：O
+// @author Takaaki Ohnishi
+//
+// Copyright(C) 2014 1 24
+//-------------------------------------------------------------------------------
+importPackage(Packages.jp.co.ana.smart.tool);
+
+var inputData = args[0];
+var allowedSymbol = args[1];
+var resultDataitemName = args[2];
+
+//有効性チェック
+var rtn = StringUtil.getContainedCharacterType(inputData, allowedSymbol);
+
+var resultDataitem = application.dataItems[resultDataitemName];
+resultDataitem.value = rtn;
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-01-24 08:32:28.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-01-24 09:56:14.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

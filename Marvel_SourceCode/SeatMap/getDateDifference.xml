@@ -1,0 +1,72 @@
+<LocalDescRef version="1.1">
+  <name>getDateDifference</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 基準日とチェックしたい日付の差を算出するスクリプト
+;
+; @param returnDiff      (OUT) 日付の差
+; @param basisDate       (IN)  基準となる日付
+; @param checkDate       (IN)  チェックしたい日付
+; @param basisDateFormat (IN)  基準日のフォーマット
+;                             デフォルトはYYYY-MM-DD
+; @param checkDateFormat (IN)  チェックしたい日付のフォーマット
+;                             デフォルトはYYYY-MM-DD
+;  対応するフォーマットは以下の通り
+;   ・'DDMMMYY'
+;   ・'DDMMYY'
+;   ・'DDMMMYYYY'
+;   ・'yyyyMMdd'
+;   ・'YYYY-MM-DD'
+;   ・'MM/DD/YY'
+;   ・'MM/DD/YYYY'
+;   ・'DDMMYYYY'
+;   ・'YYMMDD'
+;  以下は制限事項(動作は保証なし)
+;   ・入力日付と入力フォーマットが一致しているかはチェックしない
+;   ・日、年の正当性はチェックしない
+;   ・年の２桁⇒４桁変換は実施しない
+; 
+; @author Sato
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'returnDiff'
+name_arguments #2 'basisDate'
+name_arguments #3 'checkDate'
+name_arguments #4 'basisDateFormat'
+name_arguments #5 'checkDateFormat'
+
+build_local_data_item '_inputFormat'
+build_local_data_item '_localBasisDate'
+build_local_data_item '_localCheckDate'
+
+; 基準日フォーマットの設定
+if basisDateFormat = ''
+    set _inputFormat 'YYYY-MM-DD'
+else
+    set _inputFormat basisDateFormat
+end_if
+
+; 基準日のフォーマットを変換
+call 'SmartUtil:translateDateFormat' #1=basisDate #2=_inputFormat #3='MM/DD/YY' #4=_localBasisDate
+
+; チェック日フォーマットの設定
+if checkDateFormat = ''
+    set _inputFormat 'YYYY-MM-DD'
+else
+    set _inputFormat checkDateFormat
+end_if
+
+; チェック日のフォーマット変換
+call 'SmartUtil:translateDateFormat' #1=checkDate #2=_inputFormat #3='MM/DD/YY' #4=_localCheckDate
+
+; 日付の差を算出
+calculate_date_diff returnDiff = _localCheckDate - _localBasisDate
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-04-23 02:48:22.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-04-23 04:52:21.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

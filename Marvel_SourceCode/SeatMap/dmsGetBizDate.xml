@@ -1,0 +1,44 @@
+<LocalDescRef version="1.1">
+  <name>dmsGetBizDate</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 国内用業務日付取得処理
+;
+; @param year  年(yyyy)   (OUT)
+; @param month 月(mm)     (OUT)
+; @param day   日(dd)     (OUT)
+;
+; @author Kota Yoshino
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'year'
+name_arguments #2 'month'
+name_arguments #3 'day'
+
+build_local_data_item '_dataitemeName'
+build_local_data_item '_currentDate'
+
+; 業務日付を取得(YYYY-MM-DDT hh:mm:ss)
+set _dataitemeName 'DmsXmlPNRPane:dmsDisplayAreaInfoBizDateDataitem'
+set _currentDate $_dataitemeName
+
+;年取得
+call 'SmartUtil:substringValue_js' #1=_currentDate #2='0' #3='4'  #4='SmartUtil:resultStringDataitem'
+set year SmartUtil:resultStringDataitem
+
+;月取得
+call 'SmartUtil:substringValue_js' #1=_currentDate #2='5' #3='7'  #4='SmartUtil:resultStringDataitem'
+set month SmartUtil:resultStringDataitem
+
+;日取得
+call 'SmartUtil:substringValue_js' #1=_currentDate #2='8' #3='10' #4='SmartUtil:resultStringDataitem'
+set day SmartUtil:resultStringDataitem
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-04-15 08:31:55.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-05-02 05:20:16.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

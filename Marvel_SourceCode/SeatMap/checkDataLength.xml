@@ -1,0 +1,45 @@
+<LocalDescRef version="1.1">
+  <name>checkDataLength</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 値の桁数チェック
+;
+; @param value 値
+; @param length 桁数
+; @param result 結果(1:指定桁数より桁数多,0桁数同じ、-1:指定桁数より小さい
+; @author Hideaki Miyata
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'value'
+name_arguments #2 'length'
+name_arguments #3 'result'
+
+build_local_data_item '_length'
+build_local_data_item '_beforeSpaceLength'
+build_local_data_item '_afterSpaceLength'
+
+; 桁数計算
+
+data_item_length value _length _beforeSpaceLength _afterSpaceLength
+calculate _length = _length +  _beforeSpaceLength + _afterSpaceLength
+
+;桁数判定
+
+if _length &gt; length
+    set result '1'
+end_if
+if _length = length
+    set result '0'
+end_if
+if _length &lt; length
+    set result '-1'
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-08-21 01:10:39.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-08-21 05:07:57.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

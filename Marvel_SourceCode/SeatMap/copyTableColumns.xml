@@ -1,0 +1,72 @@
+<LocalDescRef version="1.1">
+  <name>copyTableColumns</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 指定テーブル行からカラム毎にデータ取得
+;
+; @param table   取得元テーブル名
+; @param row     取得元テーブル行
+; @param result1 カラム1の値
+; @param column1 カラム1
+; @param result2 カラム2の値
+; @param column2 カラム2    
+; @param result3 カラム3の値
+; @param column3 カラム3    
+; @param result4 カラム4の値
+; @param column4 カラム4    
+; @param result5 カラム5の値
+; @param column5 カラム5    
+; @param result6 カラム6の値
+; @param column6 カラム6    
+; @param result7 カラム7の値
+; @param column7 カラム7    
+; @param result8 カラム8の値
+; @param column8 カラム8    
+; @param result9 カラム9の値
+; @param column9 カラム9    
+; 
+; @author Misuru Watanabe
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1  'table'
+name_arguments #2  'row'
+name_arguments #3  'result1'
+name_arguments #4  'column1'
+name_arguments #5  'result2'
+name_arguments #6  'column2'
+name_arguments #7  'result3'
+name_arguments #8  'column3'
+name_arguments #9  'result4'
+name_arguments #10 'column4'
+name_arguments #11 'result5'
+name_arguments #12 'column5'
+name_arguments #13 'result6'
+name_arguments #14 'column6'
+name_arguments #15 'result7'
+name_arguments #16 'column7'
+name_arguments #17 'result8'
+name_arguments #18 'column8'
+name_arguments #19 'result9'
+name_arguments #20 'column9'
+
+; 各カラムコピー
+copy_table table result1 row '' column1
+copy_table table result2 row '' column2
+copy_table table result3 row '' column3
+copy_table table result4 row '' column4
+copy_table table result5 row '' column5
+copy_table table result6 row '' column6
+copy_table table result7 row '' column7
+copy_table table result8 row '' column8
+copy_table table result9 row '' column9
+
+
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-05-30 03:59:06.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-05-30 04:09:27.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

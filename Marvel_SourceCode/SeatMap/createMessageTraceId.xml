@@ -1,0 +1,35 @@
+<LocalDescRef version="1.1">
+  <name>createMessageTraceId</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; createMessageTraceId
+;
+; @param ID 生成したメッセージ追跡ID
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'ID'
+
+;タイムスタンプ用変数
+build_local_data_item '_timeStamp'
+
+;プロセスIDは8桁固定
+format_data_item processIdDi 'right' '8' '0'
+
+;プロセスIDは取得できたが、スレッドIDは無理っぽい
+;決め打ちで良い、ということなので「threadID」を設定
+set threadIdDi 'threadID'
+
+;タイムスタンプ生成
+call 'SmartUtil:getTimeStamp' #1='yyyyMMddHHmmssSSSS' #2=_timeStamp
+
+concat ID 'QIK_' lsnDi '_' processIdDi '_' threadIdDi '_' _timeStamp
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-10-21 11:51:46.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-10-28 09:54:16.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

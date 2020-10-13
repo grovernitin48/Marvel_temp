@@ -1,0 +1,73 @@
+<LocalDescRef version="1.1">
+  <name>getTagValue</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getTagValueの説明
+;  引数で指定したXML文字列から指定タグの値を取得する。
+;  検索処理終了時、引数の開始位置を終了タグの末尾に更新する。
+;
+; @param sourceXml     検索対象文字列(XML)
+; @param targetTagName 値を取得したいタグ名(&lt;と&gt;は除く)
+; @param position      検索開始位置(''の場合、先頭から)
+; @param tagValue      取得した値(存在しない場合、'')
+; @param endTargetTagName      値を取得したい終了タグ名(&lt;と&gt;は除く)
+; @author kanda tatsuya
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'sourceXml'
+name_arguments #2 'targetTagName'
+name_arguments #3 'position'
+name_arguments #4 'tagValue'
+name_arguments #5 'endTargetTagName'
+
+build_local_data_item '_tagLength'
+build_local_data_item '_valueLength'
+build_local_data_item '_startTag'
+build_local_data_item '_endTag'
+build_local_data_item '_startPosition'
+build_local_data_item '_endPosition'
+build_local_data_item '_valuePosition'
+
+;入力チェック
+if '' = sourceXml | '' = targetTagName
+    return
+end_if
+if '' = position
+    set position '1'
+end_if
+
+;下準備
+set tagValue ''
+concat _startTag '&lt;'  targetTagName '&gt;'
+if endTargetTagName = ''
+    concat _endTag   '&lt;/' targetTagName '&gt;'
+else
+    concat _endTag   '&lt;/' endTargetTagName '&gt;'
+end_if
+data_item_length _startTag _tagLength
+
+;検索
+search_data_item _startTag _startPosition sourceXml position
+if _startPosition = ''
+    set position ''
+    return
+end_if
+search_data_item _endTag   _endPosition   sourceXml _startPosition
+
+;データ長 = 終了タグ位置 - (開始タグ位置 + 開始タグ長)
+calculate _valuePosition = _startPosition + _tagLength
+calculate _valueLength = _endPosition - _valuePosition
+
+;データ取得
+copy_data_item tagValue sourceXml _valuePosition _valueLength
+data_item_length _endTag _tagLength
+calculate position = _endPosition + _tagLength
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-21 03:00:20.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-04-11 11:47:49.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

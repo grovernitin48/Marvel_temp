@@ -1,0 +1,62 @@
+<LocalDescRef version="1.1">
+  <name>writeTraceLog</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; トレースログを記録する
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param channelKind       チャネル区分
+; @param logLevel          ログレベル
+; @param processName       処理名
+; @param freeText          フリーテキスト
+; @param additionalText    追加フリーテキスト
+; @author Keita Okada
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments    #1 'channelKind'
+name_arguments    #2 'logLevel'
+name_arguments    #3 'processName'
+name_arguments    #4 'freeText'
+name_arguments    #5 'additionalText'
+
+build_local_data_item '_pnrIdentifier'
+build_local_data_item '_pnrControlNumber'
+build_local_data_item '_freeText'
+build_local_data_item '_channel'
+build_local_data_item '_dmsScript'
+build_local_data_item '_dataitem'
+
+call 'SmartUtil:getChannel' #1=_channel
+
+; 国内データクリア時はログは別実装。
+set _dataitem 'MainPortal:dataClearProcessingDataitem'
+if $_dataitem &lt;&gt; '' &amp;  _channel &lt;&gt; 'INT' &amp; _channel &lt;&gt; 'REF_DMS'
+    return
+end_if
+
+; ログに必要な情報をテーブルから取得する
+if _channel = 'INT' | _channel = 'REF_INT' 
+    call 'readPnrReplyHeaderTable'    #1=_pnrIdentifier #2=_pnrControlNumber
+else
+    set _dmsScript 'DmsPNRPane:dmsReadPnrReplyHeaderTable'
+    call _dmsScript #1=_pnrIdentifier #2=_pnrControlNumber
+end_if
+
+set _freeText freeText
+if '' &lt;&gt; additionalText
+    concat _freeText additionalText
+end_if
+
+; トレースログを出力する
+call 'SmartUtil:outputTraceLog' #1=channelKind #2=logLevel #3=_pnrControlNumber \
+    #4=_pnrIdentifier #5=processName #6=_freeText
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-21 09:48:31.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2016-05-09 09:28:31.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

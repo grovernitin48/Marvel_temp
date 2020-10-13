@@ -1,0 +1,42 @@
+<LocalDescRef version="1.1">
+  <name>getANACoreBasicAuthParam</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getANACoreBasicAuthParam
+; HTTP_HEADERに設定する、ANACoreのBasic認証設定値を取得する
+; ※IDが空の場合は、PWが設定されていても空を返却する。
+;
+; @param param (out)設定値
+; @author Naoya Yamaguchi
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'param'
+
+build_local_data_item '_buff'
+build_local_data_item '_basicAuth'
+
+; IDが空の場合は戻り値に空を設定
+if AnacoreBasicAuthAcntDi = ''
+    set param ''
+    return
+end_if
+
+set    _buff ''
+concat _buff AnacoreBasicAuthAcntDi ':' AnacoreBasicAuthPasswdDi
+
+;base64 エンコード
+call 'SmartUtil:createSoap4PrintingAuthorization_js' #1=_buff\
+    #2='AnacoreUtil:AnacoreHashedPasswordDataitem' #3='SmartUtil:jsErrorFlagDataitem'
+set    _basicAuth ''
+concat _basicAuth 'Basic ' AnacoreHashedPasswordDataitem
+
+set param _basicAuth
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-02-13 06:50:09.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-02-16 03:52:42.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

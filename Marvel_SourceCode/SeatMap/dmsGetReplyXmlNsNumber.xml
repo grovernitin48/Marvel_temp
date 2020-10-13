@@ -1,0 +1,109 @@
+<LocalDescRef version="1.1">
+  <name>dmsGetReplyXmlNsNumber</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsGetReplyXmlNsNumber
+;
+; @param replyXml
+; @param number
+; @param tagName
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'replyXml'
+name_arguments #2 'number'
+name_arguments #3 'tagName'
+
+build_local_data_item '_foundPosition'
+build_local_data_item '_startPosition'
+build_local_data_item '_endPosition'
+build_local_data_item '_length'
+
+build_local_data_item '_tagName'
+build_local_data_item '_Buff'
+build_local_data_item '_type'
+build_local_data_item '_outerIndex'
+build_local_data_item '_index'
+build_local_data_item '_xmlLength'
+build_local_data_item '_searchStartPosition'
+
+if tagName = ''
+    search_data_item '&lt;ns' _startPosition replyXml '1'
+
+    ;「&lt;ns」の右隣りから、nsナンバーが記述されている
+    calculate _startPosition = _startPosition + '3'
+
+    ;nsナンバー終了位置取得
+    search_data_item ':' _endPosition replyXml _startPosition
+
+    ;nsナンバー長さ計算
+    calculate _length = _endPosition - _startPosition
+
+    ;nsナンバー切り出し
+    copy_data_item number replyXml _startPosition _length
+else
+    ;タグ名が指定されている場合は、そのタグのnsナンバーを取得する
+    concat _tagName ':' tagName
+
+    data_item_length replyXml _xmlLength
+    set _searchStartPosition '1'
+    set _outerIndex '1'
+    while _outerIndex &lt;= _xmlLength
+        ;タグの開始位置(＝nsナンバーの終了位置)を取得
+        search_data_item _tagName _endPosition replyXml _searchStartPosition
+
+        if _endPosition &lt;&gt; ''
+            ;nsナンバーの開始位置を取得
+            calculate _index = _endPosition - '1'
+            while _index &gt;= '1'
+                copy_data_item _Buff replyXml _index '1'
+                char_type _Buff '1' _type
+                if _type &lt;&gt; '9'
+                    ;数字以外が見つかった場合、それが'&lt;ns'か確認する
+                    if _index &gt;= '3'
+                        calculate _startPosition = _index - '2'
+                        copy_data_item _Buff replyXml _startPosition '3'
+                        if _Buff = '&lt;ns'
+                            ;'&lt;ns'の右隣りがnsナンバーの開始位置
+                            calculate _startPosition = _index + '1'
+                        else
+                            ;数字の左隣りが'&lt;ns'ではない
+                            set _startPosition ''
+                        end_if
+                        break_while
+                    else
+                        break_while
+                    end_if
+                end_if
+        
+                calculate _index = _index - '1'
+            end_while
+
+            if _startPosition = ''
+                ;数字の左隣りが'&lt;ns'ではなかった場合、次の一致箇所を探す
+                calculate _searchStartPosition = _endPosition + '1'
+                restart_while
+            end_if
+
+            ;nsナンバー長さ計算
+            calculate _length = _endPosition - _startPosition
+
+            ;nsナンバー切り出し
+            copy_data_item number replyXml _startPosition _length
+            break_while
+        else
+            ;XML内に該当タグなし
+            break_while
+        end_if
+        calculate _outerIndex = _outerIndex - '1'
+    end_while
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-03-07 02:27:25.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-03-10 07:27:20.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

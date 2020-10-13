@@ -1,0 +1,55 @@
+<LocalDescRef version="1.1">
+  <name>replaceStringOnlyOnce</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 文字列置換処理
+; 文字列置換は一回だけ行う
+; 大文字・小文字は関係なく変換する
+;
+; @param originString  変換処理を行う文字列
+; @param oldString     変換対象の文字列
+; @param newString     変換後の文字列
+; @param returnString  戻り値：変換処理後の文字列
+; @author kusakabe
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'originString' 
+name_arguments #2 'oldString' 
+name_arguments #3 'newString'
+name_arguments #4 'returnString' 
+
+build_local_data_item '_dummy'
+build_local_data_item '_searchPosition'
+build_local_data_item '_workValue1'
+build_local_data_item '_workValue2'
+build_local_data_item '_originLength'
+build_local_data_item '_length'
+
+search_data_item oldString _searchPosition originString '1'
+if _searchPosition = ''
+
+    ; 変換対象の文字列がない場合は元文字列をそのまま返す
+    set returnString originString
+    return
+end_if
+
+; 変換対象の文字列がある場合、置換処理を行う
+calculate _searchPosition = _searchPosition - '1'
+copy_data_item _workValue1 originString '1' _searchPosition
+data_item_length originString _originLength
+data_item_length oldString _length
+calculate _searchPosition = _searchPosition + _length + '1'
+copy_data_item _workValue2 originString _searchPosition _originLength
+set returnString ''
+concat returnString _workValue1 newString _workValue2
+
+
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-05-31 00:23:24.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-06-06 03:38:23.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

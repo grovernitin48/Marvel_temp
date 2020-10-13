@@ -1,0 +1,27 @@
+<LocalDescRef version="1.1">
+  <name>dmsGetAirportName</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 空港コードから空港名を取得する処理
+;
+; @param airportCode 空港コード
+; @param resultAirportName 空港名
+;
+; @author someya
+; @author Satomi Kobayashi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments   #1 'airportCode'
+name_arguments   #2 'resultAirportName'
+
+; 実質的に同じなため、getAirportNameのほうを呼び出す
+call 'SmartUtil:getAirportName' #1=airportCode #2=resultAirportName
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-07-23 05:39:30.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-04-28 12:14:47.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

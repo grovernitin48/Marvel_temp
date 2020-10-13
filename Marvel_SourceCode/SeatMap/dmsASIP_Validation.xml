@@ -1,0 +1,90 @@
+<LocalDescRef version="1.1">
+  <name>dmsASIP_Validation</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsASIP_Validation
+; シートマップ紹介条件入力画面のバリデーションチェック
+;
+; @param year      年(out) ※未設定時のの場合は自動取得
+; @param errorFlag 判定結果(out)
+;
+; @author Mami Taniguchi
+;
+; Copyright(C) 2014/06/26
+;-------------------------------------------------------------------------------
+name_arguments #1 'year'
+name_arguments #2 'errorFlag'
+
+build_local_data_item '_popup'
+build_local_data_item '_day'
+build_local_data_item '_date'
+build_local_data_item '_bizYear'
+build_local_data_item '_bizMonth'
+build_local_data_item '_bizDay'
+build_local_data_item '_bizDate'
+build_local_data_item '_returnDiff'
+
+set errorFlag ''
+set _popup  'DmsBusinessPopup:dmsActiveSeatmapInputPopup'
+
+;必須チェック(補完処理含む)
+call 'dmsASIP_validationMandatory' #1=errorFlag
+if errorFlag = 'y'
+    return
+end_if
+
+;桁数チェック
+call 'dmsASIP_validationDigits'    #1=errorFlag
+if errorFlag = 'y'
+    return
+end_if
+
+;文字種別チェック
+call 'dmsASIP_validationCharacter' #1=errorFlag
+if errorFlag = 'y'
+    return
+end_if
+
+;日付チェック(年補完含む)
+call 'dmsASIP_validationDate'      #1=year #2=errorFlag
+if errorFlag = 'y'
+    return
+end_if
+
+; 日付編集
+set _day dmsASIP_DateDi
+format_data_item _day 'right' '2' '0'
+set _date ''
+concat _date year '-' dmsASIP_DateComboDi '-' _day
+
+; 業務日付取得
+call 'DmsSmartUtil:dmsGetBizDate' #1=_bizYear #2=_bizMonth #3=_bizDay
+concat _bizDate _bizYear '-' _bizMonth '-' _bizDay
+
+;搭乗日との比較
+call 'SmartUtil:getDateDifference' #1=_returnDiff #2=_bizDate #3=_date
+
+;業務日付から-2日以上前の日付はエラー
+if _returnDiff &lt;= '-2'
+    set errorFlag 'y'
+    highlight_popup _popup dmsASIP_DateDi
+    highlight_popup _popup dmsASIP_DateComboDi
+    highlight_popup _popup dmsASIP_DateYearDi
+    call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS4000_003'
+    return
+end_if
+
+if _returnDiff &lt;= '1' &amp; dmsASIP_DepartureDi =''
+    set errorFlag 'y'
+    call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS6200_048'
+    highlight_popup _popup dmsASIP_DepartureDi
+    highlight_popup _popup dmsASIP_ArrivalDi
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-25 05:54:37.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2019-06-19 03:07:03.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

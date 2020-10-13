@@ -1,0 +1,36 @@
+<LocalDescRef version="1.1">
+  <name>replaceStringAll_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// 文字列置換処理
+// 
+// @param originString  変換処理を行う文字列
+// @param oldString     変換対象の文字列
+// @param newString     変換後の文字列
+// @param returnString  戻り値：変換処理後の文字列格納先Dataitem名
+// @author Ai Fukuhiro
+//
+// Copyright(C) 2013 XXXX
+//-------------------------------------------------------------------------------
+var originString = args[0];
+var oldString = args[1];
+var newString = args[2];
+var returnString = application.dataItems[args[3]];
+
+var beforeReplace = new String(originString);
+var afterReplace = beforeReplace.replace(oldString, newString); 
+
+while ( beforeReplace != afterReplace ) {
+    beforeReplace = afterReplace;
+    afterReplace = beforeReplace.replace(oldString, newString); 
+}
+
+returnString.value = afterReplace;
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-26 07:18:20.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-06-26 07:18:34.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

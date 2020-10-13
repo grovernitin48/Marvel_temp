@@ -1,0 +1,129 @@
+<LocalDescRef version="1.1">
+  <name>outputWebServiceLog</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+;  webserviceログを出力する
+;
+; @param systemName        システム名
+; @param sessionId         セッションID
+; @param scriptName        スクリプト名
+; @param data              送受信データ
+; @param logMessage        出力メッセージ(out)
+; @author Watanabe Shinji
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments    #1 'systemName'
+name_arguments    #2 'sessionId'
+name_arguments    #3 'scriptName'
+name_arguments    #4 'data'
+name_arguments    #5 'logMessage'
+
+build_local_data_item     '_dateTime'
+build_local_data_item     '_language'
+build_local_data_item     '_logMessage'
+build_local_data_item     '_data'
+build_local_data_item     '_alteaLogger'
+build_local_data_item     '_anacoreLogger'
+build_local_data_item     '_amindsLogger'
+
+call 'getCurrentDateTime' #1=_dateTime
+get_language _language
+
+; マスキングを行うため、送信用データとマスキング用データで変数を分ける
+set _data data
+if systemName = 'altea' &amp; _data = 'NONE'
+    ; Alteaはタイムアウトのチェックのため、NONEという当て字をしているが、それをそのままログには出さない
+    set _data ''
+end_if
+
+; マスキング対象データに対し、マスキングを行う
+if systemName = 'pf'
+    ; pfの場合
+    call 'maskingPfLog' #1=_data
+else
+    ; pf以外の場合
+    call 'authCheckMaskWbsLog' #1=systemName #2=_data
+end_if
+
+if systemName = 'altea'
+    ; Altea接続の場合、オフィスコードとDUTYも出力する
+    concat _logMessage _dateTime ',' _language ',' sessionId ',' authenticateSourceOffice ',' authenticateDutyIdentifier ',' scriptName ',' _data
+else
+    ;pfの場合は異なるメッセージ形式となる
+    if systemName = 'pf'
+        concat _logMessage _dateTime ',' _language ',' _data
+    else
+        concat _logMessage _dateTime ',' _language ',' sessionId ',' scriptName ',' _data
+    end_if  
+end_if
+
+if SmartUtil:fromRobotDataitem = 'Y'
+    ; 対象Robotのプロパティファイルに定義されているID(wbs.login.id)でログの出し分けを行う
+    ; 対象Robotは、KL、ScheduleChange、Refund、Upgrade、StatusChange、CreateNCP、AlteaHealthCheck
+    switch authenticateUserIdDataitem
+    case 'QIKRBTQUE'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtque'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtque'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtque'
+    case 'QIKRBTREI'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtrei'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtrei'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtrei'
+    case 'QIKRBTRFD'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtrfd'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtrfd'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtrfd'
+    case 'QIKRBTUPG'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtupg'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtupg'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtupg'
+    case 'QIKRBTSSR'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtssr'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtssr'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtssr'
+    case 'QIKRBTNCP'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtncp'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtncp'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtncp'
+    case 'QIKRBTAHC'
+        set _alteaLogger   'jp.co.ana.smart.alteaLoggerRbtahc'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLoggerRbtahc'
+        set _amindsLogger  'jp.co.ana.smart.mindsLoggerRbtahc'
+    default
+        set _alteaLogger   'jp.co.ana.smart.alteaLogger'
+        set _anacoreLogger 'jp.co.ana.smart.anacoreLogger'
+        set _amindsLogger  'jp.co.ana.smart.mindsLogger'
+    end_switch
+else
+    set _alteaLogger   'jp.co.ana.smart.alteaLogger'
+    set _anacoreLogger 'jp.co.ana.smart.anacoreLogger'
+    set _amindsLogger  'jp.co.ana.smart.mindsLogger'
+end_if
+switch systemName
+case 'altea'
+    call 'outputLog_js' #1=_alteaLogger #2=_logMessage #3='INFO' #4='Y'
+case 'anacore'
+    call 'outputLog_js' #1=_anacoreLogger #2=_logMessage #3='INFO' #4='Y'
+case 'minds'
+    call 'outputLog_js' #1=_amindsLogger #2=_logMessage #3='INFO' #4='Y'
+case 'printing'
+    call 'outputLog_js' #1='jp.co.ana.smart.printingLogger' #2=_logMessage #3='INFO' #4='Y'
+case 'datahub'
+    call 'outputLog_js' #1='jp.co.ana.smart.datahubLogger' #2=_logMessage #3='INFO' #4='Y'
+case 'pf'
+    call 'outputLog_js' #1='jp.co.ana.smart.pfLogger' #2=_logMessage #3='INFO' #4='Y'
+case 'mail'
+    call 'outputLog_js' #1='jp.co.ana.smart.mailLogger' #2=_logMessage #3='INFO' #4='Y'
+end_switch
+
+; 出力したメッセージを返す
+set logMessage _logMessage
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-14 01:58:01.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2019-09-26 06:48:05.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

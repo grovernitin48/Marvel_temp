@@ -1,0 +1,40 @@
+<LocalDescRef version="1.1">
+  <name>cutDownXmlHeader</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; fill_xml_schemaで生成したXMLの先頭38文字分を削除する
+;     削除対象「&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;」
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param originXml　変更前のXML
+; @param outTreatedXml　変更後のXML
+; @author Takayama Yuki
+;
+; Copyright(C) 2013 5 9
+;-------------------------------------------------------------------------------
+name_arguments #1 'originXml'
+name_arguments #2 'outTreatedXml'
+
+build_local_data_item     '_beforeLength'
+build_local_data_item     '_afterLength'
+build_local_data_item     '_buff'
+
+if originXml = ''
+    return
+end_if
+
+; 先頭38文字分の文字列を削除する。
+data_item_length     originXml _beforeLength
+calculate   _afterLength = _beforeLength - '38'
+copy_data_item    _buff originXml '39' _afterLength
+set outTreatedXml _buff
+
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-14 02:01:28.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-10-17 06:54:24.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

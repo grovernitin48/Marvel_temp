@@ -1,0 +1,83 @@
+<LocalDescRef version="1.1">
+  <name>dmsSearchFlightsPopupGainFocus</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 国内空席照会条件画面でフォーカスのステータスを取得し、適切なステータスに切り替える。
+;
+; @author Tanase Yoshiyuki
+;
+; Copyright(C) 2013 07 18
+;-------------------------------------------------------------------------------
+build_local_data_item '_popupName'
+build_local_data_item '_controlName'
+build_local_data_item '_style'
+
+; 選択コントロールを取得
+set _popupName 'dmsSearchFlightsPopup'
+get_popup_focus  _popupName _controlName
+; 選択状態にし直す
+set_popup_focus _popupName _controlName 'HIGHLIGHT'
+
+; 現在の状態がエラーであったら、エラー有でアクティブのスタイルに切り替える
+;get_popup_control_property _popupName _controlName 'styles.inactiveControl' _style
+;if _style = 'errorInactiveInputStyle'
+;    set_popup_control_property _popupName _controlName 'styles.activeControl' 'Styles:errorActiveInputStyle'
+;end_if
+
+; 行とクラスの入力欄に関して、変更があった場合にチェックをするため、フォーカス時にその時の入力値をおぼえておく
+
+; 行の入力欄の場合、変更時に全てのクラスがNGとなる
+if _controlName = 'lineNumberField'
+    ; クラス入力欄1が変更されるかチェックをする準備
+    if dmsSearchFlightsDirectInput1Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput1Dataitem dmsLineNumberDataitem
+    end_if
+    ; クラス入力欄2が変更されるかチェックをする準備
+    if dmsSearchFlightsDirectInput2Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput2Dataitem dmsLineNumberDataitem
+    end_if
+    ; クラス入力欄3が変更されるかチェックをする準備
+    if dmsSearchFlightsDirectInput3Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput3Dataitem dmsLineNumberDataitem
+    end_if
+    ; クラス入力欄4が変更されるかチェックをする準備
+    if dmsSearchFlightsDirectInput4Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput4Dataitem dmsLineNumberDataitem
+    end_if
+end_if
+
+; クラス入力欄1が変更されるかチェックをする準備
+if _controlName = 'classOneField'
+    if dmsSearchFlightsDirectInput1Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput1Dataitem dmsClass1Dataitem
+    end_if
+end_if
+
+; クラス入力欄2が変更されるかチェックをする準備
+if _controlName = 'classTwoField'
+    if dmsSearchFlightsDirectInput2Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput2Dataitem dmsClass2Dataitem
+    end_if
+end_if
+
+; クラス入力欄3が変更されるかチェックをする準備
+if _controlName = 'classThreeField'
+    if dmsSearchFlightsDirectInput3Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput3Dataitem dmsClass3Dataitem
+    end_if
+end_if
+
+; クラス入力欄4が変更されるかチェックをする準備
+if _controlName = 'classFourField'
+    if dmsSearchFlightsDirectInput4Dataitem &lt;&gt; 'alreadyNG'
+        set dmsSearchFlightsDirectInput4Dataitem dmsClass4Dataitem
+    end_if
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-07-19 06:08:34.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-12-10 10:24:38.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

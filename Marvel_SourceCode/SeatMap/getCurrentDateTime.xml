@@ -1,0 +1,79 @@
+<LocalDescRef version="1.1">
+  <name>getCurrentDateTime</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; ローカル日時(自端末)を取得する処理
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param yyyymmddhhmiss    (OUT)yyyymmdd hh24:mi:ss.SSS形式の現在日時    ()
+; @param yy                (OUT)yy形式の現在日時
+; @param yyyy              (OUT)yyyy形式の現在日時
+; @param mm                (OUT)mm形式の現在日時
+; @param MMM               (OUT)MMM形式の現在日時
+; @param dd                (OUT)dd形式の現在日時
+; @param yyyyddmm          (OUT)yyyymmdd形式の現在日時
+; @param slashDateAndTime  (OUT)yyyy/mm/dd hh24:mi:ss形式の現在日時
+; @author Watanabe Shinji
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'yyyymmddhhmissSSS'
+name_arguments #2 'yy'
+name_arguments #3 'yyyy'
+name_arguments #4 'mm'
+name_arguments #5 'MMM'
+name_arguments #6 'dd'
+name_arguments #7 'yyyyddmm'
+name_arguments #8 'slashDateAndTime'
+
+build_local_data_item '_localDate'
+build_local_data_item '_localTime'
+build_local_data_item '_localyy'
+build_local_data_item '_localmm'
+build_local_data_item '_localdd'
+build_local_data_item '_hhmmss'
+
+;-------------------------------------------------------------------------------
+; 初期化
+;-------------------------------------------------------------------------------
+set yyyymmddhhmissSSS yy yyyy mm MMM dd yyyyddmm slashDateAndTime ''
+
+;-------------------------------------------------------------------------------
+; ローカル日付と時刻を取得
+;-------------------------------------------------------------------------------
+get_current_date _localDate
+get_current_time _localTime
+copy_data_item _localyy _localDate '7' '2'
+copy_data_item _localmm _localDate '1' '2'
+copy_data_item _localdd _localDate '4' '2'
+; .SSSを取り除いた時間
+copy_data_item _hhmmss _localTime '1' '8'
+
+;-------------------------------------------------------------------------------
+; 返却値設定
+;-------------------------------------------------------------------------------
+; yyyymmdd hh24:mi:ss.SSS形式
+concat yyyymmddhhmissSSS '20' _localyy _localmm _localdd ' ' _localTime
+; yy形式
+concat yy _localyy
+; yyyy形式
+concat yyyy '20' _localyy
+; mm形式
+concat mm _localmm
+; MMM形式(月の数字をMMM形式に変換 Ex.01→JAN)
+call 'SmartUtil:getMonthFromMM' #1=_localmm #2='' #3=MMM
+; dd形式
+concat dd _localdd
+; yyyyddmm形式
+concat yyyyddmm yyyy mm dd
+; yyyy/mm/dd hh24:mi:ss形式
+concat slashDateAndTime yyyy '/' mm '/' dd ' ' _hhmmss
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-14 01:57:55.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-06-22 10:52:47.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

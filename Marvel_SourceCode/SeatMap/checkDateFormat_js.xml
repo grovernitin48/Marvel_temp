@@ -1,0 +1,33 @@
+<LocalDescRef version="1.1">
+  <name>checkDateFormat_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// 日付フォーマットチェック
+//
+// @param args[0] 入力日付
+// @param args[1] 日付フォーマット
+// @param args[2] 結果格納先
+// @author Soichiro Okano 2013.5.15
+//
+// Copyright(C) 2013 XXXX
+//-------------------------------------------------------------------------------
+importPackage(Packages.jp.co.ana.smart.tool);
+
+var inputDate = args[0];
+var format = args[1];
+var result = application.dataItems[args[2]];
+// Java呼び出し.
+var checkValue = DateUtil.isAvailableDate(inputDate, format);
+if (checkValue == true) {
+    result.value = "Y";
+}else{
+    result.value = "N";
+}
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-08-20 12:13:56.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-08-21 01:07:17.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

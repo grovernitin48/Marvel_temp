@@ -1,0 +1,58 @@
+<LocalDescRef version="1.1">
+  <name>dmsASIP_validationDate</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsASIP_validationDate
+;
+; @param year      年(out) ※未設定時のの場合は自動取得
+; @param errorFlag 判定結果
+;
+; @author Mami Taniguchi
+;
+; Copyright(C) 2014/06/26
+;-------------------------------------------------------------------------------
+name_arguments #1 'year'
+name_arguments #2 'errorFlag'
+
+build_local_data_item '_popup'
+build_local_data_item '_mergeDate'
+build_local_data_item '_day'
+
+set _popup  'DmsBusinessPopup:dmsActiveSeatmapInputPopup'
+
+; 日の0補完
+set _day dmsASIP_DateDi
+format_data_item _day 'right' '2' '0'
+
+; 年の補完
+if dmsASIP_DateYearDi = ''
+    call 'DmsSmartUtil:dmsSetFutureYear' #1=_day #2=dmsASIP_DateComboDi #3=year #4=year
+else    
+    ; 年の0補完
+    set year dmsASIP_DateYearDi
+    format_data_item year 'right' '2' '0'
+    ; カレンダーまたは手入力した場合は4桁に変換
+    calculate year = year + '2000'
+end_if
+
+; 日付の結合
+set _mergeDate ''
+concat _mergeDate year '-' dmsASIP_DateComboDi '-' _day
+call 'SmartUtil:checkDateFormat' #1=_mergeDate #2='yyyy-MM-dd' #3=errorFlag
+if errorFlag = 'N'
+    set errorFlag 'y'
+    call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS4000_001'
+    highlight_popup _popup dmsASIP_DateDi
+    highlight_popup _popup dmsASIP_DateComboDi
+    highlight_popup _popup dmsASIP_DateYearDi
+else
+    set errorFlag ''
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-26 05:29:35.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-05-14 08:29:11.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

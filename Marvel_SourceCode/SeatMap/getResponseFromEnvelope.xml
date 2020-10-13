@@ -1,0 +1,59 @@
+<LocalDescRef version="1.1">
+  <name>getResponseFromEnvelope</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; (Anacore用)
+; SOAPボディ内の情報を取り出す
+;
+; @param envelope       sendSoapRequestの受信結果のXML
+; @param outWbsResponse ボディ部分のみが取り出されたXML
+; @author Ai Fukuhiro
+;
+; Copyright(C) 2013 5 10
+;-------------------------------------------------------------------------------
+name_arguments #1 'envelope'
+name_arguments #2 'outWbsResponse'
+
+build_local_data_item '_startPos'
+build_local_data_item '_pos'
+build_local_data_item '_length'
+build_local_data_item '_copy'
+;commonMessage対応
+build_local_data_item '_startTag'
+build_local_data_item '_endTag'
+build_local_data_item '_tagName'
+build_local_data_item '_nsNo'
+
+;applicationMessageタグのnsXXを取得
+set _tagName 'applicationMessage'
+call 'AnacoreUtil:dmsGetReplyXmlNsNumber' #1=envelope #2=_nsNo #3=_tagName
+set _startTag '&lt;ns'
+concat _startTag _nsNo ':' _tagName '&gt;'
+set _endTag '&lt;/ns'
+concat _endTag _nsNo ':' _tagName '&gt;'
+
+; ボディ部分を取り出す。
+search_data_item _startTag _startPos envelope '1'
+if _startPos &lt;&gt; ''
+    data_item_length _startTag _length
+    calculate _startPos = _startPos + _length
+    search_data_item _endTag _pos envelope '1'
+    
+    ; 開始タグと終了タグが両方存在する場合のみ、ボディ部分を取り出す。
+    if _pos &lt;&gt; ''
+        calculate _length = _pos - _startPos
+        copy_data_item _copy envelope _startPos _length
+    end_if
+end_if
+
+; 取り出したボディ部分の先頭にヘッダを追加する。
+set outWbsResponse '&lt;?xml version="1.0" encoding="utf-8"?&gt;'
+concat outWbsResponse _copy
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-24 02:09:44.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-07-14 07:51:04.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,182 @@
+<LocalDescRef version="1.1">
+  <name>sendSoapRequest</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; (Anacore用)
+; prepare_soap_request、set_soap_http_headerを行い、SOAPRequestを送信する
+;
+; @param xmlDoc         xml形式のSOAP送信オブジェクト
+; @param operationName  ★★★国内では未使用★★★
+; @param scriptName     呼び出し元スクリプトの名前
+; @param outReply       受信結果
+; @param outErrorStatus エラーステータス
+;   空白 : success
+;   1    : prepare_error
+;   2    : AnctionName_not_found
+;   3    : soapFault  Qikの場合とAmadeusの場合があるので注意
+;   4    : fault以外のSoapStatusエラー
+;   5    : soapStatusエラーではないが、WBS内部にエラーがある場合
+; @param outErrorCode  （SoapFaultの場合の）エラーコード ★★★国内では常に空白となる★★★
+; @param outErrorLayer （SoapFaultの場合の）エラーが発生した階層　★★★国内では常に空白となる★★★
+; @param outErrorText  （SoapFaultの場合の）エラーメッセージ
+; @author Ai Fukuhiro
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'xmlDoc'
+name_arguments #2 'operationName'
+name_arguments #3 'scriptName'
+name_arguments #4 'outReply'
+name_arguments #5 'outErrorStatus'
+name_arguments #6 'outErrorCode'
+name_arguments #7 'outErrorLayer'
+name_arguments #8 'outErrorText'
+
+; ローカル変数宣言
+build_local_data_item '_soapActionName'
+build_local_data_item '_requestName'
+build_local_data_item '_tableRow'
+build_local_data_item '_replyType'
+build_local_data_item '_isExistError'
+build_local_data_item '_errorStringFirstPosition'
+build_local_data_item '_errorStringEndPosition'
+build_local_data_item '_errorStringLength'
+build_local_data_item '_replyBody'
+build_local_data_item '_redoFlag'
+build_local_data_item '_basicAuth'
+build_local_data_item '_communicatingPopup'
+; LB切替用変数
+build_local_data_item '_switchFlag'
+
+build_local_data_item  '_nsElement'
+build_local_data_item  '_nsFlg'
+
+; 値を初期化する。
+set _requestName 'soapAnacoreRequest'
+set outReply ''
+set outErrorStatus ''
+set outErrorCode ''
+set outErrorLayer ''
+set outErrorText ''
+clear_table 'reasonMessageDisplayTable'
+
+;============================================================
+;SOAP requestオブジェクト作る
+;============================================================
+remove_soap_request      _requestName
+prepare_soap_request     _requestName xmlDoc
+if soapStatusDataItem &lt;&gt; '0'
+    set outErrorStatus '1'
+    set outErrorText 'AnacoreUtil#sendSoapRequest prepare_error'
+    remove_soap_request    _requestName
+    return 
+end_if
+
+;============================================================
+; httpHeader設定
+;============================================================
+;SOAPAction名を設定
+set _soapActionName 'http://www.ana.co.jp/dps/fwk/external/webservice'
+
+;basic認証設定値取得
+call 'getANACoreBasicAuthParam' #1=_basicAuth
+
+set_soap_http_header     _requestName 'SOAPAction' _soapActionName
+set_soap_http_header     _requestName 'Connection' 'Close'
+if _basicAuth &lt;&gt; ''
+    set_soap_http_header _requestName 'Authorization' _basicAuth
+end_if
+
+;============================================================
+; soap送信
+;============================================================
+if DmsSmartUtil:dms15inchFlag = 'y' &amp; SmartUtil:channelDataitem = 'DMS'
+    set _communicatingPopup 'SmartUtil:communicatingPopup_15'
+else
+    set _communicatingPopup 'SmartUtil:communicatingPopup'
+end_if
+display_page _communicatingPopup
+call 'SmartUtil:outputWebServiceLog' #1='Anacore' #2=lsnDi  #3=scriptName #4=xmlDoc
+call 'SmartUtil:outputWebServiceLog' #1='Anacore' #2=lsnDi  #3=scriptName #4=webServiceUrlDataItem
+send_soap_request    _requestName webServiceUrlDataItem outReply 
+call 'SmartUtil:outputWebServiceLog' #1='Anacore' #2=lsnDi  #3=scriptName #4=outReply
+remove_page _communicatingPopup
+
+if outReply = 'null' | outReply = ''
+    set outErrorText 'XmlSearchError occured at AnacoreUtil#getResponse or Qik internal error.'
+    set outErrorStatus '3'
+    remove_soap_request    _requestName
+    return
+end_if
+
+;============================================================
+; SoapFaultかどうかをまず判断する
+;============================================================
+call 'checkSoapFault' #1=outReply #2=outErrorCode #3=outErrorLayer #4=outErrorText\
+    #5=_switchFlag #6=_redoFlag
+
+if _switchFlag = 'y'
+    ; URL切替実施
+    call 'dmsSetANACoreURL'
+end_if
+if _redoFlag = 'y'
+    ; 再帰処理実施 
+    goto 'REDO'
+end_if
+
+; SoapFaultかQik内部エラーの場合
+if outErrorCode &lt;&gt; '' 
+    set outErrorText 'SystemError occured at sendSoapRequest#SoapFault or Qik internal error.'
+    set outErrorStatus '3'
+    remove_soap_request    _requestName
+    return
+end_if
+
+; SoapStatusが異常である場合
+if  soapStatusDataItem &lt;&gt; '0'
+    concat  outErrorText 'SystemError occured at sendSoapRequest#PrepareSoap. Status=' soapStatusDataItem
+    set outErrorStatus '4'
+end_if
+
+;============================================================
+; エラー判定 &amp; エラーメッセージ取得 &amp; NEED系ポップアップ判定
+;============================================================
+;返却されたANACore機能IDをDataitemに退避
+call 'SmartUtil:getTagValue' #1=outReply #2='processTypeId' #3='' #4=AnacoreProcessTypeIdDataitem
+
+;汎用項目のparse
+call 'parseANACoreQikCommonMessage' #1=outReply  #2=_nsFlg
+call 'getAnacoreCommonItemValue' #1='erroredFunctionId' #2=AnacoreErroredFunctionIdDataitem
+
+;★TLM電文対応(NameSpaceの取得)
+call 'dmsGetAirportReplayXmlNameSpace' #1=AnacoreProcessTypeIdDataitem #2=outReply  #3=_nsElement #4=_nsFlg
+
+;正常／異常に関わらず、Bodyのみ取り出す
+call 'AnacoreUtil:getResponseFromEnvelope' #1=outReply #2=_replyBody
+call 'SmartUtil:cutDownXmlHeader' #1=_replyBody #2=outReply
+
+;★TLM電文対応(NameSpaceの付与)
+call 'dmsSetAirportReplayXmlNameSpace' #1=AnacoreProcessTypeIdDataitem #2=outReply  #3=_nsElement #4=_nsFlg
+
+;NEED系ポップアップ表示
+call 'dmsJudgeAndDisplayNeedPopup' #1=outReply #2=_redoFlag
+if _redoFlag = 'y'
+    ; 再帰処理実施 
+    goto 'REDO'
+end_if
+
+remove_soap_request    _requestName
+
+return
+
+label 'REDO'
+    call 'sendSoapRequest' #1=xmlDoc #2=operationName #3=scriptName #4=outReply\
+         #5=outErrorStatus #6=outErrorCode #7=outErrorLayer #8=outErrorText
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-24 02:08:23.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-10-28 06:42:21.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,103 @@
+<LocalDescRef version="1.1">
+  <name>outputOperationLog</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+;  操作履歴ログを出力する
+;
+; @param channelKind       チャネル区分
+; @param recordLocator     レコードロケータ
+; @param pageId            画面ID
+; @param operation         操作内容
+; @param pageData          画面データ
+; @author Watanabe Shinji
+; @author Keita Okada
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments    #1 'channelKind'
+name_arguments    #2 'recordLocator'
+name_arguments    #3 'pageId'
+name_arguments    #4 'operation'
+name_arguments    #5 'pageData'
+
+build_local_data_item  '_dateTime'
+build_local_data_item  '_language'
+build_local_data_item  '_channel'
+build_local_data_item  '_sessionId'
+build_local_data_item  '_userId'
+build_local_data_item  '_officeCode'
+build_local_data_item  '_dutyCode'
+build_local_data_item  '_logMessage'
+build_local_data_item  '_dmsLogFlag'
+build_local_data_item  '_logger'
+
+; 国内用ログ出力処理判定
+call 'getChannel' #1=_dmsLogFlag
+
+; 日時取得
+call 'getCurrentDateTime' #1=_dateTime
+
+;　Qik表示言語取得
+get_language _language
+
+; チャネル取得
+if (channelKind = '0')
+    set _channel channelDataItem
+else
+    set _channel 'CMN'
+end_if
+
+if _dmsLogFlag = 'DMS' | _dmsLogFlag = 'REF_DMS'
+    ; 国内情報取得
+    call 'callScript' #1='DmsSmartUtil:dmsGetCommonLogInfo' #2='' #3=_userId #4=_officeCode #5=_dutyCode
+else
+    ; 国際情報取得
+    ; セッションID取得
+    set _sessionId sessionIdDataitem
+
+    ; ユーザID取得
+    set _userId authenticateUserIdDataitem
+    
+    ; オフィスコード取得
+    set _officeCode authenticateSourceOffice
+    
+    ; Dutyコード取得
+    set _dutyCode authenticateDutyIdentifier
+end_if
+
+concat _logMessage _dateTime ',' _language ',' _channel ',' _sessionId ',' _userId ',' _officeCode ',' \
+    _dutyCode ',' recordLocator ',' pageId ',' operation ',' pageData
+
+if SmartUtil:fromRobotDataitem = 'Y'
+    ; 対象Robotのプロパティファイルに定義されているID(wbs.login.id)でログの出し分けを行う
+    ; 対象Robotは、KL、ScheduleChange、Refund、Upgrade、StatusChange、CreateNCP、AlteaHealthCheck
+    switch _userId
+    case 'QIKRBTQUE'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtque'
+    case 'QIKRBTREI'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtrei'
+    case 'QIKRBTRFD'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtrfd'
+    case 'QIKRBTUPG'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtupg'
+    case 'QIKRBTSSR'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtssr'
+    case 'QIKRBTNCP'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtncp'
+    case 'QIKRBTAHC'
+        set _logger 'jp.co.ana.smart.operationLoggerRbtahc'
+    default
+        set _logger 'jp.co.ana.smart.operationLogger'
+    end_switch
+else
+    set _logger 'jp.co.ana.smart.operationLogger'
+end_if
+call 'outputLog_js' #1=_logger #2=_logMessage #3='INFO' #4='Y'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-06-21 10:52:34.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2019-05-09 06:19:36.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

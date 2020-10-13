@@ -1,0 +1,28 @@
+<LocalDescRef version="1.1">
+  <name>getTimeStamp</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getTimeStamp
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param format フォーマット(JavaのSimpleDateFormatに準ずる)
+; @param timeStamp 戻り値
+; @author Naoya Yamaguchi
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'format'
+name_arguments #2 'timeStamp'
+
+call 'getTimeStamp_js' #1=format
+
+set timeStamp timeStampDi
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-10-22 07:59:14.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2017-02-07 05:46:17.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

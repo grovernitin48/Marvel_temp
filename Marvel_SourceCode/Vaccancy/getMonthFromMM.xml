@@ -1,0 +1,43 @@
+<LocalDescRef version="1.1">
+  <name>getMonthFromMM</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getMonthFromMM
+; MM形式の月からMMMを取得(例：10→OCT)
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param mm MM形式の月(in)
+; @param month Month形式の月(out)
+; @param mmm MMM形式の月(out)
+; @author Jun Tanami
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'mm'
+name_arguments #2 'month'
+name_arguments #3 'mmm'
+
+build_local_data_item '_mm'
+build_local_data_item '_length'
+build_local_data_item '_row'
+
+; 月が1桁であれば0埋めする
+set _mm ''
+data_item_length mm _length
+if _length = '1'
+    concat _mm '0' mm
+else
+    concat _mm mm
+end_if
+
+; テーブルを検索
+search_table 'monthTable' _mm 'MM' _row '1' '12' month 'Month' mmm 'MMM'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-11-08 13:05:38.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-10-17 06:54:45.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

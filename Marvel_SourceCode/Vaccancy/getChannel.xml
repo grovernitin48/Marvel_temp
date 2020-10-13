@@ -1,0 +1,51 @@
+<LocalDescRef version="1.1">
+  <name>getChannel</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getChannel
+; 内際判定結果を返す
+;  国際：INT
+;  国内：DMS
+;  国際の国内線タブ：REF_DMS
+;  国内の国際線タブ：REF_INT
+;
+; @param cahnnel 内際チャネル(out)
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'channel'
+
+build_local_data_item '_referenceFlagDi'
+build_local_data_item '_referenceFlag'
+
+set _referenceFlagDi 'PNRPane:referenceModeFlagDataitem'
+set _referenceFlag $_referenceFlagDi
+
+if channelDataitem = 'INT'
+    ;国際でログインした場合
+    if _referenceFlag = 'y'
+        ;国際の国内線タブを開いている場合
+        set channel 'REF_DMS'
+    else
+        ;国際のA～Cタブを開いている場合
+        set channel 'INT'
+    end_if
+else
+    ;;国内でログインした場合
+    if _referenceFlag = 'y'
+        ;国内の国際線タブを開いている場合
+        set channel 'REF_INT'
+    else
+        ;国内のA～Eタブを開いている場合
+        set channel 'DMS'
+    end_if
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-05-16 09:33:21.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-03-29 10:09:46.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

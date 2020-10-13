@@ -1,0 +1,92 @@
+<LocalDescRef version="1.1">
+  <name>dmsASIP_validationCharacter</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsASIP_validationCharacter
+;
+; @param errorFlag 判定結果
+; @author Mami Taniguchi
+;
+; Copyright(C) 2014/06/26
+;-------------------------------------------------------------------------------
+name_arguments #1 'errorFlag'
+
+build_local_data_item '_result'
+build_local_data_item '_popup'
+
+set _popup  'DmsBusinessPopup:dmsActiveSeatmapInputPopup'
+
+; 便番号 全角半角変換
+set SmartUtil:convertTwoByteToOneByteDataitem ''
+call 'convertTwoByteToOneByte_js' #1=dmsASIP_FlightNumberDi #2='SmartUtil:convertTwoByteToOneByteDataitem'
+set dmsASIP_FlightNumberDi SmartUtil:convertTwoByteToOneByteDataitem
+
+; 搭乗日(日) 全角半角変換
+set SmartUtil:convertTwoByteToOneByteDataitem ''
+call 'convertTwoByteToOneByte_js' #1=dmsASIP_DateDi #2='SmartUtil:convertTwoByteToOneByteDataitem'
+set dmsASIP_DateDi SmartUtil:convertTwoByteToOneByteDataitem
+
+; 搭乗日(年) 全角半角変換
+set SmartUtil:convertTwoByteToOneByteDataitem ''
+call 'convertTwoByteToOneByte_js' #1=dmsASIP_DateYearDi #2='SmartUtil:convertTwoByteToOneByteDataitem'
+set dmsASIP_DateYearDi SmartUtil:convertTwoByteToOneByteDataitem
+
+; キャリアコード 文字種チェック
+if dmsASIP_CarrierDi &lt;&gt; ''
+    call 'DmsSmartUtil:dmsValidation_Common' #1='carrierCode' #2=DmsBusinessPopup:dmsASIP_CarrierDi \
+        #3=_popup #4='' #5='' #6= '' #7=_result #8='Y'
+    ; 文字種&amp;フォーマットのチェック
+    if (_result = '3'|_result = '5')
+        set errorFlag 'y'
+        call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS3000_001' #3='DMS20_0003'
+        highlight_popup _popup dmsASIP_CarrierDi
+    end_if
+end_if
+
+; 出発空港 文字種チェック
+if dmsASIP_DepartureDi &lt;&gt; ''
+    call 'DmsSmartUtil:dmsValidation_Common' #1='airportCode' #2=DmsBusinessPopup:dmsASIP_DepartureDi \
+        #3=_popup #4='' #5='' #6= '' #7=_result #8='Y'
+    ; 文字種&amp;フォーマットのチェック
+    if (_result = '3'|_result = '5')
+        set errorFlag 'y'
+        call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS3000_008' #3='DMS20_0051'
+        highlight_popup _popup dmsASIP_DepartureDi
+    end_if
+end_if
+
+; 到着空港 文字種チェック
+if dmsASIP_ArrivalDi &lt;&gt; ''
+    call 'DmsSmartUtil:dmsValidation_Common' #1='airportCode' #2=DmsBusinessPopup:dmsASIP_ArrivalDi \
+        #3=_popup #4='' #5='' #6= '' #7=_result #8='Y'
+    ; 文字種&amp;フォーマットのチェック
+    if (_result = '3'|_result = '5')
+        set errorFlag 'y'
+        call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS3000_008' #3='DMS20_0052'
+        highlight_popup _popup dmsASIP_ArrivalDi
+    end_if
+end_if
+
+; 出発空港コード、到着空港コードの相関チェック
+if dmsASIP_DepartureDi &lt;&gt; '' &amp; dmsASIP_ArrivalDi = ''
+    set errorFlag 'y'
+    call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS1100_008' #3='DMS20_0051~|DMS20_0052'
+    
+    highlight_popup _popup dmsASIP_DepartureDi
+    highlight_popup _popup dmsASIP_ArrivalDi
+end_if
+
+if dmsASIP_DepartureDi = '' &amp; dmsASIP_ArrivalDi &lt;&gt; ''
+    set errorFlag 'y'
+    call 'DmsSmartUtil:dmsDisplayErrorMessage' #1=_popup #2='DMS1100_008' #3='DMS20_0052~|DMS20_0051'
+    highlight_popup _popup dmsASIP_DepartureDi
+    highlight_popup _popup dmsASIP_ArrivalDi
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-26 05:10:14.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-04-17 11:32:36.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,58 @@
+<LocalDescRef version="1.1">
+  <name>getReasonCodeByStringSearch</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; getReasonCodeByStringSearch
+; 返却されたxmlを文字列検索して、reasonCodeを取得する
+;
+; @param replyXml      (in)返却されたxml
+; @param csvExistsFlag (out)reasonMessage.csvにreasonCodeが存在したらな'y' そうでないなら'n'
+;
+; @author Naoya Yamaguchi
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'replyXml'
+name_arguments #2 'csvExistsFlag'
+
+build_local_data_item '_nsNo'
+build_local_data_item '_targetTagName'
+build_local_data_item '_reasonCode'
+build_local_data_item '_reasonMessage'
+build_local_data_item '_insertRow'
+; エラー以外のreasonCode判定用変数
+build_local_data_item '_reasonCodeInitial'
+
+; reasonCode取得
+call 'dmsGetReplyXmlNsNumber' #1=replyXml #2=_nsNo           #3='reasonCode'
+concat _targetTagName 'ns' _nsNo ':reasonCode'
+call 'SmartUtil:getTagValue'  #1=replyXml #2=_targetTagName  #3=''    #4=_reasonCode
+
+; 後続処理で、返却型 = ResponseData且つ
+; reasonCode = 300000000だったら正常系として
+; ハンドリングするために、テーブルを更新しておく。
+if _reasonCode = '300000000' &amp; dmsReplyWBSTypeDi = 'ResponseData'
+    insert_table_row 'reasonMessageDisplayTable' _reasonCode ''
+end_if
+
+; エラー以外のreasonCode判定
+copy_data_item _reasonCodeInitial _reasonCode '1' '1'
+if _reasonCodeInitial = '3'
+    ; 3始まりのreasonCodeはエラーではないのでreturn
+    set csvExistsFlag 'n'
+    return
+end_if
+
+call 'getWBSErrorMessageByCommonParsedFuncionId' #1=_reasonCode #2=_reasonMessage #3=csvExistsFlag
+
+; 解析結果をテーブルに保存
+concat _insertRow _reasonCode '~|' _reasonMessage
+insert_table_row 'reasonMessageDisplayTable' _insertRow '' '~|'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-02-18 08:40:02.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-03-18 09:57:13.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

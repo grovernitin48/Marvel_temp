@@ -1,0 +1,55 @@
+<LocalDescRef version="1.1">
+  <name>dmsJudgeWBSPattern</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsJudgeWBSPattern
+;
+; @param replyXml
+; @param wbsType
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'replyXml'
+name_arguments #2 'wbsType'
+
+build_local_data_item '_foundPosition'
+build_local_data_item '_startPosition'
+build_local_data_item '_endPosition'
+build_local_data_item '_length'
+
+call 'SmartUtil:outputTraceLog' #1='0' #2='INFO' #3='' #4='' #5='AnacoreUtil_dmsJudgeWBSPattern' #6='Start'
+
+; ネームスペースの接頭辞終了位置を取得
+search_data_item ':' _startPosition replyXml '1'
+
+;「:」の右隣りから、WBS名称が記述されている
+calculate _startPosition = _startPosition + '1'
+
+; WBS名称終了位置取得
+search_data_item 'xmlns' _endPosition replyXml _startPosition
+
+if _endPosition = ''
+    ; ANACore WEB-FRONT対応によって、名前空間が設定されていないケースが出てきた。
+    ; 名前空間が無い場合は閉じタグ「&gt;」の位置を基にレスポンス型名称を取得する。
+    search_data_item '&gt;' _endPosition replyXml _startPosition
+else
+    ; WBS名称終了位置から、半角スペースを一つはさんだ位置から、'xmlns'が記述されている
+    calculate _endPosition = _endPosition - '1'
+end_if
+
+; WBS名称長さ計算
+calculate _length = _endPosition - _startPosition
+
+; WBS名称切り出し
+copy_data_item wbsType replyXml _startPosition _length
+
+call 'SmartUtil:outputTraceLog' #1='0' #2='INFO' #3='' #4='' #5='AnacoreUtil_dmsJudgeWBSPattern' #6='End'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-10-24 08:39:54.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-03-24 10:48:50.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

@@ -1,0 +1,88 @@
+<LocalDescRef version="1.1">
+  <name>dmsWBSSendCommandSubApllyXargs</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsWBSSendCommandSubApllyXargs
+; 
+; スクリプト名、引数が書かれた文字列を元にスクリプトを呼出す。その際、引数先頭に別の引数を挿入して呼出す
+; ex) apllyArgs='script,arg1,arg2' xArgCount=3
+;     call 'script' #1=xarg1 #2=xarg2 #3=xarg3 #4='arg1 #5='arg2' と呼出す。
+; 
+; @param apllyArgs  [IN]  スクリプト情報 'script,arg1,arg2...'
+; @param xArgCount  [IN]  入替える引数の数
+; @param proc       [OUT] 呼出したスクリプト
+; @param xarg1      [IN/OUT] 入替える引数1
+; @param xarg2      [IN/OUT] 入替える引数2
+; @param xarg3      [IN/OUT] 入替える引数3
+; @param xarg4      [IN/OUT] 入替える引数4
+; 
+; @author Misuru Watanabe
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1  'apllyArgs'
+name_arguments #2  'xArgCount'
+name_arguments #3  'proc'
+name_arguments #4  'xarg1'
+name_arguments #5  'xarg2'
+name_arguments #6  'xarg3'
+name_arguments #7  'xarg4'
+
+
+; ローカル変数
+build_local_data_item '_aplys'
+build_local_data_item '_delimiter'
+build_local_data_item '_regexp'
+build_local_data_item '_wktbl'
+build_local_data_item '_a1'
+build_local_data_item '_a2'
+build_local_data_item '_a3'
+build_local_data_item '_a4'
+build_local_data_item '_a5'
+build_local_data_item '_a6'
+build_local_data_item '_a7'
+
+set _aplys apllyArgs
+set _wktbl  'DmsXmlPNRPane:dmsWBSSendCommandWorkTable'
+
+; 使用済みのスクリプト情報は削除していき、無くなるまで繰返し呼出す
+while _aplys &lt;&gt; ''
+    ; デリミタ(scriptの次の1文字)取得
+    ;   検索条件=英字か:[コロン]以外の最初の1文字
+    call 'SmartUtil:captureMultiRegularExpression' #1=_aplys #2='^[\\w:]*?([^\\w:]).*$' #3='1' #4=_delimiter
+    
+    ; デリミタで分割しscriptと引数値取得
+    clear_table _wktbl
+    insert_table_row _wktbl _aplys '' _delimiter
+    call 'SmartUtil:copyTableColumns' #1=_wktbl #2='1' \
+        #3=proc #4='1' #5=_a1 #6='2' #7=_a2 #8='3' #9=_a3 #10='4' #11=_a4 #12='5' \
+        #13=_a5 #14='6' #15=_a6 #16='7'#17=_a7 #18='8'
+    
+    ; スクリプト呼出
+    set DmsXmlPNRPane:dmsWBSSendCommandUsedArgCountDi '' ; 呼出スクリプトがこの変数に引数の個数を設定した場合継続
+    switch xArgCount
+    case '3'
+        call proc #1=xarg1 #2=xarg2 #3=xarg3 #4=_a1 #5=_a2 #6=_a3 #7=_a4 #8=_a5 #9=_a6 #10=_a7
+    case '4'
+        call proc #1=xarg1 #2=xarg2 #3=xarg3 #4=xarg4 #5=_a1 #6=_a2 #7=_a3 #8=_a4 #9=_a5 #10=_a6 #11=_a7
+    end_switch
+    
+    ; 使用済みスクリプト情報を削除 (デリミタなしの場合検索でないため場合分け、呼出スクリプトが継続希望しない場合も明示的にbreak)
+    if _delimiter &lt;&gt; '' &amp; DmsXmlPNRPane:dmsWBSSendCommandUsedArgCountDi &lt;&gt; ''
+        ; 検索条件="デリミタが呼出スクリプトが設定した引数の個数分出現するまで"と"その後"で"その後"を_aplysに設定
+        set _regexp ''
+        calculate DmsXmlPNRPane:dmsWBSSendCommandUsedArgCountDi = '1' + DmsXmlPNRPane:dmsWBSSendCommandUsedArgCountDi - xArgCount ; スクリプト名分(1) + 呼出スクリプトの引数 - xargで付加した個数
+        concat _regexp '^(.*?' _delimiter '){' DmsXmlPNRPane:dmsWBSSendCommandUsedArgCountDi '}(.*)$'
+        call 'SmartUtil:captureMultiRegularExpression' #1=_aplys #2=_regexp #3='2' #4=_aplys
+    else
+        set _aplys ''  ; break
+    end_if
+end_while
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-05-30 04:20:57.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-05-06 03:00:25.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

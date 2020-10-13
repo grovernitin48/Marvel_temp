@@ -1,0 +1,56 @@
+<LocalDescRef version="1.1">
+  <name>dmsWrapApMessageByCommonMessage</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsWrapApMessageByCommonMessage
+; CommonMessageの中に、業務メッセージと、プリンタ設定メッセージを包む
+;
+; @param apMessage     業務メッセージ
+; @param commonMessage 生成したCommonMessage
+; @param errorFlag     'Y'エラー
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'apMessage'
+name_arguments #2 'commonMessage'
+name_arguments #3 'errorFlag'
+
+build_local_data_item '_commonHeader'
+build_local_data_item '_commonFragment'
+build_local_data_item '_commonFooter'
+build_local_data_item '_printerXml'
+build_local_data_item '_status'
+
+;初期化
+set errorFlag       ''
+set _commonHeader   '&lt;ns1:CommonMessage xmlns:ns1="http://www.ana.co.jp/dps/fwk/external/eo/webservice"&gt;&lt;ns1:applicationMessage&gt;'
+set _commonFragment '&lt;/ns1:applicationMessage&gt;&lt;ns1:systemIndividualMessage&gt;'
+set _commonFooter   '&lt;/ns1:systemIndividualMessage&gt;&lt;/ns1:CommonMessage&gt;'
+
+;プリンタ設定メッセージ生成
+fill_xml_schema 'Anacore_ANACoreQikCommonMessage' _printerXml _status
+if _status &lt;&gt; '0'
+    set errorFlag 'y'
+    return
+end_if
+;ApMessage内には不要な先頭の38文字を削除「&lt;?xml version="1.0" encoding="UTF-8"?&gt;」
+call  'SmartUtil:cutDownXmlHeader' #1=_printerXml #2=_printerXml
+;ns0をns1に変換
+call 'dmsReplaceXmlNsNumber' #1=_printerXml #2='1'
+
+;プリンタのparamをクリア
+set dmsCommonMessageReportOutputTypeDi ''
+clear_table 'dmsCommonMessageCommonItemTable'
+
+;返却値生成
+set commonMessage ''
+concat commonMessage _commonHeader apMessage _commonFragment _printerXml _commonFooter
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-04-28 05:59:40.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-01-29 00:08:29.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

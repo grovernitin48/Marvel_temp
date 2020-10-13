@@ -1,0 +1,147 @@
+<LocalDescRef version="1.1">
+  <name>dmsWBSSendCommand</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; AnaCore WBS 送受信処理
+;
+; @param commandEntry [IN]  送受信処理情報を返すスクリプト
+;          commandEntry #1=sendInfo #2=replayInfoで呼出
+;          =&gt; dmsWBSSendCommand取説 参照
+; 
+; @param errorType    [OUT] エラー [(空):正常, PROG:プログラムエラー SERVE:サーバーエラー, INFO:サーバーからのメッセージ(ResponseData)]
+; @param replyPattern [OUT] 戻ってきたWBSタイプ['ERROR': エラー]
+; @param replyXml     [OUT] 返却されたxml (オプション)
+; @param hole         [IN]  commandEntryに渡す引数 (オプション)
+; 
+; @author Misuru Watanabe
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'commandEntry'
+name_arguments #2 'errorType'
+name_arguments #3 'replyPattern'
+name_arguments #4 'replyXml'
+name_arguments #5 'hole'
+
+; MEMO 変数は重要度、スコープ範囲により、より省略。注意を促す場合、変な名前にしています。
+; ローカル変数 情報
+build_local_data_item '_script'
+build_local_data_item '_sndInf'
+build_local_data_item '_rspInfs'
+build_local_data_item '_aRspInf'
+; ローカル変数 xml
+build_local_data_item '_sndXml'
+build_local_data_item '_rpyXml'
+build_local_data_item '_orgRpyPtn'
+build_local_data_item '_resRpyPtn'
+; ローカル変数 作業
+build_local_data_item '_proc'
+build_local_data_item '_pr'
+build_local_data_item '_msg'
+build_local_data_item '_tmp'
+
+set _script 'DmsXmlPNRPane_dmsWBSSendCommand'
+
+; リーズンコード 初期化
+clear_table 'AnacoreUtil:reasonMessageDisplayTable'
+
+; WBS 処理情報取得
+call commandEntry #1=_sndInf #2=_rspInfs #3=hole
+
+; ------------------------------
+; 送信XML生成 
+call 'DmsXmlPNRPane:dmsWBSSendCommandSubApllyXargs' #1=_sndInf #2='3' #3=_proc #4=_sndXml #5=_pr #6=_msg
+if _pr &lt;&gt; ''
+    set _tmp ''
+    concat _tmp _proc '_' _msg
+    call 'DmsXmlPNRPane:dmsWriteCreateSoapXmlErrorLog' #1=commandEntry #2=_tmp
+    set errorType 'PROG'
+    set replyPattern 'ERROR'
+    return ; ERROR
+end_if
+
+; ------------------------------
+; SOAP送信
+set AnacoreUtil:soapStatusDataItem ''
+call 'AnacoreUtil:sendSoapRequest' \
+    #1=_sndXml #2='' #3=commandEntry #4=_rpyXml #5=_pr #6='' #7='' #8=_msg
+set AnacoreUtil:soapStatusDataItem ''
+if _pr &lt;&gt; ''
+    call 'DmsXmlPNRPane:dmsWriteCreateSoapXmlErrorLog' #1=commandEntry #2=_msg
+    set errorType 'SERVE'
+    set replyPattern 'ERROR'
+    return ; ERROR
+end_if
+set replyXml _rpyXml
+
+; ------------------------------
+; パース
+; リプライパターン取得
+;call 'AnacoreUtil:dmsJudgeWBSPattern' #1=_rpyXml #2=_orgRpyPtn
+set _orgRpyPtn AnacoreUtil:dmsReplyWBSTypeDi
+
+; リプライパターンにマッチする処理情報取得
+;   ex.) _orgRpyPtn='RpyPtn2'の時 1-1間を検索し、2-2間を_aRspInfに取得  WEB SEARCH "正規表現 グループ キャプチャしない 最短一致 先読み"
+;                               1         2                 2 1
+;   'RpyPtn1,script1,arg11,arg12~|RpyPtn2,script2,arg21,arg22~|RpyPtn3,script3,arg31,arg32'
+set    _tmp ''
+concat _tmp '(?:^|~\\|)(?:' _orgRpyPtn '|),(.*?)(?:$|~\\|)' 
+call 'SmartUtil:captureMultiRegularExpression' #1=_rspInfs #2=_tmp #3='1' #4=_aRspInf
+
+; 指定パターン
+set _resRpyPtn ''
+if _aRspInf &lt;&gt; ''
+    set _resRpyPtn _orgRpyPtn
+    call 'DmsXmlPNRPane:dmsWBSSendCommandSubApllyXargs' #1=_aRspInf #2='3' #3=_proc #4=_rpyXml #5=_resRpyPtn #6=_msg
+    ; 処理結果
+    switch _resRpyPtn
+    case 'ERROR'
+        ; 異常
+        set _tmp ''
+        concat _tmp _orgRpyPtn '_' _proc '_' _msg
+        call 'DmsXmlPNRPane:dmsWriteParseXmlErrorLog' #1=commandEntry #2=_tmp
+    end_switch
+end_if
+; 指定外のパターン or 指定パターンで未処理
+if _resRpyPtn = ''
+    switch  _orgRpyPtn
+    case 'ResponseData'
+        ; 準正常
+        ;call 'AnacoreUtil:getReasonCode' #1=_rpyXml
+        set _resRpyPtn 'ResponseData'
+    default
+        ; 異常
+        call 'DmsXmlPNRPane:dmsWriteUnexpectedErrorLog' #1=commandEntry #2=_orgRpyPtn
+        set _resRpyPtn 'ERROR'
+    end_switch
+end_if
+
+; 戻り設定
+switch _resRpyPtn
+case 'ERROR'
+    ; 異常
+    set replyPattern 'ERROR'
+    set errorType 'PROG'
+case 'ResponseData'
+    ; 準正常
+    set replyPattern 'ResponseData'
+    copy_table 'AnacoreUtil:reasonMessageDisplayTable' _tmp '1' '~|' 'code'
+    
+    if _tmp &lt;&gt; '300000000'
+        set errorType 'INFO'
+    else
+        set errorType ''    ; リーズンコード300000000は正常
+    end_if
+default
+    ; 正常
+    set replyPattern _resRpyPtn
+    set errorType ''
+end_switch
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-05-07 02:35:58.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-05-04 03:14:14.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

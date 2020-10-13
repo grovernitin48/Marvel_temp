@@ -1,0 +1,77 @@
+<LocalDescRef version="1.1">
+  <name>getAirportBySpecificColumn</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 空港コードから空港マスタを検索し、指定カラムのデータを返す
+;
+; @param airportCode   (in)空港コード3レター(必須)
+; @param columnName1   (in)取得対象カラム名1(必須)
+; @param returnData1   (out)取得カラム名1に対する取得データ
+; @param columnName2   (in)取得対象カラム名2(任意)
+; @param returnData2   (out)取得カラム名2に対する取得データ
+; @param columnName3   (in)取得対象カラム名3(任意)
+; @param returnData3   (out)取得カラム名3に対する取得データ
+; 
+; @author kanda tatsuya
+;
+; Copyright(C) 2013/07/18
+;-------------------------------------------------------------------------------
+name_arguments #1 'airportCode'
+name_arguments #2 'columnName1'
+name_arguments #3 'returnData1'
+name_arguments #4 'columnName2'
+name_arguments #5 'returnData2'
+name_arguments #6 'columnName3'
+name_arguments #7 'returnData3'
+
+build_local_data_item '_tableName'
+build_local_data_item '_row'
+build_local_data_item '_logMessage'
+build_local_data_item '_intDmsFlg'
+build_local_data_item '_channel'
+build_local_data_item '_searchAirportCode'
+
+; 初期化
+set _searchAirportCode airportCode
+set returnData1 returnData2 returnData3 ''
+set _tableName 'airportTable'
+
+; 引数が空なら検索する必要なし
+if '' = _searchAirportCode
+    return
+end_if
+
+search_table _tableName _searchAirportCode 'APT_CD' _row
+if '' = _row
+    concat _logMessage 'airportCode[' _searchAirportCode '] is Not Defined.'
+    call 'outputTraceLog' #1='0' #2='INFO' #3='' #4='' #5='SmartUtil_getAirportBySpecificColumn' #6=_logMessage
+    return
+else
+    ; 内際区分取得
+    call 'getChannel' #1=_channel
+    ; 国内で国際のコードを取得してきた場合、再検索する
+    if _channel = 'DMS' | _channel = 'REF_DMS'
+        copy_table _tableName _intDmsFlg _row '' 'ILAND_VC'
+        if _intDmsFlg = 'I'
+            calculate _row = _row + '1'
+            search_table _tableName _searchAirportCode 'APT_CD' _row _row ''
+        end_if
+    end_if
+end_if
+
+; 返却値設定
+copy_table _tableName returnData1 _row '' columnName1
+if columnName2 &lt;&gt; ''
+    copy_table _tableName returnData2 _row '' columnName2
+end_if
+if columnName3 &lt;&gt; ''
+    copy_table _tableName returnData3 _row '' columnName3
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-07-18 02:01:59.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-01-22 05:53:54.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

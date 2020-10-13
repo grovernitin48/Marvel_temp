@@ -1,0 +1,34 @@
+<LocalDescRef version="1.1">
+  <name>replaceStringAll</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 文字列を全置換する
+;
+; @param originString  変換処理を行う文字列
+; @param oldString     変換対象の文字列
+; @param newString     変換後の文字列
+; @param returnString  戻り値
+;
+; @author Tanase Yoshiyuki
+;
+; Copyright(C) 2013 01 21
+;-------------------------------------------------------------------------------
+name_arguments #1 'originString' 
+name_arguments #2 'oldString'
+name_arguments #3 'newString'
+name_arguments #4 'returnString'
+
+build_local_data_item '_originString'
+
+set _originString originString
+set returnString replaceStringDataitem ''
+call 'SmartUtil:replaceStringAll_js' #1=_originString #2=oldString #3=newString #4='replaceStringDataitem'
+set returnString replaceStringDataitem
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-04-09 08:01:08.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-04-09 08:05:53.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

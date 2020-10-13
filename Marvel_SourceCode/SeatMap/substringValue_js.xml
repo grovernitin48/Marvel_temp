@@ -1,0 +1,28 @@
+<LocalDescRef version="1.1">
+  <name>substringValue_js</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>1</type>
+    <scriptText>//-------------------------------------------------------------------------------
+// 引数で与えられたDataitem内の開始位置から終了位置ある文字を返します
+//   Dataitem の from～to - 1 文字目は（最初の文字位置は 0 番）の文字列を返します
+//   substring(from,to)
+// @param args[0]  変換処理を行う文字列
+// @param args[1]  開始位置
+// @param args[2]  終了位置
+// @author ohtahara
+// Copyright(C) 2013 XXXX
+//-------------------------------------------------------------------------------
+var inputsrc = args[0];
+var startPoint = args[1];
+var endPoint = args[2];
+var returnString = application.dataItems[args[3]];
+
+var afterReplace = inputsrc.substring(startPoint, endPoint);
+returnString.value = afterReplace;
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-07-08 08:56:00.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2013-07-08 08:56:17.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

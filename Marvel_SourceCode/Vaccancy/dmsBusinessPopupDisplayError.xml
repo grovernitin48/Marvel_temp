@@ -1,0 +1,62 @@
+<LocalDescRef version="1.1">
+  <name>dmsBusinessPopupDisplayError</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 画面エラーメッセージテーブル表示の共通処理
+;
+; @param popupName         (in)エラーメッセージを表示するポップアップ名称
+;                              未指定の場合currentPopupDataitemを使用
+; @param errorMessageTable (in)エラーメッセージテーブル
+;                              未指定の場合ポップアップ名+ErrorMessageTableを使用
+; @param dataitemName      (in)エラーメッセージ欄のdataitemの"名前"
+;                              未指定の場合、dataitemをクリアしない
+;
+; @author Watanabe Shinji
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments   #1 'popupName'
+name_arguments   #2 'errorMessageTable'
+name_arguments   #3 'dataitemName'
+
+build_local_data_item '_popup'
+build_local_data_item '_table'
+build_local_data_item '_row'
+build_local_data_item '_visible'
+
+; 初期設定
+set _visible 'N'
+if popupName = ''
+    set _popup ''
+    concat _popup 'DmsBusinessPopup:' currentPopupDataitem
+else
+    set _popup popupName
+end_if
+if errorMessageTable = ''
+    concat _table _popup 'ErrorMessageTable'
+else
+    set _table errorMessageTable
+end_if
+
+;表示判定
+get_table_row_count _table _row
+if _row &gt;= '1'
+    set _visible 'Y'
+    call 'SmartUtil:insertDummyRecord' #1=_table ;メッセージ領域が切れる事象対応
+end_if
+
+; エラーメッセージの選択アイテム解除
+if dataitemName &lt;&gt; ''
+    set $dataitemName ''
+end_if
+
+set_popup_control_property _popup 'errorMessageList' 'visible' _visible
+scroll_popup_control _popup 'errorMessageList' 'up'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-04-16 07:04:12.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-08-07 06:44:23.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

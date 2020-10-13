@@ -1,0 +1,107 @@
+<LocalDescRef version="1.1">
+  <name>checkSoapFault</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+;  SoapFaultの場合のエラーをチェックする。
+;
+; @param replyXml      (in)受信結果のXMLオブジェクト
+; @param outErrorCode  (out)エラーコード(INTの名残)
+; @param outErrorLayer (out)エラーが発生した階層(INTの名残)
+; @param outErrorText  (out)エラーメッセージ
+; @param needSwitch    (out)切替要否判定結果
+; @param needRedo      (out)再帰処理要否判定結果
+; @author Naoya Yamaguchi
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'replyXml'
+name_arguments #2 'outErrorCode'
+name_arguments #3 'outErrorLayer'
+name_arguments #4 'outErrorText'
+name_arguments #5 'needSwitch'
+name_arguments #6 'needRedo'
+
+; ローカル変数
+build_local_data_item '_faultString'
+build_local_data_item '_isSwitchAvailable'
+build_local_data_item '_errorDetail'
+build_local_data_item '_isSwitchingTrigger'
+build_local_data_item '_soapFaultType'
+
+; faultstring属性の値を取得する
+; faultStringがあればsoapFaultと判定
+call 'SmartUtil:getTagValue' #1=replyXml #2='faultstring' #3='1' #4=_faultString
+
+if _faultString = ''
+    ; faultStringが無いならSoapFaultでないと判定
+    set _soapFaultType 'NOT_SOAP_FAULT'
+    goto 'END'
+end_if
+
+set outErrorText _faultString
+call 'SmartUtil:outputTraceLog' #1='0' #2='ERROR' #3='' #4='' #5='SmartUtil_checkSoapFault' #6=_faultString
+
+; 切替可能な環境か判定
+call 'dmsIsAvailableANACoreURLSwitching' #1=_isSwitchAvailable
+
+if _isSwitchAvailable &lt;&gt; 'y'
+    ; 切替不可能な環境
+    set _soapFaultType 'SERVER_ERROR'
+else
+    ; 切替可能な環境
+    ; 接続先切替トリガ例外か判定
+    call 'dmsIsANACoreURLSwitchingTrigger'   #1=_faultString #2=_isSwitchingTrigger
+    if _isSwitchingTrigger = 'y'
+        ; 接続先切替実施
+        if dmsANACoreURLSwitchingTriggerOccurredFlagDataitem = 'y'
+            ; 既に一度切替トリガ例外が発生していた場合(再帰処理から呼び出された場合)
+            set _soapFaultType 'SERVER_ERROR_AFTER_SWITCH'
+        else
+            ; 今回の送信処理で初めて接続先切替トリガ例外が発生した場合
+            set _soapFaultType 'NEED_SWITCH_AND_REDO'
+        end_if
+    else
+        ; 接続先切替トリガ例外以外である
+        set _soapFaultType 'SERVER_ERROR'
+    end_if
+end_if
+
+label 'END'
+
+switch _soapFaultType
+case 'NEED_SWITCH_AND_REDO'
+    ; 接続先切替後に再送信
+    set  dmsANACoreURLSwitchingTriggerOccurredFlagDataitem 'y'
+    call 'dmsSwitchANACoreURLSwitchingFlag'        ; フラグを別の系に切り替えて
+    set  needSwitch 'y'                            ; この処理の呼び出し元で上記フラグに基づいて、現在とは異なる系のURLにして、
+    set  needRedo   'y'                            ; 再帰呼び出しすることで再度同じxmlを送信させ、
+    set  outErrorCode ''                           ; 通常のSoapFaultととは異なり、エラーとさせない。
+case 'SERVER_ERROR_AFTER_SWITCH'
+    ; 接続先切替後にエラーなので送信処理終了
+    set  dmsANACoreURLSwitchingTriggerOccurredFlagDataitem ''
+    call 'dmsInitializeANACoreURLSwitchingFlag'    ; フラグをデフォルトに戻して、
+    set  needSwitch 'y'                            ; この処理の呼び出し元で上記フラグに基づいて、デフォルトの接続先URLに戻し、
+    set  needRedo   ''                             ; 再帰呼び出しはさせないで、
+    set  outErrorCode 'SystemError'                ; 通常のSoapFaultと同じく、SERVER ERRORとさせる。
+case 'SERVER_ERROR'
+    ; サーバーエラー
+    set  dmsANACoreURLSwitchingTriggerOccurredFlagDataitem ''
+    call 'SmartUtil:getTagValue' #1=replyXml #2='detail' #3='1' #4=_errorDetail    ;detailタグの文言を取得してログ出力する
+    call 'SmartUtil:outputTraceLog' #1='0' #2='ERROR' #3='' #4='' #5='AnacoreUtil_checkSoapFault' #6=_errorDetail
+    set  needSwitch ''                             ; 接続先切替トリガではないので、接続先切替はしないし、
+    set  needRedo   ''                             ; ただのSoapFaultなので再帰呼び出しによる再送もしない。
+    set  outErrorCode 'SystemError'                ; SERVER ERRORとなるようにエラーコードを返す。
+case 'NOT_SOAP_FAULT'
+    ; SoapFaultでない
+    set  dmsANACoreURLSwitchingTriggerOccurredFlagDataitem ''
+    set needSwitch ''
+    set needRedo   ''
+    set outErrorCode ''
+end_switch
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2015-06-02 08:49:09.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-06-03 05:36:46.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

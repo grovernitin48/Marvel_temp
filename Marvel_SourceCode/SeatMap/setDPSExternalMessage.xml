@@ -1,0 +1,57 @@
+<LocalDescRef version="1.1">
+  <name>setDPSExternalMessage</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; setDPSExternalMessage
+;
+; @param tarnsactionLogKey トランザクションログキー
+; @param processTypeId     呼び出し先の機能ID
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'tarnsactionLogKey'
+name_arguments #2 'processTypeId'
+
+build_local_data_item '_applicationIdMaster'
+build_local_data_item '_row'
+build_local_data_item '_envIdDi'
+build_local_data_item '_envId'
+build_local_data_item '_localServiceId'
+build_local_data_item '_applicationGroupCode'
+
+set _applicationIdMaster 'ANACoreApplicationIdMasterTable'
+set _envIdDi             'PNRPane:authAgentEnvIdDataitem'
+set _envId               $_envIdDi
+
+;送信先IDと、アプリケーショングループコードは
+;アプリケーショングループ名によって設定する値が変わる
+search_table _applicationIdMaster _envId 'envId' _row '' ''\
+    _localServiceId 'localServiceId' _applicationGroupCode 'applicationGroupCode'
+
+set AnacoreToServiceIdDataitem     _localServiceId
+set AnacoreApplicationCodeDataitem _applicationGroupCode
+
+;各種パラメータに設定
+;messageヘッダ
+;set AnacoreTransactionLogKeyDataitem tarnsactionLogKey
+set AnacoreFromServiceIdDataitem     'QIK'
+set AnacoreMessageTypeCodeDataitem   '0'
+set AnacoreFormatCode                '0000'
+;set AnacoreOrderKeepFlagDataitem_    '11'
+
+;applicationヘッダ
+set AnacoreDirectionTypeCodeDataitem '1'
+set AnacoreProcessTypeIdDataitem     processTypeId
+set AnacoreSessionIdDataitem         lsnDi
+
+;applicationボディ(置換用文字列)
+set AnacoreBodyXmlDataitem           '~|AnacoreBodyXml~|'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-10-21 11:31:49.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-02-12 09:11:04.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

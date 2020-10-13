@@ -1,0 +1,220 @@
+<LocalDescRef version="1.1">
+  <name>dmsSFIP_ReflectSearchCondition</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 結果画面遷移前の条件入力画面のデータを条件入力画面全タブへ反映する
+;
+; @author Sato
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+build_local_data_item '_maxRow'
+build_local_data_item '_maxRoute'
+build_local_data_item '_index'
+build_local_data_item '_refIndex'
+build_local_data_item '_popupName'
+build_local_data_item '_tabName'
+build_local_data_item '_carrierLabelScriptName'
+build_local_data_item '_airportLabelScriptName'
+
+; データ格納用
+build_local_data_item '_primary'
+build_local_data_item '_route'
+build_local_data_item '_day'
+build_local_data_item '_month'
+build_local_data_item '_year'
+build_local_data_item '_time'
+build_local_data_item '_from'
+build_local_data_item '_to'
+build_local_data_item '_carrier'
+build_local_data_item '_flightNumber'
+build_local_data_item '_carrierOption'
+build_local_data_item '_discount'
+build_local_data_item '_bkg'
+
+build_local_data_item '_refRoute'
+build_local_data_item '_refTabName'
+build_local_data_item '_refDay'
+build_local_data_item '_refMonth'
+build_local_data_item '_refYear'
+build_local_data_item '_refTime'
+build_local_data_item '_refFrom'
+build_local_data_item '_refFromLabel'
+build_local_data_item '_refTo'
+build_local_data_item '_refToLabel'
+build_local_data_item '_refCarrier'
+build_local_data_item '_refFlightNumber'
+build_local_data_item '_refCarrierOption'
+build_local_data_item '_refCarrierLabel'
+build_local_data_item '_refDiscount'
+build_local_data_item '_refDiscountLabel'
+build_local_data_item '_refBkg'
+
+build_local_data_item '_scriptName'
+set _scriptName 'DmsBusinessPopup_dmsSFIP_ReflectSearchCondition'
+
+call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_scriptName #4='Start'
+
+; 初期設定
+set _index '1'
+set _popupName 'dmsSearchFlightsInputPopup'
+set _carrierLabelScriptName 'dmsSetCarrierNameLabel'
+set _airportLabelScriptName 'dmsSetAirportNameLabel'
+get_table_row_count 'dmsSearchConditionMasterTable'  _maxRow
+
+; 条件画面を初期表示の場合はこの処理を行わない
+if dmsCurrentSearchFlightsPopupDataitem = ''
+    return
+end_if
+
+switch dmsCurrentSearchFlightsPopupDataitem
+case 'dmsSearchFlightsPopup'
+    set _tabName 'oneTwoTab'
+case 'dmsSearchFlightsVVPopup'
+    set _tabName 'oneTwoTab'
+case 'dmsSearchFlightsSKPopup'
+    set _tabName 'oneTwoTab'
+case 'dmsSearchFlightsGWPopup'
+    set _tabName 'oneTwoTab'
+case 'dmsSearchFlightsAXPopup'
+    set _tabName 'sevenDaySearchTab'
+case 'dmsSeasonalityReferencePopup'
+    set _tabName 'seasonalitySearchTab'
+case 'dmsFareReferenceFCPopup'
+    set _tabName 'fareSearch'
+case 'dmsFareReferencePopup'
+    set _tabName 'DiscountFareSearch'
+case 'dmsDowngradeSearchResultPNRPopup'
+    set _tabName 'downgradeTab'
+case 'dmsDowngradeSearchResultCondPopup'
+    set _tabName 'downgradeTab'
+end_switch
+
+search_table 'dmsSearchConditionMasterTable' _tabName 'tabName' _index _index ''
+calculate _maxRoute = _index + '3'
+
+while _index &lt;= _maxRoute
+    ; 結果画面遷移前の条件入力のタブのデータを変数へセット
+    search_table 'dmsSearchConditionMasterTable' _tabName 'tabName' _index _index '' _route 'route' _day 'day' \
+        _month 'month' _year 'year' _time 'time' _from 'from' _to 'to' _carrier 'carrier' _flightNumber 'flightNumber' \
+        _carrierOption 'carrierOption' _discount 'discount'  _bkg 'bkg'
+
+    ; 区間がなければ抜ける
+    if _index = ''
+        return
+    end_if
+    
+    ; 条件入力画面の各タブにデータをセットする
+    set _refIndex '1'
+    while _refIndex &lt;= _maxRow
+        search_table 'dmsSearchConditionMasterTable' _refIndex 'primary' _refIndex _refIndex '' _refRoute 'route' _refTabName 'tabName' \
+            _refDay 'day' _refMonth 'month' _refYear 'year' _refTime 'time' _refFrom 'from' _refFromLabel 'fromLabel' _refTo 'to' \
+            _refToLabel 'toLabel' _refCarrier 'carrier' _refFlightNumber 'flightNumber' _refCarrierOption 'carrierOption' \
+            _refCarrierLabel 'carrierLabel' _refDiscount 'discount' _refDiscountLabel 'discountLabel' _refBkg 'bkg'
+        
+        ; 結果画面遷移前の条件入力画面タブと同じ場合セットを行わない
+        if _tabName = _refTabName
+            calculate _refIndex = _refIndex + '1'
+            restart_while
+        end_if
+        
+        ; 区間が違う場合セットを行わない
+        if _route &lt;&gt; _refRoute
+            calculate _refIndex = _refIndex + '1'
+            restart_while
+        end_if
+        
+        ; 遷移もとのデータが空でない場合データをセットする
+        ; 日
+        if _day &lt;&gt; '' &amp; _refDay &lt;&gt; ''
+            if $_day &lt;&gt; ''
+                set $_refDay $_day
+            end_if
+        end_if
+        
+        ; 月
+        if _month &lt;&gt; '' &amp; _refMonth &lt;&gt; ''
+            if $_month &lt;&gt; ''
+                set $_refMonth $_month
+            end_if
+        end_if
+
+        ; 年
+        if _year &lt;&gt; '' &amp; _refYear &lt;&gt; ''
+            if $_year &lt;&gt; ''
+                set $_refYear $_year
+            end_if
+        end_if
+
+        ; 時間
+        if _time &lt;&gt; '' &amp; _refTime &lt;&gt; ''
+            if $_time &lt;&gt; ''
+                set $_refTime $_time
+            end_if
+        end_if
+
+        ; 出発空港
+        if _from &lt;&gt; '' &amp; _refFrom &lt;&gt; ''
+            if $_from &lt;&gt; ''
+                set $_refFrom $_from
+                call _airportLabelScriptName #1=_popupName #2=$_refFrom #3=_refFromLabel
+            end_if
+        end_if
+
+        ; 到着空港
+        if _to &lt;&gt; '' &amp; _refTo &lt;&gt; ''
+            if $_to &lt;&gt; ''
+                set $_refTo $_to
+                call _airportLabelScriptName #1=_popupName #2=$_refTo #3=_refToLabel
+            end_if
+        end_if
+
+        ; 便名
+        if _carrier &lt;&gt; '' &amp; _refCarrier &lt;&gt; ''
+            if $_carrier &lt;&gt; ''
+                set $_refCarrier $_carrier
+            end_if
+        end_if
+        if _flightNumber &lt;&gt; '' &amp; _refFlightNumber &lt;&gt; ''
+            if $_flightNumber &lt;&gt; ''
+                set $_refFlightNumber $_flightNumber
+            end_if
+        end_if
+
+        ; キャリアオプション
+        if _carrierOption &lt;&gt; '' &amp; _refCarrierOption &lt;&gt; ''
+            if $_carrierOption &lt;&gt; ''
+                set $_refCarrierOption $_carrierOption
+                call _carrierLabelScriptName #1=_popupName #2=$_refCarrierOption #3=_refCarrierLabel
+            end_if
+        end_if
+        
+        ; 割引種別
+        if _discount &lt;&gt; '' &amp; _refDiscount &lt;&gt; ''
+            if $_discount &lt;&gt; ''
+                set $_refDiscount $_discount
+            end_if
+        end_if
+
+        ; BKGクラス
+        if _bkg &lt;&gt; '' &amp; _refBkg &lt;&gt; ''
+            if $_bkg &lt;&gt; ''
+                set $_refBkg $_bkg
+            end_if
+        end_if
+
+        calculate _refIndex = _refIndex + '1'
+    end_while
+    calculate _index = _index + '1'
+end_while
+
+; ログ出力
+call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_scriptName #4='End'
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-05-07 06:34:28.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-03-11 08:28:48.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

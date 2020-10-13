@@ -1,0 +1,74 @@
+<LocalDescRef version="1.1">
+  <name>getAirportName</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 空港コードから空港名を取得する処理
+;
+; @param airportCode        (I) 空港コード
+; @param resultAirportName  (O) 空港名
+; @param languageFlg        (I) 言語         (1:en_US, 2:ja_JP ※指定不要、Qikの言語フラグで判定する)
+; @param airportNameHtml    (O) 空港名HTML   (ボタン用の改行しないHTML) ※ツールチップ用途
+; @param displayMaxLength   (I) 表示最大桁数  (指定した表示桁数より長い空港名の場合、
+;                               (半角数字)    短くした空港名の末尾に"..."を付けた#4「空港名HTML」を返す) ※ツールチップ用途
+;                                            * 指定する表示桁数は大文字「W」を連続して何桁まで表示できるかで算出する
+; @author TAKAHASHI Taro
+;
+; Copyright (C) All Nippon Airways Co., Ltd.  All rights reserved.
+;-------------------------------------------------------------------------------
+name_arguments #1 'airportCode'
+name_arguments #2 'resultAirportName'
+name_arguments #3 'languageFlg'
+name_arguments #4 'airportNameHtml'
+name_arguments #5 'displayMaxLength'
+
+build_local_data_item '_column'
+build_local_data_item '_language'
+build_local_data_item '_airportName'
+build_local_data_item '_airportNameDisplay'
+build_local_data_item '_length'
+build_local_data_item '_endPosition'
+
+; 初期化
+set airportNameHtml ''
+
+get_language _language
+if _language = 'ja_JP'
+    set _column 'P_JP_APT_VC'
+else
+    set _column 'P_EN_APT_VC'
+end_if
+call 'getAirportBySpecificColumn' #1=airportCode #2=_column #3=_airportName
+set resultAirportName _airportName
+
+; 空港名HTML
+if displayMaxLength = ''
+    ; 最大表示桁数の指定がない場合
+    ; 空港名の文字列操作はせずそのまま空港名HTMLを作成
+    concat airportNameHtml '&lt;html&gt;&lt;body&gt;&lt;nobr&gt;' _airportName '&lt;/nobr&gt;&lt;/body&gt;&lt;/html&gt;'
+else
+    ; 最大表示桁数の指定がある場合
+    ; 空港名の桁数を取得し、最大表示桁数と比較
+    data_item_length _airportName _length
+    if displayMaxLength &lt; _length
+        ; 指定した表示桁数より長い空港名の場合
+        ; 1桁目から最大表示桁数-1桁目で取得した空港名の末尾に"..."を付与
+        calculate _endPosition = displayMaxLength - '1'
+        copy_data_item _airportNameDisplay _airportName '1' _endPosition
+        concat _airportNameDisplay '...'
+    else
+        ; 指定した表示桁数以下の空港名の場合
+        ; 空港名の文字列操作はせずそのまま空港名HTMLを作成
+        set _airportNameDisplay _airportName
+    end_if
+
+    ; 空港名HTMLを作成
+    concat airportNameHtml '&lt;html&gt;&lt;body&gt;&lt;nobr&gt;' _airportNameDisplay '&lt;/nobr&gt;&lt;/body&gt;&lt;/html&gt;'
+end_if
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-05-27 02:36:23.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2018-11-20 11:11:17.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

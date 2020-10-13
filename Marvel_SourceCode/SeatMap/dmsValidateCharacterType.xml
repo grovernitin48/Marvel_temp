@@ -1,0 +1,83 @@
+<LocalDescRef version="1.1">
+  <name>dmsValidateCharacterType</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsValidateCharacterType
+; ★文字種別指定方法★
+;   A:英字
+;   K:半角カナ文字
+;   C:漢字(全角文字)
+;   N:数字
+;   /:スラッシュ('/'は特殊文字ではないため個別に指定可能とする)
+;   S:許容する特殊文字(#4で指定された特殊文字)
+;   X:禁止されている特殊文字(#4で指定された以外の特殊文字)
+; 上記の記号を結合して#2に指定してください。
+; #2で指定した文字種別の内、#1に含まれていた文字種別を#3に入れて返します。
+; 
+; @param targetString 判定・変換対象文字列
+; @param invalidType  禁止文字種別
+; @param result       判定結果
+; @param acceptSymbol 許容する特殊文字
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2014 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'targetString'
+name_arguments #2 'invalidType'
+name_arguments #3 'result'
+name_arguments #4 'acceptSymbol'
+
+build_local_data_item '_pos'
+build_local_data_item '_targetString'
+build_local_data_item '_length'
+build_local_data_item '_index'
+build_local_data_item '_invalidType'
+
+build_local_data_item 'debug'
+
+set result ''
+
+; Cが設定されていない場合は、全角文字を半角文字に変換する
+search_data_item 'C' _pos invalidType '1'
+if _pos &lt;&gt; ''
+    set SmartUtil:convertTwoByteToOneByteDataitem ''
+    call 'SmartUtil:convertTwoByteToOneByte_js' #1=targetString #2='SmartUtil:convertTwoByteToOneByteDataitem'
+    set _targetString SmartUtil:convertTwoByteToOneByteDataitem
+else
+    set _targetString targetString
+end_if
+
+; 全体判定実施
+call 'SmartUtil:getContainedCharacterType_js' #1=_targetString #2=acceptSymbol #3='SmartUtil:getContainedCharacterTypeDataitem'
+
+set debug SmartUtil:getContainedCharacterTypeDataitem
+set targetString _targetString
+
+; '/'が存在する場合は判定結果に追記しておく
+search_data_item '/' _pos _targetString '1'
+if _pos &lt;&gt; ''
+    concat SmartUtil:getContainedCharacterTypeDataitem '/'
+end_if
+
+; 判定結果に禁止文字種別があるか確認する
+data_item_length invalidType _length
+set _index '1'
+while _index &lt;= _length
+    copy_data_item _invalidType invalidType _index '1'
+
+    search_data_item _invalidType _pos SmartUtil:getContainedCharacterTypeDataitem '1'
+    if _pos &lt;&gt; ''
+        ; 禁止文字種別あり
+        concat result _invalidType
+    end_if
+
+    calculate _index = _index + '1'
+end_while
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-01-23 01:13:07.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-12-07 05:32:53.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

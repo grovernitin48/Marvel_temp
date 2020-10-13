@@ -1,0 +1,81 @@
+<LocalDescRef version="1.1">
+  <name>dmsASIP_OnSelectSearchButton</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; dmsASIP_OnSelectSearchButton
+; シートマップ照会条件入力画面(DM) 検索ボタン押下時の処理
+;
+; @author Mizushima satoru
+;
+; Copyright(C) 2014/06/24
+;-------------------------------------------------------------------------------
+build_local_data_item '_popup'
+build_local_data_item '_script'
+build_local_data_item '_errorFlag'
+build_local_data_item '_displayId'
+build_local_data_item '_replyPattern'
+build_local_data_item '_buf'
+build_local_data_item '_year'
+
+; 初期設定
+set _popup 'DmsBusinessPopup:dmsActiveSeatmapInputPopup'
+set _script 'DmsBusinessPopup_dmsASIP_OnSelectSearchButton'
+set _displayId 'DMS_PU_ActiveSeatmapInputPopup'
+
+; ログ出力
+call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_script #4='Event Start'
+call 'DmsSmartUtil:dmsWriteOperationLog' #1='DmsBusinessPopup_dmsActiveSeatMapInputPopup' #2='' #3='searchButton'
+
+; エラーメッセージクリア
+call 'dmsASIP_ClearError'
+
+; 入力値チェック
+call 'dmsASIP_Validation' #1=_year #2=_errorFlag
+if _errorFlag = 'Y'
+    ; エラー表示/ログ出力
+    call 'dmsASIP_DisplayError'
+    call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_script #4='Event end (Input Error)'
+    return
+end_if
+
+; 送信情報設定
+call 'dmsASIP_SetParam' #1='' #2=_year
+
+; WBS送信/受信(DM:N)
+call 'DmsXmlPNRPane:dmsWBSSendCommand' #1='DmsXmlPNRPane:dmsWBSCmdDmN' #2=_errorFlag #3=_replyPattern
+if _errorFlag &lt;&gt; ''
+    ; エラー表示
+    call 'DmsSmartUtil:dmsCommonErrorHandling' #1=_popup #2=_errorFlag #3=_replyPattern
+    call 'dmsASIP_DisplayError'
+    ; トレース/操作履歴ログ(異常終了)
+    call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_script #4='Event end (WBS Error DM:N)'
+    return
+end_if
+
+; WBS送信/受信(DM:Z)
+if dmsASIP_AttributeDi = 'Y'
+    call 'DmsXmlPNRPane:dmsWBSSendCommand' #1='DmsXmlPNRPane:dmsWBSCmdDmZ' #2=_errorFlag #3=_replyPattern
+end_if
+if _errorFlag &lt;&gt; ''
+    ; エラー表示
+    call 'DmsSmartUtil:dmsCommonErrorHandling' #1=_popup #2=_errorFlag #3=_replyPattern
+    call 'dmsASIP_DisplayError'
+    ; トレース/操作履歴ログ(異常終了)
+    call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_script #4='Event end (WBS Error DM:Z)'
+    return
+end_if
+
+; トレース/操作履歴ログ(正常終了)
+call 'PNRPane:writeTraceLog' #1='0' #2='INFO' #3=_script #4='Event end'
+set dmsASP_SelectClassDi dmsASIP_ClassRadioDi
+; 画面呼出
+set dmsASIP_DisplayResultFlgDi 'Y'
+commit_popup _popup
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-06-24 05:22:11.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2015-12-23 02:00:12.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

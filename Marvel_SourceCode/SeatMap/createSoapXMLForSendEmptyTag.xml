@@ -1,0 +1,136 @@
+<LocalDescRef version="1.1">
+  <name>createSoapXMLForSendEmptyTag</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; (Anacore用)
+;  空タグを含む SOAP送信オブジェクトを作成する
+;
+; @param schemaMapName       スキーママップ名
+; @param operationName       オペレーション名(ANACore機能ID)
+; @param outXmlDoc           xmlオブジェクト
+; @param outErrorFlag        エラーフラグ（Y:エラー、それ以外:正常）
+; @param outErrorMessage     エラーメッセージ
+; @param dataitemOrTableName 挿入する空タグにマッピングされている
+;                            データアイテム又はテーブル名
+; @param columnName          カラム名(これを指定した場合テーブルと判断)
+; ※ dataitemOrTableNameの内容が空の場合のみ空タグを追加する
+; 
+; @author Watanabe Mitsuru
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'schemaMapName'
+name_arguments #2 'operationName'
+name_arguments #3 'outXmlDoc'
+name_arguments #4 'outErrorFlag'
+name_arguments #5 'outErrorMessage'
+name_arguments #6 'dataitemOrTableName'
+name_arguments #7 'columnName'
+
+;変数宣言
+build_local_data_item '_dummyType'
+build_local_data_item '_isClrTbl'
+build_local_data_item '_i'
+build_local_data_item '_cnt'
+build_local_data_item '_tmp'
+
+; --------------------------------------------------
+; データアイテム or テーブル ?
+; --------------------------------------------------
+if dataitemOrTableName &lt;&gt; ''
+    if columnName = ''
+        set _dummyType 'DATAITEM' ; データアイテム指定
+    else
+        set _dummyType 'TABLE'    ; テーブル指定
+    end_if
+else
+    set _dummyType ''             ; 無し
+end_if
+
+; --------------------------------------------------
+; DUMMY設定
+; --------------------------------------------------
+set _i ''
+set _cnt ''
+
+; ----- データアイテム指定 -----
+if _dummyType = 'DATAITEM'
+    ; 内容が空の場合DUMMY追加
+    if $dataitemOrTableName = ''
+        set $dataitemOrTableName '~|DUMMY~|'
+    end_if
+end_if
+
+; ----- テーブル指定 -----
+if _dummyType = 'TABLE'
+    get_table_row_count dataitemOrTableName _cnt
+    if _cnt = '0'
+        ; DUMMY用のrow追加
+        insert_table_row dataitemOrTableName ''
+        set _cnt '1'
+        set _isClrTbl 'Y'
+    end_if
+end_if ; テーブル指定の処理継続
+; 指定celの内容が空の場合DUMMY追加
+set _i '1'
+while _i &lt;= _cnt
+    copy_table dataitemOrTableName _tmp _i '' columnName
+    if _tmp = ''
+        update_table_cell dataitemOrTableName '~|DUMMY~|' _i columnName
+    end_if
+    calculate _i = _i + '1'
+end_while
+
+; --------------------------------------------------
+; SOAP送信のXMLオブジェクト作成
+; --------------------------------------------------
+call 'AnacoreUtil:createSoapXMLForSend' \
+    #1=schemaMapName #2=operationName \
+    #3=outXmlDoc #4=outErrorFlag #5=outErrorMessage
+
+if outErrorFlag = 'Y'
+    return
+end_if
+
+; --------------------------------------------------
+; DUMMYを削除
+; --------------------------------------------------
+if _dummyType &lt;&gt; ''
+    call 'SmartUtil:replaceStringAll_js' \
+        #1=outXmlDoc \
+        #2='&gt;~|DUMMY~|&lt;' #3='&gt;&lt;' \
+        #4='SmartUtil:temporaryValueDataitem'
+    set outXmlDoc SmartUtil:temporaryValueDataitem
+
+end_if
+
+; ダミーデータ 削除
+set _i ''
+set _cnt ''
+if _dummyType = 'DATAITEM'
+    if $dataitemOrTableName = '~|DUMMY~|'
+        set $dataitemOrTableName ''
+    end_if
+end_if
+if _dummyType = 'TABLE'
+	if _isClrTbl &lt;&gt; ''
+	    clear_table dataitemOrTableName
+    end_if
+    get_table_row_count dataitemOrTableName _cnt
+end_if ; テーブル指定の処理継続
+set _i '1'
+while _i &lt;= _cnt
+    copy_table dataitemOrTableName _tmp _i '' columnName
+    if _tmp = '~|DUMMY~|'
+        update_table_cell dataitemOrTableName '' _i columnName
+    end_if
+    calculate _i = _i + '1'
+end_while
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2014-02-21 05:06:42.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-06-27 07:31:02.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>

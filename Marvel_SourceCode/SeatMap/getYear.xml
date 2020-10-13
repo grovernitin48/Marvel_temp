@@ -1,0 +1,60 @@
+<LocalDescRef version="1.1">
+  <name>getYear</name>
+  <type>6</type>
+  <appObjectDesc class="SCRIPT">
+    <type>0</type>
+    <scriptText>;-------------------------------------------------------------------------------
+; 日付から年を返す。
+; ※年が2桁の場合、1950年か2050年かの判定はしない。
+; 日付がフォーマット通りかどうかは判定しない。
+;
+; ※ Robotから呼ばれているスクリプトです。
+;
+; @param date　日付
+; @param format　フォーマット 'YYYY-MM-DD'、'DDMMMYY'など
+; @param returnYear　戻り値
+; @author Naoya Yamaguchi
+;
+; Copyright(C) 2013 XXXX
+;-------------------------------------------------------------------------------
+name_arguments #1 'date'
+name_arguments #2 'format'
+name_arguments #3 'returnYear'
+
+; 指定フォーマットによる年の取得
+switch format
+case 'yyyyMMdd'
+    copy_data_item returnYear date '1' '4'
+
+case 'YYYY-MM-DD'
+    copy_data_item returnYear date '1' '4'
+
+case 'DDMMMYY'
+    copy_data_item returnYear date '6' '2'
+
+case 'DDMMYY'
+    copy_data_item returnYear date '5' '2'
+
+case 'DDMMYYYY'
+    copy_data_item returnYear date '5' '4'
+
+case 'MM/dd/yy'
+    copy_data_item returnYear date '7' '2'
+
+case 'ddMMMyyyy'
+    copy_data_item returnYear date '6' '4'
+
+case 'DD/MM/YYYY'
+    copy_data_item returnYear date '7' '4'
+
+case 'MM/DD/YYYY'
+    copy_data_item returnYear date '7' '4'
+case 'YYMMDD'
+    copy_data_item returnYear date '1' '2'
+end_switch
+</scriptText>
+    <javaScriptMode>0</javaScriptMode>
+    <created class="com.poet.rt.db.tracked.TrackedDate">2013-05-22 04:25:52.0 GMT</created>
+    <lastSaved class="com.poet.rt.db.tracked.TrackedDate">2014-10-17 06:55:15.0 GMT</lastSaved>
+  </appObjectDesc>
+</LocalDescRef>
