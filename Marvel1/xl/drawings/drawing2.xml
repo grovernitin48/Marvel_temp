@@ -1,2 +1,1792 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xdr:wsDr xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>21</xdr:col><xdr:colOff>425819</xdr:colOff><xdr:row>5</xdr:row><xdr:rowOff>0</xdr:rowOff></xdr:from><xdr:to><xdr:col>31</xdr:col><xdr:colOff>580350</xdr:colOff><xdr:row>52</xdr:row><xdr:rowOff>36054</xdr:rowOff></xdr:to><xdr:pic><xdr:nvPicPr><xdr:cNvPr id="4" name="図 3"/><xdr:cNvPicPr><a:picLocks noChangeAspect="1"/></xdr:cNvPicPr></xdr:nvPicPr><xdr:blipFill><a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId1"/><a:stretch><a:fillRect/></a:stretch></xdr:blipFill><xdr:spPr><a:xfrm><a:off x="11161054" y="784412"/><a:ext cx="9847620" cy="7409524"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></xdr:spPr></xdr:pic><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>313763</xdr:colOff><xdr:row>4</xdr:row><xdr:rowOff>0</xdr:rowOff></xdr:from><xdr:to><xdr:col>13</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>6</xdr:row><xdr:rowOff>0</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="29" name="テキスト ボックス 28"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="627528" y="627529"/><a:ext cx="3451413" cy="313765"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0" anchor="t"/><a:lstStyle/><a:p><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000"/><a:t>2</a:t></a:r><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000"/><a:t>区間表示</a:t></a:r></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>21</xdr:col><xdr:colOff>450586</xdr:colOff><xdr:row>4</xdr:row><xdr:rowOff>0</xdr:rowOff></xdr:from><xdr:to><xdr:col>24</xdr:col><xdr:colOff>1884940</xdr:colOff><xdr:row>6</xdr:row><xdr:rowOff>0</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="10" name="テキスト ボックス 9"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="11185821" y="627529"/><a:ext cx="3451413" cy="313765"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0" anchor="t"/><a:lstStyle/><a:p><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000"/><a:t>1</a:t></a:r><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000"/><a:t>区間表示</a:t></a:r></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:oneCellAnchor><xdr:from><xdr:col>16</xdr:col><xdr:colOff>499223</xdr:colOff><xdr:row>255</xdr:row><xdr:rowOff>78440</xdr:rowOff></xdr:from><xdr:ext cx="142875" cy="142875"/><xdr:pic><xdr:nvPicPr><xdr:cNvPr id="14" name="図 13"/><xdr:cNvPicPr><a:picLocks noChangeAspect="1"/></xdr:cNvPicPr></xdr:nvPicPr><xdr:blipFill><a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId2"><a:extLst><a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}"><a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/></a:ext></a:extLst></a:blip><a:stretch><a:fillRect/></a:stretch></xdr:blipFill><xdr:spPr><a:xfrm><a:off x="7128623" y="47474840"/><a:ext cx="142875" cy="142875"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></xdr:spPr></xdr:pic><xdr:clientData/></xdr:oneCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>16</xdr:col><xdr:colOff>437030</xdr:colOff><xdr:row>260</xdr:row><xdr:rowOff>100852</xdr:rowOff></xdr:from><xdr:to><xdr:col>17</xdr:col><xdr:colOff>120991</xdr:colOff><xdr:row>260</xdr:row><xdr:rowOff>215138</xdr:rowOff></xdr:to><xdr:pic><xdr:nvPicPr><xdr:cNvPr id="2" name="図 1"/><xdr:cNvPicPr><a:picLocks noChangeAspect="1"/></xdr:cNvPicPr></xdr:nvPicPr><xdr:blipFill><a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId3"><a:extLst><a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}"><a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/></a:ext></a:extLst></a:blip><a:stretch><a:fillRect/></a:stretch></xdr:blipFill><xdr:spPr><a:xfrm><a:off x="7059706" y="50717823"/><a:ext cx="266667" cy="114286"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></xdr:spPr></xdr:pic><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>7</xdr:row><xdr:rowOff>4</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>9</xdr:row><xdr:rowOff>11694</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="54" name="テキスト ボックス 53"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="1098180"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>1</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>9</xdr:row><xdr:rowOff>6727</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>11</xdr:row><xdr:rowOff>18417</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="55" name="テキスト ボックス 54"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="1418668"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>2</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>12</xdr:row><xdr:rowOff>100853</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>14</xdr:row><xdr:rowOff>112543</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="56" name="テキスト ボックス 55"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="1983441"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>4</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>49</xdr:row><xdr:rowOff>22416</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>51</xdr:row><xdr:rowOff>34106</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="57" name="テキスト ボックス 56"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="7709651"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>12</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>10</xdr:row><xdr:rowOff>125506</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>12</xdr:row><xdr:rowOff>137197</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="58" name="テキスト ボックス 57"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="1694330"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>3</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>26</xdr:row><xdr:rowOff>58271</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>28</xdr:row><xdr:rowOff>69961</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="59" name="テキスト ボックス 58"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="4137212"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>5</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>28</xdr:row><xdr:rowOff>76199</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>30</xdr:row><xdr:rowOff>87889</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="60" name="テキスト ボックス 59"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="4468905"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>6</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>30</xdr:row><xdr:rowOff>71716</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>32</xdr:row><xdr:rowOff>83407</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="61" name="テキスト ボックス 60"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="4778187"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>7</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>43</xdr:row><xdr:rowOff>152399</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>46</xdr:row><xdr:rowOff>7207</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="62" name="テキスト ボックス 61"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="6898340"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>8</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>46</xdr:row><xdr:rowOff>2240</xdr:rowOff></xdr:from><xdr:to><xdr:col>2</xdr:col><xdr:colOff>0</xdr:colOff><xdr:row>48</xdr:row><xdr:rowOff>13930</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="63" name="テキスト ボックス 62"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="313765" y="7218828"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>9</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>20</xdr:col><xdr:colOff>1</xdr:colOff><xdr:row>11</xdr:row><xdr:rowOff>33617</xdr:rowOff></xdr:from><xdr:to><xdr:col>21</xdr:col><xdr:colOff>1</xdr:colOff><xdr:row>13</xdr:row><xdr:rowOff>45307</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="64" name="テキスト ボックス 63"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="10421472" y="1759323"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>10</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>20</xdr:col><xdr:colOff>2243</xdr:colOff><xdr:row>36</xdr:row><xdr:rowOff>91887</xdr:rowOff></xdr:from><xdr:to><xdr:col>21</xdr:col><xdr:colOff>2243</xdr:colOff><xdr:row>38</xdr:row><xdr:rowOff>103578</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="65" name="テキスト ボックス 64"/><xdr:cNvSpPr txBox="1"/></xdr:nvSpPr><xdr:spPr><a:xfrm><a:off x="10423714" y="5739652"/><a:ext cx="313764" cy="325455"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="9525" cmpd="sng"><a:noFill/></a:ln></xdr:spPr><xdr:style><a:lnRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:lnRef><a:fillRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:fillRef><a:effectRef idx="0"><a:scrgbClr r="0" g="0" b="0"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="dk1"/></a:fontRef></xdr:style><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:rPr><a:t>11</a:t></a:r><a:endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1"><a:solidFill><a:srgbClr val="FF0000"/></a:solidFill></a:endParaRPr></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>1</xdr:col><xdr:colOff>302558</xdr:colOff><xdr:row>5</xdr:row><xdr:rowOff>22412</xdr:rowOff></xdr:from><xdr:to><xdr:col>20</xdr:col><xdr:colOff>42472</xdr:colOff><xdr:row>52</xdr:row><xdr:rowOff>58466</xdr:rowOff></xdr:to><xdr:pic><xdr:nvPicPr><xdr:cNvPr id="3" name="図 2"/><xdr:cNvPicPr><a:picLocks noChangeAspect="1"/></xdr:cNvPicPr></xdr:nvPicPr><xdr:blipFill><a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId4"/><a:stretch><a:fillRect/></a:stretch></xdr:blipFill><xdr:spPr><a:xfrm><a:off x="616323" y="806824"/><a:ext cx="9847620" cy="7409524"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></xdr:spPr></xdr:pic><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>17</xdr:col><xdr:colOff>302559</xdr:colOff><xdr:row>11</xdr:row><xdr:rowOff>22411</xdr:rowOff></xdr:from><xdr:to><xdr:col>19</xdr:col><xdr:colOff>504265</xdr:colOff><xdr:row>35</xdr:row><xdr:rowOff>56029</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="27" name="正方形/長方形 26"/><xdr:cNvSpPr/></xdr:nvSpPr><xdr:spPr bwMode="auto"><a:xfrm><a:off x="7507941" y="1748117"/><a:ext cx="2835089" cy="3798794"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:solidFill><a:schemeClr val="tx1"><a:alpha val="50000"/></a:schemeClr></a:solidFill><a:ln w="9525" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:schemeClr val="tx1"/></a:solidFill><a:prstDash val="solid"/><a:round/><a:headEnd type="none" w="med" len="med"/><a:tailEnd type="none" w="med" len="med"/></a:ln><a:effectLst/></xdr:spPr><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" upright="1"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>「</a:t></a:r><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>MARVEL</a:t></a:r><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>国内画面項目一覧</a:t></a:r><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>_</a:t></a:r><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>チケットイメージ」を参照</a:t></a:r></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>16</xdr:col><xdr:colOff>11210</xdr:colOff><xdr:row>6</xdr:row><xdr:rowOff>145675</xdr:rowOff></xdr:from><xdr:to><xdr:col>18</xdr:col><xdr:colOff>1917330</xdr:colOff><xdr:row>9</xdr:row><xdr:rowOff>74518</xdr:rowOff></xdr:to><xdr:pic><xdr:nvPicPr><xdr:cNvPr id="25" name="図 24"/><xdr:cNvPicPr><a:picLocks noChangeAspect="1" noChangeArrowheads="1"/></xdr:cNvPicPr></xdr:nvPicPr><xdr:blipFill><a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId5"><a:extLst><a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}"><a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/></a:ext></a:extLst></a:blip><a:srcRect/><a:stretch><a:fillRect/></a:stretch></xdr:blipFill><xdr:spPr bwMode="auto"><a:xfrm><a:off x="6633886" y="1086969"/><a:ext cx="3071532" cy="399490"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:extLst><a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}"><a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a14:hiddenFill></a:ext></a:extLst></xdr:spPr></xdr:pic><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>25</xdr:col><xdr:colOff>387728</xdr:colOff><xdr:row>6</xdr:row><xdr:rowOff>141193</xdr:rowOff></xdr:from><xdr:to><xdr:col>30</xdr:col><xdr:colOff>433672</xdr:colOff><xdr:row>9</xdr:row><xdr:rowOff>70036</xdr:rowOff></xdr:to><xdr:pic><xdr:nvPicPr><xdr:cNvPr id="26" name="図 25"/><xdr:cNvPicPr><a:picLocks noChangeAspect="1" noChangeArrowheads="1"/></xdr:cNvPicPr></xdr:nvPicPr><xdr:blipFill><a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId5"><a:extLst><a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}"><a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/></a:ext></a:extLst></a:blip><a:srcRect/><a:stretch><a:fillRect/></a:stretch></xdr:blipFill><xdr:spPr bwMode="auto"><a:xfrm><a:off x="17185346" y="1082487"/><a:ext cx="3071532" cy="399490"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:extLst><a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}"><a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a14:hiddenFill></a:ext></a:extLst></xdr:spPr></xdr:pic><xdr:clientData/></xdr:twoCellAnchor><xdr:twoCellAnchor editAs="oneCell"><xdr:from><xdr:col>27</xdr:col><xdr:colOff>56030</xdr:colOff><xdr:row>11</xdr:row><xdr:rowOff>11206</xdr:rowOff></xdr:from><xdr:to><xdr:col>31</xdr:col><xdr:colOff>470648</xdr:colOff><xdr:row>35</xdr:row><xdr:rowOff>44824</xdr:rowOff></xdr:to><xdr:sp macro="" textlink=""><xdr:nvSpPr><xdr:cNvPr id="30" name="正方形/長方形 29"/><xdr:cNvSpPr/></xdr:nvSpPr><xdr:spPr bwMode="auto"><a:xfrm><a:off x="18063883" y="1736912"/><a:ext cx="2835089" cy="3798794"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:solidFill><a:schemeClr val="tx1"><a:alpha val="50000"/></a:schemeClr></a:solidFill><a:ln w="9525" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:schemeClr val="tx1"/></a:solidFill><a:prstDash val="solid"/><a:round/><a:headEnd type="none" w="med" len="med"/><a:tailEnd type="none" w="med" len="med"/></a:ln><a:effectLst/></xdr:spPr><xdr:txBody><a:bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" upright="1"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>「</a:t></a:r><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>MARVEL</a:t></a:r><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>国内画面項目一覧</a:t></a:r><a:r><a:rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>_</a:t></a:r><a:r><a:rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0"><a:solidFill><a:schemeClr val="bg1"/></a:solidFill></a:rPr><a:t>チケットイメージ」を参照</a:t></a:r></a:p></xdr:txBody></xdr:sp><xdr:clientData/></xdr:twoCellAnchor></xdr:wsDr>
+<wsDr xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				21
+			</col>
+			<colOff>
+				425819
+			</colOff>
+			<row>
+				5
+			</row>
+			<rowOff>
+				0
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				31
+			</col>
+			<colOff>
+				580350
+			</colOff>
+			<row>
+				52
+			</row>
+			<rowOff>
+				36054
+			</rowOff>
+		</to>
+		<pic>
+			<nvPicPr>
+				<cNvPr id="4" name="図 3" />
+				<cNvPicPr>
+					<picLocks noChangeAspect="1" />
+				</cNvPicPr>
+			</nvPicPr>
+			<blipFill>
+				<blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId1" />
+				<stretch>
+					<fillRect />
+				</stretch>
+			</blipFill>
+			<spPr>
+				<xfrm>
+					<off x="11161054" y="784412" />
+					<ext cx="9847620" cy="7409524" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+			</spPr>
+		</pic>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				313763
+			</colOff>
+			<row>
+				4
+			</row>
+			<rowOff>
+				0
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				13
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				6
+			</row>
+			<rowOff>
+				0
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="29" name="テキスト ボックス 28" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="627528" y="627529" />
+					<ext cx="3451413" cy="313765" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0" anchor="t" />
+				<lstStyle />
+				<p>
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" />
+						<t>
+							2
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" />
+						<t>
+							区間表示
+						</t>
+					</r>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				21
+			</col>
+			<colOff>
+				450586
+			</colOff>
+			<row>
+				4
+			</row>
+			<rowOff>
+				0
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				24
+			</col>
+			<colOff>
+				1884940
+			</colOff>
+			<row>
+				6
+			</row>
+			<rowOff>
+				0
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="10" name="テキスト ボックス 9" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="11185821" y="627529" />
+					<ext cx="3451413" cy="313765" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0" anchor="t" />
+				<lstStyle />
+				<p>
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" />
+						<t>
+							1
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" />
+						<t>
+							区間表示
+						</t>
+					</r>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<oneCellAnchor>
+		<from>
+			<col>
+				16
+			</col>
+			<colOff>
+				499223
+			</colOff>
+			<row>
+				255
+			</row>
+			<rowOff>
+				78440
+			</rowOff>
+		</from>
+		<ext cx="142875" cy="142875" />
+		<pic>
+			<nvPicPr>
+				<cNvPr id="14" name="図 13" />
+				<cNvPicPr>
+					<picLocks noChangeAspect="1" />
+				</cNvPicPr>
+			</nvPicPr>
+			<blipFill>
+				<blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId2">
+					<extLst>
+						<ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+							<useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0" />
+						</ext>
+					</extLst>
+				</blip>
+				<stretch>
+					<fillRect />
+				</stretch>
+			</blipFill>
+			<spPr>
+				<xfrm>
+					<off x="7128623" y="47474840" />
+					<ext cx="142875" cy="142875" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+			</spPr>
+		</pic>
+		<clientData />
+	</oneCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				16
+			</col>
+			<colOff>
+				437030
+			</colOff>
+			<row>
+				260
+			</row>
+			<rowOff>
+				100852
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				17
+			</col>
+			<colOff>
+				120991
+			</colOff>
+			<row>
+				260
+			</row>
+			<rowOff>
+				215138
+			</rowOff>
+		</to>
+		<pic>
+			<nvPicPr>
+				<cNvPr id="2" name="図 1" />
+				<cNvPicPr>
+					<picLocks noChangeAspect="1" />
+				</cNvPicPr>
+			</nvPicPr>
+			<blipFill>
+				<blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId3">
+					<extLst>
+						<ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+							<useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0" />
+						</ext>
+					</extLst>
+				</blip>
+				<stretch>
+					<fillRect />
+				</stretch>
+			</blipFill>
+			<spPr>
+				<xfrm>
+					<off x="7059706" y="50717823" />
+					<ext cx="266667" cy="114286" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+			</spPr>
+		</pic>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				7
+			</row>
+			<rowOff>
+				4
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				9
+			</row>
+			<rowOff>
+				11694
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="54" name="テキスト ボックス 53" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="1098180" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							1
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				9
+			</row>
+			<rowOff>
+				6727
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				11
+			</row>
+			<rowOff>
+				18417
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="55" name="テキスト ボックス 54" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="1418668" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							2
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				12
+			</row>
+			<rowOff>
+				100853
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				14
+			</row>
+			<rowOff>
+				112543
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="56" name="テキスト ボックス 55" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="1983441" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							4
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				49
+			</row>
+			<rowOff>
+				22416
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				51
+			</row>
+			<rowOff>
+				34106
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="57" name="テキスト ボックス 56" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="7709651" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							12
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				10
+			</row>
+			<rowOff>
+				125506
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				12
+			</row>
+			<rowOff>
+				137197
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="58" name="テキスト ボックス 57" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="1694330" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							3
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				26
+			</row>
+			<rowOff>
+				58271
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				28
+			</row>
+			<rowOff>
+				69961
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="59" name="テキスト ボックス 58" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="4137212" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							5
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				28
+			</row>
+			<rowOff>
+				76199
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				30
+			</row>
+			<rowOff>
+				87889
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="60" name="テキスト ボックス 59" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="4468905" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							6
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				30
+			</row>
+			<rowOff>
+				71716
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				32
+			</row>
+			<rowOff>
+				83407
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="61" name="テキスト ボックス 60" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="4778187" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							7
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				43
+			</row>
+			<rowOff>
+				152399
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				46
+			</row>
+			<rowOff>
+				7207
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="62" name="テキスト ボックス 61" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="6898340" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							8
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				46
+			</row>
+			<rowOff>
+				2240
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				2
+			</col>
+			<colOff>
+				0
+			</colOff>
+			<row>
+				48
+			</row>
+			<rowOff>
+				13930
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="63" name="テキスト ボックス 62" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="313765" y="7218828" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							9
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				20
+			</col>
+			<colOff>
+				1
+			</colOff>
+			<row>
+				11
+			</row>
+			<rowOff>
+				33617
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				21
+			</col>
+			<colOff>
+				1
+			</colOff>
+			<row>
+				13
+			</row>
+			<rowOff>
+				45307
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="64" name="テキスト ボックス 63" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="10421472" y="1759323" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							10
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				20
+			</col>
+			<colOff>
+				2243
+			</colOff>
+			<row>
+				36
+			</row>
+			<rowOff>
+				91887
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				21
+			</col>
+			<colOff>
+				2243
+			</colOff>
+			<row>
+				38
+			</row>
+			<rowOff>
+				103578
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="65" name="テキスト ボックス 64" />
+				<cNvSpPr txBox="1" />
+			</nvSpPr>
+			<spPr>
+				<xfrm>
+					<off x="10423714" y="5739652" />
+					<ext cx="313764" cy="325455" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<ln w="9525" cmpd="sng">
+					<noFill />
+				</ln>
+			</spPr>
+			<style>
+				<lnRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</lnRef>
+				<fillRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</fillRef>
+				<effectRef idx="0">
+					<scrgbClr r="0" g="0" b="0" />
+				</effectRef>
+				<fontRef idx="minor">
+					<schemeClr val="dk1" />
+				</fontRef>
+			</style>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1400" b="1">
+							<solidFill>
+								<srgbClr val="FF0000" />
+							</solidFill>
+						</rPr>
+						<t>
+							11
+						</t>
+					</r>
+					<endParaRPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1400" b="1">
+						<solidFill>
+							<srgbClr val="FF0000" />
+						</solidFill>
+					</endParaRPr>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				1
+			</col>
+			<colOff>
+				302558
+			</colOff>
+			<row>
+				5
+			</row>
+			<rowOff>
+				22412
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				20
+			</col>
+			<colOff>
+				42472
+			</colOff>
+			<row>
+				52
+			</row>
+			<rowOff>
+				58466
+			</rowOff>
+		</to>
+		<pic>
+			<nvPicPr>
+				<cNvPr id="3" name="図 2" />
+				<cNvPicPr>
+					<picLocks noChangeAspect="1" />
+				</cNvPicPr>
+			</nvPicPr>
+			<blipFill>
+				<blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId4" />
+				<stretch>
+					<fillRect />
+				</stretch>
+			</blipFill>
+			<spPr>
+				<xfrm>
+					<off x="616323" y="806824" />
+					<ext cx="9847620" cy="7409524" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+			</spPr>
+		</pic>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				17
+			</col>
+			<colOff>
+				302559
+			</colOff>
+			<row>
+				11
+			</row>
+			<rowOff>
+				22411
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				19
+			</col>
+			<colOff>
+				504265
+			</colOff>
+			<row>
+				35
+			</row>
+			<rowOff>
+				56029
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="27" name="正方形/長方形 26" />
+				<cNvSpPr />
+			</nvSpPr>
+			<spPr bwMode="auto">
+				<xfrm>
+					<off x="7507941" y="1748117" />
+					<ext cx="2835089" cy="3798794" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<solidFill>
+					<schemeClr val="tx1">
+						<alpha val="50000" />
+					</schemeClr>
+				</solidFill>
+				<ln w="9525" cap="flat" cmpd="sng" algn="ctr">
+					<solidFill>
+						<schemeClr val="tx1" />
+					</solidFill>
+					<prstDash val="solid" />
+					<round />
+					<headEnd type="none" w="med" len="med" />
+					<tailEnd type="none" w="med" len="med" />
+				</ln>
+				<effectLst />
+			</spPr>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" upright="1" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							「
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							MARVEL
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							国内画面項目一覧
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							_
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							チケットイメージ」を参照
+						</t>
+					</r>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				16
+			</col>
+			<colOff>
+				11210
+			</colOff>
+			<row>
+				6
+			</row>
+			<rowOff>
+				145675
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				18
+			</col>
+			<colOff>
+				1917330
+			</colOff>
+			<row>
+				9
+			</row>
+			<rowOff>
+				74518
+			</rowOff>
+		</to>
+		<pic>
+			<nvPicPr>
+				<cNvPr id="25" name="図 24" />
+				<cNvPicPr>
+					<picLocks noChangeAspect="1" noChangeArrowheads="1" />
+				</cNvPicPr>
+			</nvPicPr>
+			<blipFill>
+				<blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId5">
+					<extLst>
+						<ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+							<useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0" />
+						</ext>
+					</extLst>
+				</blip>
+				<srcRect />
+				<stretch>
+					<fillRect />
+				</stretch>
+			</blipFill>
+			<spPr bwMode="auto">
+				<xfrm>
+					<off x="6633886" y="1086969" />
+					<ext cx="3071532" cy="399490" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<extLst>
+					<ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+						<hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+							<solidFill>
+								<srgbClr val="FFFFFF" />
+							</solidFill>
+						</hiddenFill>
+					</ext>
+				</extLst>
+			</spPr>
+		</pic>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				25
+			</col>
+			<colOff>
+				387728
+			</colOff>
+			<row>
+				6
+			</row>
+			<rowOff>
+				141193
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				30
+			</col>
+			<colOff>
+				433672
+			</colOff>
+			<row>
+				9
+			</row>
+			<rowOff>
+				70036
+			</rowOff>
+		</to>
+		<pic>
+			<nvPicPr>
+				<cNvPr id="26" name="図 25" />
+				<cNvPicPr>
+					<picLocks noChangeAspect="1" noChangeArrowheads="1" />
+				</cNvPicPr>
+			</nvPicPr>
+			<blipFill>
+				<blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId5">
+					<extLst>
+						<ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+							<useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0" />
+						</ext>
+					</extLst>
+				</blip>
+				<srcRect />
+				<stretch>
+					<fillRect />
+				</stretch>
+			</blipFill>
+			<spPr bwMode="auto">
+				<xfrm>
+					<off x="17185346" y="1082487" />
+					<ext cx="3071532" cy="399490" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<noFill />
+				<extLst>
+					<ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+						<hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+							<solidFill>
+								<srgbClr val="FFFFFF" />
+							</solidFill>
+						</hiddenFill>
+					</ext>
+				</extLst>
+			</spPr>
+		</pic>
+		<clientData />
+	</twoCellAnchor>
+	<twoCellAnchor editAs="oneCell">
+		<from>
+			<col>
+				27
+			</col>
+			<colOff>
+				56030
+			</colOff>
+			<row>
+				11
+			</row>
+			<rowOff>
+				11206
+			</rowOff>
+		</from>
+		<to>
+			<col>
+				31
+			</col>
+			<colOff>
+				470648
+			</colOff>
+			<row>
+				35
+			</row>
+			<rowOff>
+				44824
+			</rowOff>
+		</to>
+		<sp macro="" textlink="">
+			<nvSpPr>
+				<cNvPr id="30" name="正方形/長方形 29" />
+				<cNvSpPr />
+			</nvSpPr>
+			<spPr bwMode="auto">
+				<xfrm>
+					<off x="18063883" y="1736912" />
+					<ext cx="2835089" cy="3798794" />
+				</xfrm>
+				<prstGeom prst="rect">
+					<avLst />
+				</prstGeom>
+				<solidFill>
+					<schemeClr val="tx1">
+						<alpha val="50000" />
+					</schemeClr>
+				</solidFill>
+				<ln w="9525" cap="flat" cmpd="sng" algn="ctr">
+					<solidFill>
+						<schemeClr val="tx1" />
+					</solidFill>
+					<prstDash val="solid" />
+					<round />
+					<headEnd type="none" w="med" len="med" />
+					<tailEnd type="none" w="med" len="med" />
+				</ln>
+				<effectLst />
+			</spPr>
+			<txBody>
+				<bodyPr vertOverflow="clip" horzOverflow="clip" wrap="square" lIns="36000" tIns="36000" rIns="36000" bIns="36000" rtlCol="0" anchor="ctr" upright="1" />
+				<lstStyle />
+				<p>
+					<pPr algn="ctr" />
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							「
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							MARVEL
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							国内画面項目一覧
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="en-US" altLang="ja-JP" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							_
+						</t>
+					</r>
+					<r>
+						<rPr kumimoji="1" lang="ja-JP" altLang="en-US" sz="1000" b="0">
+							<solidFill>
+								<schemeClr val="bg1" />
+							</solidFill>
+						</rPr>
+						<t>
+							チケットイメージ」を参照
+						</t>
+					</r>
+				</p>
+			</txBody>
+		</sp>
+		<clientData />
+	</twoCellAnchor>
+</wsDr>

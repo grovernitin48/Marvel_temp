@@ -1,515 +1,8216 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="3612" uniqueCount="1106"><si><t>リクエスト</t><phoneticPr fontId="3"/></si><si><t>データ項目名</t><rPh sb="3" eb="5"><t>コウモク</t></rPh><rPh sb="5" eb="6"><t>メイ</t></rPh><phoneticPr fontId="3"/></si><si><t>レベル</t><phoneticPr fontId="3"/></si><si><t>型名</t><rPh sb="0" eb="2"><t>カタメイ</t></rPh><phoneticPr fontId="3"/></si><si><t>フィールド名</t><rPh sb="5" eb="6"><t>メイ</t></rPh><phoneticPr fontId="3"/></si><si><t>配列</t><rPh sb="0" eb="2"><t>ハイレツ</t></rPh><phoneticPr fontId="3"/></si><si><t>byte数</t><rPh sb="4" eb="5"><t>カズ</t></rPh><phoneticPr fontId="3"/></si><si><t>形式</t><rPh sb="0" eb="2"><t>ケイシキ</t></rPh><phoneticPr fontId="3"/></si><si><t>必須</t><rPh sb="0" eb="2"><t>ヒッス</t></rPh><phoneticPr fontId="3"/></si><si><t>備考</t><rPh sb="0" eb="2"><t>ビコウ</t></rPh><phoneticPr fontId="3"/></si><si><t>最小</t><rPh sb="0" eb="2"><t>サイショウ</t></rPh><phoneticPr fontId="3"/></si><si><t>最大</t><rPh sb="0" eb="2"><t>サイダイ</t></rPh><phoneticPr fontId="3"/></si><si><t>改訂年月日</t><rPh sb="0" eb="2"><t>カイテイ</t></rPh><rPh sb="2" eb="5"><t>ネンガッピ</t></rPh><phoneticPr fontId="3"/></si><si><t>版</t><rPh sb="0" eb="1"><t>ハン</t></rPh><phoneticPr fontId="3"/></si><si><t>改訂項番</t><rPh sb="0" eb="2"><t>カイテイ</t></rPh><rPh sb="2" eb="4"><t>コウバン</t></rPh><phoneticPr fontId="3"/></si><si><t>使用有無</t><rPh sb="0" eb="2"><t>シヨウ</t></rPh><rPh sb="2" eb="4"><t>ウム</t></rPh><phoneticPr fontId="1"/></si><si><t>※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻</t><phoneticPr fontId="1"/></si><si><t>使用項目</t><phoneticPr fontId="1"/></si><si><t>機能要件書名</t><phoneticPr fontId="1"/></si><si><t>インタフェース和名</t><phoneticPr fontId="1"/></si><si><t>インタフェース英名</t><phoneticPr fontId="1"/></si><si><t>インタフェースフィールド名</t><phoneticPr fontId="1"/></si><si><t>※上記の機能要件書に定義されているインタフェースのデータ項目を下表に転記</t><rPh sb="1" eb="3"><t>ジョウキ</t></rPh><rPh sb="4" eb="6"><t>キノウ</t></rPh><rPh sb="6" eb="8"><t>ヨウケン</t></rPh><rPh sb="8" eb="9"><t>ショ</t></rPh><rPh sb="10" eb="12"><t>テイギ</t></rPh><rPh sb="28" eb="30"><t>コウモク</t></rPh><rPh sb="31" eb="32"><t>シタ</t></rPh><rPh sb="32" eb="33"><t>ヒョウ</t></rPh><rPh sb="34" eb="36"><t>テンキ</t></rPh><phoneticPr fontId="1"/></si><si><t>画面項目名</t><rPh sb="0" eb="2"><t>ガメン</t></rPh><rPh sb="2" eb="4"><t>コウモク</t></rPh><rPh sb="4" eb="5"><t>メイ</t></rPh><phoneticPr fontId="1"/></si><si><t>MARVEL内処理</t><rPh sb="6" eb="7"><t>ナイ</t></rPh><rPh sb="7" eb="9"><t>ショリ</t></rPh><phoneticPr fontId="1"/></si><si><t>PRJコード</t><phoneticPr fontId="3"/></si><si><t>Version.</t><phoneticPr fontId="3"/></si><si><t>改訂内容</t><phoneticPr fontId="3"/></si><si><t>改訂者</t><phoneticPr fontId="3"/></si><si><t>新規作成</t><rPh sb="0" eb="2"><t>シンキ</t></rPh><rPh sb="2" eb="4"><t>サクセイ</t></rPh><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>全シート</t><rPh sb="0" eb="1"><t>ゼン</t></rPh><phoneticPr fontId="1"/></si><si><t>・使用項目について以下に記す。</t><rPh sb="1" eb="3"><t>シヨウ</t></rPh><rPh sb="3" eb="5"><t>コウモク</t></rPh><rPh sb="9" eb="11"><t>イカ</t></rPh><rPh sb="12" eb="13"><t>シル</t></rPh><phoneticPr fontId="1"/></si><si><t>No</t><phoneticPr fontId="3"/></si><si><t>○：使用あり、－：使用なし</t><phoneticPr fontId="1"/></si><si><t>非表示または非活性となっている画面項目は使用しない。</t><rPh sb="20" eb="22"><t>シヨウ</t></rPh><phoneticPr fontId="1"/></si><si><t>MARVEL国内送受信項目一覧_空席照会・便予約(運賃)</t><rPh sb="8" eb="11"><t>ソウジュシン</t></rPh><phoneticPr fontId="1"/></si><si><t>OKI川口</t><rPh sb="3" eb="5"><t>カワグチ</t></rPh><phoneticPr fontId="1"/></si><si><t>機能要件書名</t><phoneticPr fontId="1"/></si><si><t>RES_4.30.1_個別FMT_予約状況照会</t><phoneticPr fontId="1"/></si><si><t>インタフェース和名</t><phoneticPr fontId="1"/></si><si><t>予約状況照会Param</t><phoneticPr fontId="1"/></si><si><t>インタフェース英名</t><phoneticPr fontId="1"/></si><si><t>SearchBookedCountParam</t><phoneticPr fontId="1"/></si><si><t>インタフェースフィールド名</t><phoneticPr fontId="1"/></si><si><t>○：使用あり、－：使用なし</t><phoneticPr fontId="1"/></si><si><t>※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻</t><phoneticPr fontId="1"/></si><si><t>No</t><phoneticPr fontId="3"/></si><si><t>使用項目</t><phoneticPr fontId="1"/></si><si><t>リクエスト</t><phoneticPr fontId="3"/></si><si><t>レベル</t><phoneticPr fontId="3"/></si><si><t>○</t></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>SearchBookedCountParam</t></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>"2"を設定する</t><rPh sb="4" eb="6"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>riInputFormatNbr</t></si><si><t>Integer</t></si><si><t>予約状況照会入力フォーマット番号</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>入力フォーマットに合った番号（1～2の数字）を指定する。
-1：予約状況照会・区間入力フォーマット
-2：予約状況照会・便名入力フォーマット</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>depCode</t></si><si><t>String</t></si><si><t>出発地コード</t></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>照会対象区間の出発地コード</t><phoneticPr fontId="3"/></si><si><t>arvCode</t></si><si><t>到着地コード</t></si><si><t>照会対象区間の到着地コード</t><phoneticPr fontId="3"/></si><si><t>carrierParamList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.CarrierParam&gt;</t></si><si><t>【便名Paramリスト】</t></si><si><t>[多重度 0:4]
-※予約状況照会入力フォーマット番号＝2の場合必須</t><phoneticPr fontId="3"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>[便名]インプレースリスト</t><rPh sb="1" eb="2"><t>ビン</t></rPh><rPh sb="2" eb="3"><t>メイ</t></rPh><phoneticPr fontId="1"/></si><si><t>押下した空席照会結果リストの行に該当するキャリアコードを設定する</t><phoneticPr fontId="1"/></si><si><t>carrierCode</t></si><si><t>キャリアコード</t></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>照会対象便のキャリアコード</t><phoneticPr fontId="3"/></si><si><t>押下した空席照会結果リストの行に該当するフライトナンバーを設定する</t><phoneticPr fontId="1"/></si><si><t>fltNbr</t></si><si><t>フライトナンバー</t></si><si><t>照会対象便のフライトナンバー</t></si><si><t>押下した空席照会結果リストの行に該当する搭乗日をYYYY-MM-DD形式で設定する</t><rPh sb="0" eb="2"><t>オウカ</t></rPh><rPh sb="4" eb="6"><t>クウセキ</t></rPh><rPh sb="6" eb="8"><t>ショウカイ</t></rPh><rPh sb="8" eb="10"><t>ケッカ</t></rPh><rPh sb="14" eb="15"><t>ギョウ</t></rPh><rPh sb="16" eb="18"><t>ガイトウ</t></rPh><rPh sb="20" eb="23"><t>トウジョウビ</t></rPh><rPh sb="34" eb="36"><t>ケイシキ</t></rPh><rPh sb="37" eb="39"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>fltDate</t></si><si><t>jp.co.ana.dps.shared.fw.util.DPSDate</t></si><si><t>搭乗予定日</t><phoneticPr fontId="3"/></si><si><t>日付</t><rPh sb="0" eb="2"><t>ヒヅケ</t></rPh><phoneticPr fontId="3"/></si><si><t>照会対象日付</t></si><si><t>"1"を設定する</t><rPh sb="4" eb="6"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>seqNbr</t></si><si><t>予約状況出力項番</t></si><si><t>表示単位に付加される項番の出力開始項番
-※項番指定時は指定された値が、未指定時は項番=1とする。</t><phoneticPr fontId="3"/></si><si><t>"false"を設定する</t><rPh sb="8" eb="10"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>codeShareFlag</t></si><si><t>Boolean</t></si><si><t>CS指定フラグ</t></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>オプション‘CS’指定有無フラグ。
-True：オプション‘CS’有り
-False：オプション‘CS’無し</t><phoneticPr fontId="3"/></si><si><t>optionCarrierCode</t></si><si><t>キャリアオプション</t></si><si><t>オプションキャリア指定時のキャリアコード。</t></si><si><t>hardCopyLsn</t></si><si><t>ハードコピーLSN</t></si><si><t>ROP出力時のハードコピーLSN。</t></si><si><t>inputDate</t></si><si><t>入力日付</t></si><si><t>エージェント入力の日付文字列。
-日付省略時はnull。それ以外は入力日付文字列が設定されている。</t></si><si><t>RES_4.30.1_個別FMT_予約状況照会</t></si><si><t>予約状況照会Response</t><phoneticPr fontId="1"/></si><si><t>SearchBookedCountResponse</t><phoneticPr fontId="1"/></si><si><t>SearchBookedCountResponse</t></si><si><t>outputFormatFlag</t></si><si><t>出力フォーマット識別</t></si><si><t>True： 2コンパートメントクラス以上と1コンパートメントクラスのみが混在の場合
-False：1コンパートメントクラスのみ場合</t><phoneticPr fontId="3"/></si><si><t>searchBkdCntResultParamList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.SearchBookedCountResultParam&gt;</t></si><si><t>【予約状況照会結果Paramリスト】</t></si><si><t>[多重度 1:*]</t></si><si><t>表示単位毎、又は指定便毎に発番した番号</t><phoneticPr fontId="3"/></si><si><t>bkdCntParamList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.BookedCountParam&gt;</t></si><si><t>【予約状況Paramリスト】</t></si><si><t>[多重度 1:*]
-対象便の予約状況</t><phoneticPr fontId="3"/></si><si><t>スケジュールのキャリアコード</t></si><si><t>スケジュールのフライトナンバー</t></si><si><t>carrierColor</t></si><si><t>便名色装飾情報</t></si><si><t>便名表示時のカラー情報
-0：標準色　1：水色　2：緑色　3：青色　4：黄色　5：白色　6：赤色　7：桃色</t><phoneticPr fontId="3"/></si><si><t>carrierBlink</t></si><si><t>便名ブリンク情報</t></si><si><t>便名表示時のブリンク情報
-True：ブリンクあり
-False：ブリンクなし</t><phoneticPr fontId="3"/></si><si><t>depAirportCode</t></si><si><t>出発空港コード</t></si><si><t>スケジュールの出発空港コード</t></si><si><t>arvAirportCode</t></si><si><t>到着空港コード</t></si><si><t>スケジュールの到着空港コード</t></si><si><t>depTime</t></si><si><t>jp.co.ana.dps.shared.fw.util.DPSTime</t></si><si><t>出発時刻</t></si><si><t>スケジュールの出発時刻</t></si><si><t>arvTime</t></si><si><t>到着時刻</t></si><si><t>スケジュールの到着時刻</t></si><si><t>eqtCode</t></si><si><t>機種コード</t><phoneticPr fontId="1"/></si><si><t>機種
-「B5M」などの、先頭2桁</t><phoneticPr fontId="3"/></si><si><t>eqtType</t></si><si><t>機種タイプコード</t><phoneticPr fontId="1"/></si><si><t>機種タイプ
-「B5M」などの、末尾1桁</t><phoneticPr fontId="3"/></si><si><t>ttl</t></si><si><t>TTL</t></si><si><t>下位クラス・予約席数と上位クラス・予約席数の合計</t><phoneticPr fontId="3"/></si><si><t>bkdCntDetailsParamList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.BookedCountDetailsParam&gt;</t></si><si><t>【予約状況明細Paramリスト】</t></si><si><t>[多重度 1:2]
-下位クラスと上位クラスの予約状況を保持する</t><phoneticPr fontId="3"/></si><si><t>compClass</t></si><si><t>コンパートメントクラス</t></si><si><t>コンパートメントクラスコード</t></si><si><t>saleableMaxSeatCount</t></si><si><t>発売席数</t></si><si><t>コンパートメントクラス単位の発売席数</t></si><si><t>bookedSeatCount</t></si><si><t>予約席数</t></si><si><t>コンパートメントクラス単位の予約済席数</t></si><si><t>otherCarrierDisplayCode</t></si><si><t>他キャリア情報表示用コード</t></si><si><t>共同運送便もしくはコードシェア便の場合に表示される情報。
-null設定時は出力対象外。</t><phoneticPr fontId="3"/></si><si><t>operationMarketFltNbr</t></si><si><t>オペ／マケ便フライトナンバー</t></si><si><t>オペ便もしくはマケ便のフライトナンバー。
-※他キャリア情報表示用コードに連結して使用する
-null設定時は出力対象外。</t></si><si><t>bkdCntTotalParam</t></si><si><t>jp.co.ana.dps.rtg.param.BookedCountTotalParam</t></si><si><t>【予約状況合計Param】</t></si><si><t>オプション‘CS’指定時に出力される対象便の予約状況明細の合計値情報。</t><phoneticPr fontId="3"/></si><si><t>予約状況明細部のオペコードシェア便とマケコードシェア便のTTLの合計</t><phoneticPr fontId="3"/></si><si><t>bkdCntDetailsParam</t></si><si><t>jp.co.ana.dps.rtg.param.BookedCountDetailsParam</t></si><si><t>【予約状況明細Param】</t></si><si><t/></si><si><t>予約状況明細部のオペコードシェア便とマケコードシェア便の発売席数の合計</t></si><si><t>予約状況明細部のオペコードシェア便とマケコードシェア便の予約済席数の合計</t></si><si><t>RES_11.1.1_個別FMT_空席照会</t><phoneticPr fontId="1"/></si><si><t>空席照会Response</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityResponse</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityResponse</t></si><si><t>displayAvailabilityResultParam</t></si><si><t>jp.co.ana.dps.rtg.param.DisplayAvailabilityResultParam</t></si><si><t>【空席照会結果Param】</t></si><si><t>holidayFlag</t></si><si><t>祝日フラグ</t></si><si><t>照会対象日の祝日を判断
-True：土曜日／日曜日／祝日
-False：上記以外</t><phoneticPr fontId="3"/></si><si><t>scheduleAvailabilityFareInfoList</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.rtg.param.ScheduleAvailabilityFareInformationParam&gt;</t></si><si><t>スケジュール空席料金情報リスト</t></si><si><t>多重度　0:*</t><phoneticPr fontId="3"/></si><si><t>scheduleAvailabilityInfoList</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.rtg.param.ScheduleAvailabilityInformationParam&gt;</t></si><si><t>スケジュール空席情報リスト</t></si><si><t>1:*
-多重度が１の場合は直行便
-多重度が２以上の場合は接続便</t><phoneticPr fontId="3"/></si><si><t>carrierParam</t></si><si><t>jp.co.ana.dps.rtg.param.CarrierParam</t></si><si><t>【便名Param】</t></si><si><t>[便名]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>carrierColorNbr</t></si><si><t>便名色番号</t></si><si><t>便名（キャリアコードとフライトナンバー）の表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>carrierBlinkFlag</t></si><si><t>便名ブリンクフラグ</t></si><si><t>便名（キャリアコードとフライトナンバー）をブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>carrierReverseFlag</t></si><si><t>便名反転フラグ</t></si><si><t>便名（キャリアコードとフライトナンバー）を反転表示するかを指定する。
-Ｔｒｕｅ：反転表示
-False：反転表示しない</t><phoneticPr fontId="3"/></si><si><t>depDate</t></si><si><t>jp.co.ana.dps.shared.fw.util.DPSDate</t><phoneticPr fontId="3"/></si><si><t>日付</t></si><si><t>depColorNbr</t></si><si><t>出発地色番号</t></si><si><t>出発地コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>depBlinkFlag</t></si><si><t>出発地ブリンクフラグ</t></si><si><t>出発地コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>depReverseFlag</t></si><si><t>出発地反転フラグ</t></si><si><t>出発地コードを反転表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>arvColorNbr</t></si><si><t>到着地色番号</t></si><si><t>到着地コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>arvBlinkFlag</t></si><si><t>到着地ブリンクフラグ</t></si><si><t>到着地コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>arvReverseFlag</t></si><si><t>到着地反転フラグ</t></si><si><t>[発着時間]インプレースリスト</t><rPh sb="1" eb="3"><t>ハッチャク</t></rPh><rPh sb="3" eb="5"><t>ジカン</t></rPh><phoneticPr fontId="1"/></si><si><t>jp.co.ana.dps.shared.fw.util.DPSTime</t><phoneticPr fontId="3"/></si><si><t>便の出発予定時刻</t><phoneticPr fontId="3"/></si><si><t>depTimeChangeFlag</t></si><si><t>出発時刻変更フラグ</t></si><si><t>スケジュールチェンジによる出発時刻変更が発生した場合
-True：出発時刻変更発生
-False：出発時刻変更発生していない</t><phoneticPr fontId="3"/></si><si><t>便の到着予定時刻</t></si><si><t>arvTimeChangeFlag</t></si><si><t>到着時刻変更フラグ</t></si><si><t>スケジュールチェンジによる到着時刻変更が発生した場合
-True：到着時刻変更発生
-False：到着時刻変更発生していない</t><phoneticPr fontId="3"/></si><si><t>eqt</t></si><si><t>機種コード</t></si><si><t>機種コード</t><phoneticPr fontId="3"/></si><si><t>eqtChangeFlag</t></si><si><t>機材変更フラグ</t></si><si><t>スケジュールチェンジによる機材変更が発生した場合
-True：機材変更発生
-False：機材変更発生していない</t><phoneticPr fontId="3"/></si><si><t>eqtColorNbr</t></si><si><t>機種コード色番号</t></si><si><t>機種コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>eqtBlinkFlag</t></si><si><t>機種コードブリンクフラグ</t></si><si><t>機種コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>eqtReverseFlag</t></si><si><t>機種コード反転フラグ</t></si><si><t>機種コードを反転表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>bkgClassInfoList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.BookingClassInformationParam&gt;</t></si><si><t>残席情報付ブッキングクラス情報リスト</t></si><si><t>多重度　1:*</t></si><si><t>bkgClassCode</t></si><si><t>ブッキングクラスコード</t></si><si><t>入力のブッキングクラスコード
-存在しない場合は定数【AVAIL_STATUS_CODE_BLANK】を指定する。</t><phoneticPr fontId="3"/></si><si><t>bkgClassAvailabilityInfo</t></si><si><t>jp.co.ana.dps.rtg.param.BookingClassAvailabilityInformationParam</t></si><si><t>【ブッキングクラス残席情報Param】</t></si><si><t>availabilityStatusCode</t></si><si><t>残席表示コード</t></si><si><t>以下の残席表示コードを指定する。
-A：【AVAIL_STATUS_CODE_OPEN_ABOVE_31】Yブッキングクラスの残席数が31席以上
-B：【AVAIL_STATUS_CODE_OPEN_ABOVE_10】Yブッキングクラスの残席数が10～30席
-数字 ： 実数の残席数
-L：【AVAIL_STATUS_CODE_WAITLISTED】満席状態だが待予約可能
-C：【AVAIL_STATUS_CODE_CLOSE】満席状態で待予約不可(強制待予約を除く)
-R：【AVAIL_STATUS_CODE_CLOSE_IIT_NOT_CLOSED】満席状態で待予約不可でIIT共通在庫がセールスクローズされていない
-\：【AVAIL_STATUS_CODE_FARE_REGISTRATION】運賃登録中設定が適用中
-M：【AVAIL_STATUS_CODE_REFERENCE_PERIOD_OUT】照会可能期間外または発売開始日時前
-K：【AVAIL_STATUS_CODE_SC_PROT_COV】プロテクティブカバー中またはスケジュールチェンジ中
-X：【AVAIL_STATUS_CODE_CANCELLED】キャンセルされている
-E：【AVAIL_STATUS_CODE_ERROR】システム内でエラー状態となっている
-*：【AVAIL_STATUS_CODE_OTHERS】乗継ブッキングクラスを単区間で照会または非アロット便など
-" "：【AVAIL_STATUS_CODE_BLANK】設定なし、発売停止日時後など</t><phoneticPr fontId="3"/></si><si><t>colorStatus</t></si><si><t>カラーステータス</t></si><si><t>AVCステータスに対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>fare</t></si><si><t>Long</t></si><si><t>運賃額</t></si><si><t>運賃表示を行う場合、かつ運賃額が設定されている場合表示する。</t><phoneticPr fontId="3"/></si><si><t>fareTypeCode</t></si><si><t>運賃種別コード</t></si><si><t>運賃表示を行う場合</t><phoneticPr fontId="3"/></si><si><t>discountRate</t></si><si><t>BigDecimal</t></si><si><t>割引率</t></si><si><t>fareName</t></si><si><t>運賃名称</t></si><si><t>otherBkgClassList</t></si><si><t>List&lt;String&gt;</t></si><si><t>アザーブッキングクラスリスト</t></si><si><t>多重度　0:*
-次プライオリティグループ以降のブッキングクラスコード。
-残席表示されているブッキングクラス以外に、当該便に設定されているブッキングクラス。最大6個まで表示。</t><phoneticPr fontId="3"/></si><si><t>hasOtherBkgClass</t></si><si><t>ブッキングクラスインジケータ</t></si><si><t>表示しているブッキングクラス以外にもアザーブッキングクラス存在するかを指定する。
-Ｔｒｕｅ：存在する（アザーブッキングクラスが6個以上）
-False：存在しない（アザーブッキングクラスが5個以下）</t><phoneticPr fontId="3"/></si><si><t>privilegeSeasonalityInfoList</t></si><si><t>List&lt;Integer&gt;</t></si><si><t>特典シーズナリティ情報リスト</t></si><si><t>多重度　0:1
-照会対象日の特典シーズナリティ情報
-指定する値は以下の通り。
-1：　“L”--LOW
-2：　“R”--REGULAR
-3：　“H”--HIGH</t><phoneticPr fontId="3"/></si><si><t>avAddInfoParam</t></si><si><t>jp.co.ana.dps.rtg.param.AvAddInfoParam</t></si><si><t>【AV付加情報Param】</t></si><si><t>color</t></si><si><t>AV付加情報色番号</t></si><si><t>付加情報の表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色</t><phoneticPr fontId="3"/></si><si><t>displayBlink</t></si><si><t>AV付加情報ブリンクフラグ</t></si><si><t>付加情報をブリンク表示するかを指定する。
-1 ： ブリンク表示
-0 ： ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>[インフォメーション]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>avAddInfoMsg</t></si><si><t>AV付加情報</t></si><si><t>pfcList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.PassengerFacilityChargeParam&gt;</t></si><si><t>旅客施設使用料リスト</t></si><si><t>airportCode</t></si><si><t>旅客施設使用料加算空港コード</t><phoneticPr fontId="3"/></si><si><t>旅客施設使用料がある空港が対象の場合</t><phoneticPr fontId="3"/></si><si><t>pfc</t></si><si><t>旅客施設使用料</t></si><si><t>-</t></si><si><t>[↓]ボタン、または[↑]ボタンのイベント処理用に保持する</t><rPh sb="21" eb="23"><t>ショリ</t></rPh><rPh sb="23" eb="24"><t>ヨウ</t></rPh><rPh sb="25" eb="27"><t>ホジ</t></rPh><phoneticPr fontId="1"/></si><si><t>scheduleReturnStartPosition</t></si><si><t>スケジュール返却開始位置</t></si><si><t>表示される最初のスケジュールの、検索結果の中での位置</t><phoneticPr fontId="3"/></si><si><t>scheduleReturnEndPosition</t></si><si><t>スケジュール返却終了位置</t><phoneticPr fontId="3"/></si><si><t>表示される最後のスケジュールの、検索結果の中での位置</t><phoneticPr fontId="3"/></si><si><t>prevPageExists</t></si><si><t>前頁存在フラグ</t></si><si><t>前頁存在する場合、true</t><phoneticPr fontId="3"/></si><si><t>nextPageExists</t></si><si><t>次頁存在フラグ</t></si><si><t>次頁存在する場合、true</t><phoneticPr fontId="3"/></si><si><t>displayTransitFareScheduleGuide</t></si><si><t>乗継運賃スケジュール案内表示フラグ</t></si><si><t>乗継運賃スケジュール案内メッセージを表示する場合、true</t><phoneticPr fontId="3"/></si><si><t>baseTime</t></si><si><t>基準時刻（便指定時）</t></si><si><t>入力で便が指定された場合、決定された基準時刻</t><phoneticPr fontId="3"/></si><si><t>originalReasonCode</t></si><si><t>引き継ぎ元リーズンコード</t></si><si><t>当サービス内で設定されることはない
-※ファンクション引き継ぎ時に、引き継ぎ元でエラーが発生した場合に引き継ぎ元で
-　 設定される。</t><phoneticPr fontId="3"/></si><si><t>RES_11.2.1_個別FMT_空席照会(詳細)</t><phoneticPr fontId="1"/></si><si><t>空席照会（詳細）Response</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityDetailResponse</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityDetailResponse</t></si><si><t>jp.co.ana.dps.rtg.param.DisplayAvailabilityResultParam</t><phoneticPr fontId="3"/></si><si><t>照会対象日の祝日を判断
-True：土曜日／日曜日／祝日
-False：上記以外</t><phoneticPr fontId="3"/></si><si><t>scheduleAvailabilityFareInfoList</t></si><si><t>多重度　0:*</t><phoneticPr fontId="3"/></si><si><t>scheduleAvailabilityInfoList</t></si><si><t>1:*
-多重度が１の場合は直行便
-多重度が２以上の場合は接続便</t><phoneticPr fontId="3"/></si><si><t>【便名Param】</t><phoneticPr fontId="3"/></si><si><t>便名色番号</t><phoneticPr fontId="3"/></si><si><t>便名（キャリアコードとフライトナンバー）の表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>便名（キャリアコードとフライトナンバー）をブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>便名反転フラグ</t><phoneticPr fontId="1"/></si><si><t>便名（キャリアコードとフライトナンバー）を反転表示するかを指定する。
-Ｔｒｕｅ：反転表示
-False：反転表示しない</t><phoneticPr fontId="3"/></si><si><t>出発地コード</t><phoneticPr fontId="1"/></si><si><t>出発地コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>出発地コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>出発地コードを反転表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>到着地コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>到着地コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>出発時刻</t><phoneticPr fontId="3"/></si><si><t>便の出発予定時刻</t><phoneticPr fontId="3"/></si><si><t>出発時刻変更フラグ</t><phoneticPr fontId="1"/></si><si><t>スケジュールチェンジによる出発時刻変更が発生した場合
-True：出発時刻変更発生
-False：出発時刻変更発生していない</t><phoneticPr fontId="3"/></si><si><t>jp.co.ana.dps.shared.fw.util.DPSTime</t><phoneticPr fontId="3"/></si><si><t>便の到着予定時刻</t><phoneticPr fontId="3"/></si><si><t>スケジュールチェンジによる到着時刻変更が発生した場合
-True：到着時刻変更発生
-False：到着時刻変更発生していない</t><phoneticPr fontId="3"/></si><si><t>機種コード</t><phoneticPr fontId="3"/></si><si><t>機材変更フラグ</t><phoneticPr fontId="1"/></si><si><t>スケジュールチェンジによる機材変更が発生した場合
-True：機材変更発生
-False：機材変更発生していない</t><phoneticPr fontId="3"/></si><si><t>機種コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>機種コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>機種コードを反転表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.rtg.param.BookingClassInformationParam&gt;</t><phoneticPr fontId="3"/></si><si><t>多重度　1:*</t><phoneticPr fontId="3"/></si><si><t>入力のブッキングクラスコード
-存在しない場合は定数【AVAIL_STATUS_CODE_BLANK】を指定する。</t><phoneticPr fontId="3"/></si><si><t>残席表示コード</t><phoneticPr fontId="1"/></si><si><t>以下の残席表示コードを指定する。
-A：【AVAIL_STATUS_CODE_OPEN_ABOVE_31】Yブッキングクラスの残席数が31席以上
-B：【AVAIL_STATUS_CODE_OPEN_ABOVE_10】Yブッキングクラスの残席数が10～30席
-数字 ： 実数の残席数
-L：【AVAIL_STATUS_CODE_WAITLISTED】満席状態だが待予約可能
-C：【AVAIL_STATUS_CODE_CLOSE】満席状態で待予約不可(強制待予約を除く)
-R：【AVAIL_STATUS_CODE_CLOSE_IIT_NOT_CLOSED】満席状態で待予約不可でIIT共通在庫がセールスクローズされていない
-\：【AVAIL_STATUS_CODE_FARE_REGISTRATION】運賃登録中設定が適用中
-M：【AVAIL_STATUS_CODE_REFERENCE_PERIOD_OUT】照会可能期間外または発売開始日時前
-K：【AVAIL_STATUS_CODE_SC_PROT_COV】プロテクティブカバー中またはスケジュールチェンジ中
-X：【AVAIL_STATUS_CODE_CANCELLED】キャンセルされている
-E：【AVAIL_STATUS_CODE_ERROR】システム内でエラー状態となっている
-*：【AVAIL_STATUS_CODE_OTHERS】乗継ブッキングクラスを単区間で照会または非アロット便など
-" "：【AVAIL_STATUS_CODE_BLANK】設定なし、発売停止日時後など</t><phoneticPr fontId="3"/></si><si><t xml:space="preserve">VVCステータスに対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色
-</t><phoneticPr fontId="3"/></si><si><t>運賃表示を行う場合、かつ運賃額が設定されている場合表示する。</t><phoneticPr fontId="3"/></si><si><t>運賃表示を行う場合</t><phoneticPr fontId="3"/></si><si><t>多重度　0:*
-次プライオリティグループ以降のブッキングクラスコード。
-残席表示されているブッキングクラス以外に、当該便に設定されているブッキングクラス。最大6個まで表示。</t><phoneticPr fontId="3"/></si><si><t>表示しているブッキングクラス以外にもアザーブッキングクラス存在するかを指定する。
-Ｔｒｕｅ：存在する（アザーブッキングクラスが6個以上）
-False：存在しない（アザーブッキングクラスが5個以下）</t><phoneticPr fontId="3"/></si><si><t>多重度　0:1
-照会対象日の特典シーズナリティ情報
-指定する値は以下の通り。
-1：　“L”--LOW
-2：　“R”--REGULAR
-3：　“H”--HIGH</t><phoneticPr fontId="3"/></si><si><t>【AV付加情報Param】</t><phoneticPr fontId="1"/></si><si><t>付加情報の表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色</t><phoneticPr fontId="3"/></si><si><t>付加情報をブリンク表示するかを指定する。
-1 ： ブリンク表示
-0 ： ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>avAddInfoMsg</t><phoneticPr fontId="1"/></si><si><t>String</t><phoneticPr fontId="1"/></si><si><t>AV付加情報</t><phoneticPr fontId="1"/></si><si><t>旅客施設使用料加算空港コード</t><phoneticPr fontId="3"/></si><si><t>旅客施設使用料がある空港が対象の場合</t><phoneticPr fontId="3"/></si><si><t>スケジュール返却開始位置</t><phoneticPr fontId="3"/></si><si><t>表示される最初のスケジュールの、検索結果の中での位置</t><phoneticPr fontId="3"/></si><si><t>スケジュール返却終了位置</t><phoneticPr fontId="3"/></si><si><t>表示される最後のスケジュールの、検索結果の中での位置</t><phoneticPr fontId="3"/></si><si><t>前頁存在フラグ</t><phoneticPr fontId="3"/></si><si><t>前頁存在する場合、true</t><phoneticPr fontId="3"/></si><si><t>次頁存在フラグ</t><phoneticPr fontId="3"/></si><si><t>次頁存在する場合、true</t><phoneticPr fontId="3"/></si><si><t>乗継運賃スケジュール案内表示フラグ</t><phoneticPr fontId="3"/></si><si><t>乗継運賃スケジュール案内メッセージを表示する場合、true</t><phoneticPr fontId="3"/></si><si><t>入力で便が指定された場合、決定された基準時刻</t><phoneticPr fontId="3"/></si><si><t>当サービス内で設定されることはない
-※ファンクション引き継ぎ時に、引き継ぎ元でエラーが発生した場合に引き継ぎ元で
-　 設定される。</t><phoneticPr fontId="3"/></si><si><t>RES_11.3.1_個別FMT_空席照会(運賃表示)</t><phoneticPr fontId="1"/></si><si><t>空席照会（運賃表示）Response</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityWithFareResponse</t></si><si><t>DisplayAvailabilityWithFareResponse</t><phoneticPr fontId="1"/></si><si><t>connectingPageIndicator</t></si><si><t>接続便用ページングインジケータ</t></si><si><t>直接便照会時に、その区間に接続便が存在する場合'= &gt;AW:C ='のインジケータをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>transitFareSchedulePageIndicator</t></si><si><t>乗継便用ページングインジケータ</t></si><si><t>①直行便指定時、直行便あり、次ページなし、接続便なし、乗継便あり
-②接続便指定時、接続便あり、次ページなし、乗継便あり
-③接続便指定時、接続便なし、乗継便あり、次ページなし
-上記いずれかの場合にＴｒｕｅ（'= &gt;AW:Z ='をブリンク表示する）</t><phoneticPr fontId="3"/></si><si><t>cOption</t></si><si><t>Cオプション</t></si><si><t>true：Cオプション指定(接続便指定)の場合
-false：直行便指定)の場合
-trueの場合は、入力ファンクションがAW(直行便)であっても、AW:C(接続便)として入力イメージを出力する必要がある。
-入力フォーマット(8)を続けて入力された際、直前のResponseが直行便/接続便の区別をするためM345に設定してもらう</t><phoneticPr fontId="3"/></si><si><t>displayAvailabilityWithFareResultParam</t></si><si><t>jp.co.ana.dps.rtg.param.DisplayAvailabilityWithFareResultParam</t></si><si><t>空港施設使用料リスト</t></si><si><t>0:*</t><phoneticPr fontId="3"/></si><si><t>空港使用料加算空港コード</t><phoneticPr fontId="3"/></si><si><t>空港使用料がある空港が対象の場合</t><phoneticPr fontId="3"/></si><si><t>空港使用料</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.AvailabilityFareInformationParam&gt;</t></si><si><t>スケジュール空席運賃情報リスト</t></si><si><t>1:*</t><phoneticPr fontId="3"/></si><si><t>carrierAvailabilityFareInformationList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.CarrierAvailabilityFareInformationParam&gt;</t></si><si><t>便空席運賃情報リスト</t></si><si><t>carrier</t></si><si><t>jp.co.ana.dps.rtg.param.CarrierParam</t><phoneticPr fontId="3"/></si><si><t>便名（キャリアコードとフライトナンバー）の表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色</t><phoneticPr fontId="3"/></si><si><t>departureAirportCode</t></si><si><t>departureAirportCodeColorNumber</t></si><si><t>出発地空港コード色番号</t></si><si><t>出発地空港コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色</t><phoneticPr fontId="3"/></si><si><t>departureAirportCodeBlinkFlag</t></si><si><t>出発地空港コードブリンクフラグ</t></si><si><t>出発地空港コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>departureAirportCodeReversalFlag</t></si><si><t>出発地空港コード反転フラグ</t></si><si><t>出発地空港コードを反転表示するかを指定する。
-Ｔｒｕｅ：反転表示
-False：反転表示しない</t><phoneticPr fontId="3"/></si><si><t>arrivalAirportCode</t></si><si><t>arrivalAirportCodeColorNumber</t></si><si><t>到着地空港コード色番号</t></si><si><t>到着地空港コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色</t><phoneticPr fontId="3"/></si><si><t>arrivalAirportCodeBlinkFlag</t></si><si><t>到着地空港コードブリンクフラグ</t></si><si><t>到着地空港コードをブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t><phoneticPr fontId="3"/></si><si><t>arrivalAirportCodeReversalFlag</t></si><si><t>到着地空港コード反転フラグ</t><phoneticPr fontId="3"/></si><si><t>到着地空港コードを反転表示するかを指定する。
-Ｔｒｕｅ：反転表示
-False：反転表示しない</t><phoneticPr fontId="3"/></si><si><t>departureTime</t></si><si><t>出発時刻</t><phoneticPr fontId="3"/></si><si><t>departureTimeChangeFlag</t></si><si><t>出発時刻が変更になった場合に'*'を表示するかを指定する。
-True：'*' を表示
-False：'*' を表示しない</t><phoneticPr fontId="3"/></si><si><t>arrivalTime</t></si><si><t>到着時刻</t><phoneticPr fontId="3"/></si><si><t>arrivalTimeChangeFlag</t></si><si><t>到着時刻が変更になった場合に'*'を表示するかを指定する。
-True：'*' を表示
-False：'*' を表示しない</t><phoneticPr fontId="3"/></si><si><t>modelCode</t></si><si><t>modelCodeChangeFlag</t></si><si><t>機種変更インディケーター</t></si><si><t>機種コードが変更になった場合に'*'を表示するかを指定する。
-True：'*' を表示
-False：'*' を表示しない</t><phoneticPr fontId="3"/></si><si><t>modelCodeColorNumber</t></si><si><t>機種コードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色</t><phoneticPr fontId="3"/></si><si><t>modelCodeBlinkFlag</t></si><si><t>機種コードブリンクフラグ</t><phoneticPr fontId="3"/></si><si><t>bookingClassAvailabilityFareInformationList</t></si><si><t>List&lt;jp.co.ana.dps.rtg.param.BookingClassAvailabilityFareInformationParam&gt;</t></si><si><t>ブッキングクラス運賃情報リスト</t></si><si><t>1:4
-※入力のAW全運賃種別表示フラグがtrueの場合、多重度：1</t><phoneticPr fontId="3"/></si><si><t>bookingClassCode</t></si><si><t>bookingClassCodeColorNumber</t></si><si><t>ブッキングクラスコード色番号</t></si><si><t>ブッキングクラスコードの表示色を指定する。
-番号に対応する色は以下の通り。
-　1 ： 水色
-　2 ： 緑色
-　3 ： 青色
-　4 ： 黄色
-　5 ： 白色
-　6 ： 赤色
-　7 ： 桃色
-　0 ： 標準色</t><phoneticPr fontId="3"/></si><si><t>jp.co.ana.dps.rtg.param.BookingClassAvailabilityInformationParam</t><phoneticPr fontId="3"/></si><si><t>ブッキングクラス残席情報</t><phoneticPr fontId="3"/></si><si><t xml:space="preserve">以下の残席表示コードを指定する。
-数字 ： 残席数を表す。
-A ： Ｙブッキングクラスで残席数が31席以上の場合。【AVAIL_STATUS_CODE_OPEN_ABOVE_31
-B ： Ｙブッキングクラスで残席数が10～30席の場合。【AVAIL_STATUS_CODE_OPEN_ABOVE_10
-L ： INVENTORY のリミット席数が’1’でないか、または待ち予約可である。【AVAIL_STATUS_CODE_WAITLISTED
-"C ： 満席状態であり、待予約も不可である。
-【AVAIL_STATUS_CODE_CLOSE】"
-"￥ ： 運賃登録中フラグ（INVENTORY）が設定されている。
-【AVAIL_STATUS_CODE_FARE_REGISTRATION】"
-"M ： 発売開始日時前
-【AVAIL_STATUS_CODE_BEFORE_SELLING】"
-"K ： プロテクティブ・カバー中である
-【AVAIL_STATUS_CODE_PROT_COVER】"
-"X ： 欠航登録がされている
-【AVAIL_STATUS_CODE_CANCELLED】"
-空白 ： 設定なし、発売停止日時後、など
-</t><phoneticPr fontId="3"/></si><si><t>lowestFareBlinkFlag</t></si><si><t>最安運賃ブリンクフラグ</t></si><si><t xml:space="preserve">対象便の最安運賃かどうかを指定する。
-true：最安運賃、ブリンク表示する
-false：最安運賃でない、ブリンク表示しない
-</t><phoneticPr fontId="3"/></si><si><t>bookingClassFlag</t></si><si><t>表示している運賃以外に、他プライオリティグループに運賃が存在するか。
-True：存在する
-False：存在しない
-※入力のAW全運賃種別表示フラグがtrueの場合、常にfalseが設定</t><phoneticPr fontId="3"/></si><si><t>スケジュール返却開始位置</t><phoneticPr fontId="3"/></si><si><t>基準時刻（便指定時）</t><phoneticPr fontId="3"/></si><si><t>awHeaderDisplayFareTypeCodeParamList</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.rtg.param.AwHeaderDisplayFareTypeCodeParam&gt;</t><phoneticPr fontId="3"/></si><si><t>AW見出し用表示運賃種別Paramリスト</t><phoneticPr fontId="3"/></si><si><t>displayFareTypeCode</t><phoneticPr fontId="3"/></si><si><t>String</t><phoneticPr fontId="3"/></si><si><t>表示運賃種別コード</t><phoneticPr fontId="3"/></si><si><t>vacantLinkFareFlag</t><phoneticPr fontId="3"/></si><si><t>boolean</t><phoneticPr fontId="3"/></si><si><t>空席連動型運賃フラグ</t><phoneticPr fontId="3"/></si><si><t>true：入力にて予約席数指定があり表示運賃種別（diplayFareTypeCode）が空席連動型運賃グループテーブルに含まれる場合
-false：上記以外の場合</t><phoneticPr fontId="3"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>[機材]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>[発着空港]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>機能要件書名</t><phoneticPr fontId="1"/></si><si><t>RES_20.6.1_個別FMT_便の直接予約</t><phoneticPr fontId="1"/></si><si><t>インタフェース和名</t><phoneticPr fontId="1"/></si><si><t>便の直接予約Param</t><phoneticPr fontId="1"/></si><si><t>インタフェース英名</t><phoneticPr fontId="1"/></si><si><t>DirectSegmentParam</t><phoneticPr fontId="1"/></si><si><t>インタフェースフィールド名</t><phoneticPr fontId="1"/></si><si><t>DirectSegmentParam</t><phoneticPr fontId="1"/></si><si><t>※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻</t><phoneticPr fontId="1"/></si><si><t>No</t><phoneticPr fontId="3"/></si><si><t>使用項目</t><phoneticPr fontId="1"/></si><si><t>リクエスト</t><phoneticPr fontId="3"/></si><si><t>レベル</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>DirectSegmentParam</t></si><si><t>segmentParamList</t></si><si><t>List&lt;jp.co.ana.dps.bkg.param.ActionableSegmentParam&gt;</t></si><si><t>セグメントParamリスト</t><phoneticPr fontId="3"/></si><si><t>多重度=1:5</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>segPLActionableSegmentParam</t></si><si><t>jp.co.ana.dps.bkg.param.ActionableSegmentParam</t><phoneticPr fontId="3"/></si><si><t>アクショナブルセグメントParam</t><phoneticPr fontId="3"/></si><si><t>可変項目1（セグメントParamリスト）。
-アクショナブルセグメントParamの場合。</t><rPh sb="40" eb="42"><t>バアイ</t></rPh><phoneticPr fontId="3"/></si><si><t>elementId</t></si><si><t>エレメントID</t><phoneticPr fontId="3"/></si><si><t>エレメントID。1-511。
-SS新規作成時の場合、nullのため項番の表示は不要。</t><phoneticPr fontId="3"/></si><si><t>elementCreationUpdateNumber</t></si><si><t>エレメント作成時アップデート番号</t><phoneticPr fontId="3"/></si><si><t>elementCancellationUpdateNumber</t></si><si><t>エレメントキャンセル時アップデート番号</t><phoneticPr fontId="3"/></si><si><t>passengerElementIdList</t></si><si><t>旅客エレメントIDリスト</t><phoneticPr fontId="3"/></si><si><t>passengerNameList</t></si><si><t>List&lt;String&gt;</t><phoneticPr fontId="3"/></si><si><t>旅客名リスト</t><phoneticPr fontId="3"/></si><si><t>segmentElementIdList</t></si><si><t>セグメントエレメントIDリスト</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>actionCodeHistoryParamList</t></si><si><t>List&lt;jp.co.ana.dps.bkg.param.ActionCodeHistoryParam&gt;</t><phoneticPr fontId="3"/></si><si><t>アクションコードヒストリParamList</t><phoneticPr fontId="3"/></si><si><t>actionCode</t></si><si><t>アクションコード</t><phoneticPr fontId="3"/></si><si><t>passengerCount</t></si><si><t>人数</t><phoneticPr fontId="3"/></si><si><t>updateNumber</t></si><si><t>アップデート番号</t><phoneticPr fontId="3"/></si><si><t>segClassCompositionParamList</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.bkg.param.SegClassCompositionParam&gt;</t><phoneticPr fontId="3"/></si><si><t>セグメントクラス構成ParamList</t><phoneticPr fontId="3"/></si><si><t>ブッキングクラスコード</t><phoneticPr fontId="3"/></si><si><t>numberOfSeat</t></si><si><t>席数</t><phoneticPr fontId="3"/></si><si><t>cancelFlag</t></si><si><t>キャンセル済フラグ</t></si><si><t>trueの場合、キャンセルされたエレメント
-falseの場合、アクティブなエレメント</t></si><si><t>アップデート番号</t><phoneticPr fontId="3"/></si><si><t>paxForRelationParamList</t></si><si><t>List&lt;jp.co.ana.dps.bkg.param.PaxForRelationParam&gt;</t><phoneticPr fontId="3"/></si><si><t>旅客Paramリスト</t></si><si><t>paxFamilyNameForRelation</t></si><si><t>String</t><phoneticPr fontId="3"/></si><si><t>旅客姓</t><phoneticPr fontId="3"/></si><si><t>paxFirstNameForRelation</t></si><si><t>String</t><phoneticPr fontId="3"/></si><si><t>旅客名</t><phoneticPr fontId="3"/></si><si><t>paxSexForRelation</t></si><si><t>性別</t><phoneticPr fontId="3"/></si><si><t>paxAgeForRelation</t></si><si><t>年齢</t><phoneticPr fontId="3"/></si><si><t>ropPaxSortOrderList</t></si><si><t>ROP表示用PAXソート順リスト</t><phoneticPr fontId="3"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>英字2桁又は英字1桁+数字1桁。</t><phoneticPr fontId="3"/></si><si><t>flightNumber</t></si><si><t>フライトナンバー</t><phoneticPr fontId="1"/></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>2桁～4桁の数字。</t><phoneticPr fontId="3"/></si><si><t>[クラス1]テキストボックス
-[クラス2]テキストボックス
-[クラス3]テキストボックス
-[クラス4]テキストボックス</t><phoneticPr fontId="1"/></si><si><t>bookingClass</t></si><si><t>ブッキングクラス</t></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>英字にて以下の指定ができる。
-ブッキングクラス。
-　　A～Zの英字1文字</t><phoneticPr fontId="3"/></si><si><t>displayFareType</t></si><si><t>表示運賃種別</t></si><si><t>ANS</t><phoneticPr fontId="3"/></si><si><t>英数字2～6字</t><phoneticPr fontId="3"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>departureDate</t></si><si><t>搭乗日</t></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>指定便名の搭乗日。</t><phoneticPr fontId="3"/></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>搭乗する発地を指定する。</t><phoneticPr fontId="3"/></si><si><t>搭乗する着地を指定する。</t><phoneticPr fontId="3"/></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>数字4桁で指定する。</t><phoneticPr fontId="3"/></si><si><t>arrivalDateChangeIndicator</t></si><si><t>到着日付変更識別</t></si><si><t>到着地の日付が変わる場合、'+'もしくは'-'と変更される日数を表示する。（ex.１日後の場合、'+1'）</t></si><si><t>marketCarrierCode</t></si><si><t>マーケット便キャリアコード</t></si><si><t>国際コードシェア便セグメントの場合、マーケット便のキャリアコードを表示する。'UA'など。</t></si><si><t>marketFlightNumber</t></si><si><t>マーケットフライトナンバー</t></si><si><t>国際コードシェア便セグメントの場合、マーケット便の便名を表示する。'8692'など。</t></si><si><t>marketBookingClass</t></si><si><t>マーケット便クラス</t></si><si><t>国際コードシェア便セグメントの場合、マーケット便のクラスを表示する。'V'など。</t></si><si><t>marketDepartureDate</t></si><si><t>マーケット便搭乗日</t></si><si><t>国際コードシェア便セグメントの場合、マーケット便の搭乗日を表示する。</t></si><si><t>isMarketFlightDisplay</t></si><si><t>マーケットフライト表示フラグ</t></si><si><t>trueの場合&lt;MKTG FLT&gt;を表示。</t></si><si><t>equipmentCode</t></si><si><t>機種コード。'772'など、IATA標準機種コード。</t></si><si><t>isCarrierCodeFlightNumberReverseDisplay</t></si><si><t>キャリアコード・フライトナンバー反転フラグ</t></si><si><t>便名（キャリアコードとフライトナンバー）を反転表示するかを指定する。
-Ｔｒｕｅ：反転表示
-False：反転表示しない</t></si><si><t>carrierCodeFlightNumberColorNumber</t></si><si><t>キャリアコード・フライトナンバー色番号</t></si><si><t>便名（キャリアコードとフライトナンバー）の表示色を指定する。
-番号に対応する色は以下の通り。
-1 ： 水色、　2 ： 緑色、　3 ： 青色、　4 ： 黄色、　5 ： 白色、　6 ： 赤色、　7 ： 桃色、　無 ： 通常色</t></si><si><t>isCarrierCodeFlightNumberBlinkDisplay</t></si><si><t>キャリアコード・フライトナンバーブリンクフラグ</t></si><si><t>便名（キャリアコードとフライトナンバー）をブリンク表示するかを指定する。
-Ｔｒｕｅ：ブリンク表示
-False：ブリンク表示しない</t></si><si><t>bookingClassDisplayColorStatus</t></si><si><t>ブッキングクラス表示カラーステータス</t></si><si><t>AV画面表示カラーと同色で表示する。
-対応する色は以下の通り。
-1 ： 水色、　2 ： 緑色、　3 ： 青色、　4 ： 黄色、　5 ： 白色、　6 ： 赤色、　7 ： 桃色、　無 ： 通常色</t></si><si><t>isHoliday</t></si><si><t>照会対象日の祝日を判断
-True：祝日
-False：非祝日</t></si><si><t>isSectionBlink</t></si><si><t>区間ブリンクフラグ</t></si><si><t>trueの場合、区間をブリンク表示する。</t></si><si><t>inActionCode</t></si><si><t>アクション・コード</t><phoneticPr fontId="1"/></si><si><t>英字2文字にて指定。</t><phoneticPr fontId="3"/></si><si><t>outActionCode</t></si><si><t>出力アクションコード</t></si><si><t>セグメントの出力アクションコード。'HK'、'HN'、'HL'、'XL'、'XX'、'UN'、'RR'、'KK'のいずれか。
-コントロールドセグメントの場合は必須。</t></si><si><t>inputArrivalDateChangeIndicator</t></si><si><t>入力到着地日付変更</t></si><si><t>NS</t><phoneticPr fontId="3"/></si><si><t>到着日付変更は記号と共に日数を指定する。</t><phoneticPr fontId="3"/></si><si><t>segmentControlType</t></si><si><t>セグメント管理種別</t><phoneticPr fontId="3"/></si><si><t>segmentReservationDateTime</t></si><si><t>セグメント作成日時</t><phoneticPr fontId="3"/></si><si><t>isActionCodeBlink</t></si><si><t>アクションコードブリンクフラグ</t></si><si><t>trueの場合、アクションコード、席数をブリンク表示する。</t></si><si><t>arnkSegmentFlg</t></si><si><t>ARNKセグメントフラグ</t></si><si><t>true、かつアップデート番号＝エレメント作成時アップデート番号の場合'A'と表示する。
-true、かつアップデート番号≠エレメント作成時アップデート番号の場合'ARNK'と表示する。</t><phoneticPr fontId="3"/></si><si><t>passengerType</t></si><si><t>旅客種別</t></si><si><t>ＰＮＲの種類の決定及びブッキンクラスとの
-対応付けを明確にする。英字1文字</t><phoneticPr fontId="3"/></si><si><t>arnkIndicatorFlg</t></si><si><t>ARNKインジケータフラグ</t><phoneticPr fontId="3"/></si><si><t>viaDisplayFlg</t></si><si><t>経由識別表示フラグ</t></si><si><t>true:経由識別を表示する
-false:経由識別を表示しない</t></si><si><t>indirectRateApplyStatus</t></si><si><t>経由レート適用ステータス</t></si><si><t>IIT-PNR(団体型)指定をする場合に指定可能。
-経由オプション”T”が指定された場合、1：申請中を設定する。
-上記以外はnull。</t><phoneticPr fontId="3"/></si><si><t>classCompositionDisplayFlg</t></si><si><t>クラス構成表示フラグ</t><phoneticPr fontId="3"/></si><si><t>bookingClassDisplayFlg</t></si><si><t>ブッキングクラス表示フラグ</t></si><si><t>true：ブッキングクラスを表示
-false：'*'を表示</t></si><si><t>subClassNumber</t></si><si><t>サブクラス番号</t></si><si><t>数字にて以下の指定ができる。
-サブクラス番号
-　　数字１～３桁</t><phoneticPr fontId="3"/></si><si><t>isKeepingReservation</t></si><si><t>預かり予約識別</t></si><si><t>預かり予約（発売代行）セグメントの場合に表示。'*'一文字。
-trueの場合、預かり予約インジケータ'*'を表示する。</t></si><si><t>[席数]テキストボックス</t><rPh sb="1" eb="3"><t>セキスウ</t></rPh><phoneticPr fontId="1"/></si><si><t>席数</t></si><si><t>予約あるいは、待ち予約の席数。
-省略時はNull。</t><phoneticPr fontId="3"/></si><si><t>indicatorList</t></si><si><t>インジケーターリスト</t></si><si><t>インジケーターを格納するリスト。
-多重度=0:*
-''S'（時刻変更）、'P'（ノープロテクション）、'C'（ミスコネクション）、'X'（便キャンセル）、'R'（イレギュラー便）、'D'（遅延便）のいずれかの状態でブリンク表示する。複数該当する場合は組み合わせで表示する。</t></si><si><t>waitlistPriority</t></si><si><t>ウェイトリストプライオリティ</t><phoneticPr fontId="3"/></si><si><t>待ち予約要求時にロールに関わらず指定可能である。</t><phoneticPr fontId="3"/></si><si><t>inputArnkIndicator</t></si><si><t>ARNKインディケータ</t></si><si><t>作成しようとしているセグメント（便）に、どのような便から乗り継ぐかが不明な時のインディケータ</t><phoneticPr fontId="3"/></si><si><t>inputThroughIndicator</t></si><si><t>スルーインディケータ</t></si><si><t>待ち予約の要求時に指定可能。</t><phoneticPr fontId="3"/></si><si><t>subClassOptionCode</t></si><si><t>サブクラスオプションコード</t><phoneticPr fontId="1"/></si><si><t>サブクラスから席を予約する場合は必須。
-英字1文字で指定する</t><phoneticPr fontId="3"/></si><si><t>allotOptionCode</t></si><si><t>アロットオプションコード</t></si><si><t>アロット便から席を予約する場合は必須。
-英字1文字で指定する</t><phoneticPr fontId="3"/></si><si><t>dummySubclassResFlg</t></si><si><t>ダミーサブクラス予約フラグ</t><phoneticPr fontId="3"/></si><si><t>True：ダミーサブクラス予約
-True以外：ダミーサブクラス予約ではない</t><rPh sb="13" eb="15"><t>ヨヤク</t></rPh><rPh sb="20" eb="22"><t>イガイ</t></rPh><rPh sb="31" eb="33"><t>ヨヤク</t></rPh><phoneticPr fontId="39"/></si><si><t>isBeforeEotFlg</t></si><si><t>EOT前フラグ</t></si><si><t>機種コード(経由地数)の出力要否フラグ。
-EOT前であれば表示
-EOT後であれば非表示</t><rPh sb="0" eb="2"><t>キシュ</t></rPh><rPh sb="6" eb="9"><t>ケイユチ</t></rPh><rPh sb="9" eb="10"><t>スウ</t></rPh><rPh sb="12" eb="14"><t>シュツリョク</t></rPh><rPh sb="14" eb="16"><t>ヨウヒ</t></rPh><rPh sb="24" eb="25"><t>マエ</t></rPh><rPh sb="29" eb="31"><t>ヒョウジ</t></rPh><rPh sb="35" eb="36"><t>ゴ</t></rPh><rPh sb="40" eb="43"><t>ヒヒョウジ</t></rPh><phoneticPr fontId="39"/></si><si><t>"true"を設定する</t><phoneticPr fontId="1"/></si><si><t>isSupplementationFlg</t></si><si><t>ブッキングクラス補完判定フラグ</t></si><si><t>ブッキングクラスが省略された場合にTRUEを設定する</t><phoneticPr fontId="3"/></si><si><t>carrierOption</t></si><si><t>キャリアオプション</t><phoneticPr fontId="3"/></si><si><t>SS-NO回答時に設定
-AGENTのキャリア＝SSで指定したキャリアの場合、SSで指定したキャリア
-AGENTのキャリア≠SSで指定したキャリアの場合、”AL”固定</t><rPh sb="5" eb="7"><t>カイトウ</t></rPh><rPh sb="7" eb="8"><t>ジ</t></rPh><rPh sb="9" eb="11"><t>セッテイ</t></rPh><rPh sb="26" eb="28"><t>シテイ</t></rPh><rPh sb="35" eb="37"><t>バアイ</t></rPh><rPh sb="41" eb="43"><t>シテイ</t></rPh><rPh sb="80" eb="82"><t>コテイ</t></rPh><phoneticPr fontId="39"/></si><si><t>displayBookingClass</t></si><si><t>表示用ブッキングクラス</t><phoneticPr fontId="3"/></si><si><t>引数として引き渡された情報/保管された情報を保持（AV表示の引数として時にブッキングクラスの情報を削除する場合があるため）</t><rPh sb="0" eb="2"><t>ヒキスウ</t></rPh><rPh sb="5" eb="6"><t>ヒ</t></rPh><rPh sb="7" eb="8"><t>ワタ</t></rPh><rPh sb="11" eb="13"><t>ジョウホウ</t></rPh><rPh sb="14" eb="16"><t>ホカン</t></rPh><rPh sb="19" eb="21"><t>ジョウホウ</t></rPh><rPh sb="22" eb="24"><t>ホジ</t></rPh><rPh sb="27" eb="29"><t>ヒョウジ</t></rPh><rPh sb="30" eb="32"><t>ヒキスウ</t></rPh><rPh sb="35" eb="36"><t>ジ</t></rPh><rPh sb="46" eb="48"><t>ジョウホウ</t></rPh><rPh sb="49" eb="51"><t>サクジョ</t></rPh><rPh sb="53" eb="55"><t>バアイ</t></rPh><phoneticPr fontId="39"/></si><si><t>transitFareOption</t></si><si><t>乗継運賃オプション</t><phoneticPr fontId="3"/></si><si><t>MFのみで使用のためDOには不要</t></si><si><t>avDepartureAirportCode</t></si><si><t>AV表示用出発空港コード</t><phoneticPr fontId="3"/></si><si><t>AV表示する際に検索条件として使用する出発空港コードを設定する</t><rPh sb="2" eb="4"><t>ヒョウジ</t></rPh><rPh sb="6" eb="7"><t>サイ</t></rPh><rPh sb="8" eb="10"><t>ケンサク</t></rPh><rPh sb="10" eb="12"><t>ジョウケン</t></rPh><rPh sb="15" eb="17"><t>シヨウ</t></rPh><rPh sb="19" eb="21"><t>シュッパツ</t></rPh><rPh sb="21" eb="23"><t>クウコウ</t></rPh><rPh sb="27" eb="29"><t>セッテイ</t></rPh><phoneticPr fontId="39"/></si><si><t>avArrivalAirportCode</t></si><si><t>AV表示用到着空港コード</t><phoneticPr fontId="3"/></si><si><t>AV表示する際に検索条件として使用する到着空港コードを設定する</t><rPh sb="2" eb="4"><t>ヒョウジ</t></rPh><rPh sb="6" eb="7"><t>サイ</t></rPh><rPh sb="8" eb="10"><t>ケンサク</t></rPh><rPh sb="10" eb="12"><t>ジョウケン</t></rPh><rPh sb="15" eb="17"><t>シヨウ</t></rPh><rPh sb="19" eb="21"><t>トウチャク</t></rPh><rPh sb="21" eb="23"><t>クウコウ</t></rPh><rPh sb="27" eb="29"><t>セッテイ</t></rPh><phoneticPr fontId="39"/></si><si><t>nonDisplayActionCodeFlg</t></si><si><t>アクションコード非表示フラグ</t><phoneticPr fontId="3"/></si><si><t>TRUEの場合、エラー表示される際にアクションコードを非表示とする。
-FALSEの場合、エラー表示される際にアクションコードを表示する。
-Nullの場合、FALSEと同様に処理を行う。</t><rPh sb="5" eb="7"><t>バアイ</t></rPh><rPh sb="11" eb="13"><t>ヒョウジ</t></rPh><rPh sb="16" eb="17"><t>サイ</t></rPh><rPh sb="27" eb="28"><t>ヒ</t></rPh><rPh sb="28" eb="30"><t>ヒョウジ</t></rPh><rPh sb="41" eb="43"><t>バアイ</t></rPh><rPh sb="47" eb="49"><t>ヒョウジ</t></rPh><rPh sb="52" eb="53"><t>サイ</t></rPh><rPh sb="63" eb="65"><t>ヒョウジ</t></rPh><rPh sb="74" eb="76"><t>バアイ</t></rPh><rPh sb="83" eb="85"><t>ドウヨウ</t></rPh><rPh sb="86" eb="88"><t>ショリ</t></rPh><rPh sb="89" eb="90"><t>オコナ</t></rPh><phoneticPr fontId="39"/></si><si><t>resOfficeCode</t></si><si><t>オフィスコード</t></si><si><t>IIT-PNR(個札型)強制予約指定をする場合は必須。
-英字3桁＋数字3桁で指定する</t><phoneticPr fontId="3"/></si><si><t>directViaFlightType</t></si><si><t>直行/経由識別</t></si><si><t>IIT-PNR(団体型)指定をする場合に指定可能。
-経由オプション”V”または”T”が指定された場合、4を設定する。
-省略時はnull。</t><phoneticPr fontId="3"/></si><si><t>inputSegClassCompositionParamList</t></si><si><t>List&lt;jp.co.ana.dps.bkg.param.SegClassCompositionParam&gt;</t><phoneticPr fontId="3"/></si><si><t>入力クラス構成Paramリスト</t></si><si><t>クラス構成。IIT-PNR(団体型)指定をする場合に指定可能。
-多重度=0:26</t><phoneticPr fontId="3"/></si><si><t>ブッキングクラスコード</t><phoneticPr fontId="3"/></si><si><t>英字にて以下の指定ができる。
-ブッキングクラス。
-　　A～Zの英字1文字</t><phoneticPr fontId="3"/></si><si><t>入力席数。省略時はnull。</t><phoneticPr fontId="3"/></si><si><t>segPLControlledSegmentParam</t></si><si><t>jp.co.ana.dps.bkg.param.ControlledSegmentParam</t><phoneticPr fontId="3"/></si><si><t>コントロールドセグメントParam</t><phoneticPr fontId="3"/></si><si><t>可変項目1（セグメントParamリスト）。
-コントロールドセグメントParamの場合。</t><rPh sb="40" eb="42"><t>バアイ</t></rPh><phoneticPr fontId="3"/></si><si><t>エレメントID</t><phoneticPr fontId="3"/></si><si><t>エレメントID。1-511。
-SS新規作成時の場合、nullのため項番の表示は不要。</t><phoneticPr fontId="3"/></si><si><t>エレメント作成時アップデート番号</t><phoneticPr fontId="3"/></si><si><t>エレメントキャンセル時アップデート番号</t><phoneticPr fontId="3"/></si><si><t>旅客エレメントIDリスト</t><phoneticPr fontId="3"/></si><si><t>List&lt;String&gt;</t><phoneticPr fontId="3"/></si><si><t>旅客名リスト</t><phoneticPr fontId="3"/></si><si><t>セグメントエレメントIDリスト</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.bkg.param.ActionCodeHistoryParam&gt;</t><phoneticPr fontId="3"/></si><si><t>アクションコードヒストリParamList</t><phoneticPr fontId="3"/></si><si><t>アクションコード</t><phoneticPr fontId="3"/></si><si><t>人数</t><phoneticPr fontId="3"/></si><si><t>アップデート番号</t><phoneticPr fontId="3"/></si><si><t>segClassCompositionParamList</t><phoneticPr fontId="3"/></si><si><t>セグメントクラス構成ParamList</t><phoneticPr fontId="3"/></si><si><t>席数</t><phoneticPr fontId="3"/></si><si><t>List&lt;jp.co.ana.dps.bkg.param.PaxForRelationParam&gt;</t><phoneticPr fontId="3"/></si><si><t>String</t><phoneticPr fontId="3"/></si><si><t>旅客姓</t><phoneticPr fontId="3"/></si><si><t>旅客名</t><phoneticPr fontId="3"/></si><si><t>性別</t><phoneticPr fontId="3"/></si><si><t>年齢</t><phoneticPr fontId="3"/></si><si><t>ROP表示用PAXソート順リスト</t><phoneticPr fontId="3"/></si><si><t>英字2桁又は英字1桁+数字1桁。</t><phoneticPr fontId="3"/></si><si><t>2桁～4桁の数字。</t><phoneticPr fontId="3"/></si><si><t>ANS</t><phoneticPr fontId="3"/></si><si><t>到着空港コード</t><phoneticPr fontId="3"/></si><si><t>アクション・コード</t></si><si><t>サブクラスオプションコード</t></si><si><t>reservationNumber</t></si><si><t>予約番号</t></si><si><t>RSV#'の後に数字4桁で表示する。</t></si><si><t>ssInformationMessageList</t></si><si><t>SSインフォメーションメッセージリスト</t><phoneticPr fontId="3"/></si><si><t>numOfStops</t></si><si><t>経由地数</t><phoneticPr fontId="3"/></si><si><t>EOT時まで表示。</t><rPh sb="3" eb="4"><t>トキ</t></rPh><rPh sb="6" eb="8"><t>ヒョウジ</t></rPh><phoneticPr fontId="39"/></si><si><t>"false"を設定する</t><phoneticPr fontId="1"/></si><si><t>randomInputFlg</t></si><si><t>ランダム入力指示</t></si><si><t>ランダム入力時の場合：true
-それ以外：false</t><phoneticPr fontId="3"/></si><si><t>multiFunctionFlg</t></si><si><t>マルチファクション指示</t></si><si><t>マルチファクションインプット時の場合：true
-それ以外：false</t><phoneticPr fontId="3"/></si><si><t>multiFunctionSeq</t></si><si><t>マルチファンクション指示SEQ</t></si><si><t>マルチファクションインプット時のファンクション呼び出し順。
-省略時は1を指定。</t><phoneticPr fontId="3"/></si><si><t>"1"を設定する</t><phoneticPr fontId="1"/></si><si><t>multiFunctionCnt</t></si><si><t>マルチファンクション指示総数</t></si><si><t>マルチファンクション登録の総数</t><phoneticPr fontId="3"/></si><si><t>readInformation</t></si><si><t>jp.co.ana.dps.shared.param.ReadInformationAnalysisParam</t></si><si><t>リード情報</t></si><si><t>AKNS</t><phoneticPr fontId="3"/></si><si><t>ＰＮＲ簡易作成時は必須。
-ユニット識別子＋端末からの読取情報
-2次元バーコード読込時は設定。</t><phoneticPr fontId="3"/></si><si><t>※1</t><phoneticPr fontId="1"/></si><si><t>xxxxx系の定義については「MARVEL国内画面項目一覧_検索条件入力」の空席照会用名称定義シートを参照。</t><rPh sb="5" eb="6"><t>ケイ</t></rPh><rPh sb="7" eb="9"><t>テイギ</t></rPh><rPh sb="51" eb="53"><t>サンショウ</t></rPh><phoneticPr fontId="1"/></si><si><t>先行受付(有償)サブポータルから遷移した場合、"NH"を設定する
-先行受付(有償)サブポータル以外から遷移した場合、[項番]テキストボックスの入力値に該当する空席照会結果リストの行のキャリアコードを設定する</t><rPh sb="47" eb="49"><t>イガイ</t></rPh><rPh sb="59" eb="61"><t>コウバン</t></rPh><rPh sb="71" eb="73"><t>ニュウリョク</t></rPh><rPh sb="73" eb="74"><t>チ</t></rPh><rPh sb="75" eb="77"><t>ガイトウ</t></rPh><rPh sb="89" eb="90"><t>ギョウ</t></rPh><rPh sb="99" eb="101"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>先行受付(有償)サブポータルから遷移した場合、"Y"を設定する
-先行受付(有償)サブポータル以外から遷移した場合、入力値を設定する</t><rPh sb="16" eb="18"><t>センイ</t></rPh><rPh sb="20" eb="22"><t>バアイ</t></rPh><rPh sb="27" eb="29"><t>セッテイ</t></rPh><rPh sb="46" eb="48"><t>イガイ</t></rPh><rPh sb="50" eb="52"><t>センイ</t></rPh><rPh sb="54" eb="56"><t>バアイ</t></rPh><rPh sb="59" eb="60"><t>チ</t></rPh><rPh sb="61" eb="63"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>先行受付(有償)サブポータルから遷移した場合、"3991"を設定する
-先行受付(有償)サブポータル以外から遷移した場合、[項番]テキストボックスの入力値に該当する空席照会結果リストの行のフライトナンバーを設定する</t><rPh sb="61" eb="63"><t>コウバン</t></rPh><rPh sb="73" eb="75"><t>ニュウリョク</t></rPh><rPh sb="75" eb="76"><t>チ</t></rPh><rPh sb="77" eb="79"><t>ガイトウ</t></rPh><rPh sb="81" eb="83"><t>クウセキ</t></rPh><rPh sb="83" eb="85"><t>ショウカイ</t></rPh><rPh sb="85" eb="87"><t>ケッカ</t></rPh><rPh sb="91" eb="92"><t>ギョウ</t></rPh><rPh sb="102" eb="104"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>先行受付(有償)サブポータルから遷移した場合、設定しない
-先行受付(有償)サブポータル以外から遷移した場合、[項番]テキストボックスの入力値に該当する空席照会結果リストの行について、[クラス1]～[クラス4]テキストボックスの入力値に該当する運賃種別コードを設定する</t><rPh sb="23" eb="25"><t>セッテイ</t></rPh><rPh sb="113" eb="115"><t>ニュウリョク</t></rPh><rPh sb="115" eb="116"><t>チ</t></rPh><rPh sb="117" eb="119"><t>ガイトウ</t></rPh><rPh sb="121" eb="123"><t>ウンチン</t></rPh><rPh sb="123" eb="125"><t>シュベツ</t></rPh><phoneticPr fontId="1"/></si><si><t>出発地コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
-名称が取得できない場合、空白とする</t><phoneticPr fontId="1"/></si><si><t>[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityWithFareResponse</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト</t><phoneticPr fontId="1"/></si><si><t>[便名]インプレースリスト</t></si><si><t>[発着空港]インプレースリスト</t></si><si><t>出発地空港コード</t><phoneticPr fontId="1"/></si><si><t>出発地空港コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
-名称が取得できない場合、空白とする</t><phoneticPr fontId="1"/></si><si><t>到着地空港コード</t><phoneticPr fontId="1"/></si><si><t>到着地空港コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
-名称が取得できない場合、空白とする</t><rPh sb="0" eb="2"><t>トウチャク</t></rPh><rPh sb="2" eb="3"><t>チ</t></rPh><rPh sb="3" eb="5"><t>クウコウ</t></rPh><rPh sb="33" eb="35"><t>ヒョウジ</t></rPh><rPh sb="50" eb="52"><t>クウハク</t></rPh><phoneticPr fontId="1"/></si><si><t>到着地コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
-名称が取得できない場合、空白とする</t><rPh sb="0" eb="2"><t>トウチャク</t></rPh><rPh sb="2" eb="3"><t>チ</t></rPh><rPh sb="31" eb="33"><t>ヒョウジ</t></rPh><rPh sb="48" eb="50"><t>クウハク</t></rPh><phoneticPr fontId="1"/></si><si><t>[機材]インプレースリスト</t></si><si><t>機能要件書名</t><phoneticPr fontId="1"/></si><si><t>インタフェース和名</t><phoneticPr fontId="1"/></si><si><t>インタフェース英名</t><phoneticPr fontId="1"/></si><si><t>インタフェースフィールド名</t><phoneticPr fontId="1"/></si><si><t>○：使用あり、－：使用なし</t><phoneticPr fontId="1"/></si><si><t>※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻</t><phoneticPr fontId="1"/></si><si><t>使用項目</t><phoneticPr fontId="1"/></si><si><t>リクエスト</t><phoneticPr fontId="3"/></si><si><t>レベル</t><phoneticPr fontId="3"/></si><si><t>RES_20.14.1_個別FMT_リマーク情報の登録</t><phoneticPr fontId="1"/></si><si><t>リマーク情報Param</t><phoneticPr fontId="1"/></si><si><t>RemarkParam</t></si><si><t>RemarkParam</t><phoneticPr fontId="1"/></si><si><t>note</t></si><si><t>インフォメーション</t></si><si><t>ANKS漢</t><rPh sb="4" eb="5"><t>カン</t></rPh><phoneticPr fontId="3"/></si><si><t>※OT:RMK/OR/～の場合、インフォメーションには"OR/"は含まない</t><phoneticPr fontId="3"/></si><si><t>remarkTypeCode</t></si><si><t>リマーク種別コード</t><phoneticPr fontId="3"/></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>OT:RMK/OR/～の場合、BkgConstants.RMKS_DUE_TO_CODE_OR("OR") を設定。それ以外の場合はnull</t><phoneticPr fontId="3"/></si><si><t>PAX-IDリスト</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>多重度=0:511 PAX-ID</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>[日付4]ボタン
-[便名]インプレースリスト
-[発着空港]インプレースリスト
-[席数]テキストボックス</t><rPh sb="1" eb="3"><t>ヒヅケ</t></rPh><rPh sb="10" eb="11"><t>ビン</t></rPh><rPh sb="11" eb="12"><t>メイ</t></rPh><rPh sb="24" eb="26"><t>ハッチャク</t></rPh><rPh sb="26" eb="28"><t>クウコウ</t></rPh><rPh sb="40" eb="42"><t>セキスウ</t></rPh><phoneticPr fontId="1"/></si><si><t>先行予約タイトルのリマーク登録の場合、"先行"を設定する
-
-先行予約情報のリマーク登録の場合、以下の通りに設定する
-"予約" + 連番(※1) + ":" + キャリアコード + フライトナンバー + "(" + 出発空港コード + 到着空港コード + ")△希望日:" + DDMMMYY(※2) + "△運賃種別:" + 運賃種別コード + "△人数:" + 席数
-(△は半角スペース)
-
-※1 PNRのリマークに文字列「"予約" + 数字 + ":"」が存在する場合、数字の最大値+1を設定する
-PNRのリマークに文字列「"予約" + 数字 + ":"」が存在しない場合、"1"を設定する
-※2 [日付4]ボタンの値を設定する
-
-例：
-予約2:NH51(HNDCTS) 希望日:11JAN17 運賃種別:V75N 人数:2</t><rPh sb="16" eb="18"><t>バアイ</t></rPh><rPh sb="20" eb="22"><t>センコウ</t></rPh><rPh sb="24" eb="26"><t>セッテイ</t></rPh><rPh sb="44" eb="46"><t>バアイ</t></rPh><rPh sb="65" eb="67"><t>レンバン</t></rPh><rPh sb="107" eb="109"><t>シュッパツ</t></rPh><rPh sb="109" eb="111"><t>クウコウ</t></rPh><rPh sb="117" eb="119"><t>トウチャク</t></rPh><rPh sb="119" eb="121"><t>クウコウ</t></rPh><rPh sb="163" eb="165"><t>ウンチン</t></rPh><rPh sb="165" eb="167"><t>シュベツ</t></rPh><rPh sb="182" eb="184"><t>セキスウ</t></rPh><rPh sb="188" eb="190"><t>ハンカク</t></rPh><rPh sb="209" eb="212"><t>モジレツ</t></rPh><rPh sb="230" eb="232"><t>ソンザイ</t></rPh><rPh sb="234" eb="236"><t>バアイ</t></rPh><rPh sb="237" eb="239"><t>スウジ</t></rPh><rPh sb="240" eb="243"><t>サイダイチ</t></rPh><rPh sb="246" eb="248"><t>セッテイ</t></rPh><rPh sb="293" eb="295"><t>セッテイ</t></rPh><rPh sb="310" eb="311"><t>アタイ</t></rPh><rPh sb="312" eb="314"><t>セッテイ</t></rPh><rPh sb="318" eb="319"><t>レイ</t></rPh><phoneticPr fontId="1"/></si><si><t>機能要件書名</t><phoneticPr fontId="1"/></si><si><t>RES_20.22.1_個別FMT_PNRの確認</t><phoneticPr fontId="1"/></si><si><t>インタフェース和名</t><phoneticPr fontId="1"/></si><si><t>PNRの確認Param</t><phoneticPr fontId="1"/></si><si><t>インタフェース英名</t><phoneticPr fontId="1"/></si><si><t>RetrievePnrParam</t><phoneticPr fontId="1"/></si><si><t>インタフェースフィールド名</t><phoneticPr fontId="1"/></si><si><t>○：使用あり、－：使用なし</t><phoneticPr fontId="1"/></si><si><t>※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻</t><phoneticPr fontId="1"/></si><si><t>No</t><phoneticPr fontId="3"/></si><si><t>使用項目</t><phoneticPr fontId="1"/></si><si><t>リクエスト</t><phoneticPr fontId="3"/></si><si><t>レベル</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>RetrievePnrParam</t></si><si><t>"8"を設定する</t><rPh sb="4" eb="6"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>inputFormat</t></si><si><t>入力形式</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>1：（＊）旅客名/便名/日付（/区間）（/サーチレベル） 
-2：（＊）旅客名の先頭一文字/便名/日付（/区間）（/サーチレベル）
-3：予約番号/便名/日付（/サーチレベル）
-4：予約番号/（＊）旅客名/便名/日付（/区間）（/サーチレベル）
-5：PNR R/L
-6：PNR R/L/（＊）旅客名
-7：便名/日付/座席番号
-8：（スペシャルオプション）（/UNMATCHオプション）
-9：項番 
-10：確認番号
-11：便名+パスポート情報</t><phoneticPr fontId="3"/></si><si><t>option</t><phoneticPr fontId="3"/></si><si><t>オプション</t></si><si><t>-</t><phoneticPr fontId="3"/></si><si><t>NULL</t><phoneticPr fontId="3"/></si><si><t>passengerName</t></si><si><t>旅客名</t></si><si><t>ANKS</t><phoneticPr fontId="3"/></si><si><t>個人旅客名、団体名、ブロックシート名。</t></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>passengerInitial</t></si><si><t>旅客名の先頭一文字</t></si><si><t>個人旅客名、団体名、ブロックシート名の先頭一文字。</t><phoneticPr fontId="3"/></si><si><t>NS</t><phoneticPr fontId="3"/></si><si><t>数字3～4桁。</t></si><si><t>pnrRecordLocator</t></si><si><t>PNR R/L</t></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>項番指定の場合はPNR R/Lが格納される。</t></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>英字2桁もしくは先頭数字1桁+英字1桁。省略可。</t><phoneticPr fontId="3"/></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>数字3～4桁。'15','263','4711'など。省略不可。</t></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>英字1桁。省略可。</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>ANS</t><phoneticPr fontId="3"/></si><si><t>指定便名の搭乗日。</t></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>seatNumber</t></si><si><t>座席番号</t></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>ASR済の座席番号。</t></si><si><t>isUnmatch</t></si><si><t>UNMATCHオプション</t></si><si><t>固定文字'UNMATCH'が指定された場合はtrue</t><phoneticPr fontId="3"/></si><si><t>confirmedNumber</t></si><si><t>確認番号</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>入力形式が10の場合に設定</t><phoneticPr fontId="3"/></si><si><t>passportAnalysisParam</t></si><si><t>jp.co.ana.dps.shared.param.PassportAnalysisParam</t></si><si><t>パスポートリード情報解析Param</t></si><si><t>入力形式が11の場合に設定</t><phoneticPr fontId="3"/></si><si><t>passportInformation</t></si><si><t>パスポートリード情報</t></si><si><t>ASN日付</t><phoneticPr fontId="3"/></si><si><t>機能要件書名</t><phoneticPr fontId="1"/></si><si><t>RES_11.3.1_個別FMT_空席照会(運賃表示)</t></si><si><t>インタフェース和名</t><phoneticPr fontId="1"/></si><si><t>空席照会（運賃表示）Param</t><phoneticPr fontId="1"/></si><si><t>インタフェース英名</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityWithFareParam</t><phoneticPr fontId="1"/></si><si><t>非表示または非活性となっている画面項目は使用しない。</t></si><si><t>インタフェースフィールド名</t><phoneticPr fontId="1"/></si><si><t>・使用項目について以下に記す。</t></si><si><t>○：使用あり、－：使用なし</t></si><si><t>※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻</t><phoneticPr fontId="1"/></si><si><t>No</t><phoneticPr fontId="3"/></si><si><t>使用項目</t><phoneticPr fontId="1"/></si><si><t>リクエスト</t><phoneticPr fontId="3"/></si><si><t>レベル</t><phoneticPr fontId="3"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityWithFareParam</t></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>formatNo</t></si><si><t>空席照会(運賃表示)入力フォーマット番号</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>下記「入力フォーマット」を参照。
-入力フォーマットに合った番号（1～8の数字）を指定する。
-1：【INPUT_FORMAT_NO_1】区間指定入力フォーマット
-2：【INPUT_FORMAT_NO_2】便指定入力フォーマット
-3：【INPUT_FORMAT_NO_3】再指定入力フォーマット
-4：【INPUT_FORMAT_NO_4】日付増減入力フォーマット
-5：【INPUT_FORMAT_NO_5】接続便区間指定入力フォーマット
-6：【INPUT_FORMAT_NO_6】接続便再指定入力フォーマット
-7：【INPUT_FORMAT_NO_7】接続便日付増減入力フォーマット
-8：【INPUT_FORMAT_NO_8】プライオリティグループ増減入力フォーマット
-
-AW/R入力フォーマットは以下のようにマッピングされること
-　AW/Rの「(1)逆区間日付指定入力フォーマット」
-　　　　　　　　　　　　　　　　　　　　→3：【INPUT_FORMAT_NO_3】
-　AW/Rの「(2)逆区間日数増減指定入力フォーマット」
-　　　　　　　　　　　　　　　　　　　　→4：【INPUT_FORMAT_NO_4】
-
-AW：C/R入力フォーマットは以下のようにマッピングされること
-　AW：C/Rの「(3)逆区間接続便日付指定入力フォーマット」
-　　　　　　　　　　　　　　　　　　　　→6：【INPUT_FORMAT_NO_6】
-　AW：C/Rの「(4)逆区間接続便日付増減指定入力フォーマット」
-　　　　　　　　　　　　　　　　　　　　→7：【INPUT_FORMAT_NO_7】</t><phoneticPr fontId="3"/></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>出発地のシティーコード</t><phoneticPr fontId="3"/></si><si><t>到着地のシティーコード</t><phoneticPr fontId="3"/></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>フライト日付
-入力フォーマット(2)の場合にオプション入力
-入力フォーマット(2)以外の場合に必須入力</t><phoneticPr fontId="3"/></si><si><t>depTime</t><phoneticPr fontId="1"/></si><si><t>時刻</t></si><si><t>出発時刻
-入力フォーマット(2)の場合にオプション入力
-入力フォーマット(2)以外の場合に必須入力</t><phoneticPr fontId="3"/></si><si><t>入力フォーマット(1)～(7)の場合にオプション入力</t><phoneticPr fontId="3"/></si><si><t>jp.co.ana.dps.rtg.param.CarrierParam</t><phoneticPr fontId="3"/></si><si><t>便名</t></si><si><t>入力フォーマット(2)の場合にオプション入力</t><phoneticPr fontId="3"/></si><si><t>フライトナンバー</t><phoneticPr fontId="3"/></si><si><t>入力フォーマット(2)の場合に必須入力</t><phoneticPr fontId="3"/></si><si><t>priorityGroupMark</t></si><si><t>プライオリティグループ増減符号</t></si><si><t>S</t><phoneticPr fontId="3"/></si><si><t>入力フォーマット(8)の場合に必須入力</t><phoneticPr fontId="3"/></si><si><t>Boolean</t><phoneticPr fontId="3"/></si><si><t>true：Cオプション指定(接続便指定)の場合
-false：直行便指定)の場合</t><phoneticPr fontId="3"/></si><si><t>乗継運賃オプション</t></si><si><t>乗継運賃オプション(Z)が指定された場合にtrue。</t><phoneticPr fontId="3"/></si><si><t>prevDisplayStartNbr</t></si><si><t>前回表示開始位置</t><phoneticPr fontId="1"/></si><si><t>前ページ要求時に、ページングの基準となる。
-前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。</t><phoneticPr fontId="3"/></si><si><t>prevDisplayEndNbr</t></si><si><t>前回表示終了位置</t></si><si><t>次ページ要求時に、ページングの基準となる。
-前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。</t><phoneticPr fontId="3"/></si><si><t>pagingDirection</t></si><si><t>ページング方向</t><phoneticPr fontId="1"/></si><si><t>ページング要求時の、ページング方向。
-０：前へ、１：次へ、２：再表示。
-NULLの場合、ページング要求ではないと判断する。
-前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。</t><phoneticPr fontId="3"/></si><si><t>targetMaxSegmentCount</t></si><si><t>要求最大セグメント数</t></si><si><t>サービスから返却される最大セグメント数。</t><phoneticPr fontId="3"/></si><si><t>optionInputFlg</t></si><si><t>オプション入力フラグ</t><phoneticPr fontId="3"/></si><si><t>ｔｒｕｅ：日付またはキャリアオプションが入力された場合
-false/null：上記以外
-入力フォーマット(3)または入力フォーマット(6)の場合に設定される。
-（逆区間のRが指定された場合も設定される。）</t><phoneticPr fontId="3"/></si><si><t>awrFlg</t></si><si><t>Boolean</t><phoneticPr fontId="1"/></si><si><t>逆区間フラグ</t><phoneticPr fontId="1"/></si><si><t>ｔｒｕｅ：逆区間のRが指定された場合
-false/null：上記以外
-逆区間のRが指定された場合は必須</t><phoneticPr fontId="3"/></si><si><t>bookSeats</t><phoneticPr fontId="3"/></si><si><t>Integer</t><phoneticPr fontId="3"/></si><si><t>予約席数</t><phoneticPr fontId="3"/></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>指定する場合は1～9の値</t><rPh sb="0" eb="2"><t>シテイ</t></rPh><rPh sb="4" eb="6"><t>バアイ</t></rPh><rPh sb="11" eb="12"><t>アタイ</t></rPh><phoneticPr fontId="3"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>reverseSectionDefFlg</t><phoneticPr fontId="3"/></si><si><t>Boolean</t><phoneticPr fontId="3"/></si><si><t>逆区間指定フラグ</t><phoneticPr fontId="3"/></si><si><t>以下のいずれかに該当する場合、保持している「スケジュール返却開始位置」を設定する
-・[↓]ボタン押下時
-・[↑]ボタン押下時
-上記以外の場合、設定しない</t><rPh sb="0" eb="2"><t>イカ</t></rPh><rPh sb="8" eb="10"><t>ガイトウ</t></rPh><rPh sb="12" eb="14"><t>バアイ</t></rPh><rPh sb="15" eb="17"><t>ホジ</t></rPh><rPh sb="30" eb="32"><t>カイシ</t></rPh><rPh sb="32" eb="34"><t>イチ</t></rPh><rPh sb="36" eb="38"><t>セッテイ</t></rPh><rPh sb="48" eb="50"><t>オウカ</t></rPh><rPh sb="50" eb="51"><t>ジ</t></rPh><rPh sb="63" eb="65"><t>ジョウキ</t></rPh><rPh sb="65" eb="67"><t>イガイ</t></rPh><rPh sb="68" eb="70"><t>バアイ</t></rPh><rPh sb="71" eb="73"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>以下のいずれかに該当する場合、保持している「スケジュール返却終了位置」を設定する
-・[↓]ボタン押下時
-・[↑]ボタン押下時
-上記以外の場合、設定しない</t><rPh sb="0" eb="2"><t>イカ</t></rPh><rPh sb="8" eb="10"><t>ガイトウ</t></rPh><rPh sb="12" eb="14"><t>バアイ</t></rPh><rPh sb="15" eb="17"><t>ホジ</t></rPh><rPh sb="30" eb="32"><t>シュウリョウ</t></rPh><rPh sb="36" eb="38"><t>セッテイ</t></rPh><rPh sb="48" eb="50"><t>オウカ</t></rPh><rPh sb="50" eb="51"><t>ジ</t></rPh><rPh sb="63" eb="65"><t>ジョウキ</t></rPh><rPh sb="65" eb="67"><t>イガイ</t></rPh><rPh sb="68" eb="70"><t>バアイ</t></rPh><rPh sb="71" eb="73"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[↓]ボタン押下時、"1"を設定する
-[↑]ボタン押下時、"0"を設定する
-上記以外の場合、設定しない</t><rPh sb="6" eb="8"><t>オウカ</t></rPh><rPh sb="8" eb="9"><t>ジ</t></rPh><rPh sb="14" eb="16"><t>セッテイ</t></rPh><rPh sb="38" eb="40"><t>ジョウキ</t></rPh><rPh sb="40" eb="42"><t>イガイ</t></rPh><rPh sb="43" eb="45"><t>バアイ</t></rPh><rPh sb="46" eb="48"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>RES_11.1.1_個別FMT_空席照会</t></si><si><t>RES_11.2.1_個別FMT_空席照会(詳細)</t></si><si><t>空席照会Param</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityParam</t><phoneticPr fontId="1"/></si><si><t>出発（都市コード／空港コード）</t></si><si><t>到着（都市コード／空港コード）</t><phoneticPr fontId="3"/></si><si><t>出発日付</t></si><si><t>日付AS</t><rPh sb="0" eb="2"><t>ヒヅケ</t></rPh><phoneticPr fontId="3"/></si><si><t>時刻</t><rPh sb="0" eb="2"><t>ジコク</t></rPh><phoneticPr fontId="3"/></si><si><t>allotSubClassOption</t></si><si><t>アロット・サブクラスオプション</t></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>アロット・サブクラスオプションは、以下の項目を指定する。
-L：【ALLOT_SUBCLASS_OPTION_CODE_ALLOT】アロット
-その他の文字：サブクラスオプション
-入力フォーマット(1)・(2)・(3)・(4)の場合にオプション入力</t><phoneticPr fontId="3"/></si><si><t>bkgClassCodeList</t></si><si><t>ブッキングクラスコードリスト</t></si><si><t>0:9</t></si><si><t>AN</t><phoneticPr fontId="3"/></si><si><t>入力フォーマット(1)・(2)・(3)・(4)の場合にオプション入力</t><phoneticPr fontId="3"/></si><si><t>入力フォーマット(2)の場合に必須入力。</t><phoneticPr fontId="3"/></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>S</t><phoneticPr fontId="3"/></si><si><t>入力フォーマット(5)の場合に必須入力。
-"*"、"+"、"+*"､"*+"：次プライオリティグループを表示対象とする
-"-*"、"-"、"*-"：前プライオリティグループを表示対象とする。</t><phoneticPr fontId="3"/></si><si><t>前回表示開始位置</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>前ページ要求時に、ページングの基準となる。
-前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。</t><phoneticPr fontId="3"/></si><si><t>次ページ要求時に、ページングの基準となる。
-前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。</t><phoneticPr fontId="3"/></si><si><t>ページング方向</t></si><si><t>ページング要求時の、ページング方向。
-０：前へ、１：次へ、２：再表示。
-NULLの場合、ページング要求ではないと判断する。
-前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。</t><phoneticPr fontId="3"/></si><si><t>サービスから返却される最大セグメント数。省略時は制限なし。</t><phoneticPr fontId="3"/></si><si><t>functionIndicator</t></si><si><t>呼び出しファンクション識別</t></si><si><t>N</t><phoneticPr fontId="3"/></si><si><t>SS、SDでの予約不可であることを識別する。
-※ファンクション引継ぎの場合に値を設定する。
-６：SSでの予約不可時
-７：SDでの予約不可時</t><phoneticPr fontId="3"/></si><si><t>A</t><phoneticPr fontId="3"/></si><si><t>乗継運賃オプション：Zが入力された場合にtrueを設定する。</t><phoneticPr fontId="3"/></si><si><t>ANS</t><phoneticPr fontId="3"/></si><si><t>reverseSectionDefFlg</t></si><si><t>逆区間指定フラグ</t><phoneticPr fontId="1"/></si><si><t>true：前回ファンクションと同じファンクション。かつ、逆区間が指定されたとき。(例：VV→VVR、AV→AVR、AW→AWRなど)
-false：上記以外</t><phoneticPr fontId="3"/></si><si><t>出発時刻変更インディケーター</t><phoneticPr fontId="3"/></si><si><t>到着時刻変更インディケーター</t><phoneticPr fontId="1"/></si><si><t>便予約を行う場合、"NN"を設定する
-空席待ち予約を行う場合、"LL"を設定する</t><rPh sb="0" eb="1"><t>ビン</t></rPh><rPh sb="1" eb="3"><t>ヨヤク</t></rPh><rPh sb="4" eb="5"><t>オコナ</t></rPh><rPh sb="6" eb="8"><t>バアイ</t></rPh><rPh sb="14" eb="16"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[日付4]ボタン</t><phoneticPr fontId="1"/></si><si><t>[日付4]ボタン</t><rPh sb="1" eb="3"><t>ヒヅケ</t></rPh><phoneticPr fontId="1"/></si><si><t>先行受付(有償)サブポータルから遷移した場合、取得した搭乗日の１か月前を設定する
-先行受付(有償)サブポータル以外から遷移した場合、取得した搭乗日を設定する
-
-[日付(日)]と[日付(月)]を基に、業務日付の4日前～360日後の範囲となるように同年、または翌年を取得する
-例：業務日付が7月1日の場合
-6月27日を入力した場合、4日前のため同年
-6月26日を入力した場合、5日前のため翌年
-
-以下の通りに設定する
-"20" + 取得した年 + "-" + 日付(月) + "-" 日付(日)</t><rPh sb="23" eb="25"><t>シュトク</t></rPh><rPh sb="27" eb="30"><t>トウジョウビ</t></rPh><rPh sb="31" eb="34"><t>イッカゲツ</t></rPh><rPh sb="34" eb="35"><t>マエ</t></rPh><phoneticPr fontId="1"/></si><si><t>○：使用あり、－：使用なし</t><phoneticPr fontId="1"/></si><si><t>便名色番号</t><phoneticPr fontId="1"/></si><si><t>No.7「キャリアコード」で使用</t></si><si><t>No.7「キャリアコード」で使用</t><rPh sb="14" eb="16"><t>シヨウ</t></rPh><phoneticPr fontId="1"/></si><si><t>No.7「キャリアコード」で使用</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用</t></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用</t><rPh sb="34" eb="36"><t>ショウサイ</t></rPh><rPh sb="40" eb="42"><t>シヨウ</t></rPh><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示色制御シートで使用</t></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示色制御シートで使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用</t><rPh sb="30" eb="32"><t>ヒョウジ</t></rPh><rPh sb="32" eb="34"><t>セイギョ</t></rPh><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_検索条件入力」のインフォメーション表示制御シートで使用</t><rPh sb="41" eb="43"><t>シヨウ</t></rPh><phoneticPr fontId="1"/></si><si><t>出発地コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
-名称が取得できない場合、空白とする</t></si><si><t>[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト</t></si><si><t>[インフォメーション]インプレースリスト</t></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>No.13「キャリアコード」で使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用</t><phoneticPr fontId="1"/></si><si><t>[席数]テキストボックス</t><phoneticPr fontId="1"/></si><si><t>入力値を設定する</t><rPh sb="0" eb="2"><t>ニュウリョク</t></rPh><rPh sb="2" eb="3"><t>アタイ</t></rPh><rPh sb="4" eb="6"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>入力値を設定する</t><rPh sb="0" eb="2"><t>ニュウリョク</t></rPh><rPh sb="2" eb="3"><t>チ</t></rPh><rPh sb="4" eb="6"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>「MARVEL国内機能仕様書_空席照会・便予約(運賃)」の[機材]インプレースリスト押下時で使用</t><rPh sb="46" eb="48"><t>シヨウ</t></rPh><phoneticPr fontId="1"/></si><si><t>「MARVEL国内機能仕様書_空席照会・便予約(運賃)」の[機材]インプレースリスト押下時で使用</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>1.0.0</t><phoneticPr fontId="1"/></si><si><t>[逆区間]ボタン押下時、No.3の「到着地コード」を設定する
-[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t><rPh sb="39" eb="41"><t>イガイ</t></rPh><rPh sb="60" eb="62"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[逆区間]ボタン押下時、No.2の「出発地コード」を設定する
-[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t><rPh sb="39" eb="41"><t>イガイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[日付(前週へ)]ボタン押下時、[日付4]ボタンの7日前の日付を設定する
-[日付(次週へ)]ボタン押下時、[日付4]ボタンの7日後の日付を設定する
-[日付1]～[日付7]ボタン押下時、押下した日付を設定する
-上記以外の場合、前回の空席照会時の検索条件を設定する
-
-日付(日)と日付(月)を基に、業務日付の4日前～360日後の範囲となるように同年、または翌年を取得する
-例：業務日付が7月1日の場合
-6月27日の場合、4日前のため同年
-6月26日の場合、5日前のため翌年
-
-以下の通りに設定する
-"20" + 取得した年 + "-" + 日付(月) + "-" 日付(日)</t><rPh sb="4" eb="5"><t>ゼン</t></rPh><rPh sb="14" eb="15"><t>ジ</t></rPh><rPh sb="17" eb="19"><t>ヒヅケ</t></rPh><rPh sb="26" eb="27"><t>ニチ</t></rPh><rPh sb="27" eb="28"><t>マエ</t></rPh><rPh sb="29" eb="31"><t>ヒヅケ</t></rPh><rPh sb="75" eb="77"><t>ヒヅケ</t></rPh><rPh sb="81" eb="83"><t>ヒヅケ</t></rPh><rPh sb="88" eb="90"><t>オウカ</t></rPh><rPh sb="90" eb="91"><t>ジ</t></rPh><rPh sb="92" eb="94"><t>オウカ</t></rPh><rPh sb="96" eb="98"><t>ヒヅケ</t></rPh><rPh sb="104" eb="106"><t>ジョウキ</t></rPh><rPh sb="106" eb="108"><t>イガイ</t></rPh><rPh sb="109" eb="111"><t>バアイ</t></rPh><phoneticPr fontId="1"/></si><si><t>前回の空席照会時の検索条件を設定する</t></si><si><t>[逆区間]ボタン押下時、設定しない
-[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t><rPh sb="1" eb="2"><t>ギャク</t></rPh><rPh sb="2" eb="4"><t>クカン</t></rPh><rPh sb="8" eb="10"><t>オウカ</t></rPh><rPh sb="10" eb="11"><t>ジ</t></rPh><rPh sb="12" eb="14"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[乗継便で検索]ボタン押下時、"true"を設定する
-[乗継便で検索]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t></si><si><t>[乗継便で検索]ボタン押下時、"true"を設定する
-[乗継便で検索]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t><rPh sb="1" eb="3"><t>ノリツギ</t></rPh><rPh sb="3" eb="4"><t>ビン</t></rPh><rPh sb="5" eb="7"><t>ケンサク</t></rPh><rPh sb="11" eb="13"><t>オウカ</t></rPh><rPh sb="13" eb="14"><t>ジ</t></rPh><rPh sb="22" eb="24"><t>セッテイ</t></rPh><rPh sb="38" eb="40"><t>イガイ</t></rPh><phoneticPr fontId="1"/></si><si><t>・[逆区間]ボタン押下時
-乗継運賃で検索時、"1"を設定する
-乗継運賃以外で検索時、"5"を設定する
-
-・[逆区間]ボタン以外を押下時
-前回の空席照会時の検索条件を設定する</t><rPh sb="13" eb="15"><t>ノリツギ</t></rPh><rPh sb="15" eb="17"><t>ウンチン</t></rPh><rPh sb="18" eb="20"><t>ケンサク</t></rPh><rPh sb="20" eb="21"><t>ジ</t></rPh><rPh sb="26" eb="28"><t>セッテイ</t></rPh><rPh sb="35" eb="37"><t>イガイ</t></rPh><rPh sb="61" eb="63"><t>イガイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[逆区間]ボタン押下時、No.4の「到着地コード」を設定する
-[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t><rPh sb="39" eb="41"><t>イガイ</t></rPh><rPh sb="60" eb="62"><t>セッテイ</t></rPh><phoneticPr fontId="1"/></si><si><t>[逆区間]ボタン押下時、No.3の「出発地コード」を設定する
-[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する</t><rPh sb="39" eb="41"><t>イガイ</t></rPh><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示色制御シートで使用</t><phoneticPr fontId="1"/></si><si><t>「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用</t><phoneticPr fontId="1"/></si><si><t>DisplayAvailabilityParam</t><phoneticPr fontId="1"/></si><si><t>[日付4]ボタン</t><phoneticPr fontId="1"/></si><si><t>hh:mm形式に変換する</t></si><si><t>DMSOPE-1058　「乗継便で検索」ボタンの活性非活性制御[TSK-00646819]</t><phoneticPr fontId="1"/></si><si><t>OKI清野</t><rPh sb="3" eb="5"><t>セイノ</t></rPh><phoneticPr fontId="1"/></si><si><t>○</t><phoneticPr fontId="1"/></si><si><t>[乗継便で検索]ボタン</t><rPh sb="1" eb="3"><t>ノリツギ</t></rPh><rPh sb="3" eb="4"><t>ビン</t></rPh><rPh sb="5" eb="7"><t>ケンサク</t></rPh><phoneticPr fontId="1"/></si><si><t>区間検索、かつ乗継運賃検索でない、かつ"true"のとき活性化する</t><rPh sb="9" eb="11"><t>ウンチン</t></rPh><rPh sb="11" eb="13"><t>ケンサク</t></rPh><rPh sb="28" eb="30"><t>カッセイ</t></rPh><rPh sb="30" eb="31"><t>カ</t></rPh><phoneticPr fontId="1"/></si><si><t>2.0.0</t><phoneticPr fontId="1"/></si><si><t>-</t><phoneticPr fontId="1"/></si><si><t>DMSOPE-1295 ASD107(販計104)_空席照会結果ならびにPNR詳細における運航キャリアの表示について</t><phoneticPr fontId="1"/></si><si><t>OKI仲</t><rPh sb="3" eb="4"><t>ナカ</t></rPh><phoneticPr fontId="1"/></si><si><t>キャリアコードが"NH"、かつNo.11「便名反転フラグ」が"true"の場合、以下のNo.9「便名色番号」の条件で表示を変更する
-No.9「便名色番号」が"0"の場合、"EH運航"を表示する(英語表示は"EH")
-No.9「便名色番号」が"1"の場合、"他社運航"を表示する(英語表示は"C/S")
-No.9「便名色番号」が"2"の場合、"6J運航"を表示する(英語表示は"6J")
-No.9「便名色番号」が"3"の場合、"HD運航"を表示する(英語表示は"HD")
-No.9「便名色番号」が"4"の場合、"OC運航"を表示する(英語表示は"OC")
-No.9「便名色番号」が"5"の場合、"MQ運航"を表示する(英語表示は"MQ")
-No.9「便名色番号」が"6"の場合、"FW運航"を表示する(英語表示は"FW")</t><phoneticPr fontId="1"/></si><si><t>キャリアコードが"NH"、かつNo.11「便名反転フラグ」が"true"の場合、以下のNo.9「便名色番号」の条件で表示を変更する
-No.9「便名色番号」が"0"の場合、"EH運航"を表示する(英語表示は"EH")
-No.9「便名色番号」が"1"の場合、"他社運航"を表示する(英語表示は"C/S")
-No.9「便名色番号」が"2"の場合、"6J運航"を表示する(英語表示は"6J")
-No.9「便名色番号」が"3"の場合、"HD運航"を表示する(英語表示は"HD")
-No.9「便名色番号」が"4"の場合、"OC運航"を表示する(英語表示は"OC")
-No.9「便名色番号」が"5"の場合、"MQ運航"を表示する(英語表示は"MQ")
-No.9「便名色番号」が"6"の場合、"FW運航"を表示する(英語表示は"FW")</t><phoneticPr fontId="1"/></si><si><t xml:space="preserve">キャリアコードが"NH"、かつNo.17「便名反転フラグ」が"true"の場合、以下のNo.15「便名色番号」の条件で表示を変更する
-No.15「便名色番号」が"0"の場合、"EH運航"を表示する(英語表示は"EH")
-No.15「便名色番号」が"1"の場合、"他社運航"を表示する(英語表示は"C/S")
-No.15「便名色番号」が"2"の場合、"6J運航"を表示する(英語表示は"6J")
-No.15「便名色番号」が"3"の場合、"HD運航"を表示する(英語表示は"HD")
-No.15「便名色番号」が"4"の場合、"OC運航"を表示する(英語表示は"OC")
-No.15「便名色番号」が"5"の場合、"MQ運航"を表示する(英語表示は"MQ")
-No.15「便名色番号」が"6"の場合、"FW運航"を表示する(英語表示は"FW")
-</t><phoneticPr fontId="1"/></si><si><t>3.0.0</t><phoneticPr fontId="1"/></si><si><t>初期表示_受信シート
-初期表示(詳細)_受信シート
-初期表示(運賃)_受信シート</t><phoneticPr fontId="1"/></si></sst>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="3612" uniqueCount="1106">
+	<si>
+		<t>
+			リクエスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			データ項目名
+		</t>
+		<rPh sb="3" eb="5">
+			<t>
+				コウモク
+			</t>
+		</rPh>
+		<rPh sb="5" eb="6">
+			<t>
+				メイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			レベル
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			型名
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				カタメイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			フィールド名
+		</t>
+		<rPh sb="5" eb="6">
+			<t>
+				メイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			配列
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ハイレツ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			byte数
+		</t>
+		<rPh sb="4" eb="5">
+			<t>
+				カズ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			形式
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ケイシキ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			必須
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ヒッス
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			備考
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ビコウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			最小
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				サイショウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			最大
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				サイダイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			改訂年月日
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				カイテイ
+			</t>
+		</rPh>
+		<rPh sb="2" eb="5">
+			<t>
+				ネンガッピ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			版
+		</t>
+		<rPh sb="0" eb="1">
+			<t>
+				ハン
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			改訂項番
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				カイテイ
+			</t>
+		</rPh>
+		<rPh sb="2" eb="4">
+			<t>
+				コウバン
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			使用有無
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<rPh sb="2" eb="4">
+			<t>
+				ウム
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			使用項目
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			機能要件書名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース和名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース英名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェースフィールド名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			※上記の機能要件書に定義されているインタフェースのデータ項目を下表に転記
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				ジョウキ
+			</t>
+		</rPh>
+		<rPh sb="4" eb="6">
+			<t>
+				キノウ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="8">
+			<t>
+				ヨウケン
+			</t>
+		</rPh>
+		<rPh sb="8" eb="9">
+			<t>
+				ショ
+			</t>
+		</rPh>
+		<rPh sb="10" eb="12">
+			<t>
+				テイギ
+			</t>
+		</rPh>
+		<rPh sb="28" eb="30">
+			<t>
+				コウモク
+			</t>
+		</rPh>
+		<rPh sb="31" eb="32">
+			<t>
+				シタ
+			</t>
+		</rPh>
+		<rPh sb="32" eb="33">
+			<t>
+				ヒョウ
+			</t>
+		</rPh>
+		<rPh sb="34" eb="36">
+			<t>
+				テンキ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			画面項目名
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ガメン
+			</t>
+		</rPh>
+		<rPh sb="2" eb="4">
+			<t>
+				コウモク
+			</t>
+		</rPh>
+		<rPh sb="4" eb="5">
+			<t>
+				メイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			MARVEL内処理
+		</t>
+		<rPh sb="6" eb="7">
+			<t>
+				ナイ
+			</t>
+		</rPh>
+		<rPh sb="7" eb="9">
+			<t>
+				ショリ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			PRJコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			Version.
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			改訂内容
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			改訂者
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			新規作成
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				シンキ
+			</t>
+		</rPh>
+		<rPh sb="2" eb="4">
+			<t>
+				サクセイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			全シート
+		</t>
+		<rPh sb="0" eb="1">
+			<t>
+				ゼン
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			・使用項目について以下に記す。
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<rPh sb="3" eb="5">
+			<t>
+				コウモク
+			</t>
+		</rPh>
+		<rPh sb="9" eb="11">
+			<t>
+				イカ
+			</t>
+		</rPh>
+		<rPh sb="12" eb="13">
+			<t>
+				シル
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○：使用あり、－：使用なし
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			非表示または非活性となっている画面項目は使用しない。
+		</t>
+		<rPh sb="20" eb="22">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			MARVEL国内送受信項目一覧_空席照会・便予約(運賃)
+		</t>
+		<rPh sb="8" eb="11">
+			<t>
+				ソウジュシン
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			OKI川口
+		</t>
+		<rPh sb="3" eb="5">
+			<t>
+				カワグチ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			機能要件書名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RES_4.30.1_個別FMT_予約状況照会
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース和名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			予約状況照会Param
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース英名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			SearchBookedCountParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェースフィールド名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○：使用あり、－：使用なし
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			使用項目
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			リクエスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			レベル
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			SearchBookedCountParam
+		</t>
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			"2"を設定する
+		</t>
+		<rPh sb="4" eb="6">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			riInputFormatNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			Integer
+		</t>
+	</si>
+	<si>
+		<t>
+			予約状況照会入力フォーマット番号
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマットに合った番号（1～2の数字）を指定する。
+			1：予約状況照会・区間入力フォーマット
+			2：予約状況照会・便名入力フォーマット
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			depCode
+		</t>
+	</si>
+	<si>
+		<t>
+			String
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地コード
+		</t>
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			照会対象区間の出発地コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arvCode
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地コード
+		</t>
+	</si>
+	<si>
+		<t>
+			照会対象区間の到着地コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.CarrierParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			【便名Paramリスト】
+		</t>
+	</si>
+	<si>
+		<t>
+			[多重度 0:4]
+			※予約状況照会入力フォーマット番号＝2の場合必須
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[便名]インプレースリスト
+		</t>
+		<rPh sb="1" eb="2">
+			<t>
+				ビン
+			</t>
+		</rPh>
+		<rPh sb="2" eb="3">
+			<t>
+				メイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			押下した空席照会結果リストの行に該当するキャリアコードを設定する
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			carrierCode
+		</t>
+	</si>
+	<si>
+		<t>
+			キャリアコード
+		</t>
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			照会対象便のキャリアコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			押下した空席照会結果リストの行に該当するフライトナンバーを設定する
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			fltNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			フライトナンバー
+		</t>
+	</si>
+	<si>
+		<t>
+			照会対象便のフライトナンバー
+		</t>
+	</si>
+	<si>
+		<t>
+			押下した空席照会結果リストの行に該当する搭乗日をYYYY-MM-DD形式で設定する
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="4" eb="6">
+			<t>
+				クウセキ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="8">
+			<t>
+				ショウカイ
+			</t>
+		</rPh>
+		<rPh sb="8" eb="10">
+			<t>
+				ケッカ
+			</t>
+		</rPh>
+		<rPh sb="14" eb="15">
+			<t>
+				ギョウ
+			</t>
+		</rPh>
+		<rPh sb="16" eb="18">
+			<t>
+				ガイトウ
+			</t>
+		</rPh>
+		<rPh sb="20" eb="23">
+			<t>
+				トウジョウビ
+			</t>
+		</rPh>
+		<rPh sb="34" eb="36">
+			<t>
+				ケイシキ
+			</t>
+		</rPh>
+		<rPh sb="37" eb="39">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			fltDate
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.fw.util.DPSDate
+		</t>
+	</si>
+	<si>
+		<t>
+			搭乗予定日
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			日付
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			照会対象日付
+		</t>
+	</si>
+	<si>
+		<t>
+			"1"を設定する
+		</t>
+		<rPh sb="4" eb="6">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			seqNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			予約状況出力項番
+		</t>
+	</si>
+	<si>
+		<t>
+			表示単位に付加される項番の出力開始項番
+			※項番指定時は指定された値が、未指定時は項番=1とする。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			"false"を設定する
+		</t>
+		<rPh sb="8" eb="10">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			codeShareFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			Boolean
+		</t>
+	</si>
+	<si>
+		<t>
+			CS指定フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			オプション‘CS’指定有無フラグ。
+			True：オプション‘CS’有り
+			False：オプション‘CS’無し
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			optionCarrierCode
+		</t>
+	</si>
+	<si>
+		<t>
+			キャリアオプション
+		</t>
+	</si>
+	<si>
+		<t>
+			オプションキャリア指定時のキャリアコード。
+		</t>
+	</si>
+	<si>
+		<t>
+			hardCopyLsn
+		</t>
+	</si>
+	<si>
+		<t>
+			ハードコピーLSN
+		</t>
+	</si>
+	<si>
+		<t>
+			ROP出力時のハードコピーLSN。
+		</t>
+	</si>
+	<si>
+		<t>
+			inputDate
+		</t>
+	</si>
+	<si>
+		<t>
+			入力日付
+		</t>
+	</si>
+	<si>
+		<t>
+			エージェント入力の日付文字列。
+			日付省略時はnull。それ以外は入力日付文字列が設定されている。
+		</t>
+	</si>
+	<si>
+		<t>
+			RES_4.30.1_個別FMT_予約状況照会
+		</t>
+	</si>
+	<si>
+		<t>
+			予約状況照会Response
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			SearchBookedCountResponse
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			SearchBookedCountResponse
+		</t>
+	</si>
+	<si>
+		<t>
+			outputFormatFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出力フォーマット識別
+		</t>
+	</si>
+	<si>
+		<t>
+			True： 2コンパートメントクラス以上と1コンパートメントクラスのみが混在の場合
+			False：1コンパートメントクラスのみ場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			searchBkdCntResultParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.SearchBookedCountResultParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			【予約状況照会結果Paramリスト】
+		</t>
+	</si>
+	<si>
+		<t>
+			[多重度 1:*]
+		</t>
+	</si>
+	<si>
+		<t>
+			表示単位毎、又は指定便毎に発番した番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bkdCntParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.BookedCountParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			【予約状況Paramリスト】
+		</t>
+	</si>
+	<si>
+		<t>
+			[多重度 1:*]
+			対象便の予約状況
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			スケジュールのキャリアコード
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールのフライトナンバー
+		</t>
+	</si>
+	<si>
+		<t>
+			carrierColor
+		</t>
+	</si>
+	<si>
+		<t>
+			便名色装飾情報
+		</t>
+	</si>
+	<si>
+		<t>
+			便名表示時のカラー情報
+			0：標準色　1：水色　2：緑色　3：青色　4：黄色　5：白色　6：赤色　7：桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierBlink
+		</t>
+	</si>
+	<si>
+		<t>
+			便名ブリンク情報
+		</t>
+	</si>
+	<si>
+		<t>
+			便名表示時のブリンク情報
+			True：ブリンクあり
+			False：ブリンクなし
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			depAirportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			出発空港コード
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールの出発空港コード
+		</t>
+	</si>
+	<si>
+		<t>
+			arvAirportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			到着空港コード
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールの到着空港コード
+		</t>
+	</si>
+	<si>
+		<t>
+			depTime
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.fw.util.DPSTime
+		</t>
+	</si>
+	<si>
+		<t>
+			出発時刻
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールの出発時刻
+		</t>
+	</si>
+	<si>
+		<t>
+			arvTime
+		</t>
+	</si>
+	<si>
+		<t>
+			到着時刻
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールの到着時刻
+		</t>
+	</si>
+	<si>
+		<t>
+			eqtCode
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			機種
+			「B5M」などの、先頭2桁
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			eqtType
+		</t>
+	</si>
+	<si>
+		<t>
+			機種タイプコード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			機種タイプ
+			「B5M」などの、末尾1桁
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ttl
+		</t>
+	</si>
+	<si>
+		<t>
+			TTL
+		</t>
+	</si>
+	<si>
+		<t>
+			下位クラス・予約席数と上位クラス・予約席数の合計
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bkdCntDetailsParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.BookedCountDetailsParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			【予約状況明細Paramリスト】
+		</t>
+	</si>
+	<si>
+		<t>
+			[多重度 1:2]
+			下位クラスと上位クラスの予約状況を保持する
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			compClass
+		</t>
+	</si>
+	<si>
+		<t>
+			コンパートメントクラス
+		</t>
+	</si>
+	<si>
+		<t>
+			コンパートメントクラスコード
+		</t>
+	</si>
+	<si>
+		<t>
+			saleableMaxSeatCount
+		</t>
+	</si>
+	<si>
+		<t>
+			発売席数
+		</t>
+	</si>
+	<si>
+		<t>
+			コンパートメントクラス単位の発売席数
+		</t>
+	</si>
+	<si>
+		<t>
+			bookedSeatCount
+		</t>
+	</si>
+	<si>
+		<t>
+			予約席数
+		</t>
+	</si>
+	<si>
+		<t>
+			コンパートメントクラス単位の予約済席数
+		</t>
+	</si>
+	<si>
+		<t>
+			otherCarrierDisplayCode
+		</t>
+	</si>
+	<si>
+		<t>
+			他キャリア情報表示用コード
+		</t>
+	</si>
+	<si>
+		<t>
+			共同運送便もしくはコードシェア便の場合に表示される情報。
+			null設定時は出力対象外。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			operationMarketFltNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			オペ／マケ便フライトナンバー
+		</t>
+	</si>
+	<si>
+		<t>
+			オペ便もしくはマケ便のフライトナンバー。
+			※他キャリア情報表示用コードに連結して使用する
+			null設定時は出力対象外。
+		</t>
+	</si>
+	<si>
+		<t>
+			bkdCntTotalParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.BookedCountTotalParam
+		</t>
+	</si>
+	<si>
+		<t>
+			【予約状況合計Param】
+		</t>
+	</si>
+	<si>
+		<t>
+			オプション‘CS’指定時に出力される対象便の予約状況明細の合計値情報。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			予約状況明細部のオペコードシェア便とマケコードシェア便のTTLの合計
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bkdCntDetailsParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.BookedCountDetailsParam
+		</t>
+	</si>
+	<si>
+		<t>
+			【予約状況明細Param】
+		</t>
+	</si>
+	<si>
+		<t />
+	</si>
+	<si>
+		<t>
+			予約状況明細部のオペコードシェア便とマケコードシェア便の発売席数の合計
+		</t>
+	</si>
+	<si>
+		<t>
+			予約状況明細部のオペコードシェア便とマケコードシェア便の予約済席数の合計
+		</t>
+	</si>
+	<si>
+		<t>
+			RES_11.1.1_個別FMT_空席照会
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			空席照会Response
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityResponse
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityResponse
+		</t>
+	</si>
+	<si>
+		<t>
+			displayAvailabilityResultParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.DisplayAvailabilityResultParam
+		</t>
+	</si>
+	<si>
+		<t>
+			【空席照会結果Param】
+		</t>
+	</si>
+	<si>
+		<t>
+			holidayFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			祝日フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			照会対象日の祝日を判断
+			True：土曜日／日曜日／祝日
+			False：上記以外
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			scheduleAvailabilityFareInfoList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.ScheduleAvailabilityFareInformationParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュール空席料金情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			多重度　0:*
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			scheduleAvailabilityInfoList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.ScheduleAvailabilityInformationParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュール空席情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			1:*
+			多重度が１の場合は直行便
+			多重度が２以上の場合は接続便
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.CarrierParam
+		</t>
+	</si>
+	<si>
+		<t>
+			【便名Param】
+		</t>
+	</si>
+	<si>
+		<t>
+			[便名]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			carrierColorNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			便名色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）の表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			便名ブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）をブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierReverseFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			便名反転フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）を反転表示するかを指定する。
+			Ｔｒｕｅ：反転表示
+			False：反転表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			depDate
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.fw.util.DPSDate
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			日付
+		</t>
+	</si>
+	<si>
+		<t>
+			depColorNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			depBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地ブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			depReverseFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地反転フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地コードを反転表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arvColorNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arvBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地ブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arvReverseFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地反転フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			[発着時間]インプレースリスト
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				ハッチャク
+			</t>
+		</rPh>
+		<rPh sb="3" eb="5">
+			<t>
+				ジカン
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.fw.util.DPSTime
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便の出発予定時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			depTimeChangeFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出発時刻変更フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールチェンジによる出発時刻変更が発生した場合
+			True：出発時刻変更発生
+			False：出発時刻変更発生していない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便の到着予定時刻
+		</t>
+	</si>
+	<si>
+		<t>
+			arvTimeChangeFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			到着時刻変更フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールチェンジによる到着時刻変更が発生した場合
+			True：到着時刻変更発生
+			False：到着時刻変更発生していない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			eqt
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			eqtChangeFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			機材変更フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュールチェンジによる機材変更が発生した場合
+			True：機材変更発生
+			False：機材変更発生していない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			eqtColorNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			eqtBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			eqtReverseFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード反転フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードを反転表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bkgClassInfoList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.BookingClassInformationParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			残席情報付ブッキングクラス情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			多重度　1:*
+		</t>
+	</si>
+	<si>
+		<t>
+			bkgClassCode
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラスコード
+		</t>
+	</si>
+	<si>
+		<t>
+			入力のブッキングクラスコード
+			存在しない場合は定数【AVAIL_STATUS_CODE_BLANK】を指定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bkgClassAvailabilityInfo
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.BookingClassAvailabilityInformationParam
+		</t>
+	</si>
+	<si>
+		<t>
+			【ブッキングクラス残席情報Param】
+		</t>
+	</si>
+	<si>
+		<t>
+			availabilityStatusCode
+		</t>
+	</si>
+	<si>
+		<t>
+			残席表示コード
+		</t>
+	</si>
+	<si>
+		<t>
+			以下の残席表示コードを指定する。
+			A：【AVAIL_STATUS_CODE_OPEN_ABOVE_31】Yブッキングクラスの残席数が31席以上
+			B：【AVAIL_STATUS_CODE_OPEN_ABOVE_10】Yブッキングクラスの残席数が10～30席
+			数字 ： 実数の残席数
+			L：【AVAIL_STATUS_CODE_WAITLISTED】満席状態だが待予約可能
+			C：【AVAIL_STATUS_CODE_CLOSE】満席状態で待予約不可(強制待予約を除く)
+			R：【AVAIL_STATUS_CODE_CLOSE_IIT_NOT_CLOSED】満席状態で待予約不可でIIT共通在庫がセールスクローズされていない
+			\：【AVAIL_STATUS_CODE_FARE_REGISTRATION】運賃登録中設定が適用中
+			M：【AVAIL_STATUS_CODE_REFERENCE_PERIOD_OUT】照会可能期間外または発売開始日時前
+			K：【AVAIL_STATUS_CODE_SC_PROT_COV】プロテクティブカバー中またはスケジュールチェンジ中
+			X：【AVAIL_STATUS_CODE_CANCELLED】キャンセルされている
+			E：【AVAIL_STATUS_CODE_ERROR】システム内でエラー状態となっている
+			*：【AVAIL_STATUS_CODE_OTHERS】乗継ブッキングクラスを単区間で照会または非アロット便など
+			" "：【AVAIL_STATUS_CODE_BLANK】設定なし、発売停止日時後など
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			colorStatus
+		</t>
+	</si>
+	<si>
+		<t>
+			カラーステータス
+		</t>
+	</si>
+	<si>
+		<t>
+			AVCステータスに対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			fare
+		</t>
+	</si>
+	<si>
+		<t>
+			Long
+		</t>
+	</si>
+	<si>
+		<t>
+			運賃額
+		</t>
+	</si>
+	<si>
+		<t>
+			運賃表示を行う場合、かつ運賃額が設定されている場合表示する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			fareTypeCode
+		</t>
+	</si>
+	<si>
+		<t>
+			運賃種別コード
+		</t>
+	</si>
+	<si>
+		<t>
+			運賃表示を行う場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			discountRate
+		</t>
+	</si>
+	<si>
+		<t>
+			BigDecimal
+		</t>
+	</si>
+	<si>
+		<t>
+			割引率
+		</t>
+	</si>
+	<si>
+		<t>
+			fareName
+		</t>
+	</si>
+	<si>
+		<t>
+			運賃名称
+		</t>
+	</si>
+	<si>
+		<t>
+			otherBkgClassList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;String&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			アザーブッキングクラスリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			多重度　0:*
+			次プライオリティグループ以降のブッキングクラスコード。
+			残席表示されているブッキングクラス以外に、当該便に設定されているブッキングクラス。最大6個まで表示。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			hasOtherBkgClass
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラスインジケータ
+		</t>
+	</si>
+	<si>
+		<t>
+			表示しているブッキングクラス以外にもアザーブッキングクラス存在するかを指定する。
+			Ｔｒｕｅ：存在する（アザーブッキングクラスが6個以上）
+			False：存在しない（アザーブッキングクラスが5個以下）
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			privilegeSeasonalityInfoList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;Integer&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			特典シーズナリティ情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			多重度　0:1
+			照会対象日の特典シーズナリティ情報
+			指定する値は以下の通り。
+			1：　“L”--LOW
+			2：　“R”--REGULAR
+			3：　“H”--HIGH
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			avAddInfoParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.AvAddInfoParam
+		</t>
+	</si>
+	<si>
+		<t>
+			【AV付加情報Param】
+		</t>
+	</si>
+	<si>
+		<t>
+			color
+		</t>
+	</si>
+	<si>
+		<t>
+			AV付加情報色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			付加情報の表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			displayBlink
+		</t>
+	</si>
+	<si>
+		<t>
+			AV付加情報ブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			付加情報をブリンク表示するかを指定する。
+			1 ： ブリンク表示
+			0 ： ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			[インフォメーション]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			avAddInfoMsg
+		</t>
+	</si>
+	<si>
+		<t>
+			AV付加情報
+		</t>
+	</si>
+	<si>
+		<t>
+			pfcList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.PassengerFacilityChargeParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客施設使用料リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			airportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客施設使用料加算空港コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客施設使用料がある空港が対象の場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			pfc
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客施設使用料
+		</t>
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+	</si>
+	<si>
+		<t>
+			[↓]ボタン、または[↑]ボタンのイベント処理用に保持する
+		</t>
+		<rPh sb="21" eb="23">
+			<t>
+				ショリ
+			</t>
+		</rPh>
+		<rPh sb="23" eb="24">
+			<t>
+				ヨウ
+			</t>
+		</rPh>
+		<rPh sb="25" eb="27">
+			<t>
+				ホジ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			scheduleReturnStartPosition
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュール返却開始位置
+		</t>
+	</si>
+	<si>
+		<t>
+			表示される最初のスケジュールの、検索結果の中での位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			scheduleReturnEndPosition
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュール返却終了位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			表示される最後のスケジュールの、検索結果の中での位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			prevPageExists
+		</t>
+	</si>
+	<si>
+		<t>
+			前頁存在フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			前頁存在する場合、true
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			nextPageExists
+		</t>
+	</si>
+	<si>
+		<t>
+			次頁存在フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			次頁存在する場合、true
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			displayTransitFareScheduleGuide
+		</t>
+	</si>
+	<si>
+		<t>
+			乗継運賃スケジュール案内表示フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			乗継運賃スケジュール案内メッセージを表示する場合、true
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			baseTime
+		</t>
+	</si>
+	<si>
+		<t>
+			基準時刻（便指定時）
+		</t>
+	</si>
+	<si>
+		<t>
+			入力で便が指定された場合、決定された基準時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			originalReasonCode
+		</t>
+	</si>
+	<si>
+		<t>
+			引き継ぎ元リーズンコード
+		</t>
+	</si>
+	<si>
+		<t>
+			当サービス内で設定されることはない
+			※ファンクション引き継ぎ時に、引き継ぎ元でエラーが発生した場合に引き継ぎ元で
+			設定される。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			RES_11.2.1_個別FMT_空席照会(詳細)
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			空席照会（詳細）Response
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityDetailResponse
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityDetailResponse
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.DisplayAvailabilityResultParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			照会対象日の祝日を判断
+			True：土曜日／日曜日／祝日
+			False：上記以外
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			scheduleAvailabilityFareInfoList
+		</t>
+	</si>
+	<si>
+		<t>
+			多重度　0:*
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			scheduleAvailabilityInfoList
+		</t>
+	</si>
+	<si>
+		<t>
+			1:*
+			多重度が１の場合は直行便
+			多重度が２以上の場合は接続便
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			【便名Param】
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便名色番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）の表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）をブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便名反転フラグ
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）を反転表示するかを指定する。
+			Ｔｒｕｅ：反転表示
+			False：反転表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発地コード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			出発地コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発地コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発地コードを反転表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着地コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着地コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便の出発予定時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発時刻変更フラグ
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			スケジュールチェンジによる出発時刻変更が発生した場合
+			True：出発時刻変更発生
+			False：出発時刻変更発生していない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.fw.util.DPSTime
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便の到着予定時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			スケジュールチェンジによる到着時刻変更が発生した場合
+			True：到着時刻変更発生
+			False：到着時刻変更発生していない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			機種コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			機材変更フラグ
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			スケジュールチェンジによる機材変更が発生した場合
+			True：機材変更発生
+			False：機材変更発生していない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			機種コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			機種コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			機種コードを反転表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.BookingClassInformationParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			多重度　1:*
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力のブッキングクラスコード
+			存在しない場合は定数【AVAIL_STATUS_CODE_BLANK】を指定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			残席表示コード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			以下の残席表示コードを指定する。
+			A：【AVAIL_STATUS_CODE_OPEN_ABOVE_31】Yブッキングクラスの残席数が31席以上
+			B：【AVAIL_STATUS_CODE_OPEN_ABOVE_10】Yブッキングクラスの残席数が10～30席
+			数字 ： 実数の残席数
+			L：【AVAIL_STATUS_CODE_WAITLISTED】満席状態だが待予約可能
+			C：【AVAIL_STATUS_CODE_CLOSE】満席状態で待予約不可(強制待予約を除く)
+			R：【AVAIL_STATUS_CODE_CLOSE_IIT_NOT_CLOSED】満席状態で待予約不可でIIT共通在庫がセールスクローズされていない
+			\：【AVAIL_STATUS_CODE_FARE_REGISTRATION】運賃登録中設定が適用中
+			M：【AVAIL_STATUS_CODE_REFERENCE_PERIOD_OUT】照会可能期間外または発売開始日時前
+			K：【AVAIL_STATUS_CODE_SC_PROT_COV】プロテクティブカバー中またはスケジュールチェンジ中
+			X：【AVAIL_STATUS_CODE_CANCELLED】キャンセルされている
+			E：【AVAIL_STATUS_CODE_ERROR】システム内でエラー状態となっている
+			*：【AVAIL_STATUS_CODE_OTHERS】乗継ブッキングクラスを単区間で照会または非アロット便など
+			" "：【AVAIL_STATUS_CODE_BLANK】設定なし、発売停止日時後など
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t xml:space="preserve">
+			VVCステータスに対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			運賃表示を行う場合、かつ運賃額が設定されている場合表示する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			運賃表示を行う場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			多重度　0:*
+			次プライオリティグループ以降のブッキングクラスコード。
+			残席表示されているブッキングクラス以外に、当該便に設定されているブッキングクラス。最大6個まで表示。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			表示しているブッキングクラス以外にもアザーブッキングクラス存在するかを指定する。
+			Ｔｒｕｅ：存在する（アザーブッキングクラスが6個以上）
+			False：存在しない（アザーブッキングクラスが5個以下）
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			多重度　0:1
+			照会対象日の特典シーズナリティ情報
+			指定する値は以下の通り。
+			1：　“L”--LOW
+			2：　“R”--REGULAR
+			3：　“H”--HIGH
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			【AV付加情報Param】
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			付加情報の表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			付加情報をブリンク表示するかを指定する。
+			1 ： ブリンク表示
+			0 ： ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			avAddInfoMsg
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			String
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			AV付加情報
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			旅客施設使用料加算空港コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客施設使用料がある空港が対象の場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			スケジュール返却開始位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			表示される最初のスケジュールの、検索結果の中での位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			スケジュール返却終了位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			表示される最後のスケジュールの、検索結果の中での位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			前頁存在フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			前頁存在する場合、true
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			次頁存在フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			次頁存在する場合、true
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			乗継運賃スケジュール案内表示フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			乗継運賃スケジュール案内メッセージを表示する場合、true
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力で便が指定された場合、決定された基準時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			当サービス内で設定されることはない
+			※ファンクション引き継ぎ時に、引き継ぎ元でエラーが発生した場合に引き継ぎ元で
+			設定される。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			RES_11.3.1_個別FMT_空席照会(運賃表示)
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			空席照会（運賃表示）Response
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityWithFareResponse
+		</t>
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityWithFareResponse
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			connectingPageIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			接続便用ページングインジケータ
+		</t>
+	</si>
+	<si>
+		<t>
+			直接便照会時に、その区間に接続便が存在する場合'= &gt;AW:C ='のインジケータをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			transitFareSchedulePageIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			乗継便用ページングインジケータ
+		</t>
+	</si>
+	<si>
+		<t>
+			①直行便指定時、直行便あり、次ページなし、接続便なし、乗継便あり
+			②接続便指定時、接続便あり、次ページなし、乗継便あり
+			③接続便指定時、接続便なし、乗継便あり、次ページなし
+			上記いずれかの場合にＴｒｕｅ（'= &gt;AW:Z ='をブリンク表示する）
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			cOption
+		</t>
+	</si>
+	<si>
+		<t>
+			Cオプション
+		</t>
+	</si>
+	<si>
+		<t>
+			true：Cオプション指定(接続便指定)の場合
+			false：直行便指定)の場合
+			trueの場合は、入力ファンクションがAW(直行便)であっても、AW:C(接続便)として入力イメージを出力する必要がある。
+			入力フォーマット(8)を続けて入力された際、直前のResponseが直行便/接続便の区別をするためM345に設定してもらう
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			displayAvailabilityWithFareResultParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.DisplayAvailabilityWithFareResultParam
+		</t>
+	</si>
+	<si>
+		<t>
+			空港施設使用料リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			0:*
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			空港使用料加算空港コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			空港使用料がある空港が対象の場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			空港使用料
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.AvailabilityFareInformationParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			スケジュール空席運賃情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			1:*
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierAvailabilityFareInformationList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.CarrierAvailabilityFareInformationParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			便空席運賃情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			carrier
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.CarrierParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）の表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			departureAirportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			departureAirportCodeColorNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コード色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			departureAirportCodeBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コードブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			departureAirportCodeReversalFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コード反転フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コードを反転表示するかを指定する。
+			Ｔｒｕｅ：反転表示
+			False：反転表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arrivalAirportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			arrivalAirportCodeColorNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地空港コード色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地空港コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arrivalAirportCodeBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地空港コードブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地空港コードをブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arrivalAirportCodeReversalFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地空港コード反転フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着地空港コードを反転表示するかを指定する。
+			Ｔｒｕｅ：反転表示
+			False：反転表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			departureTime
+		</t>
+	</si>
+	<si>
+		<t>
+			出発時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			departureTimeChangeFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			出発時刻が変更になった場合に'*'を表示するかを指定する。
+			True：'*' を表示
+			False：'*' を表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arrivalTime
+		</t>
+	</si>
+	<si>
+		<t>
+			到着時刻
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arrivalTimeChangeFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			到着時刻が変更になった場合に'*'を表示するかを指定する。
+			True：'*' を表示
+			False：'*' を表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			modelCode
+		</t>
+	</si>
+	<si>
+		<t>
+			modelCodeChangeFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			機種変更インディケーター
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードが変更になった場合に'*'を表示するかを指定する。
+			True：'*' を表示
+			False：'*' を表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			modelCodeColorNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			modelCodeBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コードブリンクフラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bookingClassAvailabilityFareInformationList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.BookingClassAvailabilityFareInformationParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラス運賃情報リスト
+		</t>
+	</si>
+	<si>
+		<t>
+			1:4
+			※入力のAW全運賃種別表示フラグがtrueの場合、多重度：1
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bookingClassCode
+		</t>
+	</si>
+	<si>
+		<t>
+			bookingClassCodeColorNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラスコード色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラスコードの表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色
+			2 ： 緑色
+			3 ： 青色
+			4 ： 黄色
+			5 ： 白色
+			6 ： 赤色
+			7 ： 桃色
+			0 ： 標準色
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.BookingClassAvailabilityInformationParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ブッキングクラス残席情報
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t xml:space="preserve">
+			以下の残席表示コードを指定する。
+			数字 ： 残席数を表す。
+			A ： Ｙブッキングクラスで残席数が31席以上の場合。【AVAIL_STATUS_CODE_OPEN_ABOVE_31
+			B ： Ｙブッキングクラスで残席数が10～30席の場合。【AVAIL_STATUS_CODE_OPEN_ABOVE_10
+			L ： INVENTORY のリミット席数が’1’でないか、または待ち予約可である。【AVAIL_STATUS_CODE_WAITLISTED
+			"C ： 満席状態であり、待予約も不可である。
+			【AVAIL_STATUS_CODE_CLOSE】"
+			"￥ ： 運賃登録中フラグ（INVENTORY）が設定されている。
+			【AVAIL_STATUS_CODE_FARE_REGISTRATION】"
+			"M ： 発売開始日時前
+			【AVAIL_STATUS_CODE_BEFORE_SELLING】"
+			"K ： プロテクティブ・カバー中である
+			【AVAIL_STATUS_CODE_PROT_COVER】"
+			"X ： 欠航登録がされている
+			【AVAIL_STATUS_CODE_CANCELLED】"
+			空白 ： 設定なし、発売停止日時後、など
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			lowestFareBlinkFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			最安運賃ブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t xml:space="preserve">
+			対象便の最安運賃かどうかを指定する。
+			true：最安運賃、ブリンク表示する
+			false：最安運賃でない、ブリンク表示しない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bookingClassFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			表示している運賃以外に、他プライオリティグループに運賃が存在するか。
+			True：存在する
+			False：存在しない
+			※入力のAW全運賃種別表示フラグがtrueの場合、常にfalseが設定
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			スケジュール返却開始位置
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			基準時刻（便指定時）
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			awHeaderDisplayFareTypeCodeParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.rtg.param.AwHeaderDisplayFareTypeCodeParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			AW見出し用表示運賃種別Paramリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			displayFareTypeCode
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			String
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			表示運賃種別コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			vacantLinkFareFlag
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			boolean
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			空席連動型運賃フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			true：入力にて予約席数指定があり表示運賃種別（diplayFareTypeCode）が空席連動型運賃グループテーブルに含まれる場合
+			false：上記以外の場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[機材]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[発着空港]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			機能要件書名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RES_20.6.1_個別FMT_便の直接予約
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース和名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			便の直接予約Param
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース英名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DirectSegmentParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェースフィールド名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DirectSegmentParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			使用項目
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			リクエスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			レベル
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DirectSegmentParam
+		</t>
+	</si>
+	<si>
+		<t>
+			segmentParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.ActionableSegmentParam&gt;
+		</t>
+	</si>
+	<si>
+		<t>
+			セグメントParamリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			多重度=1:5
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			segPLActionableSegmentParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.bkg.param.ActionableSegmentParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アクショナブルセグメントParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			可変項目1（セグメントParamリスト）。
+			アクショナブルセグメントParamの場合。
+		</t>
+		<rPh sb="40" eb="42">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			elementId
+		</t>
+	</si>
+	<si>
+		<t>
+			エレメントID
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			エレメントID。1-511。
+			SS新規作成時の場合、nullのため項番の表示は不要。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			elementCreationUpdateNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			エレメント作成時アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			elementCancellationUpdateNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			エレメントキャンセル時アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passengerElementIdList
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客エレメントIDリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passengerNameList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;String&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客名リスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			segmentElementIdList
+		</t>
+	</si>
+	<si>
+		<t>
+			セグメントエレメントIDリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			actionCodeHistoryParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.ActionCodeHistoryParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アクションコードヒストリParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			actionCode
+		</t>
+	</si>
+	<si>
+		<t>
+			アクションコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passengerCount
+		</t>
+	</si>
+	<si>
+		<t>
+			人数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			updateNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			segClassCompositionParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.SegClassCompositionParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			セグメントクラス構成ParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ブッキングクラスコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			numberOfSeat
+		</t>
+	</si>
+	<si>
+		<t>
+			席数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			cancelFlag
+		</t>
+	</si>
+	<si>
+		<t>
+			キャンセル済フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			trueの場合、キャンセルされたエレメント
+			falseの場合、アクティブなエレメント
+		</t>
+	</si>
+	<si>
+		<t>
+			アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			paxForRelationParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.PaxForRelationParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客Paramリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			paxFamilyNameForRelation
+		</t>
+	</si>
+	<si>
+		<t>
+			String
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客姓
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			paxFirstNameForRelation
+		</t>
+	</si>
+	<si>
+		<t>
+			String
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客名
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			paxSexForRelation
+		</t>
+	</si>
+	<si>
+		<t>
+			性別
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			paxAgeForRelation
+		</t>
+	</si>
+	<si>
+		<t>
+			年齢
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ropPaxSortOrderList
+		</t>
+	</si>
+	<si>
+		<t>
+			ROP表示用PAXソート順リスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英字2桁又は英字1桁+数字1桁。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			flightNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			フライトナンバー
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			2桁～4桁の数字。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			[クラス1]テキストボックス
+			[クラス2]テキストボックス
+			[クラス3]テキストボックス
+			[クラス4]テキストボックス
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			bookingClass
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラス
+		</t>
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英字にて以下の指定ができる。
+			ブッキングクラス。
+			A～Zの英字1文字
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			displayFareType
+		</t>
+	</si>
+	<si>
+		<t>
+			表示運賃種別
+		</t>
+	</si>
+	<si>
+		<t>
+			ANS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英数字2～6字
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			departureDate
+		</t>
+	</si>
+	<si>
+		<t>
+			搭乗日
+		</t>
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			指定便名の搭乗日。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			搭乗する発地を指定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			搭乗する着地を指定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			数字4桁で指定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arrivalDateChangeIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			到着日付変更識別
+		</t>
+	</si>
+	<si>
+		<t>
+			到着地の日付が変わる場合、'+'もしくは'-'と変更される日数を表示する。（ex.１日後の場合、'+1'）
+		</t>
+	</si>
+	<si>
+		<t>
+			marketCarrierCode
+		</t>
+	</si>
+	<si>
+		<t>
+			マーケット便キャリアコード
+		</t>
+	</si>
+	<si>
+		<t>
+			国際コードシェア便セグメントの場合、マーケット便のキャリアコードを表示する。'UA'など。
+		</t>
+	</si>
+	<si>
+		<t>
+			marketFlightNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			マーケットフライトナンバー
+		</t>
+	</si>
+	<si>
+		<t>
+			国際コードシェア便セグメントの場合、マーケット便の便名を表示する。'8692'など。
+		</t>
+	</si>
+	<si>
+		<t>
+			marketBookingClass
+		</t>
+	</si>
+	<si>
+		<t>
+			マーケット便クラス
+		</t>
+	</si>
+	<si>
+		<t>
+			国際コードシェア便セグメントの場合、マーケット便のクラスを表示する。'V'など。
+		</t>
+	</si>
+	<si>
+		<t>
+			marketDepartureDate
+		</t>
+	</si>
+	<si>
+		<t>
+			マーケット便搭乗日
+		</t>
+	</si>
+	<si>
+		<t>
+			国際コードシェア便セグメントの場合、マーケット便の搭乗日を表示する。
+		</t>
+	</si>
+	<si>
+		<t>
+			isMarketFlightDisplay
+		</t>
+	</si>
+	<si>
+		<t>
+			マーケットフライト表示フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			trueの場合&lt;MKTG FLT&gt;を表示。
+		</t>
+	</si>
+	<si>
+		<t>
+			equipmentCode
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード。'772'など、IATA標準機種コード。
+		</t>
+	</si>
+	<si>
+		<t>
+			isCarrierCodeFlightNumberReverseDisplay
+		</t>
+	</si>
+	<si>
+		<t>
+			キャリアコード・フライトナンバー反転フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）を反転表示するかを指定する。
+			Ｔｒｕｅ：反転表示
+			False：反転表示しない
+		</t>
+	</si>
+	<si>
+		<t>
+			carrierCodeFlightNumberColorNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			キャリアコード・フライトナンバー色番号
+		</t>
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）の表示色を指定する。
+			番号に対応する色は以下の通り。
+			1 ： 水色、　2 ： 緑色、　3 ： 青色、　4 ： 黄色、　5 ： 白色、　6 ： 赤色、　7 ： 桃色、　無 ： 通常色
+		</t>
+	</si>
+	<si>
+		<t>
+			isCarrierCodeFlightNumberBlinkDisplay
+		</t>
+	</si>
+	<si>
+		<t>
+			キャリアコード・フライトナンバーブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			便名（キャリアコードとフライトナンバー）をブリンク表示するかを指定する。
+			Ｔｒｕｅ：ブリンク表示
+			False：ブリンク表示しない
+		</t>
+	</si>
+	<si>
+		<t>
+			bookingClassDisplayColorStatus
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラス表示カラーステータス
+		</t>
+	</si>
+	<si>
+		<t>
+			AV画面表示カラーと同色で表示する。
+			対応する色は以下の通り。
+			1 ： 水色、　2 ： 緑色、　3 ： 青色、　4 ： 黄色、　5 ： 白色、　6 ： 赤色、　7 ： 桃色、　無 ： 通常色
+		</t>
+	</si>
+	<si>
+		<t>
+			isHoliday
+		</t>
+	</si>
+	<si>
+		<t>
+			照会対象日の祝日を判断
+			True：祝日
+			False：非祝日
+		</t>
+	</si>
+	<si>
+		<t>
+			isSectionBlink
+		</t>
+	</si>
+	<si>
+		<t>
+			区間ブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			trueの場合、区間をブリンク表示する。
+		</t>
+	</si>
+	<si>
+		<t>
+			inActionCode
+		</t>
+	</si>
+	<si>
+		<t>
+			アクション・コード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			英字2文字にて指定。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			outActionCode
+		</t>
+	</si>
+	<si>
+		<t>
+			出力アクションコード
+		</t>
+	</si>
+	<si>
+		<t>
+			セグメントの出力アクションコード。'HK'、'HN'、'HL'、'XL'、'XX'、'UN'、'RR'、'KK'のいずれか。
+			コントロールドセグメントの場合は必須。
+		</t>
+	</si>
+	<si>
+		<t>
+			inputArrivalDateChangeIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			入力到着地日付変更
+		</t>
+	</si>
+	<si>
+		<t>
+			NS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着日付変更は記号と共に日数を指定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			segmentControlType
+		</t>
+	</si>
+	<si>
+		<t>
+			セグメント管理種別
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			segmentReservationDateTime
+		</t>
+	</si>
+	<si>
+		<t>
+			セグメント作成日時
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			isActionCodeBlink
+		</t>
+	</si>
+	<si>
+		<t>
+			アクションコードブリンクフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			trueの場合、アクションコード、席数をブリンク表示する。
+		</t>
+	</si>
+	<si>
+		<t>
+			arnkSegmentFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			ARNKセグメントフラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			true、かつアップデート番号＝エレメント作成時アップデート番号の場合'A'と表示する。
+			true、かつアップデート番号≠エレメント作成時アップデート番号の場合'ARNK'と表示する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passengerType
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客種別
+		</t>
+	</si>
+	<si>
+		<t>
+			ＰＮＲの種類の決定及びブッキンクラスとの
+			対応付けを明確にする。英字1文字
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			arnkIndicatorFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			ARNKインジケータフラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			viaDisplayFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			経由識別表示フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			true:経由識別を表示する
+			false:経由識別を表示しない
+		</t>
+	</si>
+	<si>
+		<t>
+			indirectRateApplyStatus
+		</t>
+	</si>
+	<si>
+		<t>
+			経由レート適用ステータス
+		</t>
+	</si>
+	<si>
+		<t>
+			IIT-PNR(団体型)指定をする場合に指定可能。
+			経由オプション”T”が指定された場合、1：申請中を設定する。
+			上記以外はnull。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			classCompositionDisplayFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			クラス構成表示フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bookingClassDisplayFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラス表示フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			true：ブッキングクラスを表示
+			false：'*'を表示
+		</t>
+	</si>
+	<si>
+		<t>
+			subClassNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			サブクラス番号
+		</t>
+	</si>
+	<si>
+		<t>
+			数字にて以下の指定ができる。
+			サブクラス番号
+			数字１～３桁
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			isKeepingReservation
+		</t>
+	</si>
+	<si>
+		<t>
+			預かり予約識別
+		</t>
+	</si>
+	<si>
+		<t>
+			預かり予約（発売代行）セグメントの場合に表示。'*'一文字。
+			trueの場合、預かり予約インジケータ'*'を表示する。
+		</t>
+	</si>
+	<si>
+		<t>
+			[席数]テキストボックス
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				セキスウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			席数
+		</t>
+	</si>
+	<si>
+		<t>
+			予約あるいは、待ち予約の席数。
+			省略時はNull。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			indicatorList
+		</t>
+	</si>
+	<si>
+		<t>
+			インジケーターリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			インジケーターを格納するリスト。
+			多重度=0:*
+			''S'（時刻変更）、'P'（ノープロテクション）、'C'（ミスコネクション）、'X'（便キャンセル）、'R'（イレギュラー便）、'D'（遅延便）のいずれかの状態でブリンク表示する。複数該当する場合は組み合わせで表示する。
+		</t>
+	</si>
+	<si>
+		<t>
+			waitlistPriority
+		</t>
+	</si>
+	<si>
+		<t>
+			ウェイトリストプライオリティ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			待ち予約要求時にロールに関わらず指定可能である。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			inputArnkIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			ARNKインディケータ
+		</t>
+	</si>
+	<si>
+		<t>
+			作成しようとしているセグメント（便）に、どのような便から乗り継ぐかが不明な時のインディケータ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			inputThroughIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			スルーインディケータ
+		</t>
+	</si>
+	<si>
+		<t>
+			待ち予約の要求時に指定可能。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			subClassOptionCode
+		</t>
+	</si>
+	<si>
+		<t>
+			サブクラスオプションコード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			サブクラスから席を予約する場合は必須。
+			英字1文字で指定する
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			allotOptionCode
+		</t>
+	</si>
+	<si>
+		<t>
+			アロットオプションコード
+		</t>
+	</si>
+	<si>
+		<t>
+			アロット便から席を予約する場合は必須。
+			英字1文字で指定する
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			dummySubclassResFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			ダミーサブクラス予約フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			True：ダミーサブクラス予約
+			True以外：ダミーサブクラス予約ではない
+		</t>
+		<rPh sb="13" eb="15">
+			<t>
+				ヨヤク
+			</t>
+		</rPh>
+		<rPh sb="20" eb="22">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="31" eb="33">
+			<t>
+				ヨヤク
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			isBeforeEotFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			EOT前フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			機種コード(経由地数)の出力要否フラグ。
+			EOT前であれば表示
+			EOT後であれば非表示
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				キシュ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="9">
+			<t>
+				ケイユチ
+			</t>
+		</rPh>
+		<rPh sb="9" eb="10">
+			<t>
+				スウ
+			</t>
+		</rPh>
+		<rPh sb="12" eb="14">
+			<t>
+				シュツリョク
+			</t>
+		</rPh>
+		<rPh sb="14" eb="16">
+			<t>
+				ヨウヒ
+			</t>
+		</rPh>
+		<rPh sb="24" eb="25">
+			<t>
+				マエ
+			</t>
+		</rPh>
+		<rPh sb="29" eb="31">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="35" eb="36">
+			<t>
+				ゴ
+			</t>
+		</rPh>
+		<rPh sb="40" eb="43">
+			<t>
+				ヒヒョウジ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			"true"を設定する
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			isSupplementationFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラス補完判定フラグ
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラスが省略された場合にTRUEを設定する
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			carrierOption
+		</t>
+	</si>
+	<si>
+		<t>
+			キャリアオプション
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			SS-NO回答時に設定
+			AGENTのキャリア＝SSで指定したキャリアの場合、SSで指定したキャリア
+			AGENTのキャリア≠SSで指定したキャリアの場合、”AL”固定
+		</t>
+		<rPh sb="5" eb="7">
+			<t>
+				カイトウ
+			</t>
+		</rPh>
+		<rPh sb="7" eb="8">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="9" eb="11">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="26" eb="28">
+			<t>
+				シテイ
+			</t>
+		</rPh>
+		<rPh sb="35" eb="37">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="41" eb="43">
+			<t>
+				シテイ
+			</t>
+		</rPh>
+		<rPh sb="80" eb="82">
+			<t>
+				コテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			displayBookingClass
+		</t>
+	</si>
+	<si>
+		<t>
+			表示用ブッキングクラス
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			引数として引き渡された情報/保管された情報を保持（AV表示の引数として時にブッキングクラスの情報を削除する場合があるため）
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ヒキスウ
+			</t>
+		</rPh>
+		<rPh sb="5" eb="6">
+			<t>
+				ヒ
+			</t>
+		</rPh>
+		<rPh sb="7" eb="8">
+			<t>
+				ワタ
+			</t>
+		</rPh>
+		<rPh sb="11" eb="13">
+			<t>
+				ジョウホウ
+			</t>
+		</rPh>
+		<rPh sb="14" eb="16">
+			<t>
+				ホカン
+			</t>
+		</rPh>
+		<rPh sb="19" eb="21">
+			<t>
+				ジョウホウ
+			</t>
+		</rPh>
+		<rPh sb="22" eb="24">
+			<t>
+				ホジ
+			</t>
+		</rPh>
+		<rPh sb="27" eb="29">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="30" eb="32">
+			<t>
+				ヒキスウ
+			</t>
+		</rPh>
+		<rPh sb="35" eb="36">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="46" eb="48">
+			<t>
+				ジョウホウ
+			</t>
+		</rPh>
+		<rPh sb="49" eb="51">
+			<t>
+				サクジョ
+			</t>
+		</rPh>
+		<rPh sb="53" eb="55">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			transitFareOption
+		</t>
+	</si>
+	<si>
+		<t>
+			乗継運賃オプション
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			MFのみで使用のためDOには不要
+		</t>
+	</si>
+	<si>
+		<t>
+			avDepartureAirportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			AV表示用出発空港コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			AV表示する際に検索条件として使用する出発空港コードを設定する
+		</t>
+		<rPh sb="2" eb="4">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="7">
+			<t>
+				サイ
+			</t>
+		</rPh>
+		<rPh sb="8" eb="10">
+			<t>
+				ケンサク
+			</t>
+		</rPh>
+		<rPh sb="10" eb="12">
+			<t>
+				ジョウケン
+			</t>
+		</rPh>
+		<rPh sb="15" eb="17">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<rPh sb="19" eb="21">
+			<t>
+				シュッパツ
+			</t>
+		</rPh>
+		<rPh sb="21" eb="23">
+			<t>
+				クウコウ
+			</t>
+		</rPh>
+		<rPh sb="27" eb="29">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			avArrivalAirportCode
+		</t>
+	</si>
+	<si>
+		<t>
+			AV表示用到着空港コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			AV表示する際に検索条件として使用する到着空港コードを設定する
+		</t>
+		<rPh sb="2" eb="4">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="7">
+			<t>
+				サイ
+			</t>
+		</rPh>
+		<rPh sb="8" eb="10">
+			<t>
+				ケンサク
+			</t>
+		</rPh>
+		<rPh sb="10" eb="12">
+			<t>
+				ジョウケン
+			</t>
+		</rPh>
+		<rPh sb="15" eb="17">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<rPh sb="19" eb="21">
+			<t>
+				トウチャク
+			</t>
+		</rPh>
+		<rPh sb="21" eb="23">
+			<t>
+				クウコウ
+			</t>
+		</rPh>
+		<rPh sb="27" eb="29">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			nonDisplayActionCodeFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			アクションコード非表示フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			TRUEの場合、エラー表示される際にアクションコードを非表示とする。
+			FALSEの場合、エラー表示される際にアクションコードを表示する。
+			Nullの場合、FALSEと同様に処理を行う。
+		</t>
+		<rPh sb="5" eb="7">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="11" eb="13">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="16" eb="17">
+			<t>
+				サイ
+			</t>
+		</rPh>
+		<rPh sb="27" eb="28">
+			<t>
+				ヒ
+			</t>
+		</rPh>
+		<rPh sb="28" eb="30">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="41" eb="43">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="47" eb="49">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="52" eb="53">
+			<t>
+				サイ
+			</t>
+		</rPh>
+		<rPh sb="63" eb="65">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="74" eb="76">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="83" eb="85">
+			<t>
+				ドウヨウ
+			</t>
+		</rPh>
+		<rPh sb="86" eb="88">
+			<t>
+				ショリ
+			</t>
+		</rPh>
+		<rPh sb="89" eb="90">
+			<t>
+				オコナ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			resOfficeCode
+		</t>
+	</si>
+	<si>
+		<t>
+			オフィスコード
+		</t>
+	</si>
+	<si>
+		<t>
+			IIT-PNR(個札型)強制予約指定をする場合は必須。
+			英字3桁＋数字3桁で指定する
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			directViaFlightType
+		</t>
+	</si>
+	<si>
+		<t>
+			直行/経由識別
+		</t>
+	</si>
+	<si>
+		<t>
+			IIT-PNR(団体型)指定をする場合に指定可能。
+			経由オプション”V”または”T”が指定された場合、4を設定する。
+			省略時はnull。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			inputSegClassCompositionParamList
+		</t>
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.SegClassCompositionParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力クラス構成Paramリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			クラス構成。IIT-PNR(団体型)指定をする場合に指定可能。
+			多重度=0:26
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ブッキングクラスコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英字にて以下の指定ができる。
+			ブッキングクラス。
+			A～Zの英字1文字
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力席数。省略時はnull。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			segPLControlledSegmentParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.bkg.param.ControlledSegmentParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			コントロールドセグメントParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			可変項目1（セグメントParamリスト）。
+			コントロールドセグメントParamの場合。
+		</t>
+		<rPh sb="40" eb="42">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			エレメントID
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			エレメントID。1-511。
+			SS新規作成時の場合、nullのため項番の表示は不要。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			エレメント作成時アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			エレメントキャンセル時アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客エレメントIDリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;String&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客名リスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			セグメントエレメントIDリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.ActionCodeHistoryParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アクションコードヒストリParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アクションコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			人数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アップデート番号
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			segClassCompositionParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			セグメントクラス構成ParamList
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			席数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			List&lt;jp.co.ana.dps.bkg.param.PaxForRelationParam&gt;
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			String
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客姓
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			旅客名
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			性別
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			年齢
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ROP表示用PAXソート順リスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英字2桁又は英字1桁+数字1桁。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			2桁～4桁の数字。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ANS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着空港コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アクション・コード
+		</t>
+	</si>
+	<si>
+		<t>
+			サブクラスオプションコード
+		</t>
+	</si>
+	<si>
+		<t>
+			reservationNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			予約番号
+		</t>
+	</si>
+	<si>
+		<t>
+			RSV#'の後に数字4桁で表示する。
+		</t>
+	</si>
+	<si>
+		<t>
+			ssInformationMessageList
+		</t>
+	</si>
+	<si>
+		<t>
+			SSインフォメーションメッセージリスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			numOfStops
+		</t>
+	</si>
+	<si>
+		<t>
+			経由地数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			EOT時まで表示。
+		</t>
+		<rPh sb="3" eb="4">
+			<t>
+				トキ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="8">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<phoneticPr fontId="39" />
+	</si>
+	<si>
+		<t>
+			"false"を設定する
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			randomInputFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			ランダム入力指示
+		</t>
+	</si>
+	<si>
+		<t>
+			ランダム入力時の場合：true
+			それ以外：false
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			multiFunctionFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			マルチファクション指示
+		</t>
+	</si>
+	<si>
+		<t>
+			マルチファクションインプット時の場合：true
+			それ以外：false
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			multiFunctionSeq
+		</t>
+	</si>
+	<si>
+		<t>
+			マルチファンクション指示SEQ
+		</t>
+	</si>
+	<si>
+		<t>
+			マルチファクションインプット時のファンクション呼び出し順。
+			省略時は1を指定。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			"1"を設定する
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			multiFunctionCnt
+		</t>
+	</si>
+	<si>
+		<t>
+			マルチファンクション指示総数
+		</t>
+	</si>
+	<si>
+		<t>
+			マルチファンクション登録の総数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			readInformation
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.param.ReadInformationAnalysisParam
+		</t>
+	</si>
+	<si>
+		<t>
+			リード情報
+		</t>
+	</si>
+	<si>
+		<t>
+			AKNS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ＰＮＲ簡易作成時は必須。
+			ユニット識別子＋端末からの読取情報
+			2次元バーコード読込時は設定。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			※1
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			xxxxx系の定義については「MARVEL国内画面項目一覧_検索条件入力」の空席照会用名称定義シートを参照。
+		</t>
+		<rPh sb="5" eb="6">
+			<t>
+				ケイ
+			</t>
+		</rPh>
+		<rPh sb="7" eb="9">
+			<t>
+				テイギ
+			</t>
+		</rPh>
+		<rPh sb="51" eb="53">
+			<t>
+				サンショウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			先行受付(有償)サブポータルから遷移した場合、"NH"を設定する
+			先行受付(有償)サブポータル以外から遷移した場合、[項番]テキストボックスの入力値に該当する空席照会結果リストの行のキャリアコードを設定する
+		</t>
+		<rPh sb="47" eb="49">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="59" eb="61">
+			<t>
+				コウバン
+			</t>
+		</rPh>
+		<rPh sb="71" eb="73">
+			<t>
+				ニュウリョク
+			</t>
+		</rPh>
+		<rPh sb="73" eb="74">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="75" eb="77">
+			<t>
+				ガイトウ
+			</t>
+		</rPh>
+		<rPh sb="89" eb="90">
+			<t>
+				ギョウ
+			</t>
+		</rPh>
+		<rPh sb="99" eb="101">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			先行受付(有償)サブポータルから遷移した場合、"Y"を設定する
+			先行受付(有償)サブポータル以外から遷移した場合、入力値を設定する
+		</t>
+		<rPh sb="16" eb="18">
+			<t>
+				センイ
+			</t>
+		</rPh>
+		<rPh sb="20" eb="22">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="27" eb="29">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="46" eb="48">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="50" eb="52">
+			<t>
+				センイ
+			</t>
+		</rPh>
+		<rPh sb="54" eb="56">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="59" eb="60">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="61" eb="63">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			先行受付(有償)サブポータルから遷移した場合、"3991"を設定する
+			先行受付(有償)サブポータル以外から遷移した場合、[項番]テキストボックスの入力値に該当する空席照会結果リストの行のフライトナンバーを設定する
+		</t>
+		<rPh sb="61" eb="63">
+			<t>
+				コウバン
+			</t>
+		</rPh>
+		<rPh sb="73" eb="75">
+			<t>
+				ニュウリョク
+			</t>
+		</rPh>
+		<rPh sb="75" eb="76">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="77" eb="79">
+			<t>
+				ガイトウ
+			</t>
+		</rPh>
+		<rPh sb="81" eb="83">
+			<t>
+				クウセキ
+			</t>
+		</rPh>
+		<rPh sb="83" eb="85">
+			<t>
+				ショウカイ
+			</t>
+		</rPh>
+		<rPh sb="85" eb="87">
+			<t>
+				ケッカ
+			</t>
+		</rPh>
+		<rPh sb="91" eb="92">
+			<t>
+				ギョウ
+			</t>
+		</rPh>
+		<rPh sb="102" eb="104">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			先行受付(有償)サブポータルから遷移した場合、設定しない
+			先行受付(有償)サブポータル以外から遷移した場合、[項番]テキストボックスの入力値に該当する空席照会結果リストの行について、[クラス1]～[クラス4]テキストボックスの入力値に該当する運賃種別コードを設定する
+		</t>
+		<rPh sb="23" eb="25">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="113" eb="115">
+			<t>
+				ニュウリョク
+			</t>
+		</rPh>
+		<rPh sb="115" eb="116">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="117" eb="119">
+			<t>
+				ガイトウ
+			</t>
+		</rPh>
+		<rPh sb="121" eb="123">
+			<t>
+				ウンチン
+			</t>
+		</rPh>
+		<rPh sb="123" eb="125">
+			<t>
+				シュベツ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			出発地コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
+			名称が取得できない場合、空白とする
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityWithFareResponse
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[便名]インプレースリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			[発着空港]インプレースリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			出発地空港コード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			出発地空港コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
+			名称が取得できない場合、空白とする
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			到着地空港コード
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			到着地空港コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
+			名称が取得できない場合、空白とする
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				トウチャク
+			</t>
+		</rPh>
+		<rPh sb="2" eb="3">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="3" eb="5">
+			<t>
+				クウコウ
+			</t>
+		</rPh>
+		<rPh sb="33" eb="35">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="50" eb="52">
+			<t>
+				クウハク
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			到着地コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
+			名称が取得できない場合、空白とする
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				トウチャク
+			</t>
+		</rPh>
+		<rPh sb="2" eb="3">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="31" eb="33">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="48" eb="50">
+			<t>
+				クウハク
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[機材]インプレースリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			機能要件書名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース和名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース英名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェースフィールド名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○：使用あり、－：使用なし
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			使用項目
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			リクエスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			レベル
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			RES_20.14.1_個別FMT_リマーク情報の登録
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			リマーク情報Param
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RemarkParam
+		</t>
+	</si>
+	<si>
+		<t>
+			RemarkParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			note
+		</t>
+	</si>
+	<si>
+		<t>
+			インフォメーション
+		</t>
+	</si>
+	<si>
+		<t>
+			ANKS漢
+		</t>
+		<rPh sb="4" eb="5">
+			<t>
+				カン
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			※OT:RMK/OR/～の場合、インフォメーションには"OR/"は含まない
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			remarkTypeCode
+		</t>
+	</si>
+	<si>
+		<t>
+			リマーク種別コード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			OT:RMK/OR/～の場合、BkgConstants.RMKS_DUE_TO_CODE_OR("OR") を設定。それ以外の場合はnull
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			PAX-IDリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			多重度=0:511 PAX-ID
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[日付4]ボタン
+			[便名]インプレースリスト
+			[発着空港]インプレースリスト
+			[席数]テキストボックス
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<rPh sb="10" eb="11">
+			<t>
+				ビン
+			</t>
+		</rPh>
+		<rPh sb="11" eb="12">
+			<t>
+				メイ
+			</t>
+		</rPh>
+		<rPh sb="24" eb="26">
+			<t>
+				ハッチャク
+			</t>
+		</rPh>
+		<rPh sb="26" eb="28">
+			<t>
+				クウコウ
+			</t>
+		</rPh>
+		<rPh sb="40" eb="42">
+			<t>
+				セキスウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			先行予約タイトルのリマーク登録の場合、"先行"を設定する
+			
+			先行予約情報のリマーク登録の場合、以下の通りに設定する
+			"予約" + 連番(※1) + ":" + キャリアコード + フライトナンバー + "(" + 出発空港コード + 到着空港コード + ")△希望日:" + DDMMMYY(※2) + "△運賃種別:" + 運賃種別コード + "△人数:" + 席数
+			(△は半角スペース)
+			
+			※1 PNRのリマークに文字列「"予約" + 数字 + ":"」が存在する場合、数字の最大値+1を設定する
+			PNRのリマークに文字列「"予約" + 数字 + ":"」が存在しない場合、"1"を設定する
+			※2 [日付4]ボタンの値を設定する
+			
+			例：
+			予約2:NH51(HNDCTS) 希望日:11JAN17 運賃種別:V75N 人数:2
+		</t>
+		<rPh sb="16" eb="18">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="20" eb="22">
+			<t>
+				センコウ
+			</t>
+		</rPh>
+		<rPh sb="24" eb="26">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="44" eb="46">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="65" eb="67">
+			<t>
+				レンバン
+			</t>
+		</rPh>
+		<rPh sb="107" eb="109">
+			<t>
+				シュッパツ
+			</t>
+		</rPh>
+		<rPh sb="109" eb="111">
+			<t>
+				クウコウ
+			</t>
+		</rPh>
+		<rPh sb="117" eb="119">
+			<t>
+				トウチャク
+			</t>
+		</rPh>
+		<rPh sb="119" eb="121">
+			<t>
+				クウコウ
+			</t>
+		</rPh>
+		<rPh sb="163" eb="165">
+			<t>
+				ウンチン
+			</t>
+		</rPh>
+		<rPh sb="165" eb="167">
+			<t>
+				シュベツ
+			</t>
+		</rPh>
+		<rPh sb="182" eb="184">
+			<t>
+				セキスウ
+			</t>
+		</rPh>
+		<rPh sb="188" eb="190">
+			<t>
+				ハンカク
+			</t>
+		</rPh>
+		<rPh sb="209" eb="212">
+			<t>
+				モジレツ
+			</t>
+		</rPh>
+		<rPh sb="230" eb="232">
+			<t>
+				ソンザイ
+			</t>
+		</rPh>
+		<rPh sb="234" eb="236">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="237" eb="239">
+			<t>
+				スウジ
+			</t>
+		</rPh>
+		<rPh sb="240" eb="243">
+			<t>
+				サイダイチ
+			</t>
+		</rPh>
+		<rPh sb="246" eb="248">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="293" eb="295">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="310" eb="311">
+			<t>
+				アタイ
+			</t>
+		</rPh>
+		<rPh sb="312" eb="314">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="318" eb="319">
+			<t>
+				レイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			機能要件書名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RES_20.22.1_個別FMT_PNRの確認
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース和名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			PNRの確認Param
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース英名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RetrievePnrParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェースフィールド名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○：使用あり、－：使用なし
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			使用項目
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			リクエスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			レベル
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RetrievePnrParam
+		</t>
+	</si>
+	<si>
+		<t>
+			"8"を設定する
+		</t>
+		<rPh sb="4" eb="6">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			inputFormat
+		</t>
+	</si>
+	<si>
+		<t>
+			入力形式
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			1：（＊）旅客名/便名/日付（/区間）（/サーチレベル）
+			2：（＊）旅客名の先頭一文字/便名/日付（/区間）（/サーチレベル）
+			3：予約番号/便名/日付（/サーチレベル）
+			4：予約番号/（＊）旅客名/便名/日付（/区間）（/サーチレベル）
+			5：PNR R/L
+			6：PNR R/L/（＊）旅客名
+			7：便名/日付/座席番号
+			8：（スペシャルオプション）（/UNMATCHオプション）
+			9：項番
+			10：確認番号
+			11：便名+パスポート情報
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			option
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			オプション
+		</t>
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			NULL
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passengerName
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客名
+		</t>
+	</si>
+	<si>
+		<t>
+			ANKS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			個人旅客名、団体名、ブロックシート名。
+		</t>
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			passengerInitial
+		</t>
+	</si>
+	<si>
+		<t>
+			旅客名の先頭一文字
+		</t>
+	</si>
+	<si>
+		<t>
+			個人旅客名、団体名、ブロックシート名の先頭一文字。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			NS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			数字3～4桁。
+		</t>
+	</si>
+	<si>
+		<t>
+			pnrRecordLocator
+		</t>
+	</si>
+	<si>
+		<t>
+			PNR R/L
+		</t>
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			項番指定の場合はPNR R/Lが格納される。
+		</t>
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英字2桁もしくは先頭数字1桁+英字1桁。省略可。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			数字3～4桁。'15','263','4711'など。省略不可。
+		</t>
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			英字1桁。省略可。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			ANS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			指定便名の搭乗日。
+		</t>
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			seatNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			座席番号
+		</t>
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ASR済の座席番号。
+		</t>
+	</si>
+	<si>
+		<t>
+			isUnmatch
+		</t>
+	</si>
+	<si>
+		<t>
+			UNMATCHオプション
+		</t>
+	</si>
+	<si>
+		<t>
+			固定文字'UNMATCH'が指定された場合はtrue
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			confirmedNumber
+		</t>
+	</si>
+	<si>
+		<t>
+			確認番号
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力形式が10の場合に設定
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passportAnalysisParam
+		</t>
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.shared.param.PassportAnalysisParam
+		</t>
+	</si>
+	<si>
+		<t>
+			パスポートリード情報解析Param
+		</t>
+	</si>
+	<si>
+		<t>
+			入力形式が11の場合に設定
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			passportInformation
+		</t>
+	</si>
+	<si>
+		<t>
+			パスポートリード情報
+		</t>
+	</si>
+	<si>
+		<t>
+			ASN日付
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			機能要件書名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RES_11.3.1_個別FMT_空席照会(運賃表示)
+		</t>
+	</si>
+	<si>
+		<t>
+			インタフェース和名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			空席照会（運賃表示）Param
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			インタフェース英名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityWithFareParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			非表示または非活性となっている画面項目は使用しない。
+		</t>
+	</si>
+	<si>
+		<t>
+			インタフェースフィールド名
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			・使用項目について以下に記す。
+		</t>
+	</si>
+	<si>
+		<t>
+			○：使用あり、－：使用なし
+		</t>
+	</si>
+	<si>
+		<t>
+			※A：英大文字, a：英小文字, B：バイナリ, K：半角カナ 文字,　漢：漢字, N：数字, S：特殊文字, 日付, 時刻
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			使用項目
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			リクエスト
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			レベル
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityWithFareParam
+		</t>
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			formatNo
+		</t>
+	</si>
+	<si>
+		<t>
+			空席照会(運賃表示)入力フォーマット番号
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			下記「入力フォーマット」を参照。
+			入力フォーマットに合った番号（1～8の数字）を指定する。
+			1：【INPUT_FORMAT_NO_1】区間指定入力フォーマット
+			2：【INPUT_FORMAT_NO_2】便指定入力フォーマット
+			3：【INPUT_FORMAT_NO_3】再指定入力フォーマット
+			4：【INPUT_FORMAT_NO_4】日付増減入力フォーマット
+			5：【INPUT_FORMAT_NO_5】接続便区間指定入力フォーマット
+			6：【INPUT_FORMAT_NO_6】接続便再指定入力フォーマット
+			7：【INPUT_FORMAT_NO_7】接続便日付増減入力フォーマット
+			8：【INPUT_FORMAT_NO_8】プライオリティグループ増減入力フォーマット
+			
+			AW/R入力フォーマットは以下のようにマッピングされること
+			AW/Rの「(1)逆区間日付指定入力フォーマット」
+			→3：【INPUT_FORMAT_NO_3】
+			AW/Rの「(2)逆区間日数増減指定入力フォーマット」
+			→4：【INPUT_FORMAT_NO_4】
+			
+			AW：C/R入力フォーマットは以下のようにマッピングされること
+			AW：C/Rの「(3)逆区間接続便日付指定入力フォーマット」
+			→6：【INPUT_FORMAT_NO_6】
+			AW：C/Rの「(4)逆区間接続便日付増減指定入力フォーマット」
+			→7：【INPUT_FORMAT_NO_7】
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発地のシティーコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着地のシティーコード
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			フライト日付
+			入力フォーマット(2)の場合にオプション入力
+			入力フォーマット(2)以外の場合に必須入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			depTime
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			時刻
+		</t>
+	</si>
+	<si>
+		<t>
+			出発時刻
+			入力フォーマット(2)の場合にオプション入力
+			入力フォーマット(2)以外の場合に必須入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマット(1)～(7)の場合にオプション入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			jp.co.ana.dps.rtg.param.CarrierParam
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			便名
+		</t>
+	</si>
+	<si>
+		<t>
+			入力フォーマット(2)の場合にオプション入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			フライトナンバー
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマット(2)の場合に必須入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			priorityGroupMark
+		</t>
+	</si>
+	<si>
+		<t>
+			プライオリティグループ増減符号
+		</t>
+	</si>
+	<si>
+		<t>
+			S
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマット(8)の場合に必須入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			Boolean
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			true：Cオプション指定(接続便指定)の場合
+			false：直行便指定)の場合
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			乗継運賃オプション
+		</t>
+	</si>
+	<si>
+		<t>
+			乗継運賃オプション(Z)が指定された場合にtrue。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			prevDisplayStartNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			前回表示開始位置
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			前ページ要求時に、ページングの基準となる。
+			前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			prevDisplayEndNbr
+		</t>
+	</si>
+	<si>
+		<t>
+			前回表示終了位置
+		</t>
+	</si>
+	<si>
+		<t>
+			次ページ要求時に、ページングの基準となる。
+			前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			pagingDirection
+		</t>
+	</si>
+	<si>
+		<t>
+			ページング方向
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			ページング要求時の、ページング方向。
+			０：前へ、１：次へ、２：再表示。
+			NULLの場合、ページング要求ではないと判断する。
+			前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			targetMaxSegmentCount
+		</t>
+	</si>
+	<si>
+		<t>
+			要求最大セグメント数
+		</t>
+	</si>
+	<si>
+		<t>
+			サービスから返却される最大セグメント数。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			optionInputFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			オプション入力フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ｔｒｕｅ：日付またはキャリアオプションが入力された場合
+			false/null：上記以外
+			入力フォーマット(3)または入力フォーマット(6)の場合に設定される。
+			（逆区間のRが指定された場合も設定される。）
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			awrFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			Boolean
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			逆区間フラグ
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			ｔｒｕｅ：逆区間のRが指定された場合
+			false/null：上記以外
+			逆区間のRが指定された場合は必須
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bookSeats
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			Integer
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			予約席数
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			指定する場合は1～9の値
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				シテイ
+			</t>
+		</rPh>
+		<rPh sb="4" eb="6">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="11" eb="12">
+			<t>
+				アタイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			reverseSectionDefFlg
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			Boolean
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			逆区間指定フラグ
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			以下のいずれかに該当する場合、保持している「スケジュール返却開始位置」を設定する
+			・[↓]ボタン押下時
+			・[↑]ボタン押下時
+			上記以外の場合、設定しない
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				イカ
+			</t>
+		</rPh>
+		<rPh sb="8" eb="10">
+			<t>
+				ガイトウ
+			</t>
+		</rPh>
+		<rPh sb="12" eb="14">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="15" eb="17">
+			<t>
+				ホジ
+			</t>
+		</rPh>
+		<rPh sb="30" eb="32">
+			<t>
+				カイシ
+			</t>
+		</rPh>
+		<rPh sb="32" eb="34">
+			<t>
+				イチ
+			</t>
+		</rPh>
+		<rPh sb="36" eb="38">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="48" eb="50">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="50" eb="51">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="63" eb="65">
+			<t>
+				ジョウキ
+			</t>
+		</rPh>
+		<rPh sb="65" eb="67">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="68" eb="70">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="71" eb="73">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			以下のいずれかに該当する場合、保持している「スケジュール返却終了位置」を設定する
+			・[↓]ボタン押下時
+			・[↑]ボタン押下時
+			上記以外の場合、設定しない
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				イカ
+			</t>
+		</rPh>
+		<rPh sb="8" eb="10">
+			<t>
+				ガイトウ
+			</t>
+		</rPh>
+		<rPh sb="12" eb="14">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="15" eb="17">
+			<t>
+				ホジ
+			</t>
+		</rPh>
+		<rPh sb="30" eb="32">
+			<t>
+				シュウリョウ
+			</t>
+		</rPh>
+		<rPh sb="36" eb="38">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="48" eb="50">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="50" eb="51">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="63" eb="65">
+			<t>
+				ジョウキ
+			</t>
+		</rPh>
+		<rPh sb="65" eb="67">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="68" eb="70">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="71" eb="73">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[↓]ボタン押下時、"1"を設定する
+			[↑]ボタン押下時、"0"を設定する
+			上記以外の場合、設定しない
+		</t>
+		<rPh sb="6" eb="8">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="8" eb="9">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="14" eb="16">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="38" eb="40">
+			<t>
+				ジョウキ
+			</t>
+		</rPh>
+		<rPh sb="40" eb="42">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="43" eb="45">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="46" eb="48">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			RES_11.1.1_個別FMT_空席照会
+		</t>
+	</si>
+	<si>
+		<t>
+			RES_11.2.1_個別FMT_空席照会(詳細)
+		</t>
+	</si>
+	<si>
+		<t>
+			空席照会Param
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			出発（都市コード／空港コード）
+		</t>
+	</si>
+	<si>
+		<t>
+			到着（都市コード／空港コード）
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発日付
+		</t>
+	</si>
+	<si>
+		<t>
+			日付AS
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			時刻
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ジコク
+			</t>
+		</rPh>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			allotSubClassOption
+		</t>
+	</si>
+	<si>
+		<t>
+			アロット・サブクラスオプション
+		</t>
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			アロット・サブクラスオプションは、以下の項目を指定する。
+			L：【ALLOT_SUBCLASS_OPTION_CODE_ALLOT】アロット
+			その他の文字：サブクラスオプション
+			入力フォーマット(1)・(2)・(3)・(4)の場合にオプション入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			bkgClassCodeList
+		</t>
+	</si>
+	<si>
+		<t>
+			ブッキングクラスコードリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			0:9
+		</t>
+	</si>
+	<si>
+		<t>
+			AN
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマット(1)・(2)・(3)・(4)の場合にオプション入力
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマット(2)の場合に必須入力。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			S
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			入力フォーマット(5)の場合に必須入力。
+			"*"、"+"、"+*"､"*+"：次プライオリティグループを表示対象とする
+			"-*"、"-"、"*-"：前プライオリティグループを表示対象とする。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			前回表示開始位置
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			前ページ要求時に、ページングの基準となる。
+			前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			次ページ要求時に、ページングの基準となる。
+			前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ページング方向
+		</t>
+	</si>
+	<si>
+		<t>
+			ページング要求時の、ページング方向。
+			０：前へ、１：次へ、２：再表示。
+			NULLの場合、ページング要求ではないと判断する。
+			前回表示開始位置、前回表示終了位置、ページング方向はセットで設定すること。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			サービスから返却される最大セグメント数。省略時は制限なし。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			functionIndicator
+		</t>
+	</si>
+	<si>
+		<t>
+			呼び出しファンクション識別
+		</t>
+	</si>
+	<si>
+		<t>
+			N
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			SS、SDでの予約不可であることを識別する。
+			※ファンクション引継ぎの場合に値を設定する。
+			６：SSでの予約不可時
+			７：SDでの予約不可時
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			A
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			乗継運賃オプション：Zが入力された場合にtrueを設定する。
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			ANS
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			reverseSectionDefFlg
+		</t>
+	</si>
+	<si>
+		<t>
+			逆区間指定フラグ
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			true：前回ファンクションと同じファンクション。かつ、逆区間が指定されたとき。(例：VV→VVR、AV→AVR、AW→AWRなど)
+			false：上記以外
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			出発時刻変更インディケーター
+		</t>
+		<phoneticPr fontId="3" />
+	</si>
+	<si>
+		<t>
+			到着時刻変更インディケーター
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			便予約を行う場合、"NN"を設定する
+			空席待ち予約を行う場合、"LL"を設定する
+		</t>
+		<rPh sb="0" eb="1">
+			<t>
+				ビン
+			</t>
+		</rPh>
+		<rPh sb="1" eb="3">
+			<t>
+				ヨヤク
+			</t>
+		</rPh>
+		<rPh sb="4" eb="5">
+			<t>
+				オコナ
+			</t>
+		</rPh>
+		<rPh sb="6" eb="8">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<rPh sb="14" eb="16">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[日付4]ボタン
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[日付4]ボタン
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			先行受付(有償)サブポータルから遷移した場合、取得した搭乗日の１か月前を設定する
+			先行受付(有償)サブポータル以外から遷移した場合、取得した搭乗日を設定する
+			
+			[日付(日)]と[日付(月)]を基に、業務日付の4日前～360日後の範囲となるように同年、または翌年を取得する
+			例：業務日付が7月1日の場合
+			6月27日を入力した場合、4日前のため同年
+			6月26日を入力した場合、5日前のため翌年
+			
+			以下の通りに設定する
+			"20" + 取得した年 + "-" + 日付(月) + "-" 日付(日)
+		</t>
+		<rPh sb="23" eb="25">
+			<t>
+				シュトク
+			</t>
+		</rPh>
+		<rPh sb="27" eb="30">
+			<t>
+				トウジョウビ
+			</t>
+		</rPh>
+		<rPh sb="31" eb="34">
+			<t>
+				イッカゲツ
+			</t>
+		</rPh>
+		<rPh sb="34" eb="35">
+			<t>
+				マエ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○：使用あり、－：使用なし
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			便名色番号
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No.7「キャリアコード」で使用
+		</t>
+	</si>
+	<si>
+		<t>
+			No.7「キャリアコード」で使用
+		</t>
+		<rPh sb="14" eb="16">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No.7「キャリアコード」で使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用
+		</t>
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用
+		</t>
+		<rPh sb="34" eb="36">
+			<t>
+				ショウサイ
+			</t>
+		</rPh>
+		<rPh sb="40" eb="42">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示色制御シートで使用
+		</t>
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示色制御シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用
+		</t>
+		<rPh sb="30" eb="32">
+			<t>
+				ヒョウジ
+			</t>
+		</rPh>
+		<rPh sb="32" eb="34">
+			<t>
+				セイギョ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_検索条件入力」のインフォメーション表示制御シートで使用
+		</t>
+		<rPh sb="41" eb="43">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			出発地コードを基に空港情報テーブルを参照し、取得した空港名称を表示する
+			名称が取得できない場合、空白とする
+		</t>
+	</si>
+	<si>
+		<t>
+			[BKGクラスと残席数1]～[BKGクラスと残席数6]インプレースリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			[インフォメーション]インプレースリスト
+		</t>
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			No.13「キャリアコード」で使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」のイベント詳細シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[席数]テキストボックス
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			入力値を設定する
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ニュウリョク
+			</t>
+		</rPh>
+		<rPh sb="2" eb="3">
+			<t>
+				アタイ
+			</t>
+		</rPh>
+		<rPh sb="4" eb="6">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			入力値を設定する
+		</t>
+		<rPh sb="0" eb="2">
+			<t>
+				ニュウリョク
+			</t>
+		</rPh>
+		<rPh sb="2" eb="3">
+			<t>
+				チ
+			</t>
+		</rPh>
+		<rPh sb="4" eb="6">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内機能仕様書_空席照会・便予約(運賃)」の[機材]インプレースリスト押下時で使用
+		</t>
+		<rPh sb="46" eb="48">
+			<t>
+				シヨウ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内機能仕様書_空席照会・便予約(運賃)」の[機材]インプレースリスト押下時で使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			1.0.0
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[逆区間]ボタン押下時、No.3の「到着地コード」を設定する
+			[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="39" eb="41">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="60" eb="62">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[逆区間]ボタン押下時、No.2の「出発地コード」を設定する
+			[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="39" eb="41">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[日付(前週へ)]ボタン押下時、[日付4]ボタンの7日前の日付を設定する
+			[日付(次週へ)]ボタン押下時、[日付4]ボタンの7日後の日付を設定する
+			[日付1]～[日付7]ボタン押下時、押下した日付を設定する
+			上記以外の場合、前回の空席照会時の検索条件を設定する
+			
+			日付(日)と日付(月)を基に、業務日付の4日前～360日後の範囲となるように同年、または翌年を取得する
+			例：業務日付が7月1日の場合
+			6月27日の場合、4日前のため同年
+			6月26日の場合、5日前のため翌年
+			
+			以下の通りに設定する
+			"20" + 取得した年 + "-" + 日付(月) + "-" 日付(日)
+		</t>
+		<rPh sb="4" eb="5">
+			<t>
+				ゼン
+			</t>
+		</rPh>
+		<rPh sb="14" eb="15">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="17" eb="19">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<rPh sb="26" eb="27">
+			<t>
+				ニチ
+			</t>
+		</rPh>
+		<rPh sb="27" eb="28">
+			<t>
+				マエ
+			</t>
+		</rPh>
+		<rPh sb="29" eb="31">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<rPh sb="75" eb="77">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<rPh sb="81" eb="83">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<rPh sb="88" eb="90">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="90" eb="91">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="92" eb="94">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="96" eb="98">
+			<t>
+				ヒヅケ
+			</t>
+		</rPh>
+		<rPh sb="104" eb="106">
+			<t>
+				ジョウキ
+			</t>
+		</rPh>
+		<rPh sb="106" eb="108">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="109" eb="111">
+			<t>
+				バアイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			前回の空席照会時の検索条件を設定する
+		</t>
+	</si>
+	<si>
+		<t>
+			[逆区間]ボタン押下時、設定しない
+			[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="1" eb="2">
+			<t>
+				ギャク
+			</t>
+		</rPh>
+		<rPh sb="2" eb="4">
+			<t>
+				クカン
+			</t>
+		</rPh>
+		<rPh sb="8" eb="10">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="10" eb="11">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="12" eb="14">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[乗継便で検索]ボタン押下時、"true"を設定する
+			[乗継便で検索]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+	</si>
+	<si>
+		<t>
+			[乗継便で検索]ボタン押下時、"true"を設定する
+			[乗継便で検索]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				ノリツギ
+			</t>
+		</rPh>
+		<rPh sb="3" eb="4">
+			<t>
+				ビン
+			</t>
+		</rPh>
+		<rPh sb="5" eb="7">
+			<t>
+				ケンサク
+			</t>
+		</rPh>
+		<rPh sb="11" eb="13">
+			<t>
+				オウカ
+			</t>
+		</rPh>
+		<rPh sb="13" eb="14">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="22" eb="24">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="38" eb="40">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			・[逆区間]ボタン押下時
+			乗継運賃で検索時、"1"を設定する
+			乗継運賃以外で検索時、"5"を設定する
+			
+			・[逆区間]ボタン以外を押下時
+			前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="13" eb="15">
+			<t>
+				ノリツギ
+			</t>
+		</rPh>
+		<rPh sb="15" eb="17">
+			<t>
+				ウンチン
+			</t>
+		</rPh>
+		<rPh sb="18" eb="20">
+			<t>
+				ケンサク
+			</t>
+		</rPh>
+		<rPh sb="20" eb="21">
+			<t>
+				ジ
+			</t>
+		</rPh>
+		<rPh sb="26" eb="28">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<rPh sb="35" eb="37">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="61" eb="63">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[逆区間]ボタン押下時、No.4の「到着地コード」を設定する
+			[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="39" eb="41">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<rPh sb="60" eb="62">
+			<t>
+				セッテイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[逆区間]ボタン押下時、No.3の「出発地コード」を設定する
+			[逆区間]ボタン以外を押下時、前回の空席照会時の検索条件を設定する
+		</t>
+		<rPh sb="39" eb="41">
+			<t>
+				イガイ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示色制御シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			「MARVEL国内画面項目一覧_空席照会・便予約(運賃)」の表示制御シートで使用
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DisplayAvailabilityParam
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[日付4]ボタン
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			hh:mm形式に変換する
+		</t>
+	</si>
+	<si>
+		<t>
+			DMSOPE-1058　「乗継便で検索」ボタンの活性非活性制御[TSK-00646819]
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			OKI清野
+		</t>
+		<rPh sb="3" eb="5">
+			<t>
+				セイノ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			○
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			[乗継便で検索]ボタン
+		</t>
+		<rPh sb="1" eb="3">
+			<t>
+				ノリツギ
+			</t>
+		</rPh>
+		<rPh sb="3" eb="4">
+			<t>
+				ビン
+			</t>
+		</rPh>
+		<rPh sb="5" eb="7">
+			<t>
+				ケンサク
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			区間検索、かつ乗継運賃検索でない、かつ"true"のとき活性化する
+		</t>
+		<rPh sb="9" eb="11">
+			<t>
+				ウンチン
+			</t>
+		</rPh>
+		<rPh sb="11" eb="13">
+			<t>
+				ケンサク
+			</t>
+		</rPh>
+		<rPh sb="28" eb="30">
+			<t>
+				カッセイ
+			</t>
+		</rPh>
+		<rPh sb="30" eb="31">
+			<t>
+				カ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			2.0.0
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			-
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			DMSOPE-1295 ASD107(販計104)_空席照会結果ならびにPNR詳細における運航キャリアの表示について
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			OKI仲
+		</t>
+		<rPh sb="3" eb="4">
+			<t>
+				ナカ
+			</t>
+		</rPh>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			キャリアコードが"NH"、かつNo.11「便名反転フラグ」が"true"の場合、以下のNo.9「便名色番号」の条件で表示を変更する
+			No.9「便名色番号」が"0"の場合、"EH運航"を表示する(英語表示は"EH")
+			No.9「便名色番号」が"1"の場合、"他社運航"を表示する(英語表示は"C/S")
+			No.9「便名色番号」が"2"の場合、"6J運航"を表示する(英語表示は"6J")
+			No.9「便名色番号」が"3"の場合、"HD運航"を表示する(英語表示は"HD")
+			No.9「便名色番号」が"4"の場合、"OC運航"を表示する(英語表示は"OC")
+			No.9「便名色番号」が"5"の場合、"MQ運航"を表示する(英語表示は"MQ")
+			No.9「便名色番号」が"6"の場合、"FW運航"を表示する(英語表示は"FW")
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			キャリアコードが"NH"、かつNo.11「便名反転フラグ」が"true"の場合、以下のNo.9「便名色番号」の条件で表示を変更する
+			No.9「便名色番号」が"0"の場合、"EH運航"を表示する(英語表示は"EH")
+			No.9「便名色番号」が"1"の場合、"他社運航"を表示する(英語表示は"C/S")
+			No.9「便名色番号」が"2"の場合、"6J運航"を表示する(英語表示は"6J")
+			No.9「便名色番号」が"3"の場合、"HD運航"を表示する(英語表示は"HD")
+			No.9「便名色番号」が"4"の場合、"OC運航"を表示する(英語表示は"OC")
+			No.9「便名色番号」が"5"の場合、"MQ運航"を表示する(英語表示は"MQ")
+			No.9「便名色番号」が"6"の場合、"FW運航"を表示する(英語表示は"FW")
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t xml:space="preserve">
+			キャリアコードが"NH"、かつNo.17「便名反転フラグ」が"true"の場合、以下のNo.15「便名色番号」の条件で表示を変更する
+			No.15「便名色番号」が"0"の場合、"EH運航"を表示する(英語表示は"EH")
+			No.15「便名色番号」が"1"の場合、"他社運航"を表示する(英語表示は"C/S")
+			No.15「便名色番号」が"2"の場合、"6J運航"を表示する(英語表示は"6J")
+			No.15「便名色番号」が"3"の場合、"HD運航"を表示する(英語表示は"HD")
+			No.15「便名色番号」が"4"の場合、"OC運航"を表示する(英語表示は"OC")
+			No.15「便名色番号」が"5"の場合、"MQ運航"を表示する(英語表示は"MQ")
+			No.15「便名色番号」が"6"の場合、"FW運航"を表示する(英語表示は"FW")
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			3.0.0
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+	<si>
+		<t>
+			初期表示_受信シート
+			初期表示(詳細)_受信シート
+			初期表示(運賃)_受信シート
+		</t>
+		<phoneticPr fontId="1" />
+	</si>
+</sst>
